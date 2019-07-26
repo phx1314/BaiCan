@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.ntdlg.bc"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled = true
+
+    }
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    signingConfigs {
+        debug {
+            storeFile file("F:\\小工具\\小工具\\ntdlg.keystore")
+            storePassword "ntdlg123"
+            keyAlias "20"
+            keyPassword "ntdlg123"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile project(':andBase')
+    compile(name: 'moxie-client-1.2.1', ext: 'aar')
+    compile 'com.jakewharton:butterknife:8.2.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile(name: 'idsafestep-V4.2-2017_07_10', ext: 'aar')
+    compile 'com.github.thinkcool:circletextimageview:1.0.20151218'
+    apt 'com.jakewharton:butterknife-compiler:8.2.0'
+}

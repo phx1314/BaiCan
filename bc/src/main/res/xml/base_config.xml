@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Base
+    AppId="appid"
+    BaseUri="http://api.falanshare.com/api"
+    TempPath="Qd"
+    UpdateUri=""
+    UseSdcard="true">
+    <param name="ErrorUpdateUrl"></param>
+    <param name="source">1</param>
+    <param name="WebServiceNamespace">value</param>
+    <param name="WebServiceUrl">value</param>
+    <param name="DefaultFragment">com.ntdlg.bc.frg.FrgLoading</param>
+</Base>

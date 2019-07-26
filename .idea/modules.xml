@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BaiCan.iml" filepath="$PROJECT_DIR$/BaiCan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/andBase/andBase.iml" filepath="$PROJECT_DIR$/andBase/andBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/andframework-release/andframework-release.iml" filepath="$PROJECT_DIR$/andframework-release/andframework-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bc/bc.iml" filepath="$PROJECT_DIR$/bc/bc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frameWidget/frameWidget.iml" filepath="$PROJECT_DIR$/frameWidget/frameWidget.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#000000" android:gravity="center" android:orientation="horizontal">
+     <LinearLayout android:layout_width="@dimen/j260dp" android:layout_height="wrap_content" android:background="@drawable/bg_con_02" android:gravity="center_horizontal" android:orientation="vertical">
+          <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:orientation="vertical" android:padding="@dimen/j10dp">
+               <TextView style="@style/text_style_15_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="客服" />
+               <TextView style="@style/text_style_13_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j5dp" android:layout_marginTop="@dimen/j15dp" android:text="客服电话:021-56256587" />
+               <TextView style="@style/text_style_13_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j5dp" android:layout_marginTop="@dimen/j10dp" android:text="服务时间:9:00PM-22:00PM" />
+          </LinearLayout>
+          <ImageView android:layout_width="match_parent" android:layout_height="1px" android:background="@color/tyD1" />
+          <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+               <TextView android:id="@+id/mTextView_cancel" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:padding="@dimen/j10dp" android:text="取消" android:textColor="#017EF7" android:textSize="13sp" />
+               <ImageView android:layout_width="1px" android:layout_height="match_parent" android:background="@color/tyD1" />
+               <TextView android:id="@+id/mTextView_zhidian" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:padding="@dimen/j10dp" android:text="致电客服" android:textColor="#017EF7" android:textSize="13sp" />
+          </LinearLayout>
+     </LinearLayout>
+</LinearLayout>
+

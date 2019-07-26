@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mybg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dip"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_style_17_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="我的" />
+
+            <ImageView
+                android:id="@+id/clk_mTextView_hd"
+                style="@style/text_style_15_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp"
+                android:src="@drawable/share" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/j20dp">
+
+            <com.mdx.framework.widget.MImageView
+                android:id="@+id/mImageView"
+                android:layout_width="@dimen/j80dp"
+                android:layout_height="@dimen/j80dp"
+                android:src="@drawable/morentouxiang_n" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/mTextView_name"
+            style="@style/text_style_15_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/j10dp"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F4F4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/mLinearLayout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/j15dp"
+            android:paddingLeft="@dimen/j10dp"
+            android:paddingRight="@dimen/j10dp"
+            android:paddingTop="@dimen/j15dp">
+
+            <TextView
+                style="@style/text_style_15_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/my_loan"
+                android:drawablePadding="@dimen/j10dp"
+                android:gravity="center_vertical"
+                android:text="我的借款" />
+
+            <TextView
+                android:id="@+id/mTextView_jk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/arrows_top" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/j35dp"
+            android:background="@color/tyD1" />
+
+        <LinearLayout
+            android:id="@+id/mLinearLayout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/j15dp"
+            android:paddingLeft="@dimen/j10dp"
+            android:paddingRight="@dimen/j10dp"
+            android:paddingTop="@dimen/j15dp">
+
+            <TextView
+                style="@style/text_style_15_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/my_bill"
+                android:drawablePadding="@dimen/j10dp"
+                android:gravity="center_vertical"
+                android:text="我的账单" />
+
+            <TextView
+                android:id="@+id/mTextView_zhangdan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/arrows_top" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/j35dp"
+            android:background="@color/tyD1" />
+
+        <LinearLayout
+            android:id="@+id/mLinearLayout_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/j15dp"
+            android:paddingLeft="@dimen/j10dp"
+            android:paddingRight="@dimen/j10dp"
+            android:paddingTop="@dimen/j15dp">
+
+            <TextView
+                style="@style/text_style_15_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/bank_card"
+                android:drawablePadding="@dimen/j10dp"
+                android:gravity="center_vertical"
+                android:text="银行卡" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/arrows_top" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/j35dp"
+            android:background="@color/tyD1" />
+
+        <LinearLayout
+            android:id="@+id/mLinearLayout_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/j15dp"
+            android:paddingLeft="@dimen/j10dp"
+            android:paddingRight="@dimen/j10dp"
+            android:paddingTop="@dimen/j15dp">
+
+            <TextView
+                style="@style/text_style_15_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/line_of_credit"
+                android:drawablePadding="@dimen/j10dp"
+                android:gravity="center_vertical"
+                android:text="更多" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/arrows_top" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/tyD1" />
+    </LinearLayout>
+</LinearLayout>
+

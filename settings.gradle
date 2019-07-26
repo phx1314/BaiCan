@@ -1,0 +1,4 @@
+include ':frameWidget'
+include ':andBase'
+include ':andframework-release'
+include ':bc'

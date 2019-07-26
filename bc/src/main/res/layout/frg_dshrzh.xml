@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mLinearLayout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/j12dp">
+
+        <TextView
+            style="@style/text_style_15_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="淘宝" />
+
+        <TextView
+            android:id="@+id/mTextView_1"
+            style="@style/text_style_15_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/j10dp"
+            android:drawableRight="@drawable/arrows_top"
+            android:text="已认证" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/tyD1" />
+
+    <LinearLayout
+        android:id="@+id/mLinearLayout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/j12dp">
+
+        <TextView
+            style="@style/text_style_15_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="京东" />
+
+        <TextView
+            android:id="@+id/mTextView_2"
+            style="@style/text_style_15_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/j5dp"
+            android:drawablePadding="@dimen/j10dp"
+            android:drawableRight="@drawable/arrows_top"
+            android:text="已认证" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/tyD1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mTextView_remark"
+            style="@style/text_style_15_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/j40dp"
+            android:gravity="center_horizontal"
+            android:text="二选一认证即可" />
+
+        <TextView
+            android:id="@+id/mTextView_shenqing"
+            style="@style/text_style_15_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/j20dp"
+            android:layout_marginLeft="@dimen/j35dp"
+            android:layout_marginRight="@dimen/j35dp"
+            android:layout_marginTop="@dimen/j10dp"
+            android:background="@drawable/shape_green"
+            android:gravity="center"
+            android:padding="@dimen/j8dp"
+            android:text="确认" />
+    </LinearLayout>
+</LinearLayout>
+

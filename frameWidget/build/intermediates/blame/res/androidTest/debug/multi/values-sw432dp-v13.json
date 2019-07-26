@@ -1,0 +1,83 @@
+[
+    {
+        "outputFile": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-sw432dp-v13\\values-sw432dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 40,
+                    "endOffset": 91
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw432dp-v13\\values-sw432dp-v13.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 40,
+                        "endOffset": 91
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 96,
+                    "endColumn": 40,
+                    "endOffset": 132
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw432dp-v13\\values-sw432dp-v13.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 96,
+                        "endColumn": 40,
+                        "endOffset": 132
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 137,
+                    "endColumn": 43,
+                    "endOffset": 176
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw432dp-v13\\values-sw432dp-v13.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 137,
+                        "endColumn": 43,
+                        "endOffset": 176
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 181,
+                    "endColumn": 39,
+                    "endOffset": 216
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw432dp-v13\\values-sw432dp-v13.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 181,
+                        "endColumn": 39,
+                        "endOffset": 216
+                    }
+                }
+            }
+        ]
+    }
+]

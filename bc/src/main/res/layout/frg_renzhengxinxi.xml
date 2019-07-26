@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/clk_mTextView_1"
+                    style="@style/text_style_15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg1"
+                    android:drawablePadding="@dimen/j10dp"
+                    android:drawableTop="@drawable/gr"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/j20dp"
+                    android:text="个人资料" />
+
+                <TextView
+                    android:id="@+id/clk_mTextView_2"
+                    style="@style/text_style_15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/j10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg1"
+                    android:drawablePadding="@dimen/j10dp"
+                    android:drawableTop="@drawable/gz"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/j20dp"
+                    android:text="工作收入" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/clk_mTextView_3"
+                    style="@style/text_style_15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg1"
+                    android:drawablePadding="@dimen/j10dp"
+                    android:drawableTop="@drawable/lxr2"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/j20dp"
+                    android:text="联系人" />
+
+                <TextView
+                    android:id="@+id/clk_mTextView_4"
+                    style="@style/text_style_15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/j10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg1"
+                    android:drawablePadding="@dimen/j10dp"
+                    android:drawableTop="@drawable/phonerz"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/j20dp"
+                    android:text="手机认证" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/clk_mTextView_5"
+                    style="@style/text_style_15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg1"
+                    android:drawablePadding="@dimen/j10dp"
+                    android:drawableTop="@drawable/sfz"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/j20dp"
+                    android:text="身份认证" />
+
+                <TextView
+                    android:id="@+id/clk_mTextView_6"
+                    style="@style/text_style_15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/j10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg1"
+                    android:drawablePadding="@dimen/j10dp"
+                    android:drawableTop="@drawable/dsh"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/j20dp"
+                    android:text="电商认证" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_style_13_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j25dp"
+                android:gravity="center"
+                android:text="填写本人真实有效信息可快速提高审核速度" />
+
+            <TextView
+                android:id="@+id/mTextView_lg"
+                style="@style/text_style_13_white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/j15dp"
+                android:layout_marginRight="@dimen/j15dp"
+                android:layout_marginTop="@dimen/j5dp"
+                android:background="@drawable/shape_green"
+                android:gravity="center"
+                android:padding="@dimen/j10dp"
+                android:text="提交审核" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

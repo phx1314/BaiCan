@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#ffffff" android:gravity="center_horizontal" android:orientation="vertical">
+     <LinearLayout android:id="@+id/mLinearLayout_kong" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_horizontal" android:orientation="vertical" android:visibility="gone">
+          <TextView android:id="@+id/mTextView_yhk" style="@style/text_style_15_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j50dp" android:drawablePadding="@dimen/j10dp" android:drawableTop="@drawable/upload_bank" android:text="您尚未添加任何银行卡" />
+          <TextView style="@style/text_style_13_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j5dp" android:text="点击卡片进行添加" />
+     </LinearLayout>
+     <LinearLayout android:id="@+id/mLinearLayout_fk" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_horizontal" android:orientation="vertical">
+          <LinearLayout android:id="@+id/mLinearLayout_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j10dp" android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="@dimen/j15dp" android:paddingRight="@dimen/j15dp" />
+          <TextView style="@style/text_style_13_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j10dp" android:paddingLeft="@dimen/j15dp" android:paddingRight="@dimen/j15dp" android:text="温馨提示您最多绑定三张银行卡" />
+     </LinearLayout>
+</LinearLayout>
+

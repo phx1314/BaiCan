@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#ffffff" android:gravity="center_horizontal" android:orientation="vertical">
+     <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+          <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:background="#ffffff" android:gravity="center_horizontal" android:orientation="vertical">
+               <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:id="@+id/mLinearLayout_top" android:layout_width="match_parent" android:layout_height="@dimen/j160dp" android:background="@drawable/xxgjbg" android:gravity="center_horizontal" android:orientation="vertical">
+                         <TextView android:id="@+id/mTextView_price" style="@style/text_style_17_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j20dp" android:text="1082.00元" />
+                         <TextView style="@style/text_style_13_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j8dp" android:text="还款总额(元)" />
+                         <TextView android:id="@+id/mTextView_time_last" style="@style/text_style_13_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j8dp" android:text="最后还款日 2017-05-08" />
+                    </LinearLayout>
+                    <com.mdx.framework.widget.MImageView android:id="@+id/mImageView_add" android:layout_width="@dimen/j80dp" android:layout_height="@dimen/j80dp" android:layout_centerHorizontal="true" android:layout_marginTop="@dimen/j110dp" android:src="@drawable/upload" />
+               </RelativeLayout>
+               <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:background="#ffffff" android:gravity="center_horizontal" android:orientation="vertical">
+                    <TextView style="@style/text_style_13_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j15dp" android:text="上传还款凭证" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/j20dp" android:background="@drawable/shape_gray_kong" android:orientation="vertical">
+                         <TextView style="@style/text_style_13_black" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:padding="@dimen/j10dp" android:text="您还可以通过以下方式进行线下转账还款" />
+                         <ImageView android:layout_width="match_parent" android:layout_height="1px" android:background="@color/tyD1" />
+                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="horizontal" android:padding="@dimen/j10dp">
+                              <ImageView android:id="@+id/mImageView_wx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/weixin" />
+                              <ImageView android:id="@+id/mImageView_zfb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j25dp" android:layout_marginRight="@dimen/j25dp" android:src="@drawable/zfb" />
+                              <ImageView android:id="@+id/mImageView_yl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/yinlian" />
+                         </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:id="@+id/mTextView_shenqing" style="@style/text_style_15_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/j20dp" android:background="@drawable/shape_green" android:gravity="center" android:padding="@dimen/j10dp" android:text="提交审核" />
+                    <TextView style="@style/text_style_15_black" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j20dp" android:layout_marginRight="@dimen/j20dp" android:text="温馨提示" />
+                    <TextView android:id="@+id/mTextView_remark" style="@style/text_style_15_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j20dp" android:layout_marginRight="@dimen/j20dp" android:layout_marginTop="@dimen/j5dp" android:text="请在本期最后还款日结束前上传还款凭证" />
+                    <TextView android:id="@+id/mTextView_remark1" style="@style/text_style_15_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j20dp" android:layout_marginRight="@dimen/j20dp" android:layout_marginTop="@dimen/j3dp" android:text="还款凭证需要包括转账账号、转账时间、转账金额等" />
+               </LinearLayout>
+          </LinearLayout>
+     </ScrollView>
+</LinearLayout>
+

@@ -1,0 +1,387 @@
+[
+    {
+        "outputFile": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 40,
+                    "endOffset": 91
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 40,
+                        "endOffset": 91
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 96,
+                    "endColumn": 40,
+                    "endOffset": 132
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 40,
+                        "endOffset": 91
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 137,
+                    "endColumn": 38,
+                    "endOffset": 171
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 96,
+                        "endColumn": 38,
+                        "endOffset": 130
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 176,
+                    "endColumn": 39,
+                    "endOffset": 211
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 135,
+                        "endColumn": 39,
+                        "endOffset": 170
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 216,
+                    "endColumn": 38,
+                    "endOffset": 250
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 175,
+                        "endColumn": 38,
+                        "endOffset": 209
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 255,
+                    "endColumn": 39,
+                    "endOffset": 290
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 214,
+                        "endColumn": 39,
+                        "endOffset": 249
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 295,
+                    "endColumn": 37,
+                    "endOffset": 328
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 254,
+                        "endColumn": 37,
+                        "endOffset": 287
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 333,
+                    "endColumn": 36,
+                    "endOffset": 365
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 292,
+                        "endColumn": 36,
+                        "endOffset": 324
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 370,
+                    "endColumn": 38,
+                    "endOffset": 404
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 329,
+                        "endColumn": 38,
+                        "endOffset": 363
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 409,
+                    "endColumn": 40,
+                    "endOffset": 445
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 368,
+                        "endColumn": 40,
+                        "endOffset": 404
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 450,
+                    "endColumn": 38,
+                    "endOffset": 484
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 137,
+                        "endColumn": 38,
+                        "endOffset": 171
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 489,
+                    "endColumn": 37,
+                    "endOffset": 522
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 409,
+                        "endColumn": 37,
+                        "endOffset": 442
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 527,
+                    "endColumn": 38,
+                    "endOffset": 561
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 447,
+                        "endColumn": 38,
+                        "endOffset": 481
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 566,
+                    "endColumn": 38,
+                    "endOffset": 600
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 486,
+                        "endColumn": 38,
+                        "endOffset": 520
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 605,
+                    "endColumn": 41,
+                    "endOffset": 642
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 525,
+                        "endColumn": 41,
+                        "endOffset": 562
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 647,
+                    "endColumn": 39,
+                    "endOffset": 682
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 567,
+                        "endColumn": 39,
+                        "endOffset": 602
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 687,
+                    "endColumn": 38,
+                    "endOffset": 721
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 607,
+                        "endColumn": 38,
+                        "endOffset": 641
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 726,
+                    "endColumn": 39,
+                    "endOffset": 761
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 646,
+                        "endColumn": 39,
+                        "endOffset": 681
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 766,
+                    "endColumn": 40,
+                    "endOffset": 802
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 176,
+                        "endColumn": 40,
+                        "endOffset": 212
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 807,
+                    "endColumn": 37,
+                    "endOffset": 840
+                },
+                "from": {
+                    "file": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 686,
+                        "endColumn": 37,
+                        "endOffset": 719
+                    }
+                }
+            }
+        ]
+    }
+]

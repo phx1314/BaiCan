@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="act" parent="Theme.AppCompat.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="colorPrimary">@color/statusBarcolor</item>
+        <item name="colorPrimaryDark">@color/statusBarcolorDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="actNNS" parent="Theme.AppCompat.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="colorPrimary">@color/statusBarcolor</item>
+        <item name="colorPrimaryDark">@color/statusBarcolorDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="actNS" parent="Theme.AppCompat.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="colorPrimary">@color/statusBarcolor</item>
+        <item name="colorPrimaryDark">@color/statusBarcolorDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="transparentact" parent="act">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="transparentactNNS" parent="actNNS">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="transparentactNS" parent="actNS">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="A">#3498DB</color>
+    <color name="YLEa">#0d9af4</color>
+    <color name="background">#02D2C2</color>
+    <color name="background_an">#0aa89a</color>
+    <color name="bg">#F1F0F2</color>
+    <color name="bg_an">#9AA809</color>
+    <color name="black">#000000</color>
+    <color name="black_deep">#FF000000</color>
+    <color name="blue">#02D2C2</color>
+    <color name="blue_1">#0BAFED</color>
+    <color name="blue_2">#149DF0</color>
+    <color name="blue_3">#099BEF</color>
+    <color name="blue_text">#0091F6</color>
+    <color name="bottom">#E2E3E5</color>
+    <color name="bottom_bar_normal_bg">#2D2F31</color>
+    <color name="bottom_text_color_normal">#ffffff</color>
+    <color name="btn_blue_normal">#1e90ff</color>
+    <color name="btn_blue_pressed">#0066FF</color>
+    <color name="btn_gray_normal">#c0c0c0</color>
+    <color name="btn_gray_pressed">#666667</color>
+    <color name="btn_gray_pressed_status">#b5b5b6</color>
+    <color name="btn_green_noraml">#68C270</color>
+    <color name="btn_green_pressed">#6FCD78</color>
+    <color name="btn_login_normal">#007086</color>
+    <color name="btn_login_pressed">#303744</color>
+    <color name="btn_logout_normal">#d33f3f</color>
+    <color name="btn_logout_pressed">#DA5A4D</color>
+    <color name="btn_pressed_green_solid">#B6DA53</color>
+    <color name="btn_register_normal">#2dafa3</color>
+    <color name="btn_register_pressed">#4ebcd3</color>
+    <color name="btn_white_normal">#f7f8f8</color>
+    <color name="btn_white_pressed">#b5b5b6</color>
+    <color name="c">#666666</color>
+    <color name="click_false">#0b63ad</color>
+    <color name="click_ture">#2e7ec2</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="color_01">#010101</color>
+    <color name="color_33">#333333</color>
+    <color name="color_66">#666666</color>
+    <color name="color_93">#939393</color>
+    <color name="color_b5">#b5b5b5</color>
+    <color name="common_bg">#fcfcfc</color>
+    <color name="common_bottom_bar_normal_bg">#2d2f31</color>
+    <color name="common_bottom_bar_selected_bg">#161718</color>
+    <color name="common_botton_bar_blue">#2ea7e0</color>
+    <color name="common_top_bar_blue">#4ebcd3</color>
+    <color name="default_circle_indicator_fill_color">#FFA305</color>
+    <color name="default_circle_indicator_page_color">#ECEBEB</color>
+    <color name="default_circle_indicator_stroke_color">#00000000</color>
+    <color name="divider_list">#cccccc</color>
+    <color name="error_item_color">#F6EBE6</color>
+    <color name="gray">#FF959595</color>
+    <color name="gray_normal">#666667</color>
+    <color name="gray_pressed">#b5b5b6</color>
+    <color name="green">#0F7169</color>
+    <color name="grid_state_focused">#80000000</color>
+    <color name="grid_state_pressed">#1Affffff</color>
+    <color name="juyellow">#FFA305</color>
+    <color name="login_99">#999999</color>
+    <color name="login_dialog_background">#00000000</color>
+    <color name="myinfo_47">#474747</color>
+    <color name="myinfo_84">#848484</color>
+    <color name="orange">#FFA500</color>
+    <color name="pet_gray">#666666</color>
+    <color name="shouye_fen">#AA266F</color>
+    <color name="shouye_green">#93B228</color>
+    <color name="shouye_red">#FF0000</color>
+    <color name="shouye_yellow">#F6BC10</color>
+    <color name="statusBarColor">@color/A</color>
+    <color name="top">#E2E3E5</color>
+    <color name="top_bar_normal_bg">#4ebcd3</color>
+    <color name="transparent">#00000000</color>
+    <color name="transpot">#22000000</color>
+    <color name="tyA">#f85515</color>
+    <color name="tyB1">#008aff</color>
+    <color name="tyD1">#cccccc</color>
+    <color name="tyD2">#dcdcdc</color>
+    <color name="tyDa">#f85515</color>
+    <color name="tyE1">#FFFFFF</color>
+    <color name="tyE2">#262626</color>
+    <color name="tyE3">#555555</color>
+    <color name="tyE4">#888888</color>
+    <color name="tyE5">#a8a8a8</color>
+    <color name="tyE6">#cccccc</color>
+    <color name="tyE7">#50d117</color>
+    <color name="tyE8">#89c9ff</color>
+    <color name="tyE9">#faa716</color>
+    <color name="tyEa">#f85515</color>
+    <color name="tyEb1">#008aff</color>
+    <color name="tyF1">#FFFFFF</color>
+    <color name="tyF2">#000000</color>
+    <color name="tyF3">#888888</color>
+    <color name="tyF4">#3e3e3e</color>
+    <color name="tyF5">#cccccc</color>
+    <color name="tyFa">#f85515</color>
+    <color name="tyFb">#008aff</color>
+    <color name="tyG1">#f2f2f2</color>
+    <color name="tyG2">#f5f5f5</color>
+    <color name="tyG3">#ffffff</color>
+    <color name="tyG4">#000000</color>
+    <color name="voip_interface_text_color">#bababa</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#F39C06</color>
+    <color name="yellow_1">#ED950B</color>
+    <declare-styleable name="SlidingMenu"><attr name="mode_1">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr><attr format="reference" name="viewAbove"/><attr format="reference" name="viewBehind"/><attr format="dimension" name="behindOffset"/><attr format="dimension" name="behindWidth"/><attr format="float" name="behindScrollScale"/><attr name="touchModeAbove">
+            <enum name="margin" value="0"/>
+            <enum name="fullscreen" value="1"/>
+        </attr><attr name="touchModeBehind">
+            <enum name="margin" value="0"/>
+            <enum name="fullscreen" value="1"/>
+        </attr><attr format="reference" name="shadowDrawable"/><attr format="dimension" name="shadowWidth"/><attr format="boolean" name="fadeEnabled"/><attr format="float" name="fadeDegree"/><attr format="boolean" name="selectorEnabled"/><attr format="reference" name="selectorDrawable"/></declare-styleable>
+    <declare-styleable name="gridPasswordView"><attr format="color|reference" name="gpvTextColor"/><attr format="dimension" name="gpvTextSize"/><attr format="color" name="gpvLineColor"/><attr format="color" name="gpvGridColor"/><attr format="dimension" name="gpvLineWidth"/><attr format="integer" name="gpvPasswordLength"/><attr format="string" name="gpvPasswordTransformation"/><attr format="enum" name="gpvPasswordType">
+            <enum name="numberPassword" value="0"/>
+            <enum name="textPassword" value="1"/>
+            <enum name="textVisiblePassword" value="2"/>
+            <enum name="textWebPassword" value="3"/>
+        </attr></declare-styleable>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="j100dp">100.0dp</dimen>
+    <dimen name="j10dp">10.0dp</dimen>
+    <dimen name="j11dp">11.0dp</dimen>
+    <dimen name="j120dp">170dp</dimen>
+    <dimen name="j12dp">12.0dp</dimen>
+    <dimen name="j17dp">17.0dp</dimen>
+    <dimen name="j1dp">1.0dp</dimen>
+    <dimen name="j200dp">200.0dp</dimen>
+    <dimen name="j2dp">2.0dp</dimen>
+    <dimen name="j30dp">30.0dp</dimen>
+    <dimen name="j320dp">320.0dp</dimen>
+    <dimen name="j3dp">3.0dp</dimen>
+    <dimen name="j40dp">40.0dp</dimen>
+    <dimen name="j44dp">44.0dp</dimen>
+    <dimen name="j500dp">500.0dp</dimen>
+    <dimen name="j50dp">50.0dp</dimen>
+    <dimen name="j5dp">5.0dp</dimen>
+    <dimen name="j60dp">60.0dp</dimen>
+    <dimen name="j8dp">8.0dp</dimen>
+    <drawable name="background">@color/background</drawable>
+    <drawable name="background_an">@color/background_an</drawable>
+    <drawable name="cao_hou">@color/background</drawable>
+    <drawable name="cao_qian">@color/white</drawable>
+    <item name="selected_view" type="id"/>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="AppTheme_pub" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/statusBarColor</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowAnimationStyle">@style/MyActivitySiwtchAnimation</item>
+    </style>
+    <style name="GridPasswordView"/>
+    <style name="GridPasswordView.Divider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+    </style>
+    <style name="GridPasswordView.EditText" parent="GridPasswordView.TextView">
+        <item name="android:cursorVisible">false</item>
+    </style>
+    <style name="GridPasswordView.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="MyActivitySiwtchAnimation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/hold</item>
+        <!--<item name="android:activityCloseEnterAnimation">@anim/push_left_in</item>-->
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_to_right</item>
+    </style>
+    <style name="default_dian">
+        <item name="android:background">@drawable/xiaohong</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:layout_width">12dp</item>
+        <item name="android:padding">1.0dip</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="default_linerlayout">
+        <item name="android:background">#00000000</item>
+        <item name="android:padding">3.0dip</item>
+        <item name="android:gravity">top|right</item>
+    </style>
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+
+        <!-- 设置无边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 设置无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置背景颜色 -->
+        <item name="android:background">#00000000</item>
+        <!-- 背景颜色及透明程度 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 设置屏幕变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="dialog_1" parent="@android:style/Theme.Dialog">
+
+        <!-- 设置无边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 设置无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置背景颜色 -->
+        <item name="android:background">@null</item>
+        <!-- 设置窗口背景 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 设置屏幕变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="menu">
+        <item name="android:background">@drawable/click_nn</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">2.0dip</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="menu_tab"/>
+    <style name="no_title_bar" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="notitle">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="text_style_10_gray">
+        <item name="android:textColor">@color/tyE4</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="text_style_11_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="text_style_11_gray">
+        <item name="android:textColor">@color/tyE4</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="text_style_11_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="text_style_13">
+        <item name="android:textColor">@color/color_66</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="text_style_13_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="text_style_13_black_noblod">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="text_style_13_gray">
+        <item name="android:textColor">@color/tyE4</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="text_style_13_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="text_style_15_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="text_style_15_gray">
+        <item name="android:textColor">@color/tyE4</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="text_style_15_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="text_style_17_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+    <style name="text_style_17_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+    <style name="text_style_18_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="text_style_18_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="text_style_19_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+    <style name="text_style_19_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+    <style name="text_style_20_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="text_style_20_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="text_style_21_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">21sp</item>
+    </style>
+    <style name="text_style_21_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">21sp</item>
+    </style>
+    <style name="text_style_22_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="text_style_22_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+</resources>

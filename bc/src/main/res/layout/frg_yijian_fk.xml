@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#f2f2f2" android:orientation="vertical" android:padding="@dimen/j10dp">
+     <EditText android:id="@+id/mEditText" style="@style/text_style_13_gray" android:layout_width="match_parent" android:layout_height="@dimen/j178dp" android:background="@drawable/bg_l_w" android:gravity="top" android:hint="在此输入框输入您宝贵的意见" android:maxLength="500" android:padding="@dimen/j10dp" />
+     <TextView android:id="@+id/clk_mTextView_next" style="@style/text_style_15_white" android:layout_width="match_parent" android:layout_height="@dimen/j40dp" android:layout_marginLeft="@dimen/j10dp" android:layout_marginRight="@dimen/j10dp" android:layout_marginTop="@dimen/j20dp" android:background="@drawable/shape_green" android:gravity="center" android:text="提交" />
+</LinearLayout>
+

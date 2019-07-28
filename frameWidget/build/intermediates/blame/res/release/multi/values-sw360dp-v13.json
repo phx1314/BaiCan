@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+        "outputFile": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-sw360dp-v13\\values-sw360dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 91
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 324,
-                        "startOffset": 363,
+                        "startOffset": 364,
                         "endColumn": 360,
-                        "endOffset": 399
+                        "endOffset": 400
                     }
                 }
             },
@@ -30,7 +30,7 @@
                     "endOffset": 133
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -49,13 +49,13 @@
                     "endOffset": 173
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 46,
-                        "startOffset": 85,
+                        "startOffset": 86,
                         "endColumn": 81,
-                        "endOffset": 120
+                        "endOffset": 121
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 214
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 563,
-                        "startOffset": 602,
+                        "startOffset": 603,
                         "endColumn": 599,
-                        "endOffset": 638
+                        "endOffset": 639
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 253
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 116,
-                        "startOffset": 155,
+                        "startOffset": 156,
                         "endColumn": 150,
-                        "endOffset": 189
+                        "endOffset": 190
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 294
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 150,
-                        "startOffset": 189,
+                        "startOffset": 190,
                         "endColumn": 186,
-                        "endOffset": 225
+                        "endOffset": 226
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 333
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 290,
-                        "startOffset": 329,
+                        "startOffset": 330,
                         "endColumn": 324,
-                        "endOffset": 363
+                        "endOffset": 364
                     }
                 }
             },
@@ -144,13 +144,13 @@
                     "endOffset": 371
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 530,
-                        "startOffset": 569,
+                        "startOffset": 570,
                         "endColumn": 563,
-                        "endOffset": 602
+                        "endOffset": 603
                     }
                 }
             },
@@ -163,13 +163,13 @@
                     "endOffset": 411
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 11,
-                        "startOffset": 50,
+                        "startOffset": 51,
                         "endColumn": 46,
-                        "endOffset": 85
+                        "endOffset": 86
                     }
                 }
             },
@@ -182,13 +182,13 @@
                     "endOffset": 452
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 186,
-                        "startOffset": 225,
+                        "startOffset": 226,
                         "endColumn": 222,
-                        "endOffset": 261
+                        "endOffset": 262
                     }
                 }
             },
@@ -201,7 +201,7 @@
                     "endOffset": 491
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -220,13 +220,13 @@
                     "endOffset": 530
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 496,
-                        "startOffset": 535,
+                        "startOffset": 536,
                         "endColumn": 530,
-                        "endOffset": 569
+                        "endOffset": 570
                     }
                 }
             },
@@ -239,13 +239,13 @@
                     "endOffset": 569
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 222,
-                        "startOffset": 261,
+                        "startOffset": 262,
                         "endColumn": 256,
-                        "endOffset": 295
+                        "endOffset": 296
                     }
                 }
             },
@@ -258,13 +258,13 @@
                     "endOffset": 608
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 430,
-                        "startOffset": 469,
+                        "startOffset": 470,
                         "endColumn": 464,
-                        "endOffset": 503
+                        "endOffset": 504
                     }
                 }
             },
@@ -277,13 +277,13 @@
                     "endOffset": 649
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 394,
-                        "startOffset": 433,
+                        "startOffset": 434,
                         "endColumn": 430,
-                        "endOffset": 469
+                        "endOffset": 470
                     }
                 }
             },
@@ -296,13 +296,13 @@
                     "endOffset": 689
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 81,
-                        "startOffset": 120,
+                        "startOffset": 121,
                         "endColumn": 116,
-                        "endOffset": 155
+                        "endOffset": 156
                     }
                 }
             },
@@ -315,13 +315,13 @@
                     "endOffset": 728
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 360,
-                        "startOffset": 399,
+                        "startOffset": 400,
                         "endColumn": 394,
-                        "endOffset": 433
+                        "endOffset": 434
                     }
                 }
             },
@@ -334,13 +334,13 @@
                     "endOffset": 767
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 256,
-                        "startOffset": 295,
+                        "startOffset": 296,
                         "endColumn": 290,
-                        "endOffset": 329
+                        "endOffset": 330
                     }
                 }
             },
@@ -353,7 +353,7 @@
                     "endOffset": 808
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -372,13 +372,13 @@
                     "endOffset": 845
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw360dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 464,
-                        "startOffset": 503,
+                        "startOffset": 504,
                         "endColumn": 496,
-                        "endOffset": 535
+                        "endOffset": 536
                     }
                 }
             }

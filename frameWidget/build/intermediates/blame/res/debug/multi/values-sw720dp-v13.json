@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+        "outputFile": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-v13\\values-sw720dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 91
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 321,
-                        "startOffset": 360,
+                        "startOffset": 361,
                         "endColumn": 357,
-                        "endOffset": 396
+                        "endOffset": 397
                     }
                 }
             },
@@ -30,7 +30,7 @@
                     "endOffset": 132
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -49,13 +49,13 @@
                     "endOffset": 171
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 45,
-                        "startOffset": 84,
+                        "startOffset": 85,
                         "endColumn": 79,
-                        "endOffset": 118
+                        "endOffset": 119
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 211
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 560,
-                        "startOffset": 599,
+                        "startOffset": 600,
                         "endColumn": 595,
-                        "endOffset": 634
+                        "endOffset": 635
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 250
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 114,
-                        "startOffset": 153,
+                        "startOffset": 154,
                         "endColumn": 148,
-                        "endOffset": 187
+                        "endOffset": 188
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 290
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 148,
-                        "startOffset": 187,
+                        "startOffset": 188,
                         "endColumn": 183,
-                        "endOffset": 222
+                        "endOffset": 223
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 328
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 288,
-                        "startOffset": 327,
+                        "startOffset": 328,
                         "endColumn": 321,
-                        "endOffset": 360
+                        "endOffset": 361
                     }
                 }
             },
@@ -144,13 +144,13 @@
                     "endOffset": 365
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 528,
-                        "startOffset": 567,
+                        "startOffset": 568,
                         "endColumn": 560,
-                        "endOffset": 599
+                        "endOffset": 600
                     }
                 }
             },
@@ -163,13 +163,13 @@
                     "endOffset": 404
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 11,
-                        "startOffset": 50,
+                        "startOffset": 51,
                         "endColumn": 45,
-                        "endOffset": 84
+                        "endOffset": 85
                     }
                 }
             },
@@ -182,13 +182,13 @@
                     "endOffset": 445
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 183,
-                        "startOffset": 222,
+                        "startOffset": 223,
                         "endColumn": 219,
-                        "endOffset": 258
+                        "endOffset": 259
                     }
                 }
             },
@@ -201,7 +201,7 @@
                     "endOffset": 484
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -220,13 +220,13 @@
                     "endOffset": 522
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 495,
-                        "startOffset": 534,
+                        "startOffset": 535,
                         "endColumn": 528,
-                        "endOffset": 567
+                        "endOffset": 568
                     }
                 }
             },
@@ -239,13 +239,13 @@
                     "endOffset": 561
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 219,
-                        "startOffset": 258,
+                        "startOffset": 259,
                         "endColumn": 253,
-                        "endOffset": 292
+                        "endOffset": 293
                     }
                 }
             },
@@ -258,13 +258,13 @@
                     "endOffset": 600
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 428,
-                        "startOffset": 467,
+                        "startOffset": 468,
                         "endColumn": 462,
-                        "endOffset": 501
+                        "endOffset": 502
                     }
                 }
             },
@@ -277,13 +277,13 @@
                     "endOffset": 642
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 391,
-                        "startOffset": 430,
+                        "startOffset": 431,
                         "endColumn": 428,
-                        "endOffset": 467
+                        "endOffset": 468
                     }
                 }
             },
@@ -296,13 +296,13 @@
                     "endOffset": 682
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 79,
-                        "startOffset": 118,
+                        "startOffset": 119,
                         "endColumn": 114,
-                        "endOffset": 153
+                        "endOffset": 154
                     }
                 }
             },
@@ -315,13 +315,13 @@
                     "endOffset": 721
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 357,
-                        "startOffset": 396,
+                        "startOffset": 397,
                         "endColumn": 391,
-                        "endOffset": 430
+                        "endOffset": 431
                     }
                 }
             },
@@ -334,13 +334,13 @@
                     "endOffset": 761
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 253,
-                        "startOffset": 292,
+                        "startOffset": 293,
                         "endColumn": 288,
-                        "endOffset": 327
+                        "endOffset": 328
                     }
                 }
             },
@@ -353,7 +353,7 @@
                     "endOffset": 802
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -372,13 +372,13 @@
                     "endOffset": 840
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp\\dpdim.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 462,
-                        "startOffset": 501,
+                        "startOffset": 502,
                         "endColumn": 495,
-                        "endOffset": 534
+                        "endOffset": 535
                     }
                 }
             }

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "outputFile": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 109
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 239,
+                        "startOffset": 246,
                         "endColumn": 58,
-                        "endOffset": 293
+                        "endOffset": 300
                     }
                 }
             }

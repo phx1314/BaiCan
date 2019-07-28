@@ -12,6 +12,8 @@
             <option value="$PROJECT_DIR$/andframework-release" />
             <option value="$PROJECT_DIR$/bc" />
             <option value="$PROJECT_DIR$/frameWidget" />
+            <option value="$PROJECT_DIR$/pertraitbodychecklibrary" />
+            <option value="$PROJECT_DIR$/picRecognize" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

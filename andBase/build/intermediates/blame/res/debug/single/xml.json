@@ -1,30 +1,30 @@
 [
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\xml\\file_paths.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\xml\\file_paths.xml"
+        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\xml\\image_config.xml",
+        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\xml\\image_config.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\xml\\error_config.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\xml\\error_config.xml"
+        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\xml\\tools_config.xml",
+        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\xml\\tools_config.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\xml\\log_config.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\xml\\log_config.xml"
+        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\xml\\file_paths.xml",
+        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\xml\\file_paths.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\xml\\tools_config.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\xml\\tools_config.xml"
+        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\xml\\error_config.xml",
+        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\xml\\error_config.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\xml\\base_config.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\xml\\base_config.xml"
+        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\xml\\base_config.xml",
+        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\xml\\base_config.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\xml\\api_config.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\xml\\api_config.xml"
+        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\xml\\log_config.xml",
+        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\xml\\log_config.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\xml\\image_config.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\xml\\image_config.xml"
+        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\xml\\api_config.xml",
+        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\xml\\api_config.xml"
     }
 ]

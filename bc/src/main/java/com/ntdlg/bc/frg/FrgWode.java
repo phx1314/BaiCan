@@ -154,27 +154,10 @@ public class FrgWode extends BaseFrg {
             return;
         }
         if (R.id.clk_mTextView_hd == v.getId()) {
-//            new ShareAction(getActivity()).withText("hello")
-//                    .setDisplayList(SHARE_MEDIA.SINA, SHARE_MEDIA.QQ, SHARE_MEDIA.WEIXIN)
-//                    .setCallback(new UMShareListener() {
-//                        @Override
-//                        public void onResult(SHARE_MEDIA share_media) {
-//
-//                        }
-//
-//                        @Override
-//                        public void onError(SHARE_MEDIA share_media, Throwable throwable) {
-//
-//                        }
-//
-//                        @Override
-//                        public void onCancel(SHARE_MEDIA share_media) {
-//
-//                        }
-//                    }).open();
             if (mModelShare != null)
                 com.framewidget.F.getShare(getContext(), "", mModelShare.url
                         , mModelShare.content, mModelShare.title);
+//            Helper.startActivity(getContext(),FrgSign.class,TitleAct.class);
         } else if (R.id.mLinearLayout_1 == v.getId()) {
             Helper.startActivity(getContext(), FrgWodeJk.class, TitleAct.class, "mModelZHZX", mModelZHZX);
         } else if (R.id.mLinearLayout_2 == v.getId()) {

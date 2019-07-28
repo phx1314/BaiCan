@@ -7,6 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/andframework-release/andframework-release.iml" filepath="$PROJECT_DIR$/andframework-release/andframework-release.iml" />
       <module fileurl="file://$PROJECT_DIR$/bc/bc.iml" filepath="$PROJECT_DIR$/bc/bc.iml" />
       <module fileurl="file://$PROJECT_DIR$/frameWidget/frameWidget.iml" filepath="$PROJECT_DIR$/frameWidget/frameWidget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pertraitbodychecklibrary/pertraitbodychecklibrary.iml" filepath="$PROJECT_DIR$/pertraitbodychecklibrary/pertraitbodychecklibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/picRecognize/picRecognize.iml" filepath="$PROJECT_DIR$/picRecognize/picRecognize.iml" />
     </modules>
   </component>
 </project>

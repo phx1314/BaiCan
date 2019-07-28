@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v19\\values-v19.xml",
+        "outputFile": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v19\\values-v19.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 559
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-v19\\values-v19.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-v19\\values-v19.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -33,7 +33,7 @@
                     "endOffset": 1069
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-v19\\values-v19.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-v19\\values-v19.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -54,7 +54,7 @@
                     "endOffset": 1579
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-v19\\values-v19.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-v19\\values-v19.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -75,7 +75,7 @@
                     "endOffset": 1698
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-v19\\values-v19.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-v19\\values-v19.xml",
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -96,7 +96,7 @@
                     "endOffset": 1825
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-v19\\values-v19.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-v19\\values-v19.xml",
                     "position": {
                         "startLine": 32,
                         "startColumn": 4,
@@ -117,7 +117,7 @@
                     "endOffset": 1950
                 },
                 "from": {
-                    "file": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-v19\\values-v19.xml",
+                    "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values-v19\\values-v19.xml",
                     "position": {
                         "startLine": 35,
                         "startColumn": 4,

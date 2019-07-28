@@ -42,11 +42,12 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile project(':andBase')
+    compile project(':picRecognize')
     compile(name: 'moxie-client-1.2.1', ext: 'aar')
     compile 'com.jakewharton:butterknife:8.2.0'
     compile 'org.greenrobot:eventbus:3.0.0'
     compile(name: 'idsafestep-V4.2-2017_07_10', ext: 'aar')
     compile 'com.github.thinkcool:circletextimageview:1.0.20151218'
+    compile 'com.github.F1ReKing:SignatureView:v1.0.0'
     apt 'com.jakewharton:butterknife-compiler:8.2.0'
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pertraitbodycheck.activity">
+
+
+    <application>
+        <activity android:name="com.facefr.activity.PictureActivity"></activity>
+        <activity android:name="com.facefr.activity.ResultActivity"></activity>
+        <activity android:name="com.facefr.activity.AuthActivity"></activity>
+
+    </application>
+
+</manifest>

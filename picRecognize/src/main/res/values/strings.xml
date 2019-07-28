@@ -1,0 +1,42 @@
+<resources>
+
+    <string name="app_name">PicRecognize</string>
+    <string name="server_address_defvalue">https://122.112.217.80:9444/AuthAppServerProject/</string>
+    <string name="frame_show_key">frame_show_key</string>
+    <string name="bestphoto_count_key">bestphoto_count_key</string>
+    <string name="isneilflag_key">isneilflag_key</string>
+    <string name="username_key">username_key</string>
+    <string name="password_key">password_key</string>
+    <string name="version_id_key">version_id</string>
+    <string name="version_des_key">version_des</string>
+    <string name="server_address_key">server_address_key</string>
+    <string name="project_id_key">project_id_key</string>
+    <string name="surface_size_key">surface_size_key</string>
+    <string name="save_photo_key">save_photo_key</string>
+    <string name="auto_pic_key">auto_pic_key</string>
+    <string name="check_only_body_key">check_only_body_key</string>
+    <string name="server_address_summary">设置后台服务器地址</string>
+    <string name="cancel">取消</string>
+    <string name="auto_bestphoto_count_defvalue">1</string>
+    <string name="frame_show_defvalue">false</string>
+    <string name="surface_size_defvalue">0</string>
+    <string name="version_info">版本信息</string>
+    <string name="version_info_key">version_info_key</string>
+    <string name="app_version_key">app_version_key</string>
+    <string name="version_control_info">版本控制信息</string>
+    <string name="app_version">app版本号</string>
+    <string name="open_tick_defvalue">true</string>
+    <string name="choose_tick_key">choose_tick_key</string>
+    <string name="is_open_tick_key">is_open_tick_key</string>
+    <string name="is_open_tick_title">倒计时声音</string>
+
+    <string name="fail_to_contect_camcard">打开相机失败</string>
+    <string name="cui_rotation_title">旋转</string>
+    <string name="img_describe">--</string>
+    <string name="login_show">请仔细核对信息，如果有误请点击</string>
+    <string name="login_name">姓名</string>
+    <string name="login_idcard">身份证</string>
+    <string name="rem_pwd">保存信息</string>
+    <string name="label_repicture">重新拍摄</string>
+
+</resources>

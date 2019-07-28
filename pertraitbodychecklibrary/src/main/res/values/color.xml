@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <!-- 按钮文字白色 -->
+    <color name="btn_text">#ffffff</color>
+    <!-- activity背景蓝色;拍照按钮 -->
+    <color name="activity_info_bg">#0386C9</color>
+    <!-- 蓝色按钮 -->
+    <color name="btn_next">#0788ca</color>
+    <!-- activity背景白色 -->
+    <color name="activity_main_bg">#f1ece8</color>
+
+    <!-- 结果页面深蓝色 -->
+    <color name="result_bg">#016191</color>
+
+    <!-- 比对结果 -->
+    <color name="result_success">#016191</color>
+    <color name="result_fail">#c09853</color>
+    <color name="result_error">#c73939</color>
+
+    <!-- 白色字体 -->
+    <color name="white">#FFFFFF</color>
+    <!-- 黑色字体 -->
+    <color name="black">#000000</color>
+    
+    <!-- 认证结果-成功-绿色 -->
+    <color name="alert_success">#81ad53</color>
+    <!-- 认证结果-错误-红色 -->
+    <color name="alert_danger">#d5393e</color>
+    <!-- 认证结果-警告-褐色 -->
+    <color name="alert_warn">#c09853</color>
+    <!-- 信息 -->
+    <color name="alert_info">#4993c6</color>
+
+    <!--#00000000-->
+
+    <!-- 透明 -->
+    <color name="clear">#00000000</color>
+
+    <!-- 红色 -->
+    <color name="red">#FF0000</color>
+    <!-- 亮绿色 -->
+    <color name="lightgreen">#90EE90</color>
+    
+    <color name="desc_right">#0788ca</color>
+    <color name="desc_erro">#e90334</color>
+    
+      <color name="range_up_100">#08d123</color> 
+ <color name="range_down_100">#e90334</color>
+
+</resources>

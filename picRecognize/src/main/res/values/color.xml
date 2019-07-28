@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cui_list_selector_normal">#00000000</color>
+    <color name="cui_list_selector_pressed">#FF4B5D70</color>
+     <color name="white">#FFFFFF</color><!-- 白色字体  --> 
+     <color name="black">#000000</color><!-- 黑色字体 -->
+     <color name="ocr_txt">#DCCFC5</color>
+ <color name="activity_info_bg">#2094DA</color>
+    <color name="transparent">#00000000</color>
+</resources>

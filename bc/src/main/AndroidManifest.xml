@@ -154,12 +154,17 @@
             android:value="59c9af7f8630f53f65000047" />
         <meta-data
             android:name="UMENG_CHANNEL"
-            android:value="共享时贷" />
+            android:value="百灿" />
         <!-- *************************     related to Share END **************************** -->
         <activity
             android:name="com.ntdlg.bc.wxapi.WXEntryActivity"
             android:exported="true"
-            android:label="@string/app_name" />
+            android:label="百灿" />
+        <!-- 必选-->
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="b1cc32d88f8962181e0656a5e19f974d" >
+        </meta-data>
     </application>
 
 </manifest>

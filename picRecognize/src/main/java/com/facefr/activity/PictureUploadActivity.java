@@ -5,7 +5,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -31,7 +30,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.provider.SyncStateContract;
+import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -55,28 +54,31 @@ import android.widget.Toast;
 
 import com.facefr.activity_ocr.R;
 import com.facefr.bean.CollectInfoInstance;
+import com.facefr.bean.ModelSF;
 import com.facefr.util.BmpUtil;
 import com.facefr.util.MiniBitmap;
+import com.google.gson.Gson;
 import com.intsig.scanner.ScannerEngine;
 import com.intsig.scanner.ScannerSDK;
+import com.mdx.framework.Frame;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 
-import static com.facefr.activity_ocr.R.id.take_photo_id;
-
 public class PictureUploadActivity extends Activity implements Camera.PreviewCallback {
 
 	public static final String EXTRA_KEY_APP_KEY = "EXTRA_KEY_APP_KEY";
 	public static final String EXTRA_KEY_IMG_CAMERA_PATH = "EXTRA_KEY_IMG_CAMERA_PATH";
-	private static final String APPKEY = "yXa527R1SdQeUhYYHUL28YJ5";
+	private static final String APPKEY = "yh2NDK9692y5LaLTh2PLNRBS";
 	private Preview mPreview = null;
 	private Camera mCamera = null;
 	private int numberOfCameras;
@@ -98,7 +100,7 @@ public class PictureUploadActivity extends Activity implements Camera.PreviewCal
 
 	private int mEngineContext;
 	private DetectThread mDetectThread = null;
-
+	private String from;
 	ScannerSDK mScannerSDK;
 	RelativeLayout rootView;
 
@@ -122,6 +124,7 @@ public class PictureUploadActivity extends Activity implements Camera.PreviewCal
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		from=getIntent().getStringExtra("from");
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		Window window = getWindow();
 		window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -482,9 +485,19 @@ public class PictureUploadActivity extends Activity implements Camera.PreviewCal
 		//压缩后的身份证翻拍照
 		Toast.makeText(getApplicationContext(), "拿到照片", 2000).show();
 		CollectInfoInstance.getInstance().setFrontId(BmpUtil.Bitmap2Bytes(bm));
-		Intent intent = new Intent(getApplicationContext(),
-				ResultActivity.class);
-		startActivity(intent);
+//		Intent intent = new Intent(getApplicationContext(),
+//				ResultActivity.class);
+//		startActivity(intent);
+//		ModelSF response = new Gson().fromJson(result, ModelSF.class);
+//		if (response != null && !TextUtils.isEmpty(response.idcard_front_photo)) {
+//			try {
+//				response.idcard_front_photo = URLDecoder.decode(response.idcard_front_photo, "UTF-8");
+//				response.idcard_back_photo = URLDecoder.decode(response.idcard_back_photo, "UTF-8");
+//				Frame.HANDLES.sentAll(from, 120, response);
+//			} catch (UnsupportedEncodingException e) {
+//				e.printStackTrace();
+//			}
+//		}
 		finish();
 
 	}
@@ -602,7 +615,6 @@ public class PictureUploadActivity extends Activity implements Camera.PreviewCal
 	 * 临时储存
 	 *
 	 * @param bitmap
-	 * @param imageName
 	 * @throws IOException
 	 */
 	public  String saveTemp(Bitmap bitmap) {

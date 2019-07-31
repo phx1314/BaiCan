@@ -1,5 +1,6 @@
 package com.ntdlg.bc;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -21,15 +22,15 @@ import android.widget.Toast;
 
 import com.ab.util.AbDateUtil;
 import com.ab.util.AbMd5;
-import com.authreal.api.AuthBuilder;
-import com.authreal.api.OnResultListener;
-import com.face.bsdk.crypt.Md5;
+import com.facefr.activity.PictureUploadActivity;
+import com.facefr.controller.Controller;
+import com.facefr.controller.SampleControllerCallBack;
+import com.facefr.controller.StyleModel;
 import com.google.gson.Gson;
 import com.mdx.framework.Frame;
 import com.mdx.framework.utility.Helper;
+import com.mdx.framework.utility.permissions.PermissionRequest;
 import com.moxie.client.model.MxParam;
-import com.ntdlg.bc.model.ModelHT;
-import com.ntdlg.bc.model.ModelSF;
 import com.ntdlg.bc.view.SortModel;
 
 import org.json.JSONObject;
@@ -38,11 +39,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLDecoder;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -58,7 +57,7 @@ public class F {
 //    public static String mApiKey = "924fe49d1902490b9db135d4851b0dbf";
 //    public static String mUserId = "2e3526ec62ee48e8b804b7c308a5db2f";                                  //合作方系统中的客户ID
     public static String mUserId = com.ntdlg.bc.F.UserId;                                  //合作方系统中的客户ID
-//    public static String mApiKey = "54642b1be96a4117a8bc0f01f46a621f";      //获取任务状态时使用
+    //    public static String mApiKey = "54642b1be96a4117a8bc0f01f46a621f";      //获取任务状态时使用
     public static String mApiKey = "ab81c5bb5d95462fb02d0b267e0a8ff2";      //获取任务状态时使用
     public static String mBannerColor = "#000000"; //标题栏背景色
     public static String mTextColor = "#ffffff";  //标题栏字体颜色
@@ -76,14 +75,12 @@ public class F {
     public static String basicInfo = "/api/customer/basicInfo";
     public static String professionInfo = "/api/customer/professionInfo";
     public static String linkManInfo = "/api/customer/linkManInfo";
-    public static String phoneAuth = "/api/customer/phoneAuth";
     public static String getPlatform = "/api/customer/getPlatform";
     public static String getInfo = "/api/customer/getInfo";
     public static String queryCards = "/api/customer/queryCards";
     public static String queryBill = "/api/customer/queryBill";
     public static String myBill = "/api/customer/myBill";
     public static String updateversion = "/updateversion";
-    public static String addopinion = "/api/customer/addopinion";
     public static String applyDeadline = "/applyDeadline";
     public static String sendSms = "/sendSms";
     public static String profrssion = "/api/customer/profrssion";
@@ -91,13 +88,10 @@ public class F {
     public static String relation = "/api/customer/relation";
     public static String jingdongAuth = "/api/customer/jingdongAuth";
     public static String taobaoAuth = "/api/customer/taobaoAuth";
-    public static String zhifubaoAuth = "/api/customer/zhifubaoAuth";
     public static String gongjijinAuth = "/api/customer/gongjijinAuth";
-    public static String shebaoAuth = "/api/customer/shebaoAuth";
     public static String xuexinwangAuth = "/api/customer/xuexinwangAuth";
     public static String yunyingshangAuth = "/api/customer/yunyingshangAuth";
     public static String orderAuth = "/api/customer/orderAuth";
-    public static String setNicheng = "/api/customer/setNicheng";
     public static String setPhoto = "/api/customer/setPhoto";
     public static String chekNumber = "/api/customer/chekNumber";
     public static String applyPromote = "/api/customer/applyPromote";
@@ -107,12 +101,12 @@ public class F {
     public static String logout = "/api/customer/logout";
     public static String beginApply = "/api/customer/beginApply";
     public static String bioAssay = "/api/customer/bioAssay";
-    public static String scanBackCard = "/api/customer/scanBackCard";
     public static String setDefaultBank = "/api/customer/setDefaultBank";
     public static String bankBind = "/api/customer/bankBind";
+    public static String bankBindOne = "/api/customer/bankBindOne";
+    public static String bankBindTwo = "/api/customer/bankBindTwo";
     public static String bank = "/api/customer/bank";
     public static String loadProduct = "/loadProduct";
-    public static String nextStep = "/api/customer/nextStep";
     public static String submitCkeck = "/api/customer/submitCkeck";
     public static String affirmBorrowData = "/api/customer/affirmBorrowData";
     public static String getUserCard = "/api/customer/getUserCard";
@@ -120,10 +114,10 @@ public class F {
     public static String pay = "/api/customer/pay";
     public static String upRepayPic = "/api/customer/upRepayPic";
     public static String share = "/api/customer/share";
-    public static String savePhone = "/api/customer/savePhone";
     public static String showAgreement = "/api/customer/showAgreement";
     public static String getOfflineData = "/api/customer/getOfflineData";
     public static String document = "/api/customer/document";
+    public static String esgin = "/api/customer/esign";
 
     public static void Login(String mUserId, String token, String reftoken) {
         SharedPreferences sp = PreferenceManager
@@ -158,16 +152,17 @@ public class F {
             return date;
         }
     }
-    public static String getSDPath(){
+
+    public static String getSDPath() {
         File sdDir = null;
         boolean sdCardExist = Environment.getExternalStorageState()
                 .equals(android.os.Environment.MEDIA_MOUNTED);//判断sd卡是否存在
-        if(sdCardExist)
-        {
+        if (sdCardExist) {
             sdDir = Environment.getExternalStorageDirectory();//获取跟目录
         }
         return sdDir.toString();
     }
+
     public static String getTime(String time) {
         if (!TextUtils.isEmpty(time)) {
             String data = "";
@@ -227,12 +222,6 @@ public class F {
         return Base64.encodeToString(bitmap2Byte(picpathcrop), Base64.DEFAULT);
     }
 
-    // T-B(活体检测+人像比对)
-    public static void mTBlivessCompare(Activity activity, String packageSessionId, String from) {
-        AuthBuilder authBuilder = getAuthBuilder(from);
-        authBuilder.setPackageCode("TC009");
-        authBuilder.livenessCompare(activity, packageSessionId);
-    }
 
     public static byte[] bitmap2Byte(String picpathcrop) {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -263,14 +252,103 @@ public class F {
         return out.toByteArray();
     }
 
-    // T-A(OCR+身份认证)
-    public static void mTAocrVerify(Activity context, String from) {
-        AuthBuilder authBuilder = getAuthBuilder(from);
-        authBuilder.setPackageCode("TC009");
-//        authBuilder.isHandOcr(true);
-        authBuilder.isShowConfirm(false);// TODO: 2016/12/28 OCR之后需要确认身份证识别信息
-        authBuilder.ocrVerify(context, "");
+    // T-B(活体检测)
+    public static void mTBlivessCompare(final Activity activity, String packageSessionId, final String from) {
+//        AuthBuilder authBuilder = getAuthBuilder(from);
+//        authBuilder.setPackageCode("TC009");
+//        authBuilder.livenessCompare(activity, packageSessionId);
+
+        Helper.requestPermissions(new String[]{Manifest.permission.CAMERA}, new PermissionRequest() {
+            @Override
+            public void onGrant(String[] strings, int[] ints) {
+                StyleModel model = new StyleModel();
+//		可以设置各种属性（也可以不设置，按照默认值来），如：
+//		model.resContentBgColor = Color.parseColor("#181818");
+//		model.resActionBackImg = R.drawable.base_map;
+//		model.actCount = 1;
+//		model.actType = EnumInstance.EActType.act_shake;
+                SampleControllerCallBack sampleControllerCallBack = new SampleControllerCallBack() {
+                    //重写两个回调函数
+                    @Override
+                    public void onBack() {
+                        System.out.println("回调：点击了返回");
+                        //如果有需要，可以在这里做点击返回后要做的事情
+                    }
+
+                    @Override
+                    public void onAllStepCompleteCallback(boolean isSuccess, String dataPage) {
+                        if (isSuccess) {
+                            System.out.println("回调：活体检测成功");
+                            Frame.HANDLES.sentAll(from, 130, null);
+                        } else {
+                            Helper.toast("活体检测失败", Frame.CONTEXT);
+                        }
+                    }
+
+                };
+                //开始
+                Controller.getInstance(activity).setCallBack(sampleControllerCallBack).show(model);
+            }
+        });
     }
+
+
+    // T-A(身份认证)
+    public static void mTAocrVerify(Activity context, String from) {
+//        AuthBuilder authBuilder = getAuthBuilder(from);
+//        authBuilder.setPackageCode("TC009");
+////        authBuilder.isHandOcr(true);
+//        authBuilder.isShowConfirm(false);// TODO: 2016/12/28 OCR之后需要确认身份证识别信息
+//        authBuilder.ocrVerify(context, "");
+        context.startActivity(new Intent(context, PictureUploadActivity.class).putExtra("from",from));
+    }
+
+//    public static AuthBuilder getAuthBuilder(final String from) {
+//        /** 测试环境 */
+////        String partner_order_id =  "201706140554";
+//        String partner_order_id = System.currentTimeMillis() + "";
+//        String pubKey = "64cbd1d8-1fc3-43b7-aad3-408be531d86f";
+//        String security_key = "c6c0bdf2-a9ad-4ddc-aab4-5acd2483eb38";
+//
+//        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+//        String sign_time = simpleDateFormat.format(new Date());
+//        String singStr = "pub_key=" + pubKey + "|partner_order_id=" + partner_order_id + "|sign_time=" + sign_time + "|security_key=" + security_key;
+//        String sign = Md5.encrypt(singStr);
+//        AuthBuilder authBuilder = new AuthBuilder(partner_order_id, pubKey, sign_time, sign, new OnResultListener() {
+//            @Override
+//            public void onResult(int op_type, String result) {
+//                switch (op_type) {
+//                    case AuthBuilder.OPTION_EOORO://流程终端异常,例如 用户返回
+//
+//                        break;
+//                    case AuthBuilder.OPTION_COMPARE://活体检测结果回调
+//                        ModelHT response1 = new Gson().fromJson(result, ModelHT.class);
+//                        if (response1 != null && !TextUtils.isEmpty(response1.auth_result)) {
+//                            if (response1.auth_result.equals("T")) {
+//                                Frame.HANDLES.sentAll(from, 130, null);
+//                            } else {
+//                                Helper.toast("认证未通过", Frame.CONTEXT);
+//                            }
+//                        }
+//                        break;
+//                    case AuthBuilder.OPTION_OCR://人像比对结果回调
+//                        ModelSF response = new Gson().fromJson(result, ModelSF.class);
+//                        if (response != null && !TextUtils.isEmpty(response.idcard_front_photo)) {
+//                            try {
+//                                response.idcard_front_photo = URLDecoder.decode(response.idcard_front_photo, "UTF-8");
+//                                response.idcard_back_photo = URLDecoder.decode(response.idcard_back_photo, "UTF-8");
+//                                Frame.HANDLES.sentAll(from, 120, response);
+//                            } catch (UnsupportedEncodingException e) {
+//                                e.printStackTrace();
+//                            }
+//                        }
+//                        break;
+//                }
+//            }
+//
+//        });
+//        return authBuilder;
+//    }
 
     public static void getUrl(final String url, final String from, final int type) {
         try {
@@ -296,52 +374,6 @@ public class F {
         }
     }
 
-    public static AuthBuilder getAuthBuilder(final String from) {
-        /** 测试环境 */
-//        String partner_order_id =  "201706140554";
-        String partner_order_id = System.currentTimeMillis() + "";
-        String pubKey = "64cbd1d8-1fc3-43b7-aad3-408be531d86f";
-        String security_key = "c6c0bdf2-a9ad-4ddc-aab4-5acd2483eb38";
-
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
-        String sign_time = simpleDateFormat.format(new Date());
-        String singStr = "pub_key=" + pubKey + "|partner_order_id=" + partner_order_id + "|sign_time=" + sign_time + "|security_key=" + security_key;
-        String sign = Md5.encrypt(singStr);
-        AuthBuilder authBuilder = new AuthBuilder(partner_order_id, pubKey, sign_time, sign, new OnResultListener() {
-            @Override
-            public void onResult(int op_type, String result) {
-                switch (op_type) {
-                    case AuthBuilder.OPTION_EOORO://流程终端异常,例如 用户返回
-
-                        break;
-                    case AuthBuilder.OPTION_COMPARE://活体检测结果回调
-                        ModelHT response1 = new Gson().fromJson(result, ModelHT.class);
-                        if (response1 != null && !TextUtils.isEmpty(response1.auth_result)) {
-                            if (response1.auth_result.equals("T")) {
-                                Frame.HANDLES.sentAll(from, 130, null);
-                            } else {
-                                Helper.toast("认证未通过", Frame.CONTEXT);
-                            }
-                        }
-                        break;
-                    case AuthBuilder.OPTION_OCR://人像比对结果回调
-                        ModelSF response = new Gson().fromJson(result, ModelSF.class);
-                        if (response != null && !TextUtils.isEmpty(response.idcard_front_photo)) {
-                            try {
-                                response.idcard_front_photo = URLDecoder.decode(response.idcard_front_photo, "UTF-8");
-                                response.idcard_back_photo = URLDecoder.decode(response.idcard_back_photo, "UTF-8");
-                                Frame.HANDLES.sentAll(from, 120, response);
-                            } catch (UnsupportedEncodingException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                        break;
-                }
-            }
-
-        });
-        return authBuilder;
-    }
 
     /**
      * 加载联系人数据
@@ -473,7 +505,7 @@ public class F {
             System.out.println(fields.length);
             for (Field field : fields) {
                 field.setAccessible(true);
-                if (!field.getName().equals("sign") && !TextUtils.isEmpty(field.get(tb).toString())) {
+                if (!field.getName().equals("sign") && field.get(tb) != null && !TextUtils.isEmpty(field.get(tb).toString())) {
                     map.put(field.getName(), TextUtils.isEmpty(field.get(tb).toString()) ? "" : field.get(tb).toString());
                     list.add(field.getName());
                 }
@@ -482,7 +514,7 @@ public class F {
                 Field[] fields_father = tb.getClass().getSuperclass().getDeclaredFields();
                 for (Field field : fields_father) {
                     field.setAccessible(true);
-                    if (!field.getName().equals("sign") && !TextUtils.isEmpty(field.get(tb).toString())) {
+                    if (!field.getName().equals("sign") && field.get(tb) != null && !TextUtils.isEmpty(field.get(tb).toString())) {
                         map.put(field.getName(), TextUtils.isEmpty(field.get(tb).toString()) ? "" : field.get(tb).toString());
                         list.add(field.getName());
                     }

@@ -21,10 +21,6 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.ab.http.HttpUtil;
-import com.facefr.activity.ResultActivity;
-import com.facefr.controller.Controller;
-import com.facefr.controller.SampleControllerCallBack;
-import com.facefr.controller.StyleModel;
 import com.framewidget.newMenu.OnCheckChange;
 import com.framewidget.newMenu.OnPageSelset;
 import com.framewidget.newMenu.SlidingFragment;
@@ -127,51 +123,9 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
         mBeanupdateversion.version = getVersionCode();
         mBeanupdateversion.sign = readClassAttr(mBeanupdateversion);
         loadJsonUrlNoshow(updateversion, new Gson().toJson(mBeanupdateversion));
-//        Helper.requestPermissions(new String[]{Manifest.permission.CAMERA }, new PermissionRequest() {
-//            @Override
-//            public void onGrant(String[] strings, int[] ints) {
-//                onNext();
-//            }
-//        });
-//        startActivity(new Intent(getActivity(), PictureUploadActivity.class));
+
     }
 
-    //进入活体界面
-    private void onNext() {
-        StyleModel model = new StyleModel();
-//		可以设置各种属性（也可以不设置，按照默认值来），如：
-//		model.resContentBgColor = Color.parseColor("#181818");
-//		model.resActionBackImg = R.drawable.base_map;
-//		model.actCount = 1;
-//		model.actType = EnumInstance.EActType.act_shake;
-        SampleControllerCallBack sampleControllerCallBack = new SampleControllerCallBack() {
-            //重写两个回调函数
-            @Override
-            public void onBack() {
-                System.out.println("回调：点击了返回");
-                //如果有需要，可以在这里做点击返回后要做的事情
-
-            }
-
-            @Override
-            public void onAllStepCompleteCallback(boolean isSuccess, String dataPage) {
-                if (isSuccess) {
-                    System.out.println("回调：活体检测成功");
-                    //如果成功，dataPage就是data数据包，可用于上传
-
-                } else {
-                    System.out.println("回调：活体检测失败");
-                    //如果失败，则dataPage为空
-                }
-                //这里做活体完成后要做的事情,比如跳转
-                Intent intent = new Intent(getActivity(), ResultActivity.class);
-                startActivity(intent);
-            }
-
-        };
-        //开始
-        Controller.getInstance(getActivity()).setCallBack(sampleControllerCallBack).show(model);
-    }
 
     @Override
     public void onSuccess(String methodName, String content) {

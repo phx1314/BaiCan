@@ -19,7 +19,7 @@ public class BeanFSDXYZM implements Serializable {
     public String sign ="";
 
 
-    public String type = "";
+//    public String type = "";
     public String phone = "";
 
 

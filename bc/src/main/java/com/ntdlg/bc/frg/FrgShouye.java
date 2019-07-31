@@ -156,14 +156,14 @@ public class FrgShouye extends BaseFrg {
                 if (mModelYHZXDD != null && mModelYHZXDD.result.equals("9")) {
                     Helper.startActivity(getContext(), FrgZhangdan.class, TitleAct.class, "title", "我的账单");
                 } else {
-                    Helper.startActivity(getContext(), FrgPtDetail.class, NoTitleAct.class, "url", BaseConfig.getUri()+ "/other/show.html?type=" + 1, "title", "新手指引");
+                    Helper.startActivity(getContext(), FrgPtDetail.class, NoTitleAct.class, "url", BaseConfig.getUri() + "/other/show.html?type=" + 1, "title", "新手指引");
                 }
             }
         });
         clk_mTextView_hd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Helper.startActivity(getContext(), FrgPtDetail.class, NoTitleAct.class, "url", BaseConfig.getUri()+"/other/show.html?type=" + 3, "title", "活动");
+                Helper.startActivity(getContext(), FrgPtDetail.class, NoTitleAct.class, "url", BaseConfig.getUri() + "/other/show.html?type=" + 3, "title", "活动");
             }
         });
         mTextView_shenqing.setOnClickListener(Helper.delayClickLitener(new View.OnClickListener() {
@@ -216,13 +216,13 @@ public class FrgShouye extends BaseFrg {
     public void onSuccess(String methodName, String content) {
         if (methodName.equals(chekNumber)) {
             mModelYHZXDD = (ModelYHZXDD) json2Model(content, ModelYHZXDD.class);
-            F.saveApplyId(mModelYHZXDD.applyId);
+//            F.saveApplyId(mModelYHZXDD.applyId);
             if (mModelYHZXDD.result.equals("9")) {//未结清
                 mTextView_xinshou.setText(mModelYHZXDD.currentPeriords + "/" + mModelYHZXDD.totalPeriords + " 最后还款日 " + changeTime(mModelYHZXDD.endDate));
             }
         } else if (methodName.equals("chekNumber2")) {
             mModelYHZXDD = (ModelYHZXDD) json2Model(content, ModelYHZXDD.class);
-            F.saveApplyId(mModelYHZXDD.applyId);
+//            F.saveApplyId(mModelYHZXDD.applyId);
             BeanKSJK mBeanKSJK = new BeanKSJK();
             mBeanKSJK.result = mModelYHZXDD.result;
             mBeanKSJK.applyId = mModelYHZXDD.applyId;
@@ -252,6 +252,7 @@ public class FrgShouye extends BaseFrg {
             setLv(mTextView_num.getText().toString(), mTextView_zhou.getText().toString());
         } else if (methodName.equals(rapidLoan)) {
             mModelKSJK = (ModelKSJK) json2Model(content, ModelKSJK.class);
+            F.saveApplyId(mModelKSJK.applyId);
             if (mModelKSJK.result.equals("0") || mModelKSJK.result.equals("2")) {
                 Helper.startActivity(getContext(), FrgRenzhengxinxi.class, TitleAct.class);
             } else if (mModelKSJK.result.equals("1")) {

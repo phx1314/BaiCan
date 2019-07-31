@@ -3,12 +3,10 @@ package com.framewidget.newMenu;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.mdx.framework.widget.MViewPager;
-
 /**
  *
  */
-public class DfMViewPager extends MViewPager {
+public class DfMViewPager extends UnsildeViewPager {
     public ICallback callback;
     public MoveCallback mMoveCallback;
 

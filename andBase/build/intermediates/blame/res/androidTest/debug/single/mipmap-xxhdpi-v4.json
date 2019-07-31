@@ -1,14 +1,14 @@
 [
     {
-        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxhdpi-v4\\sr_ic_error_n.png",
-        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\mipmap-xxhdpi-v4\\sr_ic_error_n.png"
+        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxhdpi-v4\\sr_ic_nodata_n.png",
+        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\mipmap-xxhdpi-v4\\sr_ic_nodata_n.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxhdpi-v4\\sr_ic_nodata_n.png",
-        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\mipmap-xxhdpi-v4\\sr_ic_nodata_n.png"
+        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxhdpi-v4\\fw_pull_down_n.png",
+        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\mipmap-xxhdpi-v4\\fw_pull_down_n.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxhdpi-v4\\fw_pull_down_n.png",
-        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\mipmap-xxhdpi-v4\\fw_pull_down_n.png"
+        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxhdpi-v4\\sr_ic_error_n.png",
+        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\mipmap-xxhdpi-v4\\sr_ic_error_n.png"
     }
 ]

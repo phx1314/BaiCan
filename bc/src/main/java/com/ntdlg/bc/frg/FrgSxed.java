@@ -192,6 +192,7 @@ public class FrgSxed extends BaseFrg {
             mTextView_right.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    Helper.startActivity(getContext(), FrgSign.class, TitleAct.class,"from","FrgSxed");
                     BeanSQTE mBeanSQTE = new BeanSQTE();
                     mBeanSQTE.sign = readClassAttr(mBeanSQTE);
                     loadJsonUrl(beginApply, new Gson().toJson(mBeanSQTE));

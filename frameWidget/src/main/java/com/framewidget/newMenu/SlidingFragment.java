@@ -60,7 +60,7 @@ public class SlidingFragment extends MFragment implements OnPageChangeListener,
     protected RelativeLayout mRelativeLayout_bottom;
     protected Object mMActivity;
     protected boolean isTrue = true;
-    protected boolean isCanPage = false;
+    protected boolean isCanPage = true;
     protected int resource = -1;
     protected float fadeDegree = 0;
     protected int OffscreenPageLimit;
@@ -148,7 +148,7 @@ public class SlidingFragment extends MFragment implements OnPageChangeListener,
                 mLinearLayout.addView(mLinearLayout_son);
             }
             if (isCanPage) {
-                mContentView.setScrollAble(false);
+                mContentView.setNoScroll(true);
             }
             if (mICallback != null) {
                 mRadioGroup.setCallback(mICallback);

@@ -24,7 +24,7 @@ public class Mapplication extends Application {
         com.framewidget.F.ICON_SHARE = R.drawable.logo;
         com.framewidget.F.WEIXINKEY = com.framewidget.F.WEIXINID = "wx3f06a2ea3b98c175";
         com.framewidget.F.WEIXINSEC = "84ebd12b60cdd7c224871736e5de7a78";
-        com.framewidget.F.APPNAME = "共享时贷";
+        com.framewidget.F.APPNAME = "百灿";
         com.framewidget.F.QQID = "1106422418";
         com.framewidget.F.QQSEC = "tlCpuAlnK6kd9OIh";
         PlatformConfig.setWeixin(com.framewidget.F.WEIXINID,

@@ -157,7 +157,6 @@ public class FrgWode extends BaseFrg {
             if (mModelShare != null)
                 com.framewidget.F.getShare(getContext(), "", mModelShare.url
                         , mModelShare.content, mModelShare.title);
-//            Helper.startActivity(getContext(),FrgSign.class,TitleAct.class);
         } else if (R.id.mLinearLayout_1 == v.getId()) {
             Helper.startActivity(getContext(), FrgWodeJk.class, TitleAct.class, "mModelZHZX", mModelZHZX);
         } else if (R.id.mLinearLayout_2 == v.getId()) {

@@ -49,4 +49,5 @@ public class ModelKSJK implements Serializable {
     public String endDate = "";
 
 
+    public String applyId;
 }

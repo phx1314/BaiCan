@@ -233,6 +233,7 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 Helper.toast("电商未认证", getContext());
                 return;
             }
+
             BeanSubXSSH mBeanKSJK = new BeanSubXSSH();
             mBeanKSJK.sign = readClassAttr(mBeanKSJK);
             loadJsonUrl(submitCkeck, new Gson().toJson(mBeanKSJK));

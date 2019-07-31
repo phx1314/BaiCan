@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-     <string name="app_name">共享时贷</string>
+     <string name="app_name">百灿</string>
      <string name="shm">您需要通过人脸识别完成实名认证\n验证时请将头部置于取景框内，按提示操作</string>
      <string name="gx">恭喜您，您的借款申请已经提交成功\n请等待审核!</string>
 </resources>

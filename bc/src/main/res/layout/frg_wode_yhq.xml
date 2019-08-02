@@ -10,7 +10,6 @@
                <ImageView android:id="@+id/mImageView_2" android:layout_width="@dimen/j55dp" android:layout_height="@dimen/j2dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:background="@color/white" android:visibility="gone" />
           </RelativeLayout>
      </LinearLayout>
-     <com.ntdlg.bc.pullview.AbPullListView
-         android:id="@+id/mAbPullListView" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#ffffff" android:cacheColorHint="#00000000" android:divider="@null" android:fadingEdge="none" android:listSelector="#00000000" />
+     <com.ntdlg.bc.pullview.AbPullListView android:id="@+id/mAbPullListView" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#ffffff" android:cacheColorHint="#00000000" android:divider="@null" android:fadingEdge="none" android:listSelector="#00000000" />
 </LinearLayout>
 

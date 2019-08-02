@@ -167,7 +167,7 @@
                         android:drawablePadding="@dimen/j10dp"
                         android:drawableTop="@drawable/authentication2"
                         android:gravity="center"
-                        android:text="公积金" />
+                        android:text="公积金/社保" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -183,13 +183,15 @@
                         android:drawablePadding="@dimen/j10dp"
                         android:drawableTop="@drawable/authentication3"
                         android:gravity="center"
-                        android:text="产证" />
+                        android:text="美团/饿了么"
+                      />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="1px"
                         android:layout_marginTop="@dimen/j15dp"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:visibility="invisible" />
 
                     <TextView
                         android:id="@+id/mImageView_te_4"
@@ -199,7 +201,8 @@
                         android:drawablePadding="@dimen/j10dp"
                         android:drawableTop="@drawable/authentication4"
                         android:gravity="center"
-                        android:text="账单认证" />
+                        android:text="账单认证"
+                        android:visibility="invisible" />
                 </LinearLayout>
             </LinearLayout>
 

@@ -27,6 +27,7 @@
      <dimen name="j25dp">32.109375dp</dimen>
      <dimen name="j28dp">35.962498dp</dimen>
      <dimen name="j380dp">488.06247dp</dimen>
+     <dimen name="j120dp">154.125dp</dimen>
      <dimen name="j7dp">8.990624dp</dimen>
      <dimen name="j13dp">16.696875dp</dimen>
      <dimen name="j17dp">21.834373dp</dimen>
@@ -36,7 +37,7 @@
      <dimen name="j260dp">333.9375dp</dimen>
      <dimen name="j6dp">7.7062497dp</dimen>
      <dimen name="j9dp">11.559375dp</dimen>
-     <dimen name="j410dp">526.59375dp</dimen>
+     <dimen name="j90dp">115.59374dp</dimen>
      <dimen name="activity_horizontal_margin">20.55dp</dimen>
      <dimen name="activity_vertical_margin">20.55dp</dimen>
      <dimen name="j1dp">1.284375dp</dimen>

@@ -1,0 +1,70 @@
+[
+  {
+    "route": "email",
+    "name": "邮箱"
+  },
+  {
+    "route": "bank",
+    "name": "网银"
+  },
+  {
+    "route": "carrier",
+    "name": "运营商"
+  },
+  {
+    "route": "qq",
+    "name": "QQ"
+  },
+  {
+    "route": "alipay",
+    "name": "支付宝"
+  },
+  {
+    "route": "taobao",
+    "name": "淘宝"
+  },
+  {
+    "route": "jingdong",
+    "name": "京东"
+  },
+  {
+    "route": "insurance",
+    "name": "车险"
+  },
+  {
+    "route": "lifeinsr",
+    "name": "寿险"
+  },
+  {
+    "route": "chsi",
+    "name": "学信网"
+  },
+  {
+    "route": "fund",
+    "name": "公积金"
+  },
+  {
+    "route": "security",
+    "name": "社保"
+  },
+  {
+    "route": "maimai",
+    "name": "脉脉"
+  },
+  {
+    "route": "linkedin",
+    "name": "领英"
+  },
+  {
+    "route": "tax",
+    "name": "个人所得税"
+  },
+  {
+    "route": "receiptloan",
+    "name": "借条"
+  },
+  {
+    "route": "meituanwaimai",
+    "name": "美团外卖"
+  }
+]

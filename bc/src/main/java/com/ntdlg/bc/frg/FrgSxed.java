@@ -23,6 +23,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.mdx.framework.activity.NoTitleAct;
 import com.mdx.framework.activity.TitleAct;
 import com.mdx.framework.utility.Helper;
 import com.mdx.framework.widget.ActionBar;
@@ -33,11 +34,13 @@ import com.ntdlg.bc.bean.BeanSQTE;
 import com.ntdlg.bc.model.ModelGRXYRZXX;
 import com.ntdlg.bc.model.ModelKSJK;
 import com.ntdlg.bc.model.ModelKSJK2;
+import com.ntdlg.bc.model.ModelLoginUrl;
 
 import static com.ntdlg.bc.F.beginApply;
 import static com.ntdlg.bc.F.bioAssay;
 import static com.ntdlg.bc.F.getPlatform;
 import static com.ntdlg.bc.F.getTime;
+import static com.ntdlg.bc.F.getVip88LoginUrl;
 import static com.ntdlg.bc.F.json2Model;
 import static com.ntdlg.bc.F.readClassAttr;
 
@@ -141,11 +144,14 @@ public class FrgSxed extends BaseFrg {
                 F.mTBlivessCompare(getActivity(), mModelGRXYRZXX.sessid, "FrgSxed");
             } else if (mModelKSJK2.result.equals("3")) {
                 Helper.startActivity(getContext(), FrgJkShenqing.class, TitleAct.class);
+            } else if (mModelKSJK2.result.equals("4")) {
+                Helper.startActivity(getContext(), FrgSign.class, TitleAct.class);
             }
         } else if (methodName.equals(getPlatform)) {
             mModelGRXYRZXX = (ModelGRXYRZXX) json2Model(content, ModelGRXYRZXX.class);
         } else if (methodName.equals(bioAssay)) {
             Helper.toast("认证成功", getContext());
+            Helper.startActivity(getContext(), FrgSign.class, TitleAct.class);
         }
     }
 
@@ -192,7 +198,6 @@ public class FrgSxed extends BaseFrg {
             mTextView_right.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Helper.startActivity(getContext(), FrgSign.class, TitleAct.class,"from","FrgSxed");
                     BeanSQTE mBeanSQTE = new BeanSQTE();
                     mBeanSQTE.sign = readClassAttr(mBeanSQTE);
                     loadJsonUrl(beginApply, new Gson().toJson(mBeanSQTE));

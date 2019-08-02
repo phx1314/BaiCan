@@ -11,13 +11,16 @@
 
 package com.ntdlg.bc.frg;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.framewidget.F;
 import com.framewidget.frg.FrgPtDetail;
+import com.framewidget.view.CallBackOnly;
 import com.google.gson.Gson;
 import com.mdx.framework.Frame;
 import com.mdx.framework.activity.NoTitleAct;
@@ -26,10 +29,16 @@ import com.mdx.framework.widget.ActionBar;
 import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanQYQR;
 import com.ntdlg.bc.bean.BeanQYQRSJ;
+import com.ntdlg.bc.bean.BeanSQTE;
+import com.ntdlg.bc.item.DialogCao;
+import com.ntdlg.bc.model.ModelKSJK2;
+import com.ntdlg.bc.model.ModelLoginUrl;
 import com.ntdlg.bc.model.ModelQUQRSJ;
 
 import static com.ntdlg.bc.F.affirmBorrow;
 import static com.ntdlg.bc.F.affirmBorrowData;
+import static com.ntdlg.bc.F.beginApply;
+import static com.ntdlg.bc.F.getVip88LoginUrl;
 import static com.ntdlg.bc.F.json2Model;
 import static com.ntdlg.bc.F.readClassAttr;
 
@@ -54,6 +63,20 @@ public class FrgJkShenqing extends BaseFrg {
         loaddata();
     }
 
+    @Override
+    public void disposeMsg(int type, Object obj) {
+        switch (type) {
+            case 0:
+                BeanQYQR mBeanQYQR = new BeanQYQR();
+                mBeanQYQR.sign = readClassAttr(mBeanQYQR);
+                loadJsonUrl(affirmBorrow, new Gson().toJson(mBeanQYQR));
+                break;
+            case 1:
+                loadJsonUrl(getVip88LoginUrl, "");
+                break;
+        }
+    }
+
     private void initView() {
         findVMethod();
     }
@@ -73,9 +96,11 @@ public class FrgJkShenqing extends BaseFrg {
             @Override
             public void onClick(View view) {
                 if (mCheckBox.isChecked()) {
-                    BeanQYQR mBeanQYQR = new BeanQYQR();
-                    mBeanQYQR.sign = readClassAttr(mBeanQYQR);
-                    loadJsonUrl(affirmBorrow, new Gson().toJson(mBeanQYQR));
+                    BeanSQTE mBeanSQTE = new BeanSQTE();
+                    mBeanSQTE.sign = readClassAttr(mBeanSQTE);
+                    loadJsonUrl(beginApply, new Gson().toJson(mBeanSQTE));
+
+
                 } else {
                     Helper.toast("请同意相关协议", getContext());
                 }
@@ -109,6 +134,23 @@ public class FrgJkShenqing extends BaseFrg {
             Helper.toast("签约成功", getContext());
             Frame.HANDLES.sentAll("FrgSxed,FrgWode", 0, null);
             this.finish();
+        } else if (methodName.equals(beginApply)) {
+            final ModelKSJK2 mModelKSJK2 = (ModelKSJK2) json2Model(content, ModelKSJK2.class);
+            final View view = DialogCao.getView(getContext(), null);
+            F.showCenterDialog(getContext(), view, new CallBackOnly() {
+                @Override
+                public void goReturn(String token, String reftoken) {
+
+                }
+
+                @Override
+                public void goReturnDo(Dialog mDialog) {
+                    ((DialogCao) view.getTag()).set(mDialog, mModelKSJK2);
+                }
+            });
+        } else if (methodName.equals(getVip88LoginUrl)) {
+            ModelLoginUrl mModelLoginUrl = (ModelLoginUrl) json2Model(content, ModelLoginUrl.class);
+            Helper.startActivity(getContext(), FrgVip.class, NoTitleAct.class, "url", mModelLoginUrl.loginUrl);
         }
     }
 

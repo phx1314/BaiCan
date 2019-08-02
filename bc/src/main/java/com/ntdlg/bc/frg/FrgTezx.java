@@ -12,30 +12,23 @@
 package com.ntdlg.bc.frg;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.mdx.framework.Frame;
-import com.mdx.framework.activity.TitleAct;
 import com.mdx.framework.utility.Helper;
 import com.mdx.framework.widget.ActionBar;
 import com.moxie.client.model.MxParam;
+import com.ntdlg.bc.F;
 import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanBase;
-import com.ntdlg.bc.bean.BeanSQ;
 import com.ntdlg.bc.bean.BeanSQTE;
 import com.ntdlg.bc.model.ModelGRXYRZXX;
 
-import org.json.JSONObject;
-
-import static android.app.Activity.RESULT_OK;
 import static com.ntdlg.bc.F.applyPromote;
 import static com.ntdlg.bc.F.getPlatform;
 import static com.ntdlg.bc.F.gongjijinAuth;
@@ -67,6 +60,9 @@ public class FrgTezx extends BaseFrg {
     public ModelGRXYRZXX mModelGRXYRZXX;
     public String type = "1";
     public TextView mTextView_lg;
+    public TextView mTextView_sb;
+    public LinearLayout mLinearLayout_sb;
+    public ImageView mImageView_sb;
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -106,12 +102,15 @@ public class FrgTezx extends BaseFrg {
         mLinearLayout_4 = (LinearLayout) findViewById(R.id.mLinearLayout_4);
         mLinearLayout_5 = (LinearLayout) findViewById(R.id.mLinearLayout_5);
         mTextView_lg = (TextView) findViewById(R.id.mTextView_lg);
+        mTextView_sb = (TextView) findViewById(R.id.mTextView_sb);
+        mLinearLayout_sb = (LinearLayout) findViewById(R.id.mLinearLayout_sb);
+        mImageView_sb = (ImageView) findViewById(R.id.mImageView_sb);
 
         mLinearLayout_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (!mModelGRXYRZXX.isTaobaoAuth.equals("1")) {
-                    rZhengWb(getActivity(), MxParam.PARAM_FUNCTION_TAOBAO);//淘宝
+                    rZhengWb(getActivity(), MxParam.PARAM_TASK_TAOBAO, FrgTezx.this);//淘宝
                 }
             }
         });
@@ -120,7 +119,16 @@ public class FrgTezx extends BaseFrg {
             public void onClick(View view) {
                 if (!mModelGRXYRZXX.isGongjijinAuth.equals("1")) {
                     type = "2";
-                    rZhengWb(getActivity(), MxParam.PARAM_FUNCTION_FUND);//公积金
+                    rZhengWb(getActivity(), MxParam.PARAM_TASK_FUND, FrgTezx.this);//公积金
+                }
+            }
+        });
+        mLinearLayout_sb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!mModelGRXYRZXX.IsShebaoAuth.equals("1")) {
+                    type = MxParam.PARAM_TASK_FUND;
+                    rZhengWb(getActivity(), MxParam.PARAM_TASK_SECURITY, FrgTezx.this);//社保
                 }
             }
         });
@@ -128,9 +136,8 @@ public class FrgTezx extends BaseFrg {
             @Override
             public void onClick(View view) {
                 if (!mModelGRXYRZXX.isFundAuth.equals("1")) {
-//                    type = "3";
-//                    rZhengWb(getActivity(), MxParam.PARAM_FUNCTION_CHSI);//学历
-                    Helper.startActivity(getContext(), FrgChzhRzh.class, TitleAct.class);
+                    type = F.MT;
+                    rZhengWb(getActivity(), F.MT, FrgTezx.this);//美团
                 }
             }
         });
@@ -138,7 +145,8 @@ public class FrgTezx extends BaseFrg {
             @Override
             public void onClick(View view) {
                 if (!mModelGRXYRZXX.isBillAuth.equals("1")) {
-                    Helper.startActivity(getContext(), FrgZhangdanRzh.class, TitleAct.class);
+                    type = F.ELM;
+                    rZhengWb(getActivity(), F.ELM, FrgTezx.this);//饿了么
                 }
             }
         });
@@ -147,7 +155,7 @@ public class FrgTezx extends BaseFrg {
             public void onClick(View view) {
                 if (!mModelGRXYRZXX.isJingdongAuth.equals("1")) {
                     type = "4";
-                    rZhengWb(getActivity(), MxParam.PARAM_FUNCTION_JINGDONG);
+                    rZhengWb(getActivity(), MxParam.PARAM_TASK_JINGDONG, FrgTezx.this);
                 }
             }
         });
@@ -189,24 +197,33 @@ public class FrgTezx extends BaseFrg {
                 mTextView_2.setText("未认证");
                 mTextView_2.setTextColor(getResources().getColor(R.color.shouye_red));
             }
-            if (mModelGRXYRZXX.isFundAuth.equals("1")) {
-                mImageView_3.setImageResource(R.drawable.authentication3);
-                mTextView_3.setText("已认证");
-                mTextView_3.setTextColor(getResources().getColor(R.color.A));
+            if (mModelGRXYRZXX.IsShebaoAuth.equals("1")) {
+                mImageView_sb.setImageResource(R.drawable.authentication2);
+                mTextView_sb.setText("已认证");
+                mTextView_sb.setTextColor(getResources().getColor(R.color.A));
             } else {
-                mImageView_3.setImageResource(R.drawable.xue);
-                mTextView_3.setText("未认证");
-                mTextView_3.setTextColor(getResources().getColor(R.color.shouye_red));
+                mImageView_sb.setImageResource(R.drawable.gong);
+                mTextView_sb.setText("未认证");
+                mTextView_sb.setTextColor(getResources().getColor(R.color.shouye_red));
             }
-            if (mModelGRXYRZXX.isBillAuth.equals("1")) {
-                mImageView_4.setImageResource(R.drawable.authentication4);
-                mTextView_4.setText("已认证");
-                mTextView_4.setTextColor(getResources().getColor(R.color.A));
-            } else {
-                mImageView_4.setImageResource(R.drawable.zhang);
-                mTextView_4.setText("未认证");
-                mTextView_4.setTextColor(getResources().getColor(R.color.shouye_red));
-            }
+//            if (mModelGRXYRZXX.isFundAuth.equals("1")) {
+//                mImageView_3.setImageResource(R.drawable.authentication3);
+//                mTextView_3.setText("已认证");
+//                mTextView_3.setTextColor(getResources().getColor(R.color.A));
+//            } else {
+//                mImageView_3.setImageResource(R.drawable.xue);
+//                mTextView_3.setText("未认证");
+//                mTextView_3.setTextColor(getResources().getColor(R.color.shouye_red));
+//            }
+//            if (mModelGRXYRZXX.isBillAuth.equals("1")) {
+//                mImageView_4.setImageResource(R.drawable.authentication4);
+//                mTextView_4.setText("已认证");
+//                mTextView_4.setTextColor(getResources().getColor(R.color.A));
+//            } else {
+//                mImageView_4.setImageResource(R.drawable.zhang);
+//                mTextView_4.setText("未认证");
+//                mTextView_4.setTextColor(getResources().getColor(R.color.shouye_red));
+//            }
             if (mModelGRXYRZXX.isJingdongAuth.equals("1")) {
                 mImageView_5.setImageResource(R.drawable.jd);
                 mTextView_5.setText("已认证");
@@ -226,70 +243,6 @@ public class FrgTezx extends BaseFrg {
         }
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        switch (resultCode) { //resultCode为回传的标记，我在B中回传的是RESULT_OK
-            case RESULT_OK:
-                Bundle b = data.getExtras();              //data为B中回传的Intent
-                String result = b.getString("result");    //result即为回传的值(JSON格式)
-                if (TextUtils.isEmpty(result)) {
-                    Toast.makeText(getActivity(), "用户没有进行导入操作!", Toast.LENGTH_SHORT).show();
-                } else {
-                    try {
-                        int code = 0;
-                        JSONObject jsonObject = new JSONObject(result);
-
-                        code = jsonObject.getInt("code");
-                        switch (code) {
-                            case -1:
-                                Toast.makeText(getActivity(), "用户没有进行导入操作", Toast.LENGTH_SHORT).show();
-                                break;
-                            case -2:
-                                Toast.makeText(getActivity(), "导入失败(平台方服务问题)", Toast.LENGTH_SHORT).show();
-                                break;
-                            case -3:
-                                Toast.makeText(getActivity(), "导入失败(魔蝎数据服务异常)", Toast.LENGTH_SHORT).show();
-                                break;
-                            case -4:
-                                Toast.makeText(getActivity(), "导入失败(" + jsonObject.getString("message") + ")", Toast.LENGTH_SHORT).show();
-                                break;
-                            case 0:
-                                Toast.makeText(getActivity(), "导入失败", Toast.LENGTH_SHORT).show();
-                                break;
-                            case 1:
-                                Toast.makeText(getActivity(), "导入成功", Toast.LENGTH_SHORT).show();
-                                BeanSQ mBeanSQ = new BeanSQ();
-                                mBeanSQ.taskId = jsonObject.getString("taskId");
-                                mBeanSQ.sign = readClassAttr(mBeanSQ);
-                                if (type.equals("1")) {
-                                    loadJsonUrl(taobaoAuth, new Gson().toJson(mBeanSQ));
-                                } else if (type.equals("2")) {
-                                    loadJsonUrl(gongjijinAuth, new Gson().toJson(mBeanSQ));
-                                } else if (type.equals("3")) {
-                                    loadJsonUrl(xuexinwangAuth, new Gson().toJson(mBeanSQ));
-                                } else if (type.equals("4")) {
-                                    loadJsonUrl(jingdongAuth, new Gson().toJson(mBeanSQ));
-                                }
-                                break;
-                            case 2:
-                                /**
-                                 * 如果用户中途导入魔蝎SDK会出现这个情况，如需获取最终状态请轮询贵方后台接口
-                                 * 魔蝎后台会向贵方后台推送Task通知和Bill通知
-                                 * Task通知：登录成功/登录失败
-                                 * Bill通知：账单通知
-                                 */
-                                Toast.makeText(getActivity(), "导入中", Toast.LENGTH_SHORT).show();
-                                break;
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-                break;
-            default:
-                break;
-        }
-    }
 
     @Override
     public void setActionBar(ActionBar actionBar, Context context) {

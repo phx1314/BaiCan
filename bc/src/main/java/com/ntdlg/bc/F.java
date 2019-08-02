@@ -4,14 +4,12 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.ContactsContract;
@@ -20,17 +18,29 @@ import android.util.Base64;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.ab.http.HttpUtil;
 import com.ab.util.AbDateUtil;
 import com.ab.util.AbMd5;
-import com.facefr.activity.PictureUploadActivity;
+import com.ab.util.HttpResponseListener;
 import com.facefr.controller.Controller;
 import com.facefr.controller.SampleControllerCallBack;
 import com.facefr.controller.StyleModel;
 import com.google.gson.Gson;
 import com.mdx.framework.Frame;
+import com.mdx.framework.activity.TitleAct;
 import com.mdx.framework.utility.Helper;
 import com.mdx.framework.utility.permissions.PermissionRequest;
+import com.moxie.client.exception.ExceptionType;
+import com.moxie.client.exception.MoxieException;
+import com.moxie.client.manager.MoxieCallBack;
+import com.moxie.client.manager.MoxieCallBackData;
+import com.moxie.client.manager.MoxieContext;
+import com.moxie.client.manager.MoxieSDK;
+import com.moxie.client.manager.MoxieSDKRunMode;
 import com.moxie.client.model.MxParam;
+import com.ntdlg.bc.bean.BeanSQ;
+import com.ntdlg.bc.frg.BaseFrg;
+import com.ntdlg.bc.frg.FrgShenfenRezhengNew;
 import com.ntdlg.bc.view.SortModel;
 
 import org.json.JSONObject;
@@ -58,7 +68,7 @@ public class F {
 //    public static String mUserId = "2e3526ec62ee48e8b804b7c308a5db2f";                                  //合作方系统中的客户ID
     public static String mUserId = com.ntdlg.bc.F.UserId;                                  //合作方系统中的客户ID
     //    public static String mApiKey = "54642b1be96a4117a8bc0f01f46a621f";      //获取任务状态时使用
-    public static String mApiKey = "ab81c5bb5d95462fb02d0b267e0a8ff2";      //获取任务状态时使用
+    public static String mApiKey = "228aa9f04f6c4e8ca9288dc049000a98";      //获取任务状态时使用
     public static String mBannerColor = "#000000"; //标题栏背景色
     public static String mTextColor = "#ffffff";  //标题栏字体颜色
     public static String mThemeColor = "#ff9500"; //页面主色调
@@ -67,6 +77,8 @@ public class F {
     public static final String TOKEN = "TOKEN";
     public static final String REFTOKEN = "REFTOKEN";
     public static final String APPLYID = "APPLYID";
+    public static final String MT = "meituanwaimai";
+    public static final String ELM = "eleme";
 
     public static String UserId = "", token, reftoken, applyId;
     public static String login = "/login";
@@ -76,6 +88,7 @@ public class F {
     public static String professionInfo = "/api/customer/professionInfo";
     public static String linkManInfo = "/api/customer/linkManInfo";
     public static String getPlatform = "/api/customer/getPlatform";
+    public static String getVip88LoginUrl = "/api/customer/getVip88LoginUrl";
     public static String getInfo = "/api/customer/getInfo";
     public static String queryCards = "/api/customer/queryCards";
     public static String queryBill = "/api/customer/queryBill";
@@ -89,6 +102,7 @@ public class F {
     public static String jingdongAuth = "/api/customer/jingdongAuth";
     public static String taobaoAuth = "/api/customer/taobaoAuth";
     public static String gongjijinAuth = "/api/customer/gongjijinAuth";
+    public static String shebaoAuth = "/api/customer/shebaoAuth";
     public static String xuexinwangAuth = "/api/customer/xuexinwangAuth";
     public static String yunyingshangAuth = "/api/customer/yunyingshangAuth";
     public static String orderAuth = "/api/customer/orderAuth";
@@ -300,7 +314,8 @@ public class F {
 ////        authBuilder.isHandOcr(true);
 //        authBuilder.isShowConfirm(false);// TODO: 2016/12/28 OCR之后需要确认身份证识别信息
 //        authBuilder.ocrVerify(context, "");
-        context.startActivity(new Intent(context, PictureUploadActivity.class).putExtra("from",from));
+        Helper.startActivity(context, FrgShenfenRezhengNew.class, TitleAct.class, "from", from);
+
     }
 
 //    public static AuthBuilder getAuthBuilder(final String from) {
@@ -560,21 +575,179 @@ public class F {
         return "";
     }
 
-    public static void rZhengWb(Activity activity, String type) {
+
+    public static void rZhengWb(final Activity activity, String type, final BaseFrg mBaseFrg) {
         try {
-            Bundle bundle = new Bundle();
             MxParam mxParam = new MxParam();
             mxParam.setUserId(getSharedPreferValue("userId"));
             mxParam.setApiKey(getSharedPreferValue("apiKey"));
-            mxParam.setBannerBgColor(getSharedPreferValue("bannerBgColor"));
-            mxParam.setBannerTxtColor(getSharedPreferValue("bannerTxtColor"));
-            mxParam.setThemeColor(getSharedPreferValue("themeColor"));
-            mxParam.setAgreementUrl(getSharedPreferValue("agreementUrl"));
-            mxParam.setFunction(type);
-            bundle.putParcelable("param", mxParam);
-            Intent intent = new Intent(activity, com.moxie.client.MainActivity.class);
-            intent.putExtras(bundle);
-            activity.startActivityForResult(intent, 0);
+//            mxParam.setBannerBgColor(getSharedPreferValue("bannerBgColor"));
+//            mxParam.setBannerTxtColor(getSharedPreferValue("bannerTxtColor"));
+//            mxParam.setThemeColor(getSharedPreferValue("themeColor"));
+//            mxParam.setAgreementUrl(getSharedPreferValue("agreementUrl"));
+            mxParam.setTaskType(type);
+            mxParam.setPhone("");
+            mxParam.setName("");
+            mxParam.setIdcard("");
+
+            MoxieSDK.getInstance().startInMode(activity, MoxieSDKRunMode.MoxieSDKRunModeForeground, mxParam, new MoxieCallBack() {
+
+                @Override
+                public void onStatusChange(MoxieContext moxieContext, MoxieCallBackData moxieCallBackData) {
+                    super.onStatusChange(moxieContext, moxieCallBackData);
+                    Log.d("onStatusChange", moxieCallBackData.toString());
+                    if (MoxieSDK.getInstance().getRunMode() == MoxieSDKRunMode.MoxieSDKRunModeBackground
+                            && !MoxieSDK.getInstance().isForeground()
+                            && moxieCallBackData.getWaitCode() != null) {
+                        Toast.makeText(activity, "需要显示SDK", Toast.LENGTH_SHORT).show();
+                        MoxieSDK.getInstance().show();
+                    } else if (MoxieSDK.getInstance().getRunMode() == MoxieSDKRunMode.MoxieSDKRunModeBackground
+                            && moxieCallBackData.getWaitCode() == null) {
+                    }
+                }
+
+                /**
+                 *
+                 *  物理返回键和左上角返回按钮的back事件以及sdk退出后任务的状态都通过这个函数来回调
+                 *
+                 * @param moxieContext       可以用这个来实现在魔蝎的页面弹框或者关闭魔蝎的界面
+                 * @param moxieCallBackData  我们可以根据 MoxieCallBackData 的code来判断目前处于哪个状态，以此来实现自定义的行为
+                 * @return 返回true表示这个事件由自己全权处理，返回false会接着执行魔蝎的默认行为(比如退出sdk)
+                 *
+                 *   # 注意，假如设置了MxParam.setQuitOnLoginDone(MxParam.PARAM_COMMON_YES);
+                 *   登录成功后，返回的code是MxParam.ResultCode.IMPORTING，不是MxParam.ResultCode.IMPORT_SUCCESS
+                 */
+                @Override
+                public boolean callback(MoxieContext moxieContext, MoxieCallBackData moxieCallBackData) {
+                    if (MoxieSDK.getInstance().getRunMode() == MoxieSDKRunMode.MoxieSDKRunModeBackground) {
+                    }
+
+                    /**
+                     *  # MoxieCallBackData的格式如下：
+                     *  1.1.没有进行账单导入，未开始！(后台没有通知)
+                     *      "code" : MxParam.ResultCode.IMPORT_UNSTART, "taskType" : "mail", "taskId" : "", "message" : "", "account" : "", "loginDone": false, "businessUserId": ""
+                     *  1.2.平台方服务问题(后台没有通知)
+                     *      "code" : MxParam.ResultCode.THIRD_PARTY_SERVER_ERROR, "taskType" : "mail", "taskId" : "", "message" : "", "account" : "xxx", "loginDone": false, "businessUserId": ""
+                     *  1.3.魔蝎数据服务异常(后台没有通知)
+                     *      "code" : MxParam.ResultCode.MOXIE_SERVER_ERROR, "taskType" : "mail", "taskId" : "", "message" : "", "account" : "xxx", "loginDone": false, "businessUserId": ""
+                     *  1.4.用户输入出错（密码、验证码等输错且未继续输入）
+                     *      "code" : MxParam.ResultCode.USER_INPUT_ERROR, "taskType" : "mail", "taskId" : "", "message" : "密码错误", "account" : "xxx", "loginDone": false, "businessUserId": ""
+                     *  2.账单导入失败(后台有通知)
+                     *      "code" : MxParam.ResultCode.IMPORT_FAIL, "taskType" : "mail",  "taskId" : "ce6b3806-57a2-4466-90bd-670389b1a112", "account" : "xxx", "loginDone": false, "businessUserId": ""
+                     *  3.账单导入成功(后台有通知)
+                     *      "code" : MxParam.ResultCode.IMPORT_SUCCESS, "taskType" : "mail",  "taskId" : "ce6b3806-57a2-4466-90bd-670389b1a112", "account" : "xxx", "loginDone": true, "businessUserId": "xxxx"
+                     *  4.账单导入中(后台有通知)
+                     *      "code" : MxParam.ResultCode.IMPORTING, "taskType" : "mail",  "taskId" : "ce6b3806-57a2-4466-90bd-670389b1a112", "account" : "xxx", "loginDone": true, "businessUserId": "xxxx"
+                     *
+                     *  code           :  表示当前导入的状态
+                     *  taskType       :  导入的业务类型，与MxParam.setTaskType()传入的一致
+                     *  taskId         :  每个导入任务的唯一标识，在登录成功后才会创建
+                     *  message        :  提示信息
+                     *  account        :  用户输入的账号
+                     *  loginDone      :  表示登录是否完成，假如是true，表示已经登录成功，接入方可以根据此标识判断是否可以提前退出
+                     *  businessUserId :  第三方被爬取平台本身的userId，非商户传入，例如支付宝的UserId
+                     */
+                    if (moxieCallBackData != null) {
+                        Log.d("BigdataFragment", "MoxieSDK Callback Data : " + moxieCallBackData.toString());
+                        switch (moxieCallBackData.getCode()) {
+                            /**
+                             * 账单导入中
+                             *
+                             * 如果用户正在导入魔蝎SDK会出现这个情况，如需获取最终状态请轮询贵方后台接口
+                             * 魔蝎后台会向贵方后台推送Task通知和Bill通知
+                             * Task通知：登录成功/登录失败
+                             * Bill通知：账单通知
+                             */
+                            case MxParam.ResultCode.IMPORTING:
+                                if (moxieCallBackData.isLoginDone()) {
+                                    //状态为IMPORTING, 且loginDone为true，说明这个时候已经在采集中，已经登录成功
+                                    Log.d("Tag", "任务已经登录成功，正在采集中，SDK退出后不会再回调任务状态，任务最终状态会从服务端回调，建议轮询APP服务端接口查询任务/业务最新状态");
+
+                                } else {
+                                    //状态为IMPORTING, 且loginDone为false，说明这个时候正在登录中
+                                    Log.d("Tag", "任务正在登录中，SDK退出后不会再回调任务状态，任务最终状态会从服务端回调，建议轮询APP服务端接口查询任务/业务最新状态");
+                                }
+                                break;
+                            /**
+                             * 任务还未开始
+                             *
+                             * 假如有弹框需求，可以参考 {@link BigdataFragment#showDialog(MoxieContext)}
+                             *
+                             * example:
+                             *  case MxParam.ResultCode.IMPORT_UNSTART:
+                             *      showDialog(moxieContext);
+                             *      return true;
+                             * */
+                            case MxParam.ResultCode.IMPORT_UNSTART:
+                                Log.d("Tag", "任务未开始");
+                                break;
+                            case MxParam.ResultCode.THIRD_PARTY_SERVER_ERROR:
+                                Toast.makeText(activity, "导入失败(平台方服务问题)", Toast.LENGTH_SHORT).show();
+                                break;
+                            case MxParam.ResultCode.MOXIE_SERVER_ERROR:
+                                Toast.makeText(activity, "导入失败(魔蝎数据服务异常)", Toast.LENGTH_SHORT).show();
+                                break;
+                            case MxParam.ResultCode.USER_INPUT_ERROR:
+                                Toast.makeText(activity, "导入失败(" + moxieCallBackData.getMessage() + ")", Toast.LENGTH_SHORT).show();
+                                break;
+                            case MxParam.ResultCode.IMPORT_FAIL:
+                                Toast.makeText(activity, "导入失败", Toast.LENGTH_SHORT).show();
+                                break;
+                            case MxParam.ResultCode.IMPORT_SUCCESS:
+                                Log.d("tag", "任务采集成功，任务最终状态会从服务端回调，建议轮询APP服务端接口查询任务/业务最新状态");
+                                BeanSQ mBeanSQ = new BeanSQ();
+                                mBeanSQ.taskId = moxieCallBackData.getTaskId();
+                                mBeanSQ.sign = readClassAttr(mBeanSQ);
+                                //根据taskType进行对应的处理
+                                switch (moxieCallBackData.getTaskType()) {
+                                    case MxParam.PARAM_TASK_TAOBAO:
+                                        HttpUtil.loadJsonUrl(activity, taobaoAuth, new Gson().toJson(mBeanSQ), new HttpResponseListener(activity, mBaseFrg, taobaoAuth));
+                                        break;
+                                    case MxParam.PARAM_TASK_FUND:
+                                        HttpUtil.loadJsonUrl(activity, gongjijinAuth, new Gson().toJson(mBeanSQ), new HttpResponseListener(activity, mBaseFrg, gongjijinAuth));
+                                        break;
+                                    case MxParam.PARAM_TASK_JINGDONG:
+                                        HttpUtil.loadJsonUrl(activity, jingdongAuth, new Gson().toJson(mBeanSQ), new HttpResponseListener(activity, mBaseFrg, jingdongAuth));
+                                        break;
+                                    case F.MT:
+                                        HttpUtil.loadJsonUrl(activity, gongjijinAuth, new Gson().toJson(mBeanSQ), new HttpResponseListener(activity, mBaseFrg, gongjijinAuth));
+                                        break;
+                                    case F.ELM:
+                                        HttpUtil.loadJsonUrl(activity, gongjijinAuth, new Gson().toJson(mBeanSQ), new HttpResponseListener(activity, mBaseFrg, gongjijinAuth));
+                                        break;
+                                    case MxParam.PARAM_TASK_CARRIER:
+                                        HttpUtil.loadJsonUrl(activity, yunyingshangAuth, new Gson().toJson(mBeanSQ), new HttpResponseListener(activity, mBaseFrg, yunyingshangAuth));
+                                        break;
+                                    case MxParam.PARAM_TASK_SECURITY:
+                                        HttpUtil.loadJsonUrl(activity, shebaoAuth, new Gson().toJson(mBeanSQ), new HttpResponseListener(activity, mBaseFrg, shebaoAuth));
+                                        break;
+                                    default:
+                                }
+                                moxieContext.finish();
+                                return true;
+                        }
+                    }
+                    return false;
+                }
+
+                /**
+                 * @param moxieContext    可能为null，说明还没有打开魔蝎页面，使用前要判断一下
+                 * @param moxieException  通过exception.getExceptionType();来获取ExceptionType来判断目前是哪个错误
+                 */
+                @Override
+                public void onError(MoxieContext moxieContext, MoxieException moxieException) {
+                    super.onError(moxieContext, moxieException);
+                    if (moxieException.getExceptionType() == ExceptionType.SDK_HAS_STARTED) {
+                        Toast.makeText(activity, moxieException.getMessage(), Toast.LENGTH_SHORT).show();
+                    } else if (moxieException.getExceptionType() == ExceptionType.SDK_LACK_PARAMETERS) {
+                        Toast.makeText(activity, moxieException.getMessage(), Toast.LENGTH_SHORT).show();
+                    } else if (moxieException.getExceptionType() == ExceptionType.WRONG_PARAMETERS) {
+                        Toast.makeText(activity, moxieException.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                    Log.d("BigdataFragment", "MoxieSDK onError : " + (moxieException != null ? moxieException.toString() : ""));
+                }
+            });
+
         } catch (Exception e) {
             e.printStackTrace();
         }

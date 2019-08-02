@@ -11,14 +11,15 @@
 
 package com.ntdlg.bc.frg;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.ab.http.HttpUtil;
 import com.framewidget.newMenu.OnCheckChange;
@@ -33,10 +34,10 @@ import com.ntdlg.bc.F;
 import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.Beanupdateversion;
 import com.ntdlg.bc.model.ModelVersion;
+import com.pgyersdk.javabean.AppBean;
+import com.pgyersdk.update.PgyUpdateManager;
+import com.pgyersdk.update.UpdateManagerListener;
 
-import org.json.JSONObject;
-
-import static android.app.Activity.RESULT_OK;
 import static com.ntdlg.bc.F.getVersionCode;
 import static com.ntdlg.bc.F.getVersionName;
 import static com.ntdlg.bc.F.json2Model;
@@ -56,6 +57,38 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
         setWindowStatusBarColor(getActivity(), R.color.A);
         initView();
         loaddata();
+        PgyUpdateManager.register(getActivity(),
+                new UpdateManagerListener() {
+                    @Override
+                    public void onUpdateAvailable(final String result) {
+                        try { // 将新版本信息封装到AppBean中
+                            final AppBean appBean = getAppBeanFromString(result);
+                            new AlertDialog.Builder(getContext())
+                                    .setTitle("版本更新")
+                                    .setMessage("检查到新版本，是否更新")
+                                    .setNegativeButton(
+                                            "确定",
+                                            new DialogInterface.OnClickListener() {
+
+                                                @Override
+                                                public void onClick(
+                                                        DialogInterface dialog,
+                                                        int which) {
+                                                    startDownloadTask(
+                                                            getActivity(),
+                                                            appBean.getDownloadURL());
+                                                }
+                                            }).show();
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    public void onNoUpdateAvailable() {
+                    }
+                });
     }
 
     @Override
@@ -95,7 +128,7 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
         fragmentTransaction.commit();
         mSlidingFragment.addContentView(new FrgShouye(), "首页",
                 R.drawable.btn_checked_1);
-        mSlidingFragment.addContentView(new FrgRzh(), "认证",
+        mSlidingFragment.addContentView(new FrgRenzhengxinxi(), "认证",
                 R.drawable.btn_checked_2);
         mSlidingFragment.addContentView(new FrgWode(), "我的",
                 R.drawable.btn_checked_3);
@@ -103,7 +136,7 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
                 Context.WINDOW_SERVICE);
         mSlidingFragment.setFadeDegree(0.5f);
         F.loadContacts(getContext());
-
+//        F.mTBlivessCompare(getActivity(), "", "FrgSxed");
     }
 
     public void loaddata() {
@@ -168,57 +201,4 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
     }
 
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        switch (resultCode) { //resultCode为回传的标记，我在B中回传的是RESULT_OK
-            case RESULT_OK:
-                Bundle b = data.getExtras();              //data为B中回传的Intent
-                String result = b.getString("result");    //result即为回传的值(JSON格式)
-                if (TextUtils.isEmpty(result)) {
-                    Toast.makeText(getActivity(), "用户没有进行导入操作!", Toast.LENGTH_SHORT).show();
-                } else {
-                    try {
-                        int code = 0;
-                        JSONObject jsonObject = new JSONObject(result);
-
-                        code = jsonObject.getInt("code");
-                        switch (code) {
-                            case -1:
-                                Toast.makeText(getActivity(), "用户没有进行导入操作", Toast.LENGTH_SHORT).show();
-                                break;
-                            case -2:
-                                Toast.makeText(getActivity(), "导入失败(平台方服务问题)", Toast.LENGTH_SHORT).show();
-                                break;
-                            case -3:
-                                Toast.makeText(getActivity(), "导入失败(魔蝎数据服务异常)", Toast.LENGTH_SHORT).show();
-                                break;
-                            case -4:
-                                Toast.makeText(getActivity(), "导入失败(" + jsonObject.getString("message") + ")", Toast.LENGTH_SHORT).show();
-                                break;
-                            case 0:
-                                Toast.makeText(getActivity(), "导入失败", Toast.LENGTH_SHORT).show();
-                                break;
-                            case 1:
-                                Toast.makeText(getActivity(), "导入成功", Toast.LENGTH_SHORT).show();
-                                Frame.HANDLES.sentAll("FrgRzh", 110, jsonObject);
-                                break;
-                            case 2:
-                                /**
-                                 * 如果用户中途导入魔蝎SDK会出现这个情况，如需获取最终状态请轮询贵方后台接口
-                                 * 魔蝎后台会向贵方后台推送Task通知和Bill通知
-                                 * Task通知：登录成功/登录失败
-                                 * Bill通知：账单通知
-                                 */
-                                Toast.makeText(getActivity(), "导入中", Toast.LENGTH_SHORT).show();
-                                break;
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-                break;
-            default:
-                break;
-        }
-    }
 }

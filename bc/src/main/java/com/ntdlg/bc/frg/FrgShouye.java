@@ -254,7 +254,7 @@ public class FrgShouye extends BaseFrg {
             mModelKSJK = (ModelKSJK) json2Model(content, ModelKSJK.class);
             F.saveApplyId(mModelKSJK.applyId);
             if (mModelKSJK.result.equals("0") || mModelKSJK.result.equals("2")) {
-                Helper.startActivity(getContext(), FrgRenzhengxinxi.class, TitleAct.class);
+                Helper.startActivity(getContext(), FrgRenzhengxinxi.class, TitleAct.class,"type",1);
             } else if (mModelKSJK.result.equals("1")) {
                 Helper.toast("黑名单用户", getContext());
             } else {

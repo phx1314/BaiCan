@@ -105,7 +105,7 @@ public class FrgBdZhanghao extends BaseFrg {
                 return;
             }
             BeanFSDXYZM mBeanFSDXYZM = new BeanFSDXYZM();
-//            mBeanFSDXYZM.type = "20";
+            mBeanFSDXYZM.type = "20";
             mBeanFSDXYZM.phone = mEditText_phone.getText().toString();
             mBeanFSDXYZM.sign = readClassAttr(mBeanFSDXYZM);
             loadJsonUrl(sendSms, new Gson().toJson(mBeanFSDXYZM));

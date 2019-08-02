@@ -110,6 +110,57 @@
         android:background="@color/tyD1" />
 
     <LinearLayout
+        android:id="@+id/mLinearLayout_sb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/j10dp">
+
+        <ImageView
+            android:id="@+id/mImageView_sb"
+            android:layout_width="@dimen/j40dp"
+            android:layout_height="@dimen/j40dp"
+            android:src="@drawable/authentication2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/j10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_style_15_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="社保" />
+
+            <TextView
+                style="@style/text_style_13_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j8dp"
+                android:text="最高提升3000额度，提高通过率" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mTextView_sb"
+            style="@style/text_style_15_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已认证"
+            android:textColor="@color/A" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/j40dp"
+        android:background="@color/tyD1" />
+
+    <LinearLayout
         android:id="@+id/mLinearLayout_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -135,14 +186,14 @@
                 style="@style/text_style_15_black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="产证" />
+                android:text="美团" />
 
             <TextView
                 style="@style/text_style_13_gray"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/j8dp"
-                android:text="最高提升2000额度，提高通过率" />
+                android:text="最高提升1000额度，提高通过率" />
         </LinearLayout>
 
         <TextView
@@ -186,7 +237,7 @@
                 style="@style/text_style_15_black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="账单" />
+                android:text="饿了么" />
 
             <TextView
                 style="@style/text_style_13_gray"
@@ -259,17 +310,16 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginLeft="@dimen/j40dp"
-        android:background="@color/tyD1" />
+        android:layout_weight="1" />
 
     <TextView
         android:id="@+id/mTextView_lg"
         style="@style/text_style_13_white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/j5dp"
         android:layout_marginLeft="@dimen/j15dp"
         android:layout_marginRight="@dimen/j15dp"
-        android:layout_marginTop="@dimen/j30dp"
         android:background="@drawable/shape_green"
         android:gravity="center"
         android:padding="@dimen/j10dp"

@@ -65,6 +65,7 @@ public class FrgWodeJk1 extends BaseFrg {
     private void initView() {
         findVMethod();
     }
+
     @Override
     public void disposeMsg(int type, Object obj) {
         switch (type) {
@@ -78,6 +79,7 @@ public class FrgWodeJk1 extends BaseFrg {
                 break;
         }
     }
+
     private void findVMethod() {
         mTextView_time = (TextView) findViewById(R.id.mTextView_time);
         mTextView_price = (TextView) findViewById(R.id.mTextView_price);
@@ -187,20 +189,23 @@ public class FrgWodeJk1 extends BaseFrg {
             } else {
                 mLinearLayout_content.setVisibility(View.GONE);
             }
-        }else if (methodName.equals(getPlatform)) {
+        } else if (methodName.equals(getPlatform)) {
             mModelGRXYRZXX = (ModelGRXYRZXX) json2Model(content, ModelGRXYRZXX.class);
-        }else  if (methodName.equals(beginApply)) {
+        } else if (methodName.equals(beginApply)) {
             ModelKSJK2 mModelKSJK2 = (ModelKSJK2) json2Model(content, ModelKSJK2.class);
             if (mModelKSJK2.result.equals("1")) {
                 Helper.toast("请先绑定银行卡", getContext());
-                Helper.startActivity(getContext(), FrgWodeYhk.class, TitleAct.class,"from","FrgWodeJk1");
+                Helper.startActivity(getContext(), FrgWodeYhk.class, TitleAct.class, "from", "FrgWodeJk1");
             } else if (mModelKSJK2.result.equals("2")) {
                 F.mTBlivessCompare(getActivity(), mModelGRXYRZXX.sessid, "FrgWodeJk1");
             } else if (mModelKSJK2.result.equals("3")) {
                 Helper.startActivity(getContext(), FrgJkShenqing.class, TitleAct.class);
+            } else if (mModelKSJK2.result.equals("4")) {
+                Helper.startActivity(getContext(), FrgSign.class, TitleAct.class);
             }
         } else if (methodName.equals(bioAssay)) {
             Helper.toast("认证成功", getContext());
+            Helper.startActivity(getContext(), FrgSign.class, TitleAct.class);
         }
     }
 }

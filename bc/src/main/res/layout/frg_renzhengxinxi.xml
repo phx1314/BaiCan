@@ -7,6 +7,21 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
+    <RelativeLayout
+        android:id="@+id/mRelativeLayout_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        android:background="@color/A"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_style_17_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="认证" />
+    </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -130,10 +145,48 @@
                     android:text="电商认证" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/clk_mTextView_7"
+                    style="@style/text_style_15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg1"
+                    android:drawablePadding="@dimen/j10dp"
+                    android:drawableTop="@drawable/sfz"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/j20dp"
+                    android:text="公积金/社保" />
+
+                <TextView
+                    android:id="@+id/clk_mTextView_8"
+                    style="@style/text_style_15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/j10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg1"
+                    android:drawablePadding="@dimen/j10dp"
+                    android:drawableTop="@drawable/dsh"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/j20dp"
+                    android:text="美团/饿了么" />
+            </LinearLayout>
+
             <TextView
                 style="@style/text_style_13_gray"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/j5dp"
                 android:layout_marginTop="@dimen/j25dp"
                 android:gravity="center"
                 android:text="填写本人真实有效信息可快速提高审核速度" />
@@ -143,9 +196,9 @@
                 style="@style/text_style_13_white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/j5dp"
                 android:layout_marginLeft="@dimen/j15dp"
                 android:layout_marginRight="@dimen/j15dp"
-                android:layout_marginTop="@dimen/j5dp"
                 android:background="@drawable/shape_green"
                 android:gravity="center"
                 android:padding="@dimen/j10dp"

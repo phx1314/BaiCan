@@ -1,79 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#f2f2f2"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:id="@+id/mLinearLayout_serach"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/j10dp"
-        android:layout_marginLeft="@dimen/j15dp"
-        android:layout_marginRight="@dimen/j15dp"
-        android:layout_marginTop="@dimen/j10dp"
-        android:background="@drawable/bg_sousuo"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/mEditText"
-            style="@style/text_style_15_black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#00000000"
-            android:drawableLeft="@drawable/ic_sousuo"
-            android:drawablePadding="@dimen/j5dp"
-            android:gravity="center_vertical"
-            android:hint="请输入" />
-    </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/mRelativeLayout_1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <com.mdx.framework.widget.MPageListView
-            android:id="@+id/mMPageListView"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="#ffffff"
-            android:cacheColorHint="#00000000"
-            android:divider="@drawable/line"
-            android:fadingEdge="none" />
-
-        <com.framewidget.view.SideBar
-            android:id="@+id/sidrbar"
-            android:layout_width="@dimen/j20dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="center"
-            android:background="#00000000" />
-
-        <TextView
-            android:id="@+id/dialog"
-            android:layout_width="@dimen/j80dp"
-            android:layout_height="@dimen/j80dp"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:text="A"
-            android:textColor="@color/A"
-            android:textSize="22sp"
-            android:visibility="invisible" />
-    </RelativeLayout>
-
-    <com.mdx.framework.widget.MPageListView
-        android:id="@+id/mMPageListView_2"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#ffffff"
-        android:cacheColorHint="#00000000"
-        android:divider="@drawable/line"
-        android:fadingEdge="none"
-        android:visibility="gone" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#f2f2f2" android:gravity="center_horizontal" android:orientation="vertical">
+     <LinearLayout android:id="@+id/mLinearLayout_serach" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/j10dp" android:layout_marginLeft="@dimen/j15dp" android:layout_marginRight="@dimen/j15dp" android:layout_marginTop="@dimen/j10dp" android:background="@drawable/bg_sousuo" android:gravity="center" android:orientation="horizontal">
+          <EditText android:id="@+id/mEditText" style="@style/text_style_15_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#00000000" android:drawableLeft="@drawable/ic_sousuo" android:drawablePadding="@dimen/j5dp" android:gravity="center_vertical" android:hint="请输入" />
+     </LinearLayout>
+     <RelativeLayout android:id="@+id/mRelativeLayout_1" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+          <com.mdx.framework.widget.MPageListView android:id="@+id/mMPageListView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="#ffffff" android:cacheColorHint="#00000000" android:divider="@drawable/line" android:fadingEdge="none" />
+          <com.framewidget.view.SideBar android:id="@+id/sidrbar" android:layout_width="@dimen/j20dp" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_gravity="center" android:background="#00000000" />
+          <TextView android:id="@+id/dialog" android:layout_width="@dimen/j80dp" android:layout_height="@dimen/j80dp" android:layout_centerInParent="true" android:gravity="center" android:text="A" android:textColor="@color/A" android:textSize="22sp" android:visibility="invisible" />
+     </RelativeLayout>
+     <com.mdx.framework.widget.MPageListView android:id="@+id/mMPageListView_2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="#ffffff" android:cacheColorHint="#00000000" android:divider="@drawable/line" android:fadingEdge="none" android:visibility="gone" />
 </LinearLayout>
 

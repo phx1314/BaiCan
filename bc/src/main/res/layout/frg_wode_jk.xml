@@ -1,81 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffffff"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/j65dp"
-        android:layout_centerInParent="true"
-        android:background="@color/A2"
-        android:gravity="center">
-
-        <RelativeLayout
-            android:id="@+id/clk_mRelativeLayout_1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/mTextView_1"
-                style="@style/text_style_15_white"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="未结清"
-                android:textColor="@color/A" />
-
-            <ImageView
-                android:id="@+id/mImageView_1"
-                android:layout_width="@dimen/j55dp"
-                android:layout_height="@dimen/j2dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:background="@color/white" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/clk_mRelativeLayout_2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/j20dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/mTextView_2"
-                style="@style/text_style_15_white"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="已结清" />
-
-            <ImageView
-                android:id="@+id/mImageView_2"
-                android:layout_width="@dimen/j55dp"
-                android:layout_height="@dimen/j2dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:background="@color/white"
-                android:visibility="gone" />
-        </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/mLinearLayout_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#ffffff" android:gravity="center_horizontal" android:orientation="vertical">
+     <LinearLayout android:layout_width="match_parent" android:layout_height="@dimen/j65dp" android:layout_centerInParent="true" android:background="@color/A2" android:gravity="center">
+          <RelativeLayout android:id="@+id/clk_mRelativeLayout_1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+               <TextView android:id="@+id/mTextView_1" style="@style/text_style_15_white" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerInParent="true" android:layout_gravity="center" android:gravity="center" android:text="未结清" android:textColor="@color/A" />
+               <ImageView android:id="@+id/mImageView_1" android:layout_width="@dimen/j55dp" android:layout_height="@dimen/j2dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:background="@color/white" />
+          </RelativeLayout>
+          <RelativeLayout android:id="@+id/clk_mRelativeLayout_2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/j20dp" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+               <TextView android:id="@+id/mTextView_2" style="@style/text_style_15_white" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerInParent="true" android:layout_gravity="center" android:gravity="center" android:text="已结清" />
+               <ImageView android:id="@+id/mImageView_2" android:layout_width="@dimen/j55dp" android:layout_height="@dimen/j2dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:background="@color/white" android:visibility="gone" />
+          </RelativeLayout>
+     </LinearLayout>
+     <LinearLayout android:id="@+id/mLinearLayout_content" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal" />
 </LinearLayout>
 

@@ -1,142 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#f2f2f2"
-    android:orientation="vertical"
-    android:padding="@dimen/j10dp">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/j320dp"
-        android:layout_marginTop="@dimen/j10dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/mLinearLayout_kf"
-                    android:layout_width="@dimen/j150dp"
-                    android:layout_height="@dimen/j150dp"
-                    android:layout_marginLeft="@dimen/j10dp"
-                    android:layout_marginRight="@dimen/j10dp"
-                    android:background="@drawable/shape_white"
-                    android:gravity="center">
-
-                    <TextView
-                        style="@style/text_style_15_black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawablePadding="@dimen/j15dp"
-                        android:drawableTop="@drawable/service"
-                        android:gravity="center"
-                        android:text="客服" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/mLinearLayout_help"
-                    android:layout_width="@dimen/j150dp"
-                    android:layout_height="@dimen/j150dp"
-                    android:layout_marginLeft="@dimen/j10dp"
-                    android:layout_marginRight="@dimen/j10dp"
-                    android:background="@drawable/shape_white"
-                    android:gravity="center">
-
-                    <TextView
-                        style="@style/text_style_15_black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawablePadding="@dimen/j15dp"
-                        android:drawableTop="@drawable/help"
-                        android:gravity="center"
-                        android:text="帮助" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/j20dp"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/mLinearLayout_xsh"
-                    android:layout_width="@dimen/j150dp"
-                    android:layout_height="@dimen/j150dp"
-                    android:layout_marginLeft="@dimen/j10dp"
-                    android:layout_marginRight="@dimen/j10dp"
-                    android:background="@drawable/shape_white"
-                    android:gravity="center">
-
-                    <TextView
-                        style="@style/text_style_15_black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawablePadding="@dimen/j15dp"
-                        android:drawableTop="@drawable/novice_guide"
-                        android:gravity="center"
-                        android:text="新手指引" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/mLinearLayout_fk"
-                    android:layout_width="@dimen/j150dp"
-                    android:layout_height="@dimen/j150dp"
-                    android:layout_marginLeft="@dimen/j10dp"
-                    android:layout_marginRight="@dimen/j10dp"
-                    android:background="@drawable/shape_white"
-                    android:gravity="center">
-
-                    <TextView
-                        style="@style/text_style_15_black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawablePadding="@dimen/j15dp"
-                        android:drawableTop="@drawable/feedback"
-                        android:gravity="center"
-                        android:text="意见反馈" />
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/mTextView_more"
-            style="@style/text_style_17_black"
-            android:layout_width="@dimen/j80dp"
-            android:layout_height="@dimen/j80dp"
-            android:layout_centerInParent="true"
-            android:background="@drawable/shape_gray_yuan"
-            android:gravity="center"
-            android:text="..."
-            android:textColor="@color/gray" />
-    </RelativeLayout>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
-
-    <TextView
-        android:id="@+id/clk_mTextView_next"
-        style="@style/text_style_15_white"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/j40dp"
-        android:layout_marginBottom="@dimen/j10dp"
-        android:layout_marginLeft="@dimen/j10dp"
-        android:layout_marginRight="@dimen/j10dp"
-        android:layout_marginTop="@dimen/j20dp"
-        android:background="@drawable/shape_green"
-        android:gravity="center"
-        android:text="注销资料" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#f2f2f2" android:orientation="vertical" android:padding="@dimen/j10dp">
+     <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/j320dp" android:layout_marginTop="@dimen/j10dp">
+          <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+               <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:orientation="horizontal">
+                    <LinearLayout android:id="@+id/mLinearLayout_kf" android:layout_width="@dimen/j150dp" android:layout_height="@dimen/j150dp" android:layout_marginLeft="@dimen/j10dp" android:layout_marginRight="@dimen/j10dp" android:background="@drawable/shape_white" android:gravity="center">
+                         <TextView style="@style/text_style_15_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/j15dp" android:drawableTop="@drawable/service" android:gravity="center" android:text="客服" />
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/mLinearLayout_help" android:layout_width="@dimen/j150dp" android:layout_height="@dimen/j150dp" android:layout_marginLeft="@dimen/j10dp" android:layout_marginRight="@dimen/j10dp" android:background="@drawable/shape_white" android:gravity="center">
+                         <TextView style="@style/text_style_15_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/j15dp" android:drawableTop="@drawable/help" android:gravity="center" android:text="帮助" />
+                    </LinearLayout>
+               </LinearLayout>
+               <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j20dp" android:gravity="center_horizontal" android:orientation="horizontal">
+                    <LinearLayout android:id="@+id/mLinearLayout_xsh" android:layout_width="@dimen/j150dp" android:layout_height="@dimen/j150dp" android:layout_marginLeft="@dimen/j10dp" android:layout_marginRight="@dimen/j10dp" android:background="@drawable/shape_white" android:gravity="center">
+                         <TextView style="@style/text_style_15_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/j15dp" android:drawableTop="@drawable/novice_guide" android:gravity="center" android:text="新手指引" />
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/mLinearLayout_fk" android:layout_width="@dimen/j150dp" android:layout_height="@dimen/j150dp" android:layout_marginLeft="@dimen/j10dp" android:layout_marginRight="@dimen/j10dp" android:background="@drawable/shape_white" android:gravity="center">
+                         <TextView style="@style/text_style_15_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/j15dp" android:drawableTop="@drawable/feedback" android:gravity="center" android:text="意见反馈" />
+                    </LinearLayout>
+               </LinearLayout>
+          </LinearLayout>
+          <TextView android:id="@+id/mTextView_more" style="@style/text_style_17_black" android:layout_width="@dimen/j80dp" android:layout_height="@dimen/j80dp" android:layout_centerInParent="true" android:background="@drawable/shape_gray_yuan" android:gravity="center" android:text="..." android:textColor="@color/gray" />
+     </RelativeLayout>
+     <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" />
+     <TextView android:id="@+id/clk_mTextView_next" style="@style/text_style_15_white" android:layout_width="match_parent" android:layout_height="@dimen/j40dp" android:layout_marginBottom="@dimen/j10dp" android:layout_marginLeft="@dimen/j10dp" android:layout_marginRight="@dimen/j10dp" android:layout_marginTop="@dimen/j20dp" android:background="@drawable/shape_green" android:gravity="center" android:text="注销资料" />
 </LinearLayout>
 

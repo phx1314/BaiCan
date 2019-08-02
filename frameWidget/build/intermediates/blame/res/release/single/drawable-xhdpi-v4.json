@@ -32,12 +32,12 @@
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\drawable-xhdpi\\default_avatar.png"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\moren.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\drawable-xhdpi\\moren.png"
-    },
-    {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xhdpi\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\moren.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\drawable-xhdpi\\moren.png"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",

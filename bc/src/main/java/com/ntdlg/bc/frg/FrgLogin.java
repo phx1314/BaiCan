@@ -226,14 +226,14 @@ public class FrgLogin extends BaseFrg {
             ModelLogin mModelLogin = (ModelLogin) json2Model(content, ModelLogin.class);
             F.Login(mModelLogin.accountId, mModelLogin.token, mModelLogin.reftoken);
             Helper.toast("登录成功", getContext());
-            Frame.HANDLES.sentAll("FrgWode,FrgRzh", 0, null);
+            Frame.HANDLES.sentAll("FrgWode,FrgRenzhengxinxi", 0, null);
             Frame.HANDLES.sentAll("FrgShouye", 1, null);
             this.finish();
         } else if (methodName.equals(check)) {
             ModelLogin mModelLogin = (ModelLogin) json2Model(content, ModelLogin.class);
             if (mModelLogin.result.equals("1")) {//不需要
                 F.Login(mModelLogin.accountId, mModelLogin.token, mModelLogin.reftoken);
-                Frame.HANDLES.sentAll("FrgWode,FrgRzh", 0, null);
+                Frame.HANDLES.sentAll("FrgWode,FrgRenzhengxinxi", 0, null);
                 Frame.HANDLES.sentAll("FrgShouye", 1, null);
                 Helper.toast("登录成功", getContext());
                 this.finish();

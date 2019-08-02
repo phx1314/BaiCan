@@ -77,7 +77,7 @@ public class FrgMore extends BaseFrg {
     public void onSuccess(String methodName, String content) {
         if (methodName.equals(logout)) {
             F.Login("", "", "");
-            Frame.HANDLES.sentAll("FrgWode,FrgRzh", 0, null);
+            Frame.HANDLES.sentAll("FrgWode,FrgRenzhengxinxi", 0, null);
             Frame.HANDLES.sentAll("FrgShouye", 1, null);
             this.finish();
         }

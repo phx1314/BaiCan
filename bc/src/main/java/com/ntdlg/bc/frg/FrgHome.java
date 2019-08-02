@@ -96,7 +96,7 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
         switch (type) {
             case 1105:
                 F.Login("", "", "");
-                Frame.HANDLES.sentAll("FrgWode,FrgRzh", 0, null);
+                Frame.HANDLES.sentAll("FrgWode,FrgRenzhengxinxi", 0, null);
                 Frame.HANDLES.sentAll("FrgShouye", 1, null);
                 Helper.toast("请登录", getContext());
                 Frame.HANDLES.close("FrgLogin");
@@ -177,7 +177,7 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
                 Frame.HANDLES.sentAll("FrgShouye", 0, null);
                 break;
             case 1:
-                Frame.HANDLES.sentAll("FrgRzh", 0, null);
+                Frame.HANDLES.sentAll("FrgRenzhengxinxi", 0, null);
                 break;
             case 2:
                 Frame.HANDLES.sentAll("FrgWode", 0, null);
@@ -192,7 +192,7 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
                 Frame.HANDLES.sentAll("FrgShouye", 0, null);
                 break;
             case 1:
-                Frame.HANDLES.sentAll("FrgRzh", 0, null);
+                Frame.HANDLES.sentAll("FrgRenzhengxinxi", 0, null);
                 break;
             case 2:
                 Frame.HANDLES.sentAll("FrgWode", 0, null);

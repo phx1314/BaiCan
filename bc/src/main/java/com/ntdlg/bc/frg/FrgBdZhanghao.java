@@ -137,7 +137,7 @@ public class FrgBdZhanghao extends BaseFrg {
         if (methodName.equals(login)) {
             ModelLogin mModelLogin = (ModelLogin) json2Model(content, ModelLogin.class);
             F.Login(mModelLogin.accountId, mModelLogin.token, mModelLogin.reftoken);
-            Frame.HANDLES.sentAll("FrgWode,FrgLogin,FrgRzh", 0, null);
+            Frame.HANDLES.sentAll("FrgWode,FrgLogin,FrgRenzhengxinxi", 0, null);
             Frame.HANDLES.sentAll("FrgShouye", 1, null);
             Helper.toast("登录成功", getContext());
             this.finish();

@@ -13,6 +13,7 @@ package com.ntdlg.bc.frg;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -124,10 +125,13 @@ public class FrgRenzhengxinxi extends BaseFrg {
     }
 
     public void loaddata() {
-        Frame.HANDLES.sentAll("FrgRzh", 0, null);
-        BeanBase mBeanBase = new BeanBase();
-        mBeanBase.sign = readClassAttr(mBeanBase);
-        loadJsonUrl(getPlatform, new Gson().toJson(mBeanBase));
+//        Frame.HANDLES.sentAll("FrgRzh", 0, null);
+        if (!TextUtils.isEmpty(F.UserId)) {
+            BeanBase mBeanBase = new BeanBase();
+            mBeanBase.sign = readClassAttr(mBeanBase);
+            loadJsonUrl(getPlatform, new Gson().toJson(mBeanBase));
+        }
+
     }
 
     @Override

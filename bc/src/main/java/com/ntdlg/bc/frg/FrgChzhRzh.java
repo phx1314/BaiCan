@@ -81,7 +81,7 @@ public class FrgChzhRzh extends BaseFrg {
         if (methodName.equals(document)) {
             Helper.toast("认证成功", getContext());
             this.finish();
-            Frame.HANDLES.sentAll("FrgRzh,FrgTezx", 0, null);
+            Frame.HANDLES.sentAll("FrgRenzhengxinxi,FrgTezx", 0, null);
         }
     }
 

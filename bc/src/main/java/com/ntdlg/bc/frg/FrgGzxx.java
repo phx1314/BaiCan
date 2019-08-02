@@ -129,7 +129,7 @@ public class FrgGzxx extends BaseFrg implements DataSelectDialog.OnSelected {
                 mTextView_zjh.setText(mModelZYZWXX.companyPhone);
             }
         } else if (methodName.equals(professionInfo)) {
-            Frame.HANDLES.sentAll("FrgRenzhengxinxi,FrgGerenziliao,FrgRzh", 0, null);
+            Frame.HANDLES.sentAll("FrgRenzhengxinxi,FrgGerenziliao", 0, null);
             this.finish();
         }
     }

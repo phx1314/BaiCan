@@ -100,7 +100,7 @@ public class FrgGt extends BaseFrg {
     @Override
     public void onSuccess(String methodName, String content) {
         if (methodName.equals(gongjijinAuth) || methodName.equals(shebaoAuth)) {
-            Frame.HANDLES.sentAll("FrgRenzhengxinxi,FrgRzh", 0, null);
+            Frame.HANDLES.sentAll("FrgRenzhengxinxi", 0, null);
             loaddata();
         } else if (methodName.equals(getPlatform)) {
             mModelGRXYRZXX = (ModelGRXYRZXX) json2Model(content, ModelGRXYRZXX.class);

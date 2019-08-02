@@ -235,7 +235,7 @@ public class FrgTezx extends BaseFrg {
             }
         } else if (methodName.equals(taobaoAuth) || methodName.equals(gongjijinAuth) || methodName.equals(xuexinwangAuth) || methodName.equals(jingdongAuth)) {
             loaddata();
-            Frame.HANDLES.sentAll("FrgRzh", 0, null);
+            Frame.HANDLES.sentAll("FrgRenzhengxinxi", 0, null);
         } else if (methodName.equals(applyPromote)) {
             Helper.toast("提交成功", getContext());
             Frame.HANDLES.sentAll("FrgSxed", 0, null);

@@ -121,6 +121,7 @@
         android:layout_marginBottom="@dimen/j10dp"
         android:layout_marginTop="@dimen/j20dp"
         android:gravity="center"
+        android:visibility="gone"
         android:orientation="horizontal">
 
         <ImageView

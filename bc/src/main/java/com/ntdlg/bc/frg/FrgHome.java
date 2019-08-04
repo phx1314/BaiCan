@@ -136,7 +136,6 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
                 Context.WINDOW_SERVICE);
         mSlidingFragment.setFadeDegree(0.5f);
         F.loadContacts(getContext());
-        Helper.startActivity(getContext(), FrgTezx.class, TitleAct.class);
     }
 
     public void loaddata() {

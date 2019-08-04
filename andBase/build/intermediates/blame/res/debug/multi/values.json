@@ -16070,7 +16070,15 @@
                     "endOffset": 273274
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml"
+                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 303,
+                        "startColumn": 4,
+                        "startOffset": 14633,
+                        "endLine": 306,
+                        "endColumn": 12,
+                        "endOffset": 14789
+                    }
                 }
             },
             {
@@ -16125,7 +16133,15 @@
                     "endOffset": 273755
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml"
+                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 315,
+                        "startColumn": 4,
+                        "startOffset": 15114,
+                        "endLine": 318,
+                        "endColumn": 12,
+                        "endOffset": 15270
+                    }
                 }
             },
             {
@@ -16138,7 +16154,15 @@
                     "endOffset": 273916
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml"
+                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 319,
+                        "startColumn": 4,
+                        "startOffset": 15275,
+                        "endLine": 322,
+                        "endColumn": 12,
+                        "endOffset": 15431
+                    }
                 }
             },
             {
@@ -16151,7 +16175,15 @@
                     "endOffset": 274077
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml"
+                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 323,
+                        "startColumn": 4,
+                        "startOffset": 15436,
+                        "endLine": 326,
+                        "endColumn": 12,
+                        "endOffset": 15592
+                    }
                 }
             },
             {
@@ -16164,7 +16196,15 @@
                     "endOffset": 274238
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml"
+                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 327,
+                        "startColumn": 4,
+                        "startOffset": 15597,
+                        "endLine": 330,
+                        "endColumn": 12,
+                        "endOffset": 15753
+                    }
                 }
             },
             {
@@ -16203,7 +16243,15 @@
                     "endOffset": 274721
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml"
+                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 339,
+                        "startColumn": 4,
+                        "startOffset": 16080,
+                        "endLine": 342,
+                        "endColumn": 12,
+                        "endOffset": 16236
+                    }
                 }
             },
             {
@@ -16216,7 +16264,15 @@
                     "endOffset": 274882
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml"
+                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 343,
+                        "startColumn": 4,
+                        "startOffset": 16241,
+                        "endLine": 346,
+                        "endColumn": 12,
+                        "endOffset": 16397
+                    }
                 }
             },
             {
@@ -16229,7 +16285,15 @@
                     "endOffset": 275043
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml"
+                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 347,
+                        "startColumn": 4,
+                        "startOffset": 16402,
+                        "endLine": 350,
+                        "endColumn": 12,
+                        "endOffset": 16558
+                    }
                 }
             },
             {
@@ -16242,7 +16306,15 @@
                     "endOffset": 275204
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml"
+                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 351,
+                        "startColumn": 4,
+                        "startOffset": 16563,
+                        "endLine": 354,
+                        "endColumn": 12,
+                        "endOffset": 16719
+                    }
                 }
             },
             {
@@ -16255,7 +16327,15 @@
                     "endOffset": 275365
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml"
+                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 355,
+                        "startColumn": 4,
+                        "startOffset": 16724,
+                        "endLine": 358,
+                        "endColumn": 12,
+                        "endOffset": 16880
+                    }
                 }
             },
             {
@@ -16265,20 +16345,28 @@
                     "startOffset": 275370,
                     "endLine": 6393,
                     "endColumn": 12,
-                    "endOffset": 275526
+                    "endOffset": 275527
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml"
+                    "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 359,
+                        "startColumn": 4,
+                        "startOffset": 16885,
+                        "endLine": 362,
+                        "endColumn": 12,
+                        "endOffset": 17042
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 6394,
                     "startColumn": 4,
-                    "startOffset": 275531,
+                    "startOffset": 275532,
                     "endLine": 6396,
                     "endColumn": 12,
-                    "endOffset": 275647
+                    "endOffset": 275648
                 },
                 "from": {
                     "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values\\values.xml"
@@ -16288,10 +16376,10 @@
                 "to": {
                     "startLine": 6397,
                     "startColumn": 4,
-                    "startOffset": 275652,
+                    "startOffset": 275653,
                     "endLine": 6399,
                     "endColumn": 12,
-                    "endOffset": 275774
+                    "endOffset": 275775
                 },
                 "from": {
                     "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values\\values.xml"
@@ -16301,10 +16389,10 @@
                 "to": {
                     "startLine": 6400,
                     "startColumn": 4,
-                    "startOffset": 275779,
+                    "startOffset": 275780,
                     "endLine": 6402,
                     "endColumn": 12,
-                    "endOffset": 275899
+                    "endOffset": 275900
                 },
                 "from": {
                     "file": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values\\values.xml"

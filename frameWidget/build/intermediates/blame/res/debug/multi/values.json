@@ -41744,10 +41744,10 @@
                     "position": {
                         "startLine": 253,
                         "startColumn": 4,
-                        "startOffset": 9678,
+                        "startOffset": 9679,
                         "endLine": 256,
                         "endColumn": 12,
-                        "endOffset": 9835
+                        "endOffset": 9836
                     }
                 }
             },
@@ -41765,10 +41765,10 @@
                     "position": {
                         "startLine": 228,
                         "startColumn": 4,
-                        "startOffset": 8843,
+                        "startOffset": 8844,
                         "endLine": 231,
                         "endColumn": 12,
-                        "endOffset": 9002
+                        "endOffset": 9003
                     }
                 }
             },
@@ -41786,10 +41786,10 @@
                     "position": {
                         "startLine": 233,
                         "startColumn": 4,
-                        "startOffset": 9010,
+                        "startOffset": 9011,
                         "endLine": 236,
                         "endColumn": 12,
-                        "endOffset": 9167
+                        "endOffset": 9168
                     }
                 }
             },
@@ -41807,10 +41807,10 @@
                     "position": {
                         "startLine": 223,
                         "startColumn": 4,
-                        "startOffset": 8676,
+                        "startOffset": 8677,
                         "endLine": 226,
                         "endColumn": 12,
-                        "endOffset": 8835
+                        "endOffset": 8836
                     }
                 }
             },
@@ -41828,10 +41828,10 @@
                     "position": {
                         "startLine": 243,
                         "startColumn": 4,
-                        "startOffset": 9349,
+                        "startOffset": 9350,
                         "endLine": 246,
                         "endColumn": 12,
-                        "endOffset": 9505
+                        "endOffset": 9506
                     }
                 }
             },
@@ -41849,10 +41849,10 @@
                     "position": {
                         "startLine": 218,
                         "startColumn": 4,
-                        "startOffset": 8509,
+                        "startOffset": 8510,
                         "endLine": 221,
                         "endColumn": 12,
-                        "endOffset": 8668
+                        "endOffset": 8669
                     }
                 }
             },
@@ -41870,10 +41870,10 @@
                     "position": {
                         "startLine": 238,
                         "startColumn": 4,
-                        "startOffset": 9175,
+                        "startOffset": 9176,
                         "endLine": 241,
                         "endColumn": 12,
-                        "endOffset": 9341
+                        "endOffset": 9342
                     }
                 }
             },
@@ -41891,10 +41891,10 @@
                     "position": {
                         "startLine": 248,
                         "startColumn": 4,
-                        "startOffset": 9513,
+                        "startOffset": 9514,
                         "endLine": 251,
                         "endColumn": 12,
-                        "endOffset": 9670
+                        "endOffset": 9671
                     }
                 }
             },
@@ -41912,10 +41912,10 @@
                     "position": {
                         "startLine": 203,
                         "startColumn": 4,
-                        "startOffset": 8010,
+                        "startOffset": 8011,
                         "endLine": 206,
                         "endColumn": 12,
-                        "endOffset": 8169
+                        "endOffset": 8170
                     }
                 }
             },
@@ -41929,7 +41929,15 @@
                     "endOffset": 273229
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml"
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 213,
+                        "startColumn": 4,
+                        "startOffset": 8343,
+                        "endLine": 216,
+                        "endColumn": 12,
+                        "endOffset": 8502
+                    }
                 }
             },
             {
@@ -41946,10 +41954,10 @@
                     "position": {
                         "startLine": 208,
                         "startColumn": 4,
-                        "startOffset": 8177,
+                        "startOffset": 8178,
                         "endLine": 211,
                         "endColumn": 12,
-                        "endOffset": 8334
+                        "endOffset": 8335
                     }
                 }
             },
@@ -41967,10 +41975,10 @@
                     "position": {
                         "startLine": 198,
                         "startColumn": 4,
-                        "startOffset": 7843,
+                        "startOffset": 7844,
                         "endLine": 201,
                         "endColumn": 12,
-                        "endOffset": 8002
+                        "endOffset": 8003
                     }
                 }
             },
@@ -41984,7 +41992,15 @@
                     "endOffset": 273710
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml"
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 193,
+                        "startColumn": 4,
+                        "startOffset": 7677,
+                        "endLine": 196,
+                        "endColumn": 12,
+                        "endOffset": 7836
+                    }
                 }
             },
             {
@@ -41997,7 +42013,15 @@
                     "endOffset": 273871
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml"
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 188,
+                        "startColumn": 4,
+                        "startOffset": 7510,
+                        "endLine": 191,
+                        "endColumn": 12,
+                        "endOffset": 7669
+                    }
                 }
             },
             {
@@ -42010,7 +42034,15 @@
                     "endOffset": 274032
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml"
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 183,
+                        "startColumn": 4,
+                        "startOffset": 7343,
+                        "endLine": 186,
+                        "endColumn": 12,
+                        "endOffset": 7502
+                    }
                 }
             },
             {
@@ -42023,7 +42055,15 @@
                     "endOffset": 274193
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml"
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 178,
+                        "startColumn": 4,
+                        "startOffset": 7176,
+                        "endLine": 181,
+                        "endColumn": 12,
+                        "endOffset": 7335
+                    }
                 }
             },
             {
@@ -42062,7 +42102,15 @@
                     "endOffset": 274676
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml"
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 163,
+                        "startColumn": 4,
+                        "startOffset": 6675,
+                        "endLine": 166,
+                        "endColumn": 12,
+                        "endOffset": 6834
+                    }
                 }
             },
             {
@@ -42075,7 +42123,15 @@
                     "endOffset": 274837
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml"
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 158,
+                        "startColumn": 4,
+                        "startOffset": 6508,
+                        "endLine": 161,
+                        "endColumn": 12,
+                        "endOffset": 6667
+                    }
                 }
             },
             {
@@ -42088,7 +42144,15 @@
                     "endOffset": 274998
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml"
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 153,
+                        "startColumn": 4,
+                        "startOffset": 6341,
+                        "endLine": 156,
+                        "endColumn": 12,
+                        "endOffset": 6500
+                    }
                 }
             },
             {
@@ -42101,7 +42165,15 @@
                     "endOffset": 275159
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml"
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 148,
+                        "startColumn": 4,
+                        "startOffset": 6174,
+                        "endLine": 151,
+                        "endColumn": 12,
+                        "endOffset": 6333
+                    }
                 }
             },
             {
@@ -42114,7 +42186,15 @@
                     "endOffset": 275320
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml"
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 143,
+                        "startColumn": 4,
+                        "startOffset": 6007,
+                        "endLine": 146,
+                        "endColumn": 12,
+                        "endOffset": 6166
+                    }
                 }
             },
             {
@@ -42124,20 +42204,28 @@
                     "startOffset": 275325,
                     "endLine": 6392,
                     "endColumn": 12,
-                    "endOffset": 275481
+                    "endOffset": 275482
                 },
                 "from": {
-                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml"
+                    "file": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 138,
+                        "startColumn": 4,
+                        "startOffset": 5839,
+                        "endLine": 141,
+                        "endColumn": 12,
+                        "endOffset": 5999
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 6393,
                     "startColumn": 4,
-                    "startOffset": 275486,
+                    "startOffset": 275487,
                     "endLine": 6395,
                     "endColumn": 12,
-                    "endOffset": 275602
+                    "endOffset": 275603
                 },
                 "from": {
                     "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values\\values.xml"
@@ -42147,10 +42235,10 @@
                 "to": {
                     "startLine": 6396,
                     "startColumn": 4,
-                    "startOffset": 275607,
+                    "startOffset": 275608,
                     "endLine": 6398,
                     "endColumn": 12,
-                    "endOffset": 275729
+                    "endOffset": 275730
                 },
                 "from": {
                     "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values\\values.xml"
@@ -42160,10 +42248,10 @@
                 "to": {
                     "startLine": 6399,
                     "startColumn": 4,
-                    "startOffset": 275734,
+                    "startOffset": 275735,
                     "endLine": 6401,
                     "endColumn": 12,
-                    "endOffset": 275854
+                    "endOffset": 275855
                 },
                 "from": {
                     "file": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\values\\values.xml"

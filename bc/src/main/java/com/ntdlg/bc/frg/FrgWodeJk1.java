@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.mdx.framework.Frame;
+import com.mdx.framework.activity.NoTitleAct;
 import com.mdx.framework.activity.TitleAct;
 import com.mdx.framework.utility.Helper;
 import com.ntdlg.bc.F;
@@ -26,9 +27,11 @@ import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanBase;
 import com.ntdlg.bc.bean.BeanHt;
 import com.ntdlg.bc.bean.BeanSQTE;
+import com.ntdlg.bc.bean.BeanVip;
 import com.ntdlg.bc.bean.BeanWDJK;
 import com.ntdlg.bc.model.ModelGRXYRZXX;
 import com.ntdlg.bc.model.ModelKSJK2;
+import com.ntdlg.bc.model.ModelLoginUrl;
 import com.ntdlg.bc.model.ModelWDJK;
 
 import static com.ntdlg.bc.F.beginApply;
@@ -36,6 +39,7 @@ import static com.ntdlg.bc.F.bioAssay;
 import static com.ntdlg.bc.F.changeTime;
 import static com.ntdlg.bc.F.getPlatform;
 import static com.ntdlg.bc.F.getTime;
+import static com.ntdlg.bc.F.getVip88LoginUrl;
 import static com.ntdlg.bc.F.json2Model;
 import static com.ntdlg.bc.F.queryBill;
 import static com.ntdlg.bc.F.readClassAttr;
@@ -78,7 +82,7 @@ public class FrgWodeJk1 extends BaseFrg {
                 break;
             case 130:
                 BeanHt mBeanHt = new BeanHt();
-                mBeanHt.assayPic=obj.toString();
+                mBeanHt.assayPic = obj.toString();
                 mBeanHt.sign = readClassAttr(mBeanHt);
                 loadJsonUrl(bioAssay, new Gson().toJson(mBeanHt));
                 break;
@@ -172,9 +176,36 @@ public class FrgWodeJk1 extends BaseFrg {
                         }
                     });
                 } else if (mModelWDJK.bills.get(0).billStatus.equals("10")) {//放款中
-                    mTextView_remark.setVisibility(View.GONE);
-                    mTextView_tj.setVisibility(View.INVISIBLE);
+                    mTextView_remark.setVisibility(View.VISIBLE);
+                    mTextView_tj.setVisibility(View.VISIBLE);
                     mTextView_type.setText("放款中");
+                    mTextView_remark.setText(Html.fromHtml("放款倒计时  <font color='#FDA935'>" + getTime(mModelWDJK.bills.get(0).date) + "</font>"));
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            while (isOk) {
+                                try {
+                                    Thread.sleep(1000);
+                                    if (getActivity() != null)
+                                        getActivity().runOnUiThread(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                mTextView_remark.setText(Html.fromHtml("放款倒计时  <font color='#FDA935'>" + getTime(mModelWDJK.bills.get(0).date) + "</font>"));
+                                            }
+                                        });
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }
+                    }).start();
+                    mTextView_tj.setText("购买VIP");
+                    mTextView_tj.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            loadJsonUrl(getVip88LoginUrl, new Gson().toJson(new BeanVip()));
+                        }
+                    });
                 } else if (mModelWDJK.bills.get(0).billStatus.equals("6")) {//还款中
                     mTextView_remark.setVisibility(View.VISIBLE);
                     mTextView_tj.setVisibility(View.VISIBLE);
@@ -209,6 +240,9 @@ public class FrgWodeJk1 extends BaseFrg {
         } else if (methodName.equals(bioAssay)) {
             Helper.toast("认证成功", getContext());
             Helper.startActivity(getContext(), FrgSign.class, TitleAct.class);
+        } else if (methodName.equals(getVip88LoginUrl)) {
+            ModelLoginUrl mModelLoginUrl = (ModelLoginUrl) json2Model(content, ModelLoginUrl.class);
+            Helper.startActivity(getContext(), FrgVip.class, NoTitleAct.class, "url", mModelLoginUrl.dataObject.data);
         }
     }
 }

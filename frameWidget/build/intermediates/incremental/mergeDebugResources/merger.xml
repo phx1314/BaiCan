@@ -5380,17 +5380,17 @@
         <item name="android:gravity">center</item>
     </style><style name="text_style_11_black">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">13sp</item>
     </style><style name="text_style_13_black_noblod">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">15sp</item>
     </style><style name="default_linerlayout">
         <item name="android:background">#00000000</item>
         <item name="android:padding">3.0dip</item>
         <item name="android:gravity">top|right</item>
     </style><style name="text_style_21_black">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">21sp</item>
+        <item name="android:textSize">23sp</item>
     </style><style name="menu">
         <item name="android:background">@drawable/click_nn</item>
         <item name="android:layout_width">wrap_content</item>
@@ -5404,18 +5404,18 @@
         <item name="android:textStyle">bold</item>
     </style><style name="text_style_18_white">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">20sp</item>
     </style><style name="text_style_13">
         <item name="android:textColor">@color/color_66</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">15sp</item>
     </style><style name="GridPasswordView.EditText" parent="GridPasswordView.TextView">
         <item name="android:cursorVisible">false</item>
     </style><style name="text_style_13_white">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">15sp</item>
     </style><style name="text_style_13_black">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">11sp</item>
+        <item name="android:textSize">15sp</item>
     </style><style name="dialog_1" parent="@android:style/Theme.Dialog">
 
         
@@ -5442,13 +5442,13 @@
         <item name="android:textSize">19sp</item>
     </style><style name="text_style_13_gray">
         <item name="android:textColor">@color/tyE4</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">15sp</item>
     </style><style name="text_style_21_white">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">21sp</item>
+        <item name="android:textSize">23sp</item>
     </style><style name="text_style_11_white">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">13sp</item>
     </style><style name="GridPasswordView.TextView">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
@@ -5474,10 +5474,10 @@
         <item name="android:backgroundDimEnabled">true</item>
     </style><style name="text_style_18_black">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">20sp</item>
     </style><style name="text_style_17_white">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">17sp</item>
+        <item name="android:textSize">19sp</item>
     </style><style name="MyActivitySiwtchAnimation">
         <item name="android:activityOpenEnterAnimation">@anim/slide_in_from_right</item>
         <item name="android:activityOpenExitAnimation">@anim/hold</item>
@@ -5485,35 +5485,35 @@
         <item name="android:activityCloseExitAnimation">@anim/slide_out_to_right</item>
     </style><style name="text_style_20_black">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">22sp</item>
     </style><style name="text_style_15_black">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">17sp</item>
     </style><style name="text_style_20_white">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">22sp</item>
     </style><style name="text_style_10_gray">
         <item name="android:textColor">@color/tyE4</item>
-        <item name="android:textSize">11sp</item>
+        <item name="android:textSize">12sp</item>
     </style><style name="notitle">
         <item name="android:windowNoTitle">true</item>
     </style><style name="GridPasswordView"/><style name="text_style_22_black">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">24sp</item>
     </style><style name="text_style_15_gray">
         <item name="android:textColor">@color/tyE4</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">17sp</item>
     </style><style name="AppTheme" parent="AppBaseTheme">
         
     </style><style name="text_style_22_white">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">224sp</item>
     </style><style name="text_style_19_black">
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">19sp</item>
     </style><style name="text_style_17_black">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">17sp</item>
+        <item name="android:textSize">19sp</item>
     </style><style name="AppTheme_pub" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -5523,10 +5523,10 @@
         <item name="android:windowAnimationStyle">@style/MyActivitySiwtchAnimation</item>
     </style><style name="text_style_15_white">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">17sp</item>
     </style><style name="text_style_11_gray">
         <item name="android:textColor">@color/tyE4</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">13sp</item>
     </style><style name="AppBaseTheme" parent="android:Theme.Light">
         
     </style></file><file path="F:\work\BaiCan\frameWidget\src\main\res\values-sw320dp\dpdim.xml" qualifiers="sw320dp-v13"><dimen name="j100dp">100.0dp</dimen><dimen name="j8dp">8.0dp</dimen><dimen name="j44dp">44.0dp</dimen><dimen name="j10dp">10.0dp</dimen><dimen name="j60dp">60.0dp</dimen><dimen name="j11dp">11.0dp</dimen><dimen name="j50dp">50.0dp</dimen><dimen name="j30dp">30.0dp</dimen><dimen name="j40dp">40.0dp</dimen><dimen name="j12dp">12.0dp</dimen><dimen name="j2dp">2.0dp</dimen><dimen name="j1dp">1.0dp</dimen><dimen name="j500dp">500.0dp</dimen><dimen name="j320dp">320.0dp</dimen><dimen name="j3dp">3.0dp</dimen><dimen name="j17dp">17.0dp</dimen><dimen name="j5dp">5.0dp</dimen></file><file path="F:\work\BaiCan\frameWidget\src\main\res\values-sw360dp\dpdim.xml" qualifiers="sw360dp-v13"><dimen name="j100dp">112.5dp</dimen><dimen name="j320dp">360.0dp</dimen><dimen name="j17dp">19.125dp</dimen><dimen name="j2dp">2.25dp</dimen><dimen name="j1dp">1.125dp</dimen><dimen name="j44dp">49.5dp</dimen><dimen name="j8dp">9.0dp</dimen><dimen name="j30dp">33.75dp</dimen><dimen name="j11dp">12.375dp</dimen><dimen name="j10dp">11.25dp</dimen><dimen name="j12dp">13.5dp</dimen><dimen name="j3dp">3.375dp</dimen><dimen name="j5dp">5.625dp</dimen><dimen name="j60dp">67.5dp</dimen><dimen name="j500dp">562.5dp</dimen><dimen name="j40dp">45.0dp</dimen><dimen name="j50dp">56.25dp</dimen></file><file path="F:\work\BaiCan\frameWidget\src\main\res\values-sw384dp\dpdim.xml" qualifiers="sw384dp-v13"><dimen name="j8dp">9.6dp</dimen><dimen name="j5dp">6.0dp</dimen><dimen name="j60dp">72.0dp</dimen><dimen name="j500dp">600.0dp</dimen><dimen name="j30dp">36.0dp</dimen><dimen name="j50dp">60.000004dp</dimen><dimen name="j40dp">48.0dp</dimen><dimen name="j11dp">13.200001dp</dimen><dimen name="j10dp">12.0dp</dimen><dimen name="j12dp">14.400001dp</dimen><dimen name="j44dp">52.800003dp</dimen><dimen name="j100dp">120.00001dp</dimen><dimen name="j17dp">20.400002dp</dimen><dimen name="j320dp">384.0dp</dimen><dimen name="j3dp">3.6000001dp</dimen><dimen name="j1dp">1.2dp</dimen><dimen name="j2dp">2.4dp</dimen></file><file path="F:\work\BaiCan\frameWidget\src\main\res\values-sw600dp\dpdim.xml" qualifiers="sw600dp-v13"><dimen name="j8dp">15.0dp</dimen><dimen name="j17dp">31.875dp</dimen><dimen name="j100dp">187.5dp</dimen><dimen name="j5dp">9.375dp</dimen><dimen name="j1dp">1.875dp</dimen><dimen name="j10dp">18.75dp</dimen><dimen name="j40dp">75.0dp</dimen><dimen name="j2dp">3.75dp</dimen><dimen name="j30dp">56.25dp</dimen><dimen name="j3dp">5.625dp</dimen><dimen name="j12dp">22.5dp</dimen><dimen name="j11dp">20.625dp</dimen><dimen name="j44dp">82.5dp</dimen><dimen name="j500dp">937.5dp</dimen><dimen name="j50dp">93.75dp</dimen><dimen name="j60dp">112.5dp</dimen><dimen name="j320dp">600.0dp</dimen></file><file path="F:\work\BaiCan\frameWidget\src\main\res\values-sw720dp\dpdim.xml" qualifiers="sw720dp-v13"><dimen name="j320dp">720.0dp</dimen><dimen name="j30dp">67.5dp</dimen><dimen name="j10dp">22.5dp</dimen><dimen name="j44dp">99.0dp</dimen><dimen name="j11dp">24.75dp</dimen><dimen name="j12dp">27.0dp</dimen><dimen name="j17dp">38.25dp</dimen><dimen name="j500dp">1125.0dp</dimen><dimen name="j100dp">225.0dp</dimen><dimen name="j1dp">2.25dp</dimen><dimen name="j2dp">4.5dp</dimen><dimen name="j3dp">6.75dp</dimen><dimen name="j5dp">11.25dp</dimen><dimen name="j50dp">112.5dp</dimen><dimen name="j8dp">18.0dp</dimen><dimen name="j40dp">90.0dp</dimen><dimen name="j60dp">135.0dp</dimen></file><file path="F:\work\BaiCan\frameWidget\src\main\res\values-sw720dp-land\dimens.xml" qualifiers="sw720dp-land-v13"><dimen name="activity_horizontal_margin">128dp</dimen></file><file path="F:\work\BaiCan\frameWidget\src\main\res\values-sw800dp\dpdim.xml" qualifiers="sw800dp-v13"><dimen name="j50dp">125.0dp</dimen><dimen name="j30dp">75.0dp</dimen><dimen name="j320dp">800.0dp</dimen><dimen name="j60dp">150.0dp</dimen><dimen name="j8dp">20.0dp</dimen><dimen name="j40dp">100.0dp</dimen><dimen name="j10dp">25.0dp</dimen><dimen name="j11dp">27.5dp</dimen><dimen name="j12dp">30.0dp</dimen><dimen name="j100dp">250.0dp</dimen><dimen name="j44dp">110.0dp</dimen><dimen name="j1dp">2.5dp</dimen><dimen name="j17dp">42.5dp</dimen><dimen name="j2dp">5.0dp</dimen><dimen name="j3dp">7.5dp</dimen><dimen name="j5dp">12.5dp</dimen><dimen name="j500dp">1250.0dp</dimen></file><file path="F:\work\BaiCan\frameWidget\src\main\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">

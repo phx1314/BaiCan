@@ -62,7 +62,7 @@ public class DialogCao extends BaseItem {
     public void set(final Dialog item, ModelKSJK2 mModelKSJK2) {
         this.item = item;
         this.mModelKSJK2 = mModelKSJK2;
-        if (!TextUtils.isEmpty(mModelKSJK2.isApplay) && mModelKSJK2.isApplay.equals("1")) {
+        if (!TextUtils.isEmpty(mModelKSJK2.type) && mModelKSJK2.type.equals("1")) {
             mTextView_title.setText("尊敬的会员您现在可以享受vip立即放款功能！");
             mTextView_1.setText("取消");
             mTextView_2.setText("确认");
@@ -76,7 +76,8 @@ public class DialogCao extends BaseItem {
                 @Override
                 public void onClick(View v) {
                     item.dismiss();
-                    Frame.HANDLES.sentAll("FrgJkShenqing", 0, null);
+                    Frame.HANDLES.sentAll("FrgSxed,FrgWode,FrgWodeJk1", 0, null);
+                    Frame.HANDLES.closeIds("FrgJkShenqing,FrgSign");
                 }
             });
         } else {

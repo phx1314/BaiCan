@@ -54,13 +54,13 @@ public class FrgWodeJk extends BaseFrg {
     public void disposeMsg(int type, Object obj) {
         switch (type) {
             case 0:
-//                mHeadlayout.setRText("查看合同");
-//                mHeadlayout.setRightOnclicker(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        Helper.startActivity(getContext(), FrgHt.class, TitleAct.class);
-//                    }
-//                });
+                mHeadlayout.setRText("查看合同");
+                mHeadlayout.setRightOnclicker(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Helper.startActivity(getContext(), FrgHt.class, TitleAct.class);
+                    }
+                });
                 break;
         }
     }
@@ -118,12 +118,12 @@ public class FrgWodeJk extends BaseFrg {
     public void setActionBar(ActionBar actionBar, Context context) {
         super.setActionBar(actionBar, context);
         mHeadlayout.setTitle("我的借款");
-        mHeadlayout.setRText("查看合同");
-        mHeadlayout.setRightOnclicker(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Helper.startActivity(getContext(), FrgHt.class, TitleAct.class);
-            }
-        });
+//        mHeadlayout.setRText("查看合同");
+//        mHeadlayout.setRightOnclicker(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Helper.startActivity(getContext(), FrgHt.class, TitleAct.class);
+//            }
+//        });
     }
 }

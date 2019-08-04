@@ -30,6 +30,8 @@ import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanQYQR;
 import com.ntdlg.bc.bean.BeanQYQRSJ;
 import com.ntdlg.bc.bean.BeanSQTE;
+import com.ntdlg.bc.bean.BeanVip;
+import com.ntdlg.bc.bean.BeannoVip;
 import com.ntdlg.bc.item.DialogCao;
 import com.ntdlg.bc.model.ModelKSJK2;
 import com.ntdlg.bc.model.ModelLoginUrl;
@@ -40,6 +42,7 @@ import static com.ntdlg.bc.F.affirmBorrowData;
 import static com.ntdlg.bc.F.beginApply;
 import static com.ntdlg.bc.F.getVip88LoginUrl;
 import static com.ntdlg.bc.F.json2Model;
+import static com.ntdlg.bc.F.noVip;
 import static com.ntdlg.bc.F.readClassAttr;
 
 
@@ -67,12 +70,15 @@ public class FrgJkShenqing extends BaseFrg {
     public void disposeMsg(int type, Object obj) {
         switch (type) {
             case 0:
-                BeanQYQR mBeanQYQR = new BeanQYQR();
-                mBeanQYQR.sign = readClassAttr(mBeanQYQR);
-                loadJsonUrl(affirmBorrow, new Gson().toJson(mBeanQYQR));
+//                BeanQYQR mBeanQYQR = new BeanQYQR();
+//                mBeanQYQR.sign = readClassAttr(mBeanQYQR);
+//                loadJsonUrl(affirmBorrow, new Gson().toJson(mBeanQYQR));
+                BeannoVip mBeannoVip = new BeannoVip();
+                mBeannoVip.sign = readClassAttr(mBeannoVip);
+                loadJsonUrl(noVip, new Gson().toJson(mBeannoVip));
                 break;
             case 1:
-                loadJsonUrl(getVip88LoginUrl, "");
+                loadJsonUrl(getVip88LoginUrl, new Gson().toJson(new BeanVip()));
                 break;
         }
     }
@@ -130,9 +136,9 @@ public class FrgJkShenqing extends BaseFrg {
                     Helper.startActivity(getContext(), FrgPtDetail.class, NoTitleAct.class, "url", mModelQUQRSJ.url, "title", "签约协议", "hasTextSize", true);
                 }
             });
-        } else if (methodName.equals(affirmBorrow)) {
-            Helper.toast("签约成功", getContext());
-            Frame.HANDLES.sentAll("FrgSxed,FrgWode", 0, null);
+        } else if (methodName.equals(noVip)) {
+            Helper.toast("操作成功", getContext());
+            Frame.HANDLES.sentAll("FrgSxed,FrgWode,FrgWodeJk1", 0, null);
             this.finish();
         } else if (methodName.equals(beginApply)) {
             final ModelKSJK2 mModelKSJK2 = (ModelKSJK2) json2Model(content, ModelKSJK2.class);
@@ -150,7 +156,7 @@ public class FrgJkShenqing extends BaseFrg {
             });
         } else if (methodName.equals(getVip88LoginUrl)) {
             ModelLoginUrl mModelLoginUrl = (ModelLoginUrl) json2Model(content, ModelLoginUrl.class);
-            Helper.startActivity(getContext(), FrgVip.class, NoTitleAct.class, "url", mModelLoginUrl.loginUrl);
+            Helper.startActivity(getContext(), FrgVip.class, NoTitleAct.class, "url", mModelLoginUrl.dataObject.data);
         }
     }
 

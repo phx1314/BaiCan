@@ -11,6 +11,7 @@
 
 package com.ntdlg.bc.frg;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.RelativeLayout;
@@ -20,6 +21,7 @@ import com.mdx.framework.utility.Helper;
 import com.mdx.framework.widget.MImageView;
 import com.ntdlg.bc.F;
 import com.ntdlg.bc.R;
+import com.ntdlg.bc.service.LocService;
 
 
 public class FrgLoading extends BaseFrg {
@@ -31,6 +33,8 @@ public class FrgLoading extends BaseFrg {
     @Override
     protected void create(Bundle savedInstanceState) {
         setContentView(R.layout.frg_loading);
+        getActivity().startService(
+                new Intent(getContext(), LocService.class));
         initView();
         loaddata();
     }

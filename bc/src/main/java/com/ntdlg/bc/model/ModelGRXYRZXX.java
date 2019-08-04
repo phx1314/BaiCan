@@ -30,6 +30,8 @@ public class ModelGRXYRZXX implements Serializable {
     public String isYihaodianAuth = "";
     public String isXuexinwangAuth = "";
     public String isZhifubaoAuth = "";
+    public String isMeituanAuth = "";
+    public String isElemeAuth = "";
     public String IsShebaoAuth = "";
     public String isGongjijinAuth = "";
     public String isBillAuth = "";

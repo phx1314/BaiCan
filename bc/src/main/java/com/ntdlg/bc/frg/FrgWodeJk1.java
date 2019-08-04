@@ -24,6 +24,7 @@ import com.mdx.framework.utility.Helper;
 import com.ntdlg.bc.F;
 import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanBase;
+import com.ntdlg.bc.bean.BeanHt;
 import com.ntdlg.bc.bean.BeanSQTE;
 import com.ntdlg.bc.bean.BeanWDJK;
 import com.ntdlg.bc.model.ModelGRXYRZXX;
@@ -69,13 +70,17 @@ public class FrgWodeJk1 extends BaseFrg {
     @Override
     public void disposeMsg(int type, Object obj) {
         switch (type) {
+            case 0:
+                loaddata();
+                break;
             case 1:
                 F.mTBlivessCompare(getActivity(), mModelGRXYRZXX.sessid, "FrgWodeJk1");
                 break;
             case 130:
-                BeanBase mBeanBase = new BeanBase();
-                mBeanBase.sign = readClassAttr(mBeanBase);
-                loadJsonUrl(bioAssay, new Gson().toJson(mBeanBase));
+                BeanHt mBeanHt = new BeanHt();
+                mBeanHt.assayPic=obj.toString();
+                mBeanHt.sign = readClassAttr(mBeanHt);
+                loadJsonUrl(bioAssay, new Gson().toJson(mBeanHt));
                 break;
         }
     }
@@ -132,7 +137,6 @@ public class FrgWodeJk1 extends BaseFrg {
                     mTextView_remark.setVisibility(View.VISIBLE);
                     mTextView_tj.setVisibility(View.VISIBLE);
                     mTextView_type.setText("签约中");
-                    Frame.HANDLES.sentAll("FrgWodeJk", 0, null);
                     mTextView_tj.setText("开始借款");
                     mTextView_remark.setText(Html.fromHtml("签约倒计时  <font color='#FDA935'>" + getTime(mModelWDJK.bills.get(0).date) + "</font>"));
                     new Thread(new Runnable() {
@@ -171,7 +175,6 @@ public class FrgWodeJk1 extends BaseFrg {
                     mTextView_remark.setVisibility(View.GONE);
                     mTextView_tj.setVisibility(View.INVISIBLE);
                     mTextView_type.setText("放款中");
-                    Frame.HANDLES.sentAll("FrgWodeJk", 0, null);
                 } else if (mModelWDJK.bills.get(0).billStatus.equals("6")) {//还款中
                     mTextView_remark.setVisibility(View.VISIBLE);
                     mTextView_tj.setVisibility(View.VISIBLE);

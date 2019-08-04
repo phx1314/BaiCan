@@ -185,6 +185,12 @@
                 android:name="android.accessibilityservice"
                 android:resource="@xml/accessible_crawler_config" />
         </service>
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="dde8599b0c82207923f99d7f11dc6f69" />
+        <service android:name="com.ntdlg.bc.service.LocService" />
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <service android:name="com.amap.api.location.APSService" />
     </application>
 
 </manifest>

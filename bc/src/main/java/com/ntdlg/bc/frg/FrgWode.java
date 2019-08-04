@@ -11,6 +11,8 @@
 
 package com.ntdlg.bc.frg;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -154,9 +156,12 @@ public class FrgWode extends BaseFrg {
             return;
         }
         if (R.id.clk_mTextView_hd == v.getId()) {
-            if (mModelShare != null)
-                com.framewidget.F.getShare(getContext(), "", mModelShare.url
-                        , mModelShare.content, mModelShare.title);
+            if (mModelShare != null) {
+//                com.framewidget.F.getShare(getContext(), "", mModelShare.url
+//                        , mModelShare.content, mModelShare.title);
+                share(getContext(), mModelShare.title, mModelShare.content + mModelShare.url);
+            }
+
         } else if (R.id.mLinearLayout_1 == v.getId()) {
             Helper.startActivity(getContext(), FrgWodeJk.class, TitleAct.class, "mModelZHZX", mModelZHZX);
         } else if (R.id.mLinearLayout_2 == v.getId()) {
@@ -170,6 +175,15 @@ public class FrgWode extends BaseFrg {
         } else if (R.id.mLinearLayout_4 == v.getId()) {
             Helper.startActivity(getContext(), FrgMore.class, TitleAct.class);
         }
+    }
+
+    public static void share(Context context, String title, String content) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, content);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(
+                Intent.createChooser(intent, title));
     }
 
 }

@@ -100,6 +100,7 @@ public class FrgShenfenRezhengNew extends BaseFrg {
                         ModelSF response = new ModelSF();
                         response.idcard_front_photo = Base64.encodeToString(bitmap2Byte(mBitmap2), Base64.DEFAULT);
                         response.idcard_back_photo = Base64.encodeToString(bitmap2Byte(mBitmap1), Base64.DEFAULT);
+                        FrgShenfenRezhengNew.this.finish();
                         Frame.HANDLES.sentAll(from, 120, response);
                     }
                 }).start();

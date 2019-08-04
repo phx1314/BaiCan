@@ -2,5 +2,9 @@
     {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
         "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\menu\\main.xml"
     }
 ]

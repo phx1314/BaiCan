@@ -1,5 +1,9 @@
 [
     {
+        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\menu\\main.xml"
+    },
+    {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\menu\\main.xml"
     }

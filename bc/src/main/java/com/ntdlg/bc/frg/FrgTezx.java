@@ -28,12 +28,15 @@ import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanBase;
 import com.ntdlg.bc.bean.BeanSQTE;
 import com.ntdlg.bc.model.ModelGRXYRZXX;
+import com.thinkcool.circletextimageview.CircleTextImageView;
 
 import static com.ntdlg.bc.F.applyPromote;
+import static com.ntdlg.bc.F.elemeAuth;
 import static com.ntdlg.bc.F.getPlatform;
 import static com.ntdlg.bc.F.gongjijinAuth;
 import static com.ntdlg.bc.F.jingdongAuth;
 import static com.ntdlg.bc.F.json2Model;
+import static com.ntdlg.bc.F.meituanAuth;
 import static com.ntdlg.bc.F.rZhengWb;
 import static com.ntdlg.bc.F.readClassAttr;
 import static com.ntdlg.bc.F.taobaoAuth;
@@ -63,6 +66,9 @@ public class FrgTezx extends BaseFrg {
     public TextView mTextView_sb;
     public LinearLayout mLinearLayout_sb;
     public ImageView mImageView_sb;
+    public CircleTextImageView mImageView_zfb;
+    public TextView mTextView_zfb;
+    public LinearLayout mLinearLayout_zfb;
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -105,12 +111,22 @@ public class FrgTezx extends BaseFrg {
         mTextView_sb = (TextView) findViewById(R.id.mTextView_sb);
         mLinearLayout_sb = (LinearLayout) findViewById(R.id.mLinearLayout_sb);
         mImageView_sb = (ImageView) findViewById(R.id.mImageView_sb);
-
+        mImageView_zfb = (CircleTextImageView) findViewById(R.id.mImageView_zfb);
+        mTextView_zfb = (TextView) findViewById(R.id.mTextView_zfb);
+        mLinearLayout_zfb = (LinearLayout) findViewById(R.id.mLinearLayout_zfb);
         mLinearLayout_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (!mModelGRXYRZXX.isTaobaoAuth.equals("1")) {
                     rZhengWb(getActivity(), MxParam.PARAM_TASK_TAOBAO, FrgTezx.this);//淘宝
+                }
+            }
+        });
+        mLinearLayout_zfb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!mModelGRXYRZXX.isZhifubaoAuth.equals("1")) {
+                    rZhengWb(getActivity(), MxParam.PARAM_TASK_ALIPAY, FrgTezx.this);//淘宝
                 }
             }
         });
@@ -180,60 +196,69 @@ public class FrgTezx extends BaseFrg {
         if (methodName.equals(getPlatform)) {
             mModelGRXYRZXX = (ModelGRXYRZXX) json2Model(content, ModelGRXYRZXX.class);
             if (mModelGRXYRZXX.isTaobaoAuth.equals("1")) {
-                mImageView_1.setImageResource(R.drawable.authentication1);
+                mImageView_1.setImageResource(R.drawable.tao);
                 mTextView_1.setText("已认证");
                 mTextView_1.setTextColor(getResources().getColor(R.color.A));
             } else {
-                mImageView_1.setImageResource(R.drawable.tao);
+                mImageView_1.setImageResource(R.drawable.authentication1);
                 mTextView_1.setText("未认证");
                 mTextView_1.setTextColor(getResources().getColor(R.color.shouye_red));
             }
+            if (mModelGRXYRZXX.isZhifubaoAuth.equals("1")) {
+                mImageView_zfb.setImageResource(R.drawable.zfb_c);
+                mTextView_zfb.setText("已认证");
+                mTextView_zfb.setTextColor(getResources().getColor(R.color.A));
+            } else {
+                mImageView_zfb.setImageResource(R.drawable.zfb_nc);
+                mTextView_zfb.setText("未认证");
+                mTextView_zfb.setTextColor(getResources().getColor(R.color.shouye_red));
+            }
             if (mModelGRXYRZXX.isGongjijinAuth.equals("1")) {
-                mImageView_2.setImageResource(R.drawable.authentication2);
+                mImageView_2.setImageResource(R.drawable.gong);
                 mTextView_2.setText("已认证");
                 mTextView_2.setTextColor(getResources().getColor(R.color.A));
             } else {
-                mImageView_2.setImageResource(R.drawable.gong);
+                mImageView_2.setImageResource(R.drawable.authentication2);
                 mTextView_2.setText("未认证");
                 mTextView_2.setTextColor(getResources().getColor(R.color.shouye_red));
             }
             if (mModelGRXYRZXX.IsShebaoAuth.equals("1")) {
-                mImageView_sb.setImageResource(R.drawable.authentication2);
+                mImageView_sb.setImageResource(R.drawable.gong);
                 mTextView_sb.setText("已认证");
                 mTextView_sb.setTextColor(getResources().getColor(R.color.A));
             } else {
-                mImageView_sb.setImageResource(R.drawable.gong);
+                mImageView_sb.setImageResource(R.drawable.authentication2);
                 mTextView_sb.setText("未认证");
                 mTextView_sb.setTextColor(getResources().getColor(R.color.shouye_red));
             }
-//            if (mModelGRXYRZXX.isFundAuth.equals("1")) {
-//                mImageView_3.setImageResource(R.drawable.authentication3);
-//                mTextView_3.setText("已认证");
-//                mTextView_3.setTextColor(getResources().getColor(R.color.A));
-//            } else {
-//                mImageView_3.setImageResource(R.drawable.xue);
-//                mTextView_3.setText("未认证");
-//                mTextView_3.setTextColor(getResources().getColor(R.color.shouye_red));
-//            }
-//            if (mModelGRXYRZXX.isBillAuth.equals("1")) {
-//                mImageView_4.setImageResource(R.drawable.authentication4);
-//                mTextView_4.setText("已认证");
-//                mTextView_4.setTextColor(getResources().getColor(R.color.A));
-//            } else {
-//                mImageView_4.setImageResource(R.drawable.zhang);
-//                mTextView_4.setText("未认证");
-//                mTextView_4.setTextColor(getResources().getColor(R.color.shouye_red));
-//            }
+            if (mModelGRXYRZXX.isMeituanAuth.equals("1")) {
+                mImageView_3.setImageResource(R.drawable.xue);
+                mTextView_3.setText("已认证");
+                mTextView_3.setTextColor(getResources().getColor(R.color.A));
+            } else {
+                mImageView_3.setImageResource(R.drawable.authentication3);
+                mTextView_3.setText("未认证");
+                mTextView_3.setTextColor(getResources().getColor(R.color.shouye_red));
+            }
+            if (mModelGRXYRZXX.isElemeAuth.equals("1")) {
+                mImageView_4.setImageResource(R.drawable.zhang);
+                mTextView_4.setText("已认证");
+                mTextView_4.setTextColor(getResources().getColor(R.color.A));
+            } else {
+                mImageView_4.setImageResource(R.drawable.authentication4);
+                mTextView_4.setText("未认证");
+                mTextView_4.setTextColor(getResources().getColor(R.color.shouye_red));
+            }
             if (mModelGRXYRZXX.isJingdongAuth.equals("1")) {
-                mImageView_5.setImageResource(R.drawable.jd);
+                mImageView_5.setImageResource(R.drawable.jd1);
                 mTextView_5.setText("已认证");
                 mTextView_5.setTextColor(getResources().getColor(R.color.A));
             } else {
-                mImageView_5.setImageResource(R.drawable.jd1);
+                mImageView_5.setImageResource(R.drawable.jd);
                 mTextView_5.setText("未认证");
                 mTextView_5.setTextColor(getResources().getColor(R.color.shouye_red));
             }
-        } else if (methodName.equals(taobaoAuth) || methodName.equals(gongjijinAuth) || methodName.equals(xuexinwangAuth) || methodName.equals(jingdongAuth)) {
+        } else if (methodName.equals(taobaoAuth) || methodName.equals(gongjijinAuth) || methodName.equals(xuexinwangAuth) || methodName.equals(jingdongAuth)|| methodName.equals(elemeAuth) || methodName.equals(meituanAuth)) {
             loaddata();
             Frame.HANDLES.sentAll("FrgRenzhengxinxi", 0, null);
         } else if (methodName.equals(applyPromote)) {

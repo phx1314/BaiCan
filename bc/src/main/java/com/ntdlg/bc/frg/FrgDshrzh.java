@@ -27,6 +27,7 @@ import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanBase;
 import com.ntdlg.bc.model.ModelGRXYRZXX;
 
+import static android.R.attr.type;
 import static com.ntdlg.bc.F.getPlatform;
 import static com.ntdlg.bc.F.jingdongAuth;
 import static com.ntdlg.bc.F.json2Model;
@@ -43,9 +44,10 @@ public class FrgDshrzh extends BaseFrg {
     public ModelGRXYRZXX mModelGRXYRZXX;
     public LinearLayout mLinearLayout_1;
     public LinearLayout mLinearLayout_2;
-    public String type = "1";
     public String remark;
     public TextView mTextView_remark;
+    public TextView mTextView_zfb;
+    public LinearLayout mLinearLayout_zfb;
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -66,6 +68,8 @@ public class FrgDshrzh extends BaseFrg {
         mLinearLayout_1 = (LinearLayout) findViewById(R.id.mLinearLayout_1);
         mLinearLayout_2 = (LinearLayout) findViewById(R.id.mLinearLayout_2);
         mTextView_remark = (TextView) findViewById(R.id.mTextView_remark);
+        mTextView_zfb = (TextView) findViewById(R.id.mTextView_zfb);
+        mLinearLayout_zfb = (LinearLayout) findViewById(R.id.mLinearLayout_zfb);
         mTextView_shenqing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,8 +83,17 @@ public class FrgDshrzh extends BaseFrg {
                     Helper.toast("您已认证", getContext());
                     return;
                 }
-                type = "1";
                 rZhengWb(getActivity(), MxParam.PARAM_TASK_TAOBAO,FrgDshrzh.this);
+            }
+        });
+        mLinearLayout_zfb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mModelGRXYRZXX.isZhifubaoAuth.equals("1")) {
+                    Helper.toast("您已认证", getContext());
+                    return;
+                }
+                rZhengWb(getActivity(), MxParam.PARAM_TASK_ALIPAY,FrgDshrzh.this);
             }
         });
         mLinearLayout_2.setOnClickListener(new View.OnClickListener() {
@@ -90,7 +103,6 @@ public class FrgDshrzh extends BaseFrg {
                     Helper.toast("您已认证", getContext());
                     return;
                 }
-                type = "2";
                 rZhengWb(getActivity(), MxParam.PARAM_TASK_JINGDONG,FrgDshrzh.this);
             }
         });
@@ -118,6 +130,13 @@ public class FrgDshrzh extends BaseFrg {
             } else {
                 mTextView_1.setText("未认证");
                 mTextView_1.setTextColor(getResources().getColor(R.color.shouye_red));
+            }
+            if (mModelGRXYRZXX.isZhifubaoAuth.equals("1")) {
+                mTextView_zfb.setText("已认证");
+                mTextView_zfb.setTextColor(getResources().getColor(R.color.A));
+            } else {
+                mTextView_zfb.setText("未认证");
+                mTextView_zfb.setTextColor(getResources().getColor(R.color.shouye_red));
             }
             if (mModelGRXYRZXX.isJingdongAuth.equals("1")) {
                 mTextView_2.setText("已认证");

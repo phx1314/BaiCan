@@ -32,9 +32,11 @@ import com.ntdlg.bc.bean.BeanSubXSSH;
 import com.ntdlg.bc.model.ModelGRXYRZXX;
 import com.ntdlg.bc.model.ModelSF;
 
+import static com.ntdlg.bc.F.elemeAuth;
 import static com.ntdlg.bc.F.getPlatform;
 import static com.ntdlg.bc.F.json2Model;
 import static com.ntdlg.bc.F.mTAocrVerify;
+import static com.ntdlg.bc.F.meituanAuth;
 import static com.ntdlg.bc.F.readClassAttr;
 import static com.ntdlg.bc.F.scanIdentity;
 import static com.ntdlg.bc.F.submitCkeck;
@@ -115,7 +117,7 @@ public class FrgRenzhengxinxi extends BaseFrg {
         clk_mTextView_5.setOnClickListener(com.mdx.framework.utility.Helper.delayClickLitener(this));
         clk_mTextView_6.setOnClickListener(com.mdx.framework.utility.Helper.delayClickLitener(this));
         clk_mTextView_7.setOnClickListener(com.mdx.framework.utility.Helper.delayClickLitener(this));
-        clk_mTextView_7.setOnClickListener(com.mdx.framework.utility.Helper.delayClickLitener(this));
+        clk_mTextView_8.setOnClickListener(com.mdx.framework.utility.Helper.delayClickLitener(this));
         mTextView_lg.setOnClickListener(com.mdx.framework.utility.Helper.delayClickLitener(this));
         if (type == 1) {
             mRelativeLayout_title.setVisibility(View.GONE);
@@ -173,7 +175,7 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 clk_mTextView_5.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.sfz, 0, 0);
                 clk_mTextView_5.setBackgroundResource(R.drawable.bg1);
             }
-            if (mModelGRXYRZXX.isTaobaoAuth.equals("1") || mModelGRXYRZXX.isJingdongAuth.equals("1")) {
+            if (mModelGRXYRZXX.isTaobaoAuth.equals("1") || mModelGRXYRZXX.isZhifubaoAuth.equals("1") || mModelGRXYRZXX.isJingdongAuth.equals("1")) {
                 clk_mTextView_6.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.dshhover, 0, 0);
                 clk_mTextView_6.setBackgroundResource(R.drawable.bg1_hover);
             } else {
@@ -187,14 +189,14 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 clk_mTextView_7.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.dsh, 0, 0);
                 clk_mTextView_7.setBackgroundResource(R.drawable.bg1);
             }
-//            if (mModelGRXYRZXX.isGongjijinAuth.equals("1") || mModelGRXYRZXX.IsShebaoAuth.equals("1")) {
-//                clk_mTextView_8.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.dshhover, 0, 0);
-//                clk_mTextView_8.setBackgroundResource(R.drawable.bg1_hover);
-//            } else {
-//                clk_mTextView_8.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.dsh, 0, 0);
-//                clk_mTextView_8.setBackgroundResource(R.drawable.bg1);
-//            }
-        } else if (methodName.equals(yunyingshangAuth) || methodName.equals(scanIdentity)) {
+            if (mModelGRXYRZXX.isMeituanAuth.equals("1") || mModelGRXYRZXX.isElemeAuth.equals("1")) {
+                clk_mTextView_8.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.dshhover, 0, 0);
+                clk_mTextView_8.setBackgroundResource(R.drawable.bg1_hover);
+            } else {
+                clk_mTextView_8.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.dsh, 0, 0);
+                clk_mTextView_8.setBackgroundResource(R.drawable.bg1);
+            }
+        } else if (methodName.equals(yunyingshangAuth) || methodName.equals(scanIdentity) || methodName.equals(elemeAuth) || methodName.equals(meituanAuth)) {
             loaddata();
         } else if (methodName.equals(submitCkeck)) {
             Helper.toast("提交成功", getContext());
@@ -207,6 +209,11 @@ public class FrgRenzhengxinxi extends BaseFrg {
 
     @Override
     public void onClick(android.view.View v) {
+        if (TextUtils.isEmpty(com.ntdlg.bc.F.UserId)) {
+            Helper.toast("请先登录", getContext());
+            Helper.startActivity(getContext(), FrgLogin.class, TitleAct.class);
+            return;
+        }
         if (R.id.clk_mTextView_1 == v.getId()) {
             Helper.startActivity(getContext(), FrgJbxx.class, TitleAct.class);
         } else if (R.id.clk_mTextView_2 == v.getId()) {
@@ -252,7 +259,7 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 Helper.toast("身份证信息尚未认证", getContext());
                 return;
             }
-            if (!mModelGRXYRZXX.isTaobaoAuth.equals("1") && !mModelGRXYRZXX.isJingdongAuth.equals("1")) {
+            if (!mModelGRXYRZXX.isTaobaoAuth.equals("1") && !mModelGRXYRZXX.isZhifubaoAuth.equals("1") && !mModelGRXYRZXX.isJingdongAuth.equals("1")) {
                 Helper.toast("电商未认证", getContext());
                 return;
             }
@@ -260,8 +267,13 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 Helper.toast("公积金/社保未认证", getContext());
                 return;
             }
+            if (!mModelGRXYRZXX.isMeituanAuth.equals("1") && !mModelGRXYRZXX.isElemeAuth.equals("1")) {
+                Helper.toast("美团/饿了么未认证", getContext());
+                return;
+            }
 
             BeanSubXSSH mBeanKSJK = new BeanSubXSSH();
+            mBeanKSJK.location = F.address;
             mBeanKSJK.sign = readClassAttr(mBeanKSJK);
             loadJsonUrl(submitCkeck, new Gson().toJson(mBeanKSJK));
 

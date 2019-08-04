@@ -35,6 +35,34 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="@color/tyD1" />
+    <LinearLayout
+        android:id="@+id/mLinearLayout_zfb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/j12dp">
+
+        <TextView
+            style="@style/text_style_15_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="支付宝" />
+
+        <TextView
+            android:id="@+id/mTextView_zfb"
+            style="@style/text_style_15_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/j10dp"
+            android:drawableRight="@drawable/arrows_top"
+            android:text="已认证" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/tyD1" />
 
     <LinearLayout
         android:id="@+id/mLinearLayout_2"
@@ -79,7 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/j40dp"
             android:gravity="center_horizontal"
-            android:text="二选一认证即可" />
+            android:text="三选一认证即可" />
 
         <TextView
             android:id="@+id/mTextView_shenqing"

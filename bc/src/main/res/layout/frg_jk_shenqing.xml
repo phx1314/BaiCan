@@ -25,7 +25,7 @@
             style="@style/text_style_13_gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10000.0元" />
+            android:text="" />
     </LinearLayout>
 
     <ImageView
@@ -51,7 +51,7 @@
             style="@style/text_style_13_gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="5周" />
+            android:text="" />
     </LinearLayout>
 
     <ImageView
@@ -77,7 +77,7 @@
             style="@style/text_style_13_gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0.5%/天" />
+            android:text="" />
     </LinearLayout>
 
     <ImageView
@@ -103,7 +103,7 @@
             style="@style/text_style_13_gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="100.0元/周" />
+            android:text="" />
     </LinearLayout>
 
     <ImageView
@@ -134,7 +134,7 @@
             style="@style/text_style_13_gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="等本等息" />
+            android:text="" />
     </LinearLayout>
 
     <ImageView
@@ -160,7 +160,7 @@
             style="@style/text_style_13_gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="656456454564******45645456" />
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout

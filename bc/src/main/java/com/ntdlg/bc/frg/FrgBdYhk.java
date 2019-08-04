@@ -59,7 +59,6 @@ public class FrgBdYhk extends BaseFrg {
     public TextView mTextView_shenqing;
     public LinearLayout mLinearLayout_yh;
     public List<BaseData> list = new ArrayList<>();
-    public BeanbankBindOne mBeanbankBindOne = new BeanbankBindOne();
     public BeanbankBindTwo mBeanbankBindTwo = new BeanbankBindTwo();
     public String from;
     public EditText mEditText_yzm;
@@ -67,6 +66,7 @@ public class FrgBdYhk extends BaseFrg {
     private int times = 60;
     private Handler handler;
     private Runnable runnable;
+    private ModelbankBindOne mModelbankBindOne;
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -143,15 +143,25 @@ public class FrgBdYhk extends BaseFrg {
                     Helper.toast("请输入验证码", getContext());
                     return;
                 }
-                mBeanbankBindOne.bankNo = mEditText_code.getText().toString().trim();
-                mBeanbankBindOne.phone = mEditText_phone.getText().toString().trim();
-                mBeanbankBindOne.sign = readClassAttr(mBeanbankBindOne);
-                loadJsonUrl(bankBindOne, new Gson().toJson(mBeanbankBindOne));
+                mBeanbankBindTwo.bankNo = mEditText_code.getText().toString().trim();
+                mBeanbankBindTwo.phone = mEditText_phone.getText().toString().trim();
+                mBeanbankBindTwo.txId = mModelbankBindOne.txId;
+                mBeanbankBindTwo.code = mEditText_yzm.getText().toString().trim();
+                mBeanbankBindTwo.sign = readClassAttr(mBeanbankBindTwo);
+                loadJsonUrl(bankBindTwo, new Gson().toJson(mBeanbankBindTwo));
             }
         });
         clk_mTextView_get.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (TextUtils.isEmpty(mEditText_code.getText().toString().trim())) {
+                    Helper.toast("请输入卡号", getContext());
+                    return;
+                }
+                if (!F.checkBankCard(mEditText_code.getText().toString().trim())) {
+                    Helper.toast("请输入有效卡号", getContext());
+                    return;
+                }
                 if (TextUtils.isEmpty(mEditText_phone.getText().toString())) {
                     Helper.toast("请输入手机号", getContext());
                     return;
@@ -160,11 +170,17 @@ public class FrgBdYhk extends BaseFrg {
                     Helper.toast("请输入正确的手机号", getContext());
                     return;
                 }
-                BeanFSDXYZM mBeanFSDXYZM = new BeanFSDXYZM();
-                mBeanFSDXYZM.type = "20";
-                mBeanFSDXYZM.phone = mEditText_phone.getText().toString();
-                mBeanFSDXYZM.sign = readClassAttr(mBeanFSDXYZM);
-                loadJsonUrl(sendSms, new Gson().toJson(mBeanFSDXYZM));
+                BeanbankBindOne mBeanbankBindOne = new BeanbankBindOne();
+                mBeanbankBindOne.bankNo = mEditText_code.getText().toString().trim();
+                mBeanbankBindOne.phone = mEditText_phone.getText().toString().trim();
+                mBeanbankBindOne.sign = readClassAttr(mBeanbankBindOne);
+                loadJsonUrl(bankBindOne, new Gson().toJson(mBeanbankBindOne));
+
+//                BeanFSDXYZM mBeanFSDXYZM = new BeanFSDXYZM();
+////                mBeanFSDXYZM.type = "20";
+//                mBeanFSDXYZM.phone = mEditText_phone.getText().toString();
+//                mBeanFSDXYZM.sign = readClassAttr(mBeanFSDXYZM);
+//                loadJsonUrl(sendSms, new Gson().toJson(mBeanFSDXYZM));
             }
         });
     }
@@ -193,7 +209,7 @@ public class FrgBdYhk extends BaseFrg {
 
     @Override
     public void onSuccess(String methodName, String content) {
-         if (methodName.equals(bank)) {
+        if (methodName.equals(bank)) {
             ModelYHList mModelYHList = (ModelYHList) json2Model(content, ModelYHList.class);
             for (ModelYHList.RecordsBean mRecordsBean : mModelYHList.records) {
                 BaseData mBaseData = new BaseData();
@@ -205,14 +221,10 @@ public class FrgBdYhk extends BaseFrg {
             times = 60;
             doTimer();
         } else if (methodName.equals(bankBindOne)) {
-            ModelbankBindOne mModelbankBindOne = (ModelbankBindOne) json2Model(content, ModelbankBindOne.class);
-            mBeanbankBindTwo.bankNo = mEditText_code.getText().toString().trim();
-            mBeanbankBindTwo.phone = mEditText_phone.getText().toString().trim();
-            mBeanbankBindTwo.txId = mModelbankBindOne.txId;
-            mBeanbankBindTwo.code = mEditText_yzm.getText().toString().trim();
-            mBeanbankBindTwo.sign = readClassAttr(mBeanbankBindTwo);
-            loadJsonUrl(bankBindTwo, new Gson().toJson(mBeanbankBindTwo));
-        }else if (methodName.equals(bankBindTwo)) {
+            mModelbankBindOne = (ModelbankBindOne) json2Model(content, ModelbankBindOne.class);
+            times = 60;
+            doTimer();
+        } else if (methodName.equals(bankBindTwo)) {
             Helper.toast("绑定成功", getContext());
             Frame.HANDLES.sentAll("FrgWodeYhk,FrgRenzhengxinxi", 0, null);
             if (!TextUtils.isEmpty(from))

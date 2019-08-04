@@ -79,7 +79,9 @@ public class F {
     public static final String APPLYID = "APPLYID";
     public static final String MT = "meituanwaimai";
     public static final String ELM = "eleme";
-
+    public static double latitude = 0;
+    public static double longitude = 0;
+    public static String address = "";
     public static String UserId = "", token, reftoken, applyId;
     public static String login = "/login";
     public static String check = "/check";
@@ -100,7 +102,8 @@ public class F {
     public static String education = "/api/customer/education";
     public static String relation = "/api/customer/relation";
     public static String jingdongAuth = "/api/customer/jingdongAuth";
-    public static String taobaoAuth = "/api/customer/taobaoAuth";
+    public static String taobaoAuth = "/api/customer/taobaoAndAlipayAuth";
+    public static String noVip = "/api/customer/noVip";
     public static String gongjijinAuth = "/api/customer/gongjijinAuth";
     public static String shebaoAuth = "/api/customer/shebaoAuth";
     public static String xuexinwangAuth = "/api/customer/xuexinwangAuth";
@@ -132,6 +135,9 @@ public class F {
     public static String getOfflineData = "/api/customer/getOfflineData";
     public static String document = "/api/customer/document";
     public static String esgin = "/api/customer/esign";
+    public static String meituanAuth = "/api/customer/meituanAuth";
+    public static String elemeAuth = "/api/customer/elemeAuth";
+    public static String savePhone = "/api/customer/savePhone";
 
     public static void Login(String mUserId, String token, String reftoken) {
         SharedPreferences sp = PreferenceManager
@@ -178,7 +184,7 @@ public class F {
     }
 
     public static String getTime(String time) {
-        if (!TextUtils.isEmpty(time)) {
+        if (!TextUtils.isEmpty(time) && com.framewidget.F.isDateBefore(AbDateUtil.getCurrentDate("yyyyMMddHHmmss"), time, "yyyyMMddHHmmss")) {
             String data = "";
             DateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
             try {
@@ -293,7 +299,7 @@ public class F {
                     public void onAllStepCompleteCallback(boolean isSuccess, String dataPage) {
                         if (isSuccess) {
                             System.out.println("回调：活体检测成功");
-                            Frame.HANDLES.sentAll(from, 130, null);
+                            Frame.HANDLES.sentAll(from, 130, dataPage);
                         } else {
                             Helper.toast("活体检测失败", Frame.CONTEXT);
                         }
@@ -701,6 +707,7 @@ public class F {
                                 //根据taskType进行对应的处理
                                 switch (moxieCallBackData.getTaskType()) {
                                     case MxParam.PARAM_TASK_TAOBAO:
+                                    case MxParam.PARAM_TASK_ALIPAY:
                                         HttpUtil.loadJsonUrl(activity, taobaoAuth, new Gson().toJson(mBeanSQ), new HttpResponseListener(activity, mBaseFrg, taobaoAuth));
                                         break;
                                     case MxParam.PARAM_TASK_FUND:
@@ -710,10 +717,10 @@ public class F {
                                         HttpUtil.loadJsonUrl(activity, jingdongAuth, new Gson().toJson(mBeanSQ), new HttpResponseListener(activity, mBaseFrg, jingdongAuth));
                                         break;
                                     case F.MT:
-                                        HttpUtil.loadJsonUrl(activity, gongjijinAuth, new Gson().toJson(mBeanSQ), new HttpResponseListener(activity, mBaseFrg, gongjijinAuth));
+                                        HttpUtil.loadJsonUrl(activity, meituanAuth, new Gson().toJson(mBeanSQ), new HttpResponseListener(activity, mBaseFrg, meituanAuth));
                                         break;
                                     case F.ELM:
-                                        HttpUtil.loadJsonUrl(activity, gongjijinAuth, new Gson().toJson(mBeanSQ), new HttpResponseListener(activity, mBaseFrg, gongjijinAuth));
+                                        HttpUtil.loadJsonUrl(activity, elemeAuth, new Gson().toJson(mBeanSQ), new HttpResponseListener(activity, mBaseFrg, elemeAuth));
                                         break;
                                     case MxParam.PARAM_TASK_CARRIER:
                                         HttpUtil.loadJsonUrl(activity, yunyingshangAuth, new Gson().toJson(mBeanSQ), new HttpResponseListener(activity, mBaseFrg, yunyingshangAuth));

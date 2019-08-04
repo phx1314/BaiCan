@@ -9,8 +9,8 @@ android {
         applicationId "com.ntdlg.bc"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 2
-        versionName "1.0.2"
+        versionCode 10
+        versionName "1.0.10"
         multiDexEnabled = true
 
     }
@@ -46,7 +46,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile project(':picRecognize')
     compile(name: 'moxie-client-2.4.4', ext: 'aar')
@@ -56,4 +56,5 @@ dependencies {
     compile 'com.github.F1ReKing:SignatureView:v1.0.0'
     apt 'com.jakewharton:butterknife-compiler:8.2.0'
     compile 'com.pgyersdk:sdk:2.8.1'
+    compile files('libs/AMap_Location_V2.4.1_20160414.jar')
 }

@@ -6,6 +6,6 @@ package com.ntdlg.bc.bean;
 
 public class BeanSubXSSH extends BeanBase {
     public String applyId = com.ntdlg.bc.F.applyId;
-
+    public String location ="";
 
 }

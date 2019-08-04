@@ -12,18 +12,19 @@
 package com.ntdlg.bc.frg;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.JavascriptInterface;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -43,6 +44,7 @@ public class FrgVip extends BaseFrg {
     public RelativeLayout mRelativeLayout;
     public WebView mWebView;
     public String url = "";
+    public ProgressBar mProgressBar;
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -67,6 +69,7 @@ public class FrgVip extends BaseFrg {
         mTextView_right = (TextView) findViewById(R.id.mTextView_right);
         mRelativeLayout = (RelativeLayout) findViewById(R.id.mRelativeLayout);
         mWebView = (WebView) findViewById(R.id.mWebView);
+        mProgressBar = (ProgressBar) findViewById(R.id.mProgressBar);
         btn_left.setImageResource(com.framewidget.R.drawable.yslt_bt_fanhui_n);
         btn_left.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,7 +104,17 @@ public class FrgVip extends BaseFrg {
                 return true;
             }
         });
-
+        mWebView.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public void onProgressChanged(WebView view, int newProgress) {
+                if (newProgress == 100) {
+                    mProgressBar.setVisibility(View.GONE);//加载完网页进度条消失
+                } else {
+                    mProgressBar.setVisibility(View.VISIBLE);//开始加载网页时显示进度条
+                    mProgressBar.setProgress(newProgress);//设置进度值
+                }
+            }
+        });
         mWebView.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -142,11 +155,15 @@ public class FrgVip extends BaseFrg {
          * 打开新窗体加载网址
          */
         @JavascriptInterface
-        public void gotoPage(String pageName, String url) {
+        public void gotoPage(String pageName, final String url) {
             Log.i(TAG, "gotoPage:" + pageName + " url" + url);
-            Intent intent = new Intent("com.vip.demo.PageActivity");
-            intent.putExtra("url", url);
-            context.startActivity(intent);
+            getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    mWebView.loadUrl(url);
+                }
+            });
+
         }
 
         /**

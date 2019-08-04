@@ -17,6 +17,6 @@ public class ModelKSJK2 implements Serializable {
     public String reftoken = "";
 
     public String result = "";
-    public String isApplay = "0";
+    public String type = "0";
 
 }

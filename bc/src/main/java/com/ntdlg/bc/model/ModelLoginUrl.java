@@ -10,14 +10,28 @@ public class ModelLoginUrl implements Serializable {
 
 
     /**
-     * sign : bab1230ce284aa05ca57404eee4793ee
-     * loginUrl : http://www.zilvguoyuan.com/vip-html/#/member?returnPath=&channel=150501&customerId=tiloan&sign=d4f68c56e7a01e81badce8b12c06df88&timestamp=1564642155053
-     * errorcode : 0000
-     * errormsg : 获取免登陆地址成功
+     * dataObject : {"type":null,"success":true,"code":"0000","message":"获取免登陆地址成功","name":null,"method":null,"data":"http://www.zilvguoyuan.com/vip-html/#/member?returnPath=&channel=150501&customerId=tiloan&sign=ee505e3df43498490cfa62a7775fd0ec&timestamp=1564822507257"}
      */
 
-    public String sign;
-    public String loginUrl;
-    public String errorcode;
-    public String errormsg;
+    public DataObjectBean dataObject;
+
+    public static class DataObjectBean {
+        /**
+         * type : null
+         * success : true
+         * code : 0000
+         * message : 获取免登陆地址成功
+         * name : null
+         * method : null
+         * data : http://www.zilvguoyuan.com/vip-html/#/member?returnPath=&channel=150501&customerId=tiloan&sign=ee505e3df43498490cfa62a7775fd0ec&timestamp=1564822507257
+         */
+
+        public Object type;
+        public boolean success;
+        public String code;
+        public String message;
+        public Object name;
+        public Object method;
+        public String data;
+    }
 }

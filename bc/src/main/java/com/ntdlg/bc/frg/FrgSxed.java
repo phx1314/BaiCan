@@ -30,19 +30,26 @@ import com.mdx.framework.widget.ActionBar;
 import com.ntdlg.bc.F;
 import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanBase;
+import com.ntdlg.bc.bean.BeanHt;
+import com.ntdlg.bc.bean.BeanKSJK;
 import com.ntdlg.bc.bean.BeanSQTE;
+import com.ntdlg.bc.bean.BeanVip;
 import com.ntdlg.bc.model.ModelGRXYRZXX;
 import com.ntdlg.bc.model.ModelKSJK;
 import com.ntdlg.bc.model.ModelKSJK2;
 import com.ntdlg.bc.model.ModelLoginUrl;
+import com.ntdlg.bc.model.ModelYHZXDD;
 
 import static com.ntdlg.bc.F.beginApply;
 import static com.ntdlg.bc.F.bioAssay;
+import static com.ntdlg.bc.F.chekNumber;
 import static com.ntdlg.bc.F.getPlatform;
 import static com.ntdlg.bc.F.getTime;
 import static com.ntdlg.bc.F.getVip88LoginUrl;
 import static com.ntdlg.bc.F.json2Model;
+import static com.ntdlg.bc.F.rapidLoan;
 import static com.ntdlg.bc.F.readClassAttr;
+import static com.ntdlg.bc.F.readClassByJson;
 
 
 public class FrgSxed extends BaseFrg {
@@ -70,6 +77,7 @@ public class FrgSxed extends BaseFrg {
     public LinearLayout mLinearLayout_bottom;
     public ModelGRXYRZXX mModelGRXYRZXX;
     public boolean isOk = true;
+    public LinearLayout mLinearLayout_center;
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -89,9 +97,10 @@ public class FrgSxed extends BaseFrg {
                 F.mTBlivessCompare(getActivity(), mModelGRXYRZXX.sessid, "FrgSxed");
                 break;
             case 130:
-                BeanBase mBeanBase = new BeanBase();
-                mBeanBase.sign = readClassAttr(mBeanBase);
-                loadJsonUrl(bioAssay, new Gson().toJson(mBeanBase));
+                BeanHt mBeanHt = new BeanHt();
+                mBeanHt.assayPic = obj.toString();
+                mBeanHt.sign = readClassAttr(mBeanHt);
+                loadJsonUrl(bioAssay, new Gson().toJson(mBeanHt));
                 break;
         }
     }
@@ -127,6 +136,7 @@ public class FrgSxed extends BaseFrg {
         mTextView_shz = (TextView) findViewById(R.id.mTextView_shz);
         mTextView_remark1 = (TextView) findViewById(R.id.mTextView_remark1);
         mLinearLayout_bottom = (LinearLayout) findViewById(R.id.mLinearLayout_bottom);
+        mLinearLayout_center = (LinearLayout) findViewById(R.id.mLinearLayout_center);
         mTextView_price.setText(mModelKSJK.applyAmount + "元");
         mTextView_qx.setText(mModelKSJK.applyTerm + "周");
         mTextView_fl.setText(mModelKSJK.applyRaio + "%/天");
@@ -152,6 +162,22 @@ public class FrgSxed extends BaseFrg {
         } else if (methodName.equals(bioAssay)) {
             Helper.toast("认证成功", getContext());
             Helper.startActivity(getContext(), FrgSign.class, TitleAct.class);
+        } else if (methodName.equals(getVip88LoginUrl)) {
+            ModelLoginUrl mModelLoginUrl = (ModelLoginUrl) json2Model(content, ModelLoginUrl.class);
+            Helper.startActivity(getContext(), FrgVip.class, NoTitleAct.class, "url", mModelLoginUrl.dataObject.data);
+        } else if (methodName.equals(chekNumber)) {
+            ModelYHZXDD mModelYHZXDD = (ModelYHZXDD) json2Model(content, ModelYHZXDD.class);
+            BeanKSJK mBeanKSJK = new BeanKSJK();
+            mBeanKSJK.result = mModelYHZXDD.result;
+            mBeanKSJK.applyId = mModelYHZXDD.applyId;
+            mBeanKSJK.amount = mModelKSJK.amount;
+            mBeanKSJK.term = mModelKSJK.term;
+            mBeanKSJK.sign = readClassAttr(mBeanKSJK);
+            loadJsonUrl(rapidLoan, new Gson().toJson(mBeanKSJK));
+        } else if (methodName.equals(rapidLoan)) {
+            mModelKSJK = (ModelKSJK) json2Model(content, ModelKSJK.class);
+            F.saveApplyId(mModelKSJK.applyId);
+            loaddata();
         }
     }
 
@@ -159,7 +185,9 @@ public class FrgSxed extends BaseFrg {
         BeanBase mBeanBase = new BeanBase();
         mBeanBase.sign = readClassAttr(mBeanBase);
         loadJsonUrl(getPlatform, new Gson().toJson(mBeanBase));
-
+        mLinearLayout_center.setVisibility(View.VISIBLE);
+        mTextView_left.setText("提额认证");
+        mTextView_right.setText("开始借款");
         if (mModelKSJK.result.equals("3")) {//审核中
             mRelativeLayout_top.setVisibility(View.GONE);
             mLinearLayout_bottom.setVisibility(View.GONE);
@@ -201,6 +229,49 @@ public class FrgSxed extends BaseFrg {
                     BeanSQTE mBeanSQTE = new BeanSQTE();
                     mBeanSQTE.sign = readClassAttr(mBeanSQTE);
                     loadJsonUrl(beginApply, new Gson().toJson(mBeanSQTE));
+                }
+            });
+        } else if (mModelKSJK.result.equals("10")) {//审核成功
+            mLinearLayout_center.setVisibility(View.GONE);
+
+            mTextView_ed.setText(mModelKSJK.assignAmount);
+            mTextView_time.setText("放款倒计时 " + getTime(mModelKSJK.endDate));
+            mTextView_tg.setText("审核通过");
+            mImageView_jihao.setImageResource(R.drawable.complete);
+            mTextView_remark.setText("恭喜您，您的借款申请已审核通过");
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    while (isOk) {
+                        try {
+                            Thread.sleep(1000);
+                            if (getActivity() != null)
+                                getActivity().runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        mTextView_time.setText("放款倒计时 " + getTime(mModelKSJK.endDate));
+                                    }
+                                });
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }).start();
+            mTextView_left.setText("刷新");
+            mTextView_right.setText("购买VIP");
+            mTextView_left.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    BeanBase mBeanBase = new BeanBase();
+                    mBeanBase.sign = readClassByJson(new Gson().toJson(mBeanBase));
+                    loadJsonUrlNoshow(chekNumber, new Gson().toJson(mBeanBase));
+                }
+            });
+            mTextView_right.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    loadJsonUrl(getVip88LoginUrl, new Gson().toJson(new BeanVip()));
                 }
             });
         } else if (mModelKSJK.result.equals("5")) {//签约失效

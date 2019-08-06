@@ -306,20 +306,24 @@ public class FrgShouye extends BaseFrg {
     }
 
     public void changeBottom(SeekBar seekBar) {
-        int i = seekBar.getProgress() + Integer.valueOf(mModelSQJE.deadlineRecords.get(0).value);
-        int min = Integer.MAX_VALUE;
-        ModelSQJE.DeadlineRecordsBean mAmountRecordsBean_xuanzhong = null;
-        for (ModelSQJE.DeadlineRecordsBean mAmountRecordsBean : mModelSQJE.deadlineRecords) {
-            if (min > Math.abs(Integer.valueOf(mAmountRecordsBean.value) - i)) {
-                min = Math.abs(Integer.valueOf(mAmountRecordsBean.value) - i);
-                mAmountRecordsBean_xuanzhong = mAmountRecordsBean;
+        try {
+            int i = seekBar.getProgress() + Integer.valueOf(mModelSQJE.deadlineRecords.get(0).value);
+            int min = Integer.MAX_VALUE;
+            ModelSQJE.DeadlineRecordsBean mAmountRecordsBean_xuanzhong = null;
+            for (ModelSQJE.DeadlineRecordsBean mAmountRecordsBean : mModelSQJE.deadlineRecords) {
+                if (min > Math.abs(Integer.valueOf(mAmountRecordsBean.value) - i)) {
+                    min = Math.abs(Integer.valueOf(mAmountRecordsBean.value) - i);
+                    mAmountRecordsBean_xuanzhong = mAmountRecordsBean;
+                }
             }
+            if (mAmountRecordsBean_xuanzhong != null) {
+                mSeekBar_zhou.setProgress(Integer.valueOf(mAmountRecordsBean_xuanzhong.value) - Integer.valueOf(mModelSQJE.deadlineRecords.get(0).value));
+                mTextView_zhou.setText(mAmountRecordsBean_xuanzhong.value);
+            }
+            setLv(mTextView_num.getText().toString(), mTextView_zhou.getText().toString());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        if (mAmountRecordsBean_xuanzhong != null) {
-            mSeekBar_zhou.setProgress(Integer.valueOf(mAmountRecordsBean_xuanzhong.value) - Integer.valueOf(mModelSQJE.deadlineRecords.get(0).value));
-            mTextView_zhou.setText(mAmountRecordsBean_xuanzhong.value);
-        }
-        setLv(mTextView_num.getText().toString(), mTextView_zhou.getText().toString());
     }
 
     public void setLv(String prcAmount, String prcTerm) {
@@ -335,21 +339,27 @@ public class FrgShouye extends BaseFrg {
     }
 
     public void changeTop(SeekBar seekBar) {
-        int i = seekBar.getProgress() + Integer.valueOf(mModelSQJE.amountRecords.get(0).value);
-        int min = Integer.MAX_VALUE;
-        ModelSQJE.AmountRecordsBean mAmountRecordsBean_xuanzhong = null;
-        for (ModelSQJE.AmountRecordsBean mAmountRecordsBean : mModelSQJE.amountRecords) {
-            if (min > Math.abs(Integer.valueOf(mAmountRecordsBean.value) - i)) {
-                min = Math.abs(Integer.valueOf(mAmountRecordsBean.value) - i);
-                mAmountRecordsBean_xuanzhong = mAmountRecordsBean;
+        try {
+            int i = seekBar.getProgress() + Integer.valueOf(mModelSQJE.amountRecords.get(0).value);
+            int min = Integer.MAX_VALUE;
+            ModelSQJE.AmountRecordsBean mAmountRecordsBean_xuanzhong = null;
+            for (ModelSQJE.AmountRecordsBean mAmountRecordsBean : mModelSQJE.amountRecords) {
+                if (min > Math.abs(Integer.valueOf(mAmountRecordsBean.value) - i)) {
+                    min = Math.abs(Integer.valueOf(mAmountRecordsBean.value) - i);
+                    mAmountRecordsBean_xuanzhong = mAmountRecordsBean;
+                }
             }
+            if (mAmountRecordsBean_xuanzhong != null) {
+                mSeekBar.setProgress(Integer.valueOf(mAmountRecordsBean_xuanzhong.value) - Integer.valueOf(mModelSQJE.amountRecords.get(0).value));
+                mTextView_num.setText(mAmountRecordsBean_xuanzhong.value);
+                mMViewOne.setProgress(Integer.valueOf(mAmountRecordsBean_xuanzhong.value), Integer.valueOf(mModelSQJE.amountRecords.get(mModelSQJE.amountRecords.size() - 1).value) - Integer.valueOf(mAmountRecordsBean_xuanzhong.value), 0);
+            }
+            setLv(mTextView_num.getText().toString(), mTextView_zhou.getText().toString());
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        if (mAmountRecordsBean_xuanzhong != null) {
-            mSeekBar.setProgress(Integer.valueOf(mAmountRecordsBean_xuanzhong.value) - Integer.valueOf(mModelSQJE.amountRecords.get(0).value));
-            mTextView_num.setText(mAmountRecordsBean_xuanzhong.value);
-            mMViewOne.setProgress(Integer.valueOf(mAmountRecordsBean_xuanzhong.value), Integer.valueOf(mModelSQJE.amountRecords.get(mModelSQJE.amountRecords.size() - 1).value) - Integer.valueOf(mAmountRecordsBean_xuanzhong.value), 0);
-        }
-        setLv(mTextView_num.getText().toString(), mTextView_zhou.getText().toString());
+
     }
 
 

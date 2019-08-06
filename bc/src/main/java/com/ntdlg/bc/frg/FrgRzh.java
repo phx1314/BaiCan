@@ -72,6 +72,7 @@ public class FrgRzh extends BaseFrg {
                 BeanSFSM mBeanSFSM = new BeanSFSM();
                 mBeanSFSM.idcard_back_photo = mModelSF.idcard_back_photo;
                 mBeanSFSM.idcard_front_photo = mModelSF.idcard_front_photo;
+                mBeanSFSM.pic_photo = mModelSF.pic_photo;
                 mBeanSFSM.sign = readClassAttr(mBeanSFSM);
                 loadJsonUrl(scanIdentity, new Gson().toJson(mBeanSFSM));
                 break;

@@ -73,6 +73,12 @@ public class FrgShouye extends BaseFrg {
     public ModelKSJK mModelKSJK;
     public ModelSQJE mModelSQJE;
     public com.ntdlg.bc.view.MViewOne mMViewOne;
+    public ImageView mImageView_del_top;
+    public ImageView mImageView_add_top;
+    public ImageView mImageView_del;
+    public ImageView mImageView_add;
+    public int dex_top;
+    public int dex;
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -118,6 +124,10 @@ public class FrgShouye extends BaseFrg {
         mTextView_b1 = (TextView) findViewById(R.id.mTextView_b1);
         mTextView_b2 = (TextView) findViewById(R.id.mTextView_b2);
         mMViewOne = (com.ntdlg.bc.view.MViewOne) findViewById(R.id.mMViewOne);
+        mImageView_del_top = (ImageView) findViewById(R.id.mImageView_del_top);
+        mImageView_add_top = (ImageView) findViewById(R.id.mImageView_add_top);
+        mImageView_del = (ImageView) findViewById(R.id.mImageView_del);
+        mImageView_add = (ImageView) findViewById(R.id.mImageView_add);
         mMViewOne.setColor1("#ffffff");
         mMViewOne.setColor2("#88ffffff");
         mImageView_left.setOnClickListener(new View.OnClickListener() {
@@ -210,6 +220,35 @@ public class FrgShouye extends BaseFrg {
                     changeBottom(seekBar);
             }
         });
+
+        mImageView_del_top.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mSeekBar.setProgress(mSeekBar.getProgress() > dex_top ? mSeekBar.getProgress() - dex_top : 0);
+                changeTop(mSeekBar);
+            }
+        });
+        mImageView_add_top.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mSeekBar.setProgress(mSeekBar.getProgress() < mSeekBar.getMax() ? mSeekBar.getProgress() + dex_top : mSeekBar.getMax());
+                changeTop(mSeekBar);
+            }
+        });
+        mImageView_del.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mSeekBar_zhou.setProgress(mSeekBar_zhou.getProgress() > dex ? mSeekBar_zhou.getProgress() - dex : 0);
+                changeBottom(mSeekBar_zhou);
+            }
+        });
+        mImageView_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mSeekBar_zhou.setProgress(mSeekBar_zhou.getProgress() < mSeekBar_zhou.getMax() ? mSeekBar_zhou.getProgress() + dex : mSeekBar_zhou.getMax());
+                changeBottom(mSeekBar_zhou);
+            }
+        });
     }
 
     @Override
@@ -239,6 +278,7 @@ public class FrgShouye extends BaseFrg {
                 mTextView_right.setText(mModelSQJE.amountRecords.get(mModelSQJE.amountRecords.size() - 1).value);
                 mSeekBar.setMax(max);
                 mMViewOne.setProgress(Integer.valueOf(mModelSQJE.amountRecords.get(0).value), max, 0);
+                dex_top = max / (mModelSQJE.amountRecords.size() - 1);
             }
             if (mModelSQJE.deadlineRecords.size() > 0) {
                 int max = Integer.valueOf(mModelSQJE.deadlineRecords.get(mModelSQJE.deadlineRecords.size() - 1).value) - Integer.valueOf(mModelSQJE.deadlineRecords.get(0).value);
@@ -246,6 +286,7 @@ public class FrgShouye extends BaseFrg {
                 mTextView_zhou.setText(mModelSQJE.deadlineRecords.get(0).value);
                 mTextView_right_zhou.setText(mModelSQJE.deadlineRecords.get(mModelSQJE.deadlineRecords.size() - 1).value);
                 mSeekBar_zhou.setMax(max);
+                dex = max / (mModelSQJE.deadlineRecords.size() - 1);
             }
         } else if (methodName.equals(loadProduct)) {
             mModelCPList = (ModelCPList) json2Model(content, ModelCPList.class);
@@ -254,7 +295,7 @@ public class FrgShouye extends BaseFrg {
             mModelKSJK = (ModelKSJK) json2Model(content, ModelKSJK.class);
             F.saveApplyId(mModelKSJK.applyId);
             if (mModelKSJK.result.equals("0") || mModelKSJK.result.equals("2")) {
-                Helper.startActivity(getContext(), FrgRenzhengxinxi.class, TitleAct.class,"type",1);
+                Helper.startActivity(getContext(), FrgRenzhengxinxi.class, TitleAct.class, "type", 1);
             } else if (mModelKSJK.result.equals("1")) {
                 Helper.toast("黑名单用户", getContext());
             } else {

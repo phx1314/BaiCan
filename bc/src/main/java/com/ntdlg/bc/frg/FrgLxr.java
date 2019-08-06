@@ -128,19 +128,19 @@ public class FrgLxr extends BaseFrg {
                     return;
                 }
                 if (TextUtils.isEmpty(mEditText_jj_name2.getText().toString().trim())) {
-                    Helper.toast("请输入社会联系人姓名", getContext());
+                    Helper.toast("请输入亲属联系人2姓名", getContext());
                     return;
                 }
                 if (TextUtils.isEmpty(mTextView_phone2.getText().toString().trim())) {
-                    Helper.toast("请输入社会联系人手机号", getContext());
+                    Helper.toast("请输入亲属联系人2手机号", getContext());
                     return;
                 }
                 if (mTextView_phone2.getText().toString().trim().length() != 11) {
-                    Helper.toast("请输入正确社会联系人手机号", getContext());
+                    Helper.toast("请输入亲属联系人2手机号", getContext());
                     return;
                 }
                 if (TextUtils.isEmpty(mTextView_qshgx2.getText().toString().trim())) {
-                    Helper.toast("请选择社会联系人关系", getContext());
+                    Helper.toast("请选择亲属联系人2关系", getContext());
                     return;
                 }
                 mBeanLXRXX.nameOne = mEditText_jj_name.getText().toString().trim();
@@ -173,7 +173,7 @@ public class FrgLxr extends BaseFrg {
         mLinearLayout_qshgx2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Helper.startActivity(getContext(), FrgPubList.class, TitleAct.class, "from", "FrgLxr", "type", 104, "data", mModelQSGX.shgxRecords);
+                Helper.startActivity(getContext(), FrgPubList.class, TitleAct.class, "from", "FrgLxr", "type", 104, "data", mModelQSGX.qsgxRecords);
             }
         });
     }

@@ -30,7 +30,6 @@
             android:layout_marginRight="@dimen/j10dp"
             android:layout_weight="1"
             android:background="#00000000"
-            android:enabled="false"
             android:hint="请填写"
             android:singleLine="true" />
     </LinearLayout>
@@ -142,7 +141,6 @@
             android:layout_marginRight="@dimen/j10dp"
             android:layout_weight="1"
             android:background="#00000000"
-            android:enabled="false"
             android:hint="请填写"
             android:singleLine="true" />
     </LinearLayout>
@@ -211,7 +209,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="4"
-            android:text="社会关系" />
+            android:text="亲属关系" />
 
         <TextView
             android:id="@+id/mTextView_qshgx2"

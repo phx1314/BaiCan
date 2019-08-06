@@ -12,6 +12,8 @@
 package com.ntdlg.bc.frg;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -99,9 +101,24 @@ public class FrgVip extends BaseFrg {
         mWebView.getSettings().setLoadWithOverviewMode(true);
         mWebView.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                // 重写此方法表明点击网页里面的链接还是在当前的webview里跳转，不跳到浏览器那边
+                if (url == null) return false;
+                try {
+                    if (url.startsWith("weixin://") || url.startsWith("alipays://") ||
+                            url.startsWith("mailto://") || url.startsWith("tel://")
+                        //其他自定义的scheme
+                            ) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                        startActivity(intent);
+                        return true;
+                    }
+                } catch (Exception e) { //防止crash (如果手机上没有安装处理某个scheme开头的url的APP, 会导致crash)
+                    return false;
+                }
+
+                //处理http和https开头的url
                 view.loadUrl(url);
                 return true;
+
             }
         });
         mWebView.setWebChromeClient(new WebChromeClient() {

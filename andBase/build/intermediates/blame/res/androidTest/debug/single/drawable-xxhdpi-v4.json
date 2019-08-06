@@ -1,9 +1,5 @@
 [
     {
-        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
-        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\drawable-xxhdpi-v4\\ic_launcher.png"
-    },
-    {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\cropper_queren.png",
         "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xxhdpi-v4\\cropper_queren.png"
     },
@@ -12,23 +8,11 @@
         "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\drawable-xxhdpi-v4\\ic_launcher.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\cropper_queren.png",
-        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xxhdpi-v4\\cropper_queren.png"
-    },
-    {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\cropper_quxiao.png",
         "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xxhdpi-v4\\cropper_quxiao.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\cropper_quxiao.png",
-        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xxhdpi-v4\\cropper_quxiao.png"
-    },
-    {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\cropper_xuanzhuan.png",
         "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xxhdpi-v4\\cropper_xuanzhuan.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\cropper_xuanzhuan.png",
-        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xxhdpi-v4\\cropper_xuanzhuan.png"
     }
 ]

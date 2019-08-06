@@ -26,6 +26,7 @@ import com.framewidget.F;
 import com.framewidget.view.Headlayout;
 import com.mdx.framework.activity.MFragment;
 import com.mdx.framework.widget.ActionBar;
+import com.moxie.client.manager.MoxieSDK;
 import com.ntdlg.bc.R;
 
 public abstract class BaseFrg extends MFragment implements View.OnClickListener, HttpResponseListenerSon {
@@ -88,6 +89,20 @@ public abstract class BaseFrg extends MFragment implements View.OnClickListener,
         super.finish();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (MoxieSDK.getInstance().isDoing()) {
+            MoxieSDK.getInstance().show();
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        //用来清理数据或解除引用
+        MoxieSDK.getInstance().clear();
+    }
 
     public static void setWindowStatusBarColor(Activity activity, int colorResId) {
         try {

@@ -11,6 +11,7 @@
 
 package com.ntdlg.bc.frg;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -203,7 +204,12 @@ public class FrgWodeJk1 extends BaseFrg {
                     mTextView_tj.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            loadJsonUrl(getVip88LoginUrl, new Gson().toJson(new BeanVip()));
+                            com.framewidget.F.yShoure(getContext(), "购买会员成功后，须工作时间内才能立即放款", "", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    loadJsonUrl(getVip88LoginUrl, new Gson().toJson(new BeanVip()));
+                                }
+                            });
                         }
                     });
                 } else if (mModelWDJK.bills.get(0).billStatus.equals("6")) {//还款中

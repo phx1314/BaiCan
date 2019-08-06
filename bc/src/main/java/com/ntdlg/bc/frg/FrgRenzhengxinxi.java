@@ -87,6 +87,7 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 mModelSF = (ModelSF) obj;
                 mBeanSFSM.idcard_back_photo = mModelSF.idcard_back_photo;
                 mBeanSFSM.idcard_front_photo = mModelSF.idcard_front_photo;
+                mBeanSFSM.pic_photo = mModelSF.pic_photo;
                 mBeanSFSM.sign = readClassAttr(mBeanSFSM);
                 loadJsonUrl(scanIdentity, new Gson().toJson(mBeanSFSM));
 //                com.ntdlg.qd.F.getUrl(mModelSF.idcard_front_photo, "FrgRenzhengxinxi", 1);
@@ -215,10 +216,22 @@ public class FrgRenzhengxinxi extends BaseFrg {
             return;
         }
         if (R.id.clk_mTextView_1 == v.getId()) {
+            if (mModelGRXYRZXX.isBasicAuth.equals("1")) {
+                Helper.toast("您已认证", getContext());
+                return;
+            }
             Helper.startActivity(getContext(), FrgJbxx.class, TitleAct.class);
         } else if (R.id.clk_mTextView_2 == v.getId()) {
+            if (mModelGRXYRZXX.isProfessionAuth.equals("1")) {
+                Helper.toast("您已认证", getContext());
+                return;
+            }
             Helper.startActivity(getContext(), FrgGzxx.class, TitleAct.class);
         } else if (R.id.clk_mTextView_3 == v.getId()) {
+            if (mModelGRXYRZXX.isLinkMainAuth.equals("1")) {
+                Helper.toast("您已认证", getContext());
+                return;
+            }
             Helper.startActivity(getContext(), FrgLxr.class, TitleAct.class);
         } else if (R.id.clk_mTextView_4 == v.getId()) {//手机
             if (mModelGRXYRZXX.isOperatorAuth.equals("1")) {

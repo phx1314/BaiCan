@@ -12,6 +12,7 @@
 package com.ntdlg.bc.frg;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
@@ -271,7 +272,13 @@ public class FrgSxed extends BaseFrg {
             mTextView_right.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    loadJsonUrl(getVip88LoginUrl, new Gson().toJson(new BeanVip()));
+                    com.framewidget.F.yShoure(getContext(), "购买会员成功后，须工作时间内才能立即放款", "", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            loadJsonUrl(getVip88LoginUrl, new Gson().toJson(new BeanVip()));
+                        }
+                    });
+
                 }
             });
         } else if (mModelKSJK.result.equals("5")) {//签约失效

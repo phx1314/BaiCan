@@ -1,13 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#f2f2f2" android:gravity="center_horizontal" android:orientation="vertical">
-     <com.thinkcool.circletextimageview.CircleTextImageView xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="@dimen/j80dp" android:layout_height="@dimen/j80dp" android:layout_marginTop="@dimen/j20dp" android:src="@drawable/logo" app:citv_border_color="#FF000000" app:citv_border_width="@dimen/j2dp" />
-     <TextView style="@style/text_style_13_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j15dp" android:text="亲，首次使用某某钱袋，请先绑定手机号" />
-     <EditText android:id="@+id/mEditText_phone" style="@style/text_style_13_black" android:layout_width="match_parent" android:inputType="phone" android:maxLength="11" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j15dp" android:background="#ffffff" android:hint="手机号" android:padding="@dimen/j15dp" />
-     <ImageView android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="@dimen/j10dp" android:layout_marginRight="@dimen/j10dp" android:background="@color/tyD1" />
-     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#ffffff" android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/j15dp">
-          <EditText android:id="@+id/mEditText_code" style="@style/text_style_13_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:background="#00000000" android:hint="验证码" />
-          <TextView android:id="@+id/clk_mTextView_get" style="@style/text_style_13_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="获取验证码" android:textColor="@color/A" />
-     </LinearLayout>
-     <TextView android:id="@+id/mTextView_lg" style="@style/text_style_15_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j35dp" android:layout_marginRight="@dimen/j35dp" android:layout_marginTop="@dimen/j20dp" android:background="@drawable/shape_green" android:gravity="center" android:padding="@dimen/j10dp" android:text="登录" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.thinkcool.circletextimageview.CircleTextImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="@dimen/j80dp"
+        android:layout_height="@dimen/j80dp"
+        android:layout_marginTop="@dimen/j20dp"
+        android:src="@drawable/logo"
+        app:citv_border_color="#FF000000"
+        app:citv_border_width="@dimen/j2dp" />
+
+    <TextView
+        style="@style/text_style_13_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/j15dp"
+        android:text="亲，首次使用小时代，请先绑定手机号" />
+
+    <EditText
+        android:id="@+id/mEditText_phone"
+        style="@style/text_style_13_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/j15dp"
+        android:background="#ffffff"
+        android:hint="手机号"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:padding="@dimen/j15dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/j10dp"
+        android:layout_marginRight="@dimen/j10dp"
+        android:background="@color/tyD1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/j15dp">
+
+        <EditText
+            android:id="@+id/mEditText_code"
+            style="@style/text_style_13_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:hint="验证码" />
+
+        <TextView
+            android:id="@+id/clk_mTextView_get"
+            style="@style/text_style_13_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取验证码"
+            android:textColor="@color/A" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mTextView_lg"
+        style="@style/text_style_15_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/j35dp"
+        android:layout_marginRight="@dimen/j35dp"
+        android:layout_marginTop="@dimen/j20dp"
+        android:background="@drawable/shape_green"
+        android:gravity="center"
+        android:padding="@dimen/j10dp"
+        android:text="登录" />
 </LinearLayout>
 

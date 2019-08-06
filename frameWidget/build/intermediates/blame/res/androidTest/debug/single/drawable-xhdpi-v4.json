@@ -1,5 +1,9 @@
 [
     {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_unselected_pressed_holo.9.png"
+    },
+    {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\arrows_left.png",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\arrows_left.png"
     },
@@ -8,16 +12,16 @@
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\morentouxiang_n.png"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\swipactivity_shadow_left.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\swipactivity_shadow_left.png"
-    },
-    {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\vpi__tab_unselected_holo.9.png",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_unselected_holo.9.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\morentouxiang_n.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\morentouxiang_n.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\swipactivity_shadow_left.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\swipactivity_shadow_left.png"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_pengyouquan.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_pengyouquan.png"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bg_flower_toast.9.png",
@@ -36,128 +40,136 @@
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\more_bg.png"
     },
     {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_df_img_load.9.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\default_df_img_load.9.png"
+    },
+    {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_zhuanhuansxt_h.png",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_zhuanhuansxt_h.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\shopping_cart.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\shopping_cart.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_zhuanhuansxt_n.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_zhuanhuansxt_n.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\camera_preview_next_nor.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\camera_preview_next_nor.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\moren.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\moren.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\swipactivity_shadow_right.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\swipactivity_shadow_right.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\swipactivity_shadow_right.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\swipactivity_shadow_right.png"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_avatar.png",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_avatar.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\panoramic_witeback.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\panoramic_witeback.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\vpi__tab_selected_focused_holo.9.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_selected_focused_holo.9.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\moren.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\moren.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\pulltorefresh_down_arrow.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\pulltorefresh_down_arrow.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\df_add.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\df_add.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\swipactivity_shadow_bottom.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\swipactivity_shadow_bottom.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_back_n.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_back_n.png"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\panoramic_witeback.png",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\panoramic_witeback.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_qqkongjian.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_qqkongjian.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\swipactivity_shadow_bottom.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\swipactivity_shadow_bottom.png"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_ps_back_n.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_ps_back_n.png"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_xinlang.png",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_xinlang.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\vpi__tab_unselected_focused_holo.9.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_unselected_focused_holo.9.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_weixin.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_weixin.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_gengduo_n.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_gengduo_n.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\df_add.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\df_add.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_zhuanhuansxt_n.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_zhuanhuansxt_n.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\sina_web_default.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\sina_web_default.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_xinlang.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_xinlang.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_bt_paizhao_n.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\default_bt_paizhao_n.png"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\pulltorefresh_up_arrow.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\pulltorefresh_up_arrow.png"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\yslt_bt_fanhui_n.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\yslt_bt_fanhui_n.png"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\yslt_bt_fanhui_h.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\yslt_bt_fanhui_h.png"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_bt_paizhao_h.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\default_bt_paizhao_h.png"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\camera_preview_next_nor.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\camera_preview_next_nor.png"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_qqkongjian.png",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_qqkongjian.png"
     },
     {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_jrdp_n.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bt_jrdp_n.png"
+    },
+    {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_photo_sel_s.9.png",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\default_photo_sel_s.9.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_zhuanhuansxt_h.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_zhuanhuansxt_h.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\shopping_cart.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\shopping_cart.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_jrdp_n.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bt_jrdp_n.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\pulltorefresh_down_arrow.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\pulltorefresh_down_arrow.png"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_qq.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_qq.png"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_paizhao_n.png",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_paizhao_n.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\vpi__tab_selected_focused_holo.9.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_selected_focused_holo.9.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_weixin.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_weixin.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_unselected_pressed_holo.9.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_pengyouquan.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_pengyouquan.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\vpi__tab_selected_holo.9.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_selected_holo.9.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_duanxin.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_duanxin.png"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\camera_preview_back_nor.png",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\camera_preview_back_nor.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_yixin.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_yixin.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_youjian.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_youjian.png"
     },
     {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\camera_preview_back_nor.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\camera_preview_back_nor.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_gengduo_n.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_gengduo_n.png"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
@@ -172,231 +184,19 @@
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bg_youhui.png"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_yixin.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_yixin.png"
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\fr_ps_more.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\fr_ps_more.png"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\vpi__tab_unselected_focused_holo.9.png",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_unselected_focused_holo.9.png"
     },
     {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_yixin.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_yixin.png"
+    },
+    {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_paizhao_h.png",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_paizhao_h.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_unselected_pressed_holo.9.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_pengyouquan.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_pengyouquan.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_duanxin.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_duanxin.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_df_img_load.9.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\default_df_img_load.9.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_selected_pressed_holo.9.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_youjian.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_youjian.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_zhuanhuansxt_n.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_zhuanhuansxt_n.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_photo_sel_n.9.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\default_photo_sel_n.9.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\moren.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\moren.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\sina_web_default.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\sina_web_default.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\vpi__tab_unselected_holo.9.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_unselected_holo.9.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\swipactivity_shadow_right.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\swipactivity_shadow_right.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\vpi__tab_selected_focused_holo.9.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_selected_focused_holo.9.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_avatar.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_avatar.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\swipactivity_shadow_left.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\swipactivity_shadow_left.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_back_n.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_back_n.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_back_n.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_back_n.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_ps_back_n.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_ps_back_n.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_ps_back_n.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_ps_back_n.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_weixin.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_weixin.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bg_flower_toast.9.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bg_flower_toast.9.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\df_add.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\df_add.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\sina_web_default.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\sina_web_default.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\more_bg.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\more_bg.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_bt_paizhao_n.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\default_bt_paizhao_n.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\pulltorefresh_up_arrow.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\pulltorefresh_up_arrow.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_qq.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_qq.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\yslt_bt_fanhui_n.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\yslt_bt_fanhui_n.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\yslt_bt_fanhui_h.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\yslt_bt_fanhui_h.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\fr_ps_more.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\fr_ps_more.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_bt_paizhao_h.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\default_bt_paizhao_h.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\yslt_bt_fanhui_n.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\yslt_bt_fanhui_n.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\camera_preview_next_nor.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\camera_preview_next_nor.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_jrdp_n.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bt_jrdp_n.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\yslt_bt_fanhui_h.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\yslt_bt_fanhui_h.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\shopping_cart.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\shopping_cart.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\pulltorefresh_down_arrow.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\pulltorefresh_down_arrow.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_df_img_load.9.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\default_df_img_load.9.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_qq.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_qq.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_paizhao_n.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_paizhao_n.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_photo_sel_s.9.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\default_photo_sel_s.9.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_paizhao_h.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_paizhao_h.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_duanxin.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_duanxin.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_bt_paizhao_h.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\default_bt_paizhao_h.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bg_youhui.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bg_youhui.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_youjian.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_youjian.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_bt_paizhao_n.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\default_bt_paizhao_n.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bt_gengduo_n.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_gengduo_n.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\arrows_left.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\arrows_left.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_action_undo.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\ic_action_undo.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\swipactivity_shadow_bottom.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\swipactivity_shadow_bottom.png"
-    },
-    {
-        "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\pulltorefresh_up_arrow.png",
-        "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\pulltorefresh_up_arrow.png"
-    },
-    {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\fr_ps_more.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\fr_ps_more.png"
     }
 ]

@@ -24,6 +24,7 @@ public class ModelZHZX implements Serializable {
     public String isNameAuth = "";
     public String userName = "";
     public String userCid = "";
+    public String qrCodeUrl = "";
 
 
 }

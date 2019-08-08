@@ -13,7 +13,13 @@ package com.ntdlg.bc.frg;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
+import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
@@ -32,6 +38,11 @@ import com.ntdlg.bc.bean.BeanSZTX;
 import com.ntdlg.bc.bean.BeanShare;
 import com.ntdlg.bc.model.ModelShare;
 import com.ntdlg.bc.model.ModelZHZX;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 import static com.ntdlg.bc.F.Bitmap2StrByBase64;
 import static com.ntdlg.bc.F.getInfo;
@@ -127,6 +138,7 @@ public class FrgWode extends BaseFrg {
             BeanShare mBeanShare = new BeanShare();
             mBeanShare.sign = readClassAttr(mBeanShare);
             loadJsonUrlNoshow(share, new Gson().toJson(mBeanShare));
+
         } else {
             mImageView.setObj("");
             mTextView_name.setText("");
@@ -159,7 +171,45 @@ public class FrgWode extends BaseFrg {
             if (mModelShare != null) {
 //                com.framewidget.F.getShare(getContext(), "", mModelShare.url
 //                        , mModelShare.content, mModelShare.title);
-                share(getContext(), mModelShare.title, mModelShare.content + mModelShare.url);
+//                share(getContext(), mModelShare.title, mModelShare.content + mModelShare.url);
+                if (!TextUtils.isEmpty(mModelZHZX.qrCodeUrl)) {
+                    //耗时操作都要放在子线程操作
+                    //开启子线程获取输入流
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            HttpURLConnection conn = null;
+                            InputStream is = null;
+                            try {
+                                URL url = new URL(mModelZHZX.qrCodeUrl);
+                                //开启连接
+                                conn = (HttpURLConnection) url.openConnection();
+                                //设置连接超时
+                                conn.setConnectTimeout(5000);
+                                //设置请求方式
+                                conn.setRequestMethod("GET");
+                                //conn.connect();
+                                if (conn.getResponseCode() == 200) {
+                                    is = conn.getInputStream();
+                                    Bitmap b = BitmapFactory.decodeStream(is);
+                                    shareImage(getContext(), b);
+                                }
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            } finally {
+                                try {
+                                    //用完记得关闭
+                                    is.close();
+                                    conn.disconnect();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }
+                    }).start();
+                }
+
+
             }
 
         } else if (R.id.mLinearLayout_1 == v.getId()) {
@@ -184,6 +234,36 @@ public class FrgWode extends BaseFrg {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(
                 Intent.createChooser(intent, title));
+    }
+
+    /**
+     * 分享前必须执行本代码，主要用于兼容SDK18以上的系统
+     */
+    private static void checkFileUriExposure() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
+            StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+            StrictMode.setVmPolicy(builder.build());
+            builder.detectFileUriExposure();
+        }
+    }
+
+
+    /**
+     * @param context 上下文
+     */
+    private static void shareImage(Context context, Bitmap mBitmap) {
+        checkFileUriExposure();
+
+        try {
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_SEND);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.putExtra(Intent.EXTRA_STREAM, Uri.parse(MediaStore.Images.Media.insertImage(context.getContentResolver(), mBitmap, null, null)));
+            intent.setType("image/*");   //分享文件
+            context.startActivity(Intent.createChooser(intent, "分享"));
+        } catch (Exception e) {
+            Helper.toast("分享失败，未知错误", context);
+        }
     }
 
 }

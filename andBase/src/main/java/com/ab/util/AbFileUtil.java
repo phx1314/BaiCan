@@ -15,6 +15,20 @@
  */
 package com.ab.util;
 
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+import android.os.Environment;
+import android.os.StatFs;
+
+import com.ab.global.AbAppConfig;
+
+import org.apache.http.Header;
+import org.apache.http.HttpResponse;
+
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -30,20 +44,6 @@ import java.net.URL;
 import java.util.Comparator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.apache.http.Header;
-import org.apache.http.HttpResponse;
-
-import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.res.AssetManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
-import android.os.Environment;
-import android.os.StatFs;
-
-import com.ab.global.AbAppConfig;
 
 // TODO: Auto-generated Javadoc
 
@@ -540,7 +540,7 @@ public class AbFileUtil {
             //获取后缀
             String suffix = getMIMEFromUrl(url,response);
             if(AbStrUtil.isEmpty(suffix)){
-                suffix = ".ab";
+                suffix = ".png";
             }
             name = AbMd5.MD5(url)+suffix;
         } catch (Exception e) {

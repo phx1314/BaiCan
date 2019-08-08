@@ -11,10 +11,18 @@
 
 package com.ntdlg.bc.frg;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.view.View;
@@ -24,26 +32,30 @@ import com.facefr.activity.PictureUploadActivity;
 import com.mdx.framework.Frame;
 import com.mdx.framework.activity.TitleAct;
 import com.mdx.framework.utility.Helper;
+import com.mdx.framework.utility.permissions.PermissionRequest;
 import com.mdx.framework.widget.ActionBar;
 import com.mdx.framework.widget.MImageView;
-import com.mdx.framework.widget.getphoto.PopUpdataPhoto;
 import com.ntdlg.bc.R;
 import com.ntdlg.bc.model.ModelSF;
 
-import static com.ntdlg.bc.F.Bitmap2StrByBase64;
+import java.io.File;
+
+import static com.framewidget.F.ExistSDCard;
 import static com.ntdlg.bc.F.bitmap2Byte;
 
 
 public class FrgShenfenRezhengNew extends BaseFrg {
-
+    public static final int CAMERA_CODE = 1;
     public MImageView mMImageView_1;
     public MImageView mMImageView_2;
     public TextView mTextView_shenqing;
     public Bitmap mBitmap1;
     public Bitmap mBitmap2;
+    public Bitmap mBitmap3;
     public String from;
-    public String pic_photo;
     public MImageView mMImageView_add;
+    public String path = Environment
+            .getExternalStorageDirectory() + "/" + System.currentTimeMillis() + ".jpeg";
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -97,16 +109,16 @@ public class FrgShenfenRezhengNew extends BaseFrg {
                     Helper.startActivity(getContext(), FrgLogin.class, TitleAct.class);
                     return;
                 }
-                Helper.getPhoto(getActivity(), new PopUpdataPhoto.OnReceiverPhoto() {
-                    @Override
-                    public void onReceiverPhoto(String photoPath, int width,
-                                                int height) {
-                        if (photoPath != null) {
-                            mMImageView_add.setObj("file:" + photoPath);
-                            pic_photo = Bitmap2StrByBase64(photoPath);
-                        }
+                Helper.requestPermissions(new String[]{Manifest.permission.CAMERA}, new PermissionRequest() {
+                    public void onGrant(String[] permissions, int[] grantResults) {
+                        path = Environment
+                                .getExternalStorageDirectory() + "/" + System.currentTimeMillis() + ".jpeg";
+                        Intent intent1 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                        intent1.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(path)));
+                        startActivityForResult(intent1, CAMERA_CODE);
                     }
-                }, 10, 10, 640, 640);
+                });
+
             }
         });
         mTextView_shenqing.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +132,7 @@ public class FrgShenfenRezhengNew extends BaseFrg {
                     Helper.toast("请拍摄身份证反面", getContext());
                     return;
                 }
-                if (TextUtils.isEmpty(pic_photo)) {
+                if (mBitmap3 == null) {
                     Helper.toast("请上传手持身份证照片", getContext());
                     return;
                 }
@@ -131,7 +143,7 @@ public class FrgShenfenRezhengNew extends BaseFrg {
                         ModelSF response = new ModelSF();
                         response.idcard_front_photo = Base64.encodeToString(bitmap2Byte(mBitmap2), Base64.DEFAULT);
                         response.idcard_back_photo = Base64.encodeToString(bitmap2Byte(mBitmap1), Base64.DEFAULT);
-                        response.pic_photo = pic_photo;
+                        response.pic_photo = Base64.encodeToString(bitmap2Byte(mBitmap3), Base64.DEFAULT);
                         FrgShenfenRezhengNew.this.finish();
                         Frame.HANDLES.sentAll(from, 120, response);
                     }
@@ -145,6 +157,72 @@ public class FrgShenfenRezhengNew extends BaseFrg {
 
     }
 
+    /**
+     * @param bitmap
+     * @param orientationDegree 0 - 360 范围
+     * @return
+     */
+    Bitmap adjustPhotoRotation(Bitmap bitmap, int orientationDegree) {
+
+        Matrix matrix = new Matrix();
+        matrix.setRotate(orientationDegree, (float) bitmap.getWidth() / 2,
+                (float) bitmap.getHeight() / 2);
+        float targetX, targetY;
+        if (orientationDegree == 90) {
+            targetX = bitmap.getHeight();
+            targetY = 0;
+        } else {
+            targetX = bitmap.getHeight();
+            targetY = bitmap.getWidth();
+        }
+
+
+        final float[] values = new float[9];
+        matrix.getValues(values);
+
+
+        float x1 = values[Matrix.MTRANS_X];
+        float y1 = values[Matrix.MTRANS_Y];
+
+
+        matrix.postTranslate(targetX - x1, targetY - y1);
+
+
+        Bitmap canvasBitmap = Bitmap.createBitmap(bitmap.getHeight(), bitmap.getWidth(),
+                Bitmap.Config.ARGB_8888);
+
+
+        Paint paint = new Paint();
+        Canvas canvas = new Canvas(canvasBitmap);
+        canvas.drawBitmap(bitmap, matrix, paint);
+
+
+        return canvasBitmap;
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == getActivity().RESULT_OK) {
+            return;
+        }
+        if (resultCode == Activity.RESULT_CANCELED) {
+            return;//取消
+        }
+        switch (requestCode) {
+            case CAMERA_CODE:
+                if (ExistSDCard()) {
+                    mBitmap3 = com.mdx.framework.utility.BitmapRead.decodeSampledBitmapFromFile(
+                            path, 480, 0);
+                    mMImageView_add.setImageBitmap(mBitmap3);
+                    mMImageView_add.setBackgroundResource(0);
+                } else {
+                    Helper.toast("sd卡不存在", getContext());
+                }
+                break;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 
     @Override
     public void setActionBar(ActionBar actionBar, Context context) {

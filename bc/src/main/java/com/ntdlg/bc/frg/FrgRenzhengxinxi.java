@@ -216,22 +216,22 @@ public class FrgRenzhengxinxi extends BaseFrg {
             return;
         }
         if (R.id.clk_mTextView_1 == v.getId()) {
-            if (mModelGRXYRZXX.isBasicAuth.equals("1")) {
-                Helper.toast("您已认证", getContext());
-                return;
-            }
+//            if (mModelGRXYRZXX.isBasicAuth.equals("1")) {
+//                Helper.toast("您已认证", getContext());
+//                return;
+//            }
             Helper.startActivity(getContext(), FrgJbxx.class, TitleAct.class);
         } else if (R.id.clk_mTextView_2 == v.getId()) {
-            if (mModelGRXYRZXX.isProfessionAuth.equals("1")) {
-                Helper.toast("您已认证", getContext());
-                return;
-            }
+//            if (mModelGRXYRZXX.isProfessionAuth.equals("1")) {
+//                Helper.toast("您已认证", getContext());
+//                return;
+//            }
             Helper.startActivity(getContext(), FrgGzxx.class, TitleAct.class);
         } else if (R.id.clk_mTextView_3 == v.getId()) {
-            if (mModelGRXYRZXX.isLinkMainAuth.equals("1")) {
-                Helper.toast("您已认证", getContext());
-                return;
-            }
+//            if (mModelGRXYRZXX.isLinkMainAuth.equals("1")) {
+//                Helper.toast("您已认证", getContext());
+//                return;
+//            }
             Helper.startActivity(getContext(), FrgLxr.class, TitleAct.class);
         } else if (R.id.clk_mTextView_4 == v.getId()) {//手机
             if (mModelGRXYRZXX.isOperatorAuth.equals("1")) {

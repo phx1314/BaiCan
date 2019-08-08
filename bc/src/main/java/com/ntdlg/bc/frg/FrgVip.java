@@ -165,7 +165,9 @@ public class FrgVip extends BaseFrg {
          */
         @JavascriptInterface
         public void gotoPage(String pageName) {
-            Log.i(TAG, "gotoPage:" + pageName);
+            if (pageName.equals("home")) {
+                finish();
+            }
         }
 
         /**

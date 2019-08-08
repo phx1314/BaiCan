@@ -1054,9 +1054,9 @@ public class PictureUploadActivity extends Activity implements Camera.PreviewCal
     void setImgFrame() {
         //添加拍照框
         ImageView frameImgView = new ImageView(this);
-//        InputStream is = getResources().openRawResource(type==1?R.drawable.vector_drawable_id_back:R.drawable.vector_drawable_id_front);
-//        Bitmap bmp = BitmapFactory.decodeStream(is);
-//        frameImgView.setImageBitmap(bmp);
+        InputStream is = getResources().openRawResource(type==1?R.drawable.camera_idcard_front:R.drawable.camera_idcard_back);
+        Bitmap bmp = BitmapFactory.decodeStream(is);
+        frameImgView.setImageBitmap(bmp);
 
         RelativeLayout.LayoutParams lp = null;
         lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,

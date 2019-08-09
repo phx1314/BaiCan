@@ -68,12 +68,12 @@ public class FrgLxr extends BaseFrg {
         switch (type) {
             case 101:
                 SortModel item = (SortModel) obj;
-                mTextView_phone.setText(item.number);
+                mTextView_phone.setText(item.number.replace(" ", ""));
                 mEditText_jj_name.setText(item.name);
                 break;
             case 102:
                 SortModel item2 = (SortModel) obj;
-                mTextView_phone2.setText(item2.number);
+                mTextView_phone2.setText(item2.number.replace(" ", ""));
                 mEditText_jj_name2.setText(item2.name);
                 break;
             case 103:
@@ -136,7 +136,7 @@ public class FrgLxr extends BaseFrg {
                     return;
                 }
                 if (mTextView_phone2.getText().toString().trim().length() != 11) {
-                    Helper.toast("请输入亲属联系人2手机号", getContext());
+                    Helper.toast("请输入正确的亲属联系人2手机号", getContext());
                     return;
                 }
                 if (TextUtils.isEmpty(mTextView_qshgx2.getText().toString().trim())) {
@@ -189,17 +189,17 @@ public class FrgLxr extends BaseFrg {
         if (methodName.equals(relation)) {
             mModelQSGX = (ModelQSGX) json2Model(content, ModelQSGX.class);
             if (mModelQSGX.isExist.equals("1") && mModelQSGX.lxrRecords != null) {
-                for (ModelQSGX.LxrRecordsBean mLxrRecordsBean : mModelQSGX.lxrRecords) {
-                    if (mLxrRecordsBean.type.equals("1")) {
-                        mEditText_jj_name.setText(mLxrRecordsBean.name);
-                        mTextView_phone.setText(mLxrRecordsBean.phone);
-                        mTextView_qshgx.setText(mLxrRecordsBean.relation);
-                        mBeanLXRXX.idOne = mLxrRecordsBean.id;
+                for (int i = 0; i < mModelQSGX.lxrRecords.size(); i++) {
+                    if (i == 0) {
+                        mEditText_jj_name.setText(mModelQSGX.lxrRecords.get(i).name);
+                        mTextView_phone.setText(mModelQSGX.lxrRecords.get(i).phone);
+                        mTextView_qshgx.setText(mModelQSGX.lxrRecords.get(i).relation);
+                        mBeanLXRXX.idOne = mModelQSGX.lxrRecords.get(i).id;
                     } else {
-                        mEditText_jj_name2.setText(mLxrRecordsBean.name);
-                        mTextView_phone2.setText(mLxrRecordsBean.phone);
-                        mTextView_qshgx2.setText(mLxrRecordsBean.relation);
-                        mBeanLXRXX.idTwo = mLxrRecordsBean.id;
+                        mEditText_jj_name2.setText(mModelQSGX.lxrRecords.get(i).name);
+                        mTextView_phone2.setText(mModelQSGX.lxrRecords.get(i).phone);
+                        mTextView_qshgx2.setText(mModelQSGX.lxrRecords.get(i).relation);
+                        mBeanLXRXX.idTwo = mModelQSGX.lxrRecords.get(i).id;
                     }
                 }
             }

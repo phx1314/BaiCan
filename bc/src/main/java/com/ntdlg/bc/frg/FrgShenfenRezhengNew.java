@@ -125,11 +125,11 @@ public class FrgShenfenRezhengNew extends BaseFrg {
             @Override
             public void onClick(View view) {
                 if (mBitmap2 == null) {
-                    Helper.toast("请拍摄身份证正面", getContext());
+                    Helper.toast("请拍摄身份证国徽面", getContext());
                     return;
                 }
                 if (mBitmap1 == null) {
-                    Helper.toast("请拍摄身份证反面", getContext());
+                    Helper.toast("请拍摄身份证人像面", getContext());
                     return;
                 }
                 if (mBitmap3 == null) {

@@ -67,7 +67,6 @@
             android:gravity="center_vertical"
             android:hint="请选择"
             android:inputType="phone"
-            android:maxLength="11"
             android:singleLine="true" />
 
         <ImageView
@@ -178,7 +177,6 @@
             android:gravity="center_vertical"
             android:hint="请选择"
             android:inputType="phone"
-            android:maxLength="11"
             android:singleLine="true" />
 
         <ImageView

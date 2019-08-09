@@ -80,6 +80,12 @@ public class FrgWode extends BaseFrg {
             case 0:
                 loaddata();
                 break;
+//            case 1:
+//                BeanSZTX mBeanSZTX = new BeanSZTX();
+//                mBeanSZTX.photoPic = Bitmap2StrByBase64(obj.toString());
+//                mBeanSZTX.sign = readClassAttr(mBeanSZTX);
+//                loadJsonUrl(setPhoto, new Gson().toJson(mBeanSZTX));
+//                break;
         }
     }
 
@@ -111,6 +117,7 @@ public class FrgWode extends BaseFrg {
                     Helper.startActivity(getContext(), FrgLogin.class, TitleAct.class);
                     return;
                 }
+//                Helper.startActivity(getContext(), FrgSign.class, TitleAct.class);
                 Helper.getPhoto(getActivity(), new PopUpdataPhoto.OnReceiverPhoto() {
                     @Override
                     public void onReceiverPhoto(String photoPath, int width,
@@ -122,6 +129,8 @@ public class FrgWode extends BaseFrg {
                             mBeanSZTX.photoPic = Bitmap2StrByBase64(photoPath);
                             mBeanSZTX.sign = readClassAttr(mBeanSZTX);
                             loadJsonUrl(setPhoto, new Gson().toJson(mBeanSZTX));
+
+
                         }
                     }
                 }, 10, 10, 640, 640);

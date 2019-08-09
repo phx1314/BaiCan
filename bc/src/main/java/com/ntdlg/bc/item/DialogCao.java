@@ -63,7 +63,7 @@ public class DialogCao extends BaseItem {
         this.item = item;
         this.mModelKSJK2 = mModelKSJK2;
         if (!TextUtils.isEmpty(mModelKSJK2.type) && mModelKSJK2.type.equals("1")) {
-            mTextView_title.setText("尊敬的会员您现在可以享受vip立即放款功能！");
+            mTextView_title.setText("尊敬的会员,现在后台已经放款成功！");
             mTextView_1.setText("取消");
             mTextView_2.setText("确认");
             mTextView_1.setOnClickListener(new View.OnClickListener() {

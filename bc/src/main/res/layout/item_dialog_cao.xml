@@ -50,7 +50,9 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/mLinearLayout_left"
                 android:layout_width="0dp"
+
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
 
@@ -66,7 +68,7 @@
                     android:textColor="@color/A" />
             </LinearLayout>
 
-            <ImageView
+            <ImageView     android:id="@+id/mImageView_left"
                 android:layout_width="1px"
                 android:layout_height="match_parent"
                 android:background="@color/tyD1" />

@@ -18,6 +18,8 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mdx.framework.Frame;
@@ -31,6 +33,8 @@ public class DialogCao extends BaseItem {
     public TextView mTextView_2;
     public Dialog item;
     public ModelKSJK2 mModelKSJK2;
+    public LinearLayout mLinearLayout_left;
+    public ImageView mImageView_left;
 
     @SuppressLint("InflateParams")
     public static View getView(Context context, ViewGroup parent) {
@@ -55,6 +59,8 @@ public class DialogCao extends BaseItem {
         mTextView_title = (TextView) contentview.findViewById(R.id.mTextView_title);
         mTextView_1 = (TextView) contentview.findViewById(R.id.mTextView_1);
         mTextView_2 = (TextView) contentview.findViewById(R.id.mTextView_2);
+        mLinearLayout_left = (LinearLayout) findViewById(R.id.mLinearLayout_left);
+        mImageView_left = (ImageView) findViewById(R.id.mImageView_left);
 
 
     }
@@ -64,14 +70,9 @@ public class DialogCao extends BaseItem {
         this.mModelKSJK2 = mModelKSJK2;
         if (!TextUtils.isEmpty(mModelKSJK2.type) && mModelKSJK2.type.equals("1")) {
             mTextView_title.setText("尊敬的会员,现在后台已经放款成功！");
-            mTextView_1.setText("取消");
             mTextView_2.setText("确认");
-            mTextView_1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    item.dismiss();
-                }
-            });
+            mLinearLayout_left.setVisibility(View.GONE);
+            mImageView_left.setVisibility(View.GONE);
             mTextView_2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -81,6 +82,8 @@ public class DialogCao extends BaseItem {
                 }
             });
         } else {
+            mLinearLayout_left.setVisibility(View.VISIBLE);
+            mImageView_left.setVisibility(View.VISIBLE);
             mTextView_title.setText("尊敬的客户，您现在可以选择购买vip会员即享立即放款功能或者选择24小时放款功能！(工作时间内才能立即放款)");
             mTextView_1.setText("去购买");
             mTextView_2.setText("24小时放款");

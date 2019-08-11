@@ -69,7 +69,7 @@ public class DialogCao extends BaseItem {
         this.item = item;
         this.mModelKSJK2 = mModelKSJK2;
         if (!TextUtils.isEmpty(mModelKSJK2.type) && mModelKSJK2.type.equals("1")) {
-            mTextView_title.setText("尊敬的会员,现在后台已经放款成功！");
+            mTextView_title.setText("正在急速放款中！");
             mTextView_2.setText("确认");
             mLinearLayout_left.setVisibility(View.GONE);
             mImageView_left.setVisibility(View.GONE);

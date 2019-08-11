@@ -30,6 +30,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.mdx.framework.Frame;
 import com.ntdlg.bc.R;
 
 
@@ -80,6 +81,8 @@ public class FrgVip extends BaseFrg {
                     mWebView.goBack(); // 后退
                 } else {
                     FrgVip.this.finish();
+                    Frame.HANDLES.sentAll("FrgSxed,FrgWode,FrgWodeJk1", 0, null);
+                    Frame.HANDLES.closeIds("FrgJkShenqing");
                 }
             }
         });

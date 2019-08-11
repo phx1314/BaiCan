@@ -80,12 +80,12 @@ public class FrgWode extends BaseFrg {
             case 0:
                 loaddata();
                 break;
-//            case 1:
-//                BeanSZTX mBeanSZTX = new BeanSZTX();
-//                mBeanSZTX.photoPic = Bitmap2StrByBase64(obj.toString());
-//                mBeanSZTX.sign = readClassAttr(mBeanSZTX);
-//                loadJsonUrl(setPhoto, new Gson().toJson(mBeanSZTX));
-//                break;
+            case 1:
+                BeanSZTX mBeanSZTX = new BeanSZTX();
+                mBeanSZTX.photoPic = Bitmap2StrByBase64(obj.toString());
+                mBeanSZTX.sign = readClassAttr(mBeanSZTX);
+                loadJsonUrl(setPhoto, new Gson().toJson(mBeanSZTX));
+                break;
         }
     }
 

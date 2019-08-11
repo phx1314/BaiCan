@@ -140,7 +140,7 @@ public class FrgWodeJk1 extends BaseFrg {
                     mTextView_type.setText("审核中");
                 } else if (mModelWDJK.bills.get(0).billStatus.equals("9")) {//签约中
                     mTextView_remark.setVisibility(View.VISIBLE);
-                    mTextView_tj.setVisibility(View.VISIBLE);
+                    mTextView_tj.setVisibility(View.INVISIBLE);
                     mTextView_type.setText("签约中");
                     mTextView_tj.setText("开始借款");
                     mTextView_remark.setText(Html.fromHtml("签约倒计时  <font color='#FDA935'>" + getTime(mModelWDJK.bills.get(0).date) + "</font>"));
@@ -177,7 +177,7 @@ public class FrgWodeJk1 extends BaseFrg {
                         }
                     });
                 } else if (mModelWDJK.bills.get(0).billStatus.equals("10")) {//放款中
-                    mTextView_remark.setVisibility(View.VISIBLE);
+                    mTextView_remark.setVisibility(View.GONE);
                     mTextView_tj.setVisibility(View.VISIBLE);
                     mTextView_type.setText("放款中");
                     mTextView_remark.setText(Html.fromHtml("放款倒计时  <font color='#FDA935'>" + getTime(mModelWDJK.bills.get(0).date) + "</font>"));

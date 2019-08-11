@@ -18,6 +18,7 @@ import android.view.View;
 
 import com.f1reking.signatureview.SignatureView;
 import com.google.gson.Gson;
+import com.mdx.framework.Frame;
 import com.mdx.framework.activity.TitleAct;
 import com.mdx.framework.utility.Helper;
 import com.mdx.framework.widget.ActionBar;
@@ -78,6 +79,7 @@ public class FrgSign extends BaseFrg {
             public void onClick(View view) {
                 try {
                     mSignatureView.save(Environment.getExternalStorageDirectory() + "/" + System.currentTimeMillis() + ".png", true, 0);
+//                    Frame.HANDLES.sentAll("FrgWode",1,mSignatureView.getSavePath());
                     new Thread(new Runnable() {
                         @Override
                         public void run() {

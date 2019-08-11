@@ -239,14 +239,14 @@ public class F {
      * @return
      */
     public static String Bitmap2StrByBase64(String picpathcrop) {
-        return Base64.encodeToString(bitmap2Byte(picpathcrop), Base64.DEFAULT);
+        return Base64.encodeToString(bitmap2Byte(picpathcrop), Base64.NO_WRAP);
     }
 
 
     public static byte[] bitmap2Byte(String picpathcrop) {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         com.mdx.framework.utility.BitmapRead.decodeSampledBitmapFromFile(
-                picpathcrop, 480, 0).compress(Bitmap.CompressFormat.JPEG, 80,
+                picpathcrop, 480, 0).compress(Bitmap.CompressFormat.PNG, 80,
                 out);
         try {
             out.flush();
@@ -260,7 +260,7 @@ public class F {
 
     public static byte[] bitmap2Byte(Bitmap bitmap) {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 80,
+        bitmap.compress(Bitmap.CompressFormat.PNG, 80,
                 out);
         try {
             out.flush();

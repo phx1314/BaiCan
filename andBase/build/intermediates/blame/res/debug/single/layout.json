@@ -16,16 +16,16 @@
         "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\layout\\default_act_loading.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout\\design_menu_item_action_area.xml"
+        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\sr_loading_state_a.xml",
+        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\layout\\sr_loading_state_a.xml"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\sr_loading_state_a.xml",
-        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\layout\\sr_loading_state_a.xml"
+        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
+        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
@@ -48,12 +48,12 @@
         "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\layout\\textview.xml"
     },
     {
-        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\default_act_no_title.xml",
-        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\layout\\default_act_no_title.xml"
-    },
-    {
         "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\item_wheel_text_centered.xml",
         "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\layout\\item_wheel_text_centered.xml"
+    },
+    {
+        "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\default_act_no_title.xml",
+        "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\layout\\default_act_no_title.xml"
     },
     {
         "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
@@ -96,12 +96,12 @@
         "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\layout\\menu_right.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_bar_title_item.xml"
-    },
-    {
         "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\default_actionbar.xml",
         "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\layout\\default_actionbar.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
         "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\swipedismiss_undo_popup.xml",
@@ -136,12 +136,12 @@
         "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\layout\\custom_toast_base.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main_ce.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\layout\\activity_main_ce.xml"
-    },
-    {
         "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
         "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main_ce.xml",
+        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\layout\\activity_main_ce.xml"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
@@ -196,12 +196,12 @@
         "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\layout\\item_float_label.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout\\design_navigation_item_separator.xml"
-    },
-    {
         "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
         "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
+        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
@@ -236,12 +236,12 @@
         "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\layout\\slidingmenumain.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\pull_refresh_mheader.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\layout\\pull_refresh_mheader.xml"
-    },
-    {
         "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\base_act_show.xml",
         "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\layout\\base_act_show.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\pull_refresh_mheader.xml",
+        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\layout\\pull_refresh_mheader.xml"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",

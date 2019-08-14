@@ -1,11 +1,11 @@
 [
     {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
         "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
         "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",

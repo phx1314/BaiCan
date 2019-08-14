@@ -80,12 +80,12 @@
         "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\shape.xml",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\drawable\\shape.xml"
-    },
-    {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\shape.xml",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\src\\main\\res\\drawable\\shape.xml"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\click_nn.xml",
@@ -148,12 +148,12 @@
         "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable\\default_bg_translate.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_switch_thumb_material.xml"
-    },
-    {
         "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_indicator.xml",
         "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable\\vpi__tab_indicator.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
         "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\shadow_right.xml",

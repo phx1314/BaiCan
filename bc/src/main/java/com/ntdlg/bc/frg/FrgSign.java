@@ -14,11 +14,11 @@ package com.ntdlg.bc.frg;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Environment;
+import android.text.TextUtils;
 import android.view.View;
 
 import com.f1reking.signatureview.SignatureView;
 import com.google.gson.Gson;
-import com.mdx.framework.Frame;
 import com.mdx.framework.activity.TitleAct;
 import com.mdx.framework.utility.Helper;
 import com.mdx.framework.widget.ActionBar;
@@ -63,7 +63,9 @@ public class FrgSign extends BaseFrg {
         if (methodName.equals(esgin)) {
             Helper.toast("签名成功", getContext());
             FrgSign.this.finish();
-            Helper.startActivity(getContext(), FrgJkShenqing.class, TitleAct.class);
+            if (TextUtils.isEmpty(from)) {
+                Helper.startActivity(getContext(), FrgJkShenqing.class, TitleAct.class);
+            }
         }
     }
 

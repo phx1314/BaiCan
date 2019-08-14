@@ -156,6 +156,9 @@
         <uses-library android:name="android.test.runner" />
 
         <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+        <meta-data
             android:name="UMENG_APPKEY"
             android:value="59c9af7f8630f53f65000047" />
         <meta-data

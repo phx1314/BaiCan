@@ -127,9 +127,10 @@ public class FrgWodeJk1 extends BaseFrg {
         if (methodName.equals(queryBill)) {
             final ModelWDJK mModelWDJK = (ModelWDJK) json2Model(content, ModelWDJK.class);
             if (mModelWDJK.bills != null && mModelWDJK.bills.size() > 0) {
+                F.saveApplyId(mModelWDJK.bills.get(0).billId);
                 mLinearLayout_content.setVisibility(View.VISIBLE);
                 mTextView_time.setText(changeTime(mModelWDJK.bills.get(0).beginData));
-                mTextView_price.setText(mModelWDJK.bills.get(0).rapayAmount);
+                mTextView_price.setText(mModelWDJK.bills.get(0).billAmount);
                 mTextView_je.setText(mModelWDJK.bills.get(0).billAmount + "元");
                 mTextView_qx.setText(mModelWDJK.bills.get(0).periods + mModelWDJK.bills.get(0).term);
                 mTextView_jv.setText(mModelWDJK.bills.get(0).radio + "/天");
@@ -177,6 +178,17 @@ public class FrgWodeJk1 extends BaseFrg {
                         }
                     });
                 } else if (mModelWDJK.bills.get(0).billStatus.equals("10")) {//放款中
+                    mTextView_remark.setVisibility(View.GONE);
+                    mTextView_tj.setVisibility(View.VISIBLE);
+                    mTextView_type.setText("放款中");
+                    mTextView_tj.setText("查看VIP权益");
+                    mTextView_tj.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            loadJsonUrl(getVip88LoginUrl, new Gson().toJson(new BeanVip()));
+                        }
+                    });
+                } else if (mModelWDJK.bills.get(0).billStatus.equals("11")) {//放款中
                     mTextView_remark.setVisibility(View.GONE);
                     mTextView_tj.setVisibility(View.VISIBLE);
                     mTextView_type.setText("放款中");

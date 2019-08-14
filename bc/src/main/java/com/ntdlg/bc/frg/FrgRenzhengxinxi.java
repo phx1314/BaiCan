@@ -12,6 +12,7 @@
 package com.ntdlg.bc.frg;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -29,8 +30,13 @@ import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanBase;
 import com.ntdlg.bc.bean.BeanSFSM;
 import com.ntdlg.bc.bean.BeanSubXSSH;
+import com.ntdlg.bc.bean.BeansavePhone;
 import com.ntdlg.bc.model.ModelGRXYRZXX;
 import com.ntdlg.bc.model.ModelSF;
+import com.ntdlg.bc.view.SortModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.ntdlg.bc.F.elemeAuth;
 import static com.ntdlg.bc.F.getPlatform;
@@ -38,6 +44,7 @@ import static com.ntdlg.bc.F.json2Model;
 import static com.ntdlg.bc.F.mTAocrVerify;
 import static com.ntdlg.bc.F.meituanAuth;
 import static com.ntdlg.bc.F.readClassAttr;
+import static com.ntdlg.bc.F.savePhone;
 import static com.ntdlg.bc.F.scanIdentity;
 import static com.ntdlg.bc.F.submitCkeck;
 import static com.ntdlg.bc.F.yunyingshangAuth;
@@ -59,6 +66,7 @@ public class FrgRenzhengxinxi extends BaseFrg {
     public TextView clk_mTextView_8;
     public RelativeLayout mRelativeLayout_title;
     public int type;
+    public List<SortModel> mAllContactsList = new ArrayList<SortModel>();
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -82,6 +90,9 @@ public class FrgRenzhengxinxi extends BaseFrg {
 //                mBeanSFSM.backPic = obj.toString();
                 mBeanSFSM.sign = readClassAttr(mBeanSFSM);
                 loadJsonUrl(scanIdentity, new Gson().toJson(mBeanSFSM));
+                break;
+            case 3:
+                mAllContactsList = (ArrayList) obj;
                 break;
             case 120:
                 mModelSF = (ModelSF) obj;
@@ -284,12 +295,23 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 Helper.toast("美团/饿了么未认证", getContext());
                 return;
             }
-
-            BeanSubXSSH mBeanKSJK = new BeanSubXSSH();
-            mBeanKSJK.location = F.address;
-            mBeanKSJK.sign = readClassAttr(mBeanKSJK);
-            loadJsonUrl(submitCkeck, new Gson().toJson(mBeanKSJK));
-
+            if (mAllContactsList.size() > 0) {
+                BeansavePhone mBeansavePhone = new BeansavePhone();
+                for (SortModel mSortModel : mAllContactsList) {
+                    mBeansavePhone.linkMan.add(new BeansavePhone.linkManBean(mSortModel.name, mSortModel.number));
+                }
+                mBeansavePhone.sign = readClassAttr(mBeansavePhone);
+                loadJsonUrlNoshow(savePhone, new Gson().toJson(mBeansavePhone));
+            }
+            com.framewidget.F.yShoure(getContext(), "", "请仔细核对所填信息，确保真实有效完整，一经提交将无法修改", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    BeanSubXSSH mBeanKSJK = new BeanSubXSSH();
+                    mBeanKSJK.location = F.address;
+                    mBeanKSJK.sign = readClassAttr(mBeanKSJK);
+                    loadJsonUrl(submitCkeck, new Gson().toJson(mBeanKSJK));
+                }
+            });
         }
     }
 

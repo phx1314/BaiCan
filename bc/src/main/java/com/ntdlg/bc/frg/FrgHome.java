@@ -27,6 +27,7 @@ import com.framewidget.newMenu.OnPageSelset;
 import com.framewidget.newMenu.SlidingFragment;
 import com.framewidget.view.CallBackOnly;
 import com.google.gson.Gson;
+import com.liulishuo.filedownloader.FileDownloader;
 import com.mdx.framework.Frame;
 import com.mdx.framework.activity.TitleAct;
 import com.mdx.framework.utility.Helper;
@@ -51,9 +52,11 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
     public SlidingFragment mSlidingFragment;
     public android.support.v4.app.FragmentManager fragmentManager;
 
+
     @Override
     protected void create(Bundle savedInstanceState) {
         setContentView(R.layout.frg_home);
+        FileDownloader.setup(getActivity());
         setWindowStatusBarColor(getActivity(), R.color.A);
         initView();
         loaddata();
@@ -103,12 +106,7 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
                 Helper.startActivity(getContext(), Intent.FLAG_ACTIVITY_CLEAR_TOP, FrgLogin.class, TitleAct.class);
                 break;
             case 0:
-//                mSlidingFragment.setMoveback(new MoveCallback() {
-//                    @Override
-//                    public boolean getBol() {
-//                        return Boolean.valueOf(obj.toString());
-//                    }
-//                });
+
                 break;
         }
     }

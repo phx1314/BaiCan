@@ -76,12 +76,12 @@
         "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
-    },
-    {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\drawable\\bt_paizhao.xml",
         "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable\\bt_paizhao.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\debug\\drawable\\default_bg_translate.xml",

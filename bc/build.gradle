@@ -9,8 +9,8 @@ android {
         applicationId "com.ntdlg.bc"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 28
-        versionName "1.0.28"
+        versionCode 33
+        versionName "1.0.33"
         multiDexEnabled = true
     }
     aaptOptions {
@@ -55,5 +55,7 @@ dependencies {
     compile 'com.github.F1ReKing:SignatureView:v1.0.0'
     apt 'com.jakewharton:butterknife-compiler:8.2.0'
     compile 'com.pgyersdk:sdk:2.8.1'
+    compile 'com.liulishuo.filedownloader:library:1.7.4'
+    compile 'com.github.barteksc:android-pdf-viewer:1.3.0'
     compile files('libs/AMap_Location_V2.4.1_20160414.jar')
 }

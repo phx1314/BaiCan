@@ -20,12 +20,12 @@
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\anim\\pull_refresh_slide_out_to_top.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\anim\\swipedismiss_popup_show.xml",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\anim\\swipedismiss_popup_show.xml"
-    },
-    {
         "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\anim\\pull_refresh_slide_in_from_top.xml",
         "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\anim\\pull_refresh_slide_in_from_top.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\anim\\swipedismiss_popup_show.xml",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\anim\\swipedismiss_popup_show.xml"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",

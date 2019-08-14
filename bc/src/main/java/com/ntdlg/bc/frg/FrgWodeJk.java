@@ -11,6 +11,7 @@
 
 package com.ntdlg.bc.frg;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -22,11 +23,18 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.mdx.framework.activity.TitleAct;
-import com.mdx.framework.utility.Helper;
+import com.framewidget.view.CallBackOnly;
+import com.google.gson.Gson;
 import com.mdx.framework.widget.ActionBar;
 import com.ntdlg.bc.R;
+import com.ntdlg.bc.bean.BeanCKHT;
+import com.ntdlg.bc.item.DialogBottom;
+import com.ntdlg.bc.model.ModelCKHT;
 import com.ntdlg.bc.model.ModelZHZX;
+
+import static com.ntdlg.bc.F.json2Model;
+import static com.ntdlg.bc.F.readClassAttr;
+import static com.ntdlg.bc.F.showAgreement;
 
 
 public class FrgWodeJk extends BaseFrg {
@@ -41,6 +49,8 @@ public class FrgWodeJk extends BaseFrg {
     public Fragment fragment1;
     public Fragment fragment2;
     public static ModelZHZX mModelZHZX;
+    public String ht_url;
+    public String xy_url;
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -58,10 +68,40 @@ public class FrgWodeJk extends BaseFrg {
                 mHeadlayout.setRightOnclicker(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Helper.startActivity(getContext(), FrgHt.class, TitleAct.class);
+                        BeanCKHT mBeanCKHT = new BeanCKHT();
+                        mBeanCKHT.sign = readClassAttr(mBeanCKHT);
+                        loadJsonUrl(showAgreement, new Gson().toJson(mBeanCKHT));
                     }
                 });
                 break;
+        }
+    }
+
+
+    @Override
+    public void onSuccess(String methodName, String content) {
+        if (methodName.equals(showAgreement)) {
+            ModelCKHT mModelCKHT = (ModelCKHT) json2Model(content, ModelCKHT.class);
+            for (ModelCKHT.ArrayBean mArrayBean : mModelCKHT.array) {
+                if (mArrayBean.type.equals("1")) {
+                    xy_url = mArrayBean.url;
+                }
+                if (mArrayBean.type.equals("2")) {
+                    ht_url = mArrayBean.url;
+                }
+            }
+            final View vv = DialogBottom.getView(getContext(), null);
+            com.framewidget.F.showBottomDialog(getContext(), vv, new CallBackOnly() {
+                @Override
+                public void goReturn(String token, String reftoken) {
+
+                }
+
+                @Override
+                public void goReturnDo(Dialog mDialog) {
+                    ((DialogBottom) vv.getTag()).set(xy_url, ht_url, mDialog);
+                }
+            });
         }
     }
 
@@ -93,6 +133,7 @@ public class FrgWodeJk extends BaseFrg {
 
     public void loaddata() {
         chageFrgment(fragment1);
+
     }
 
     @Override

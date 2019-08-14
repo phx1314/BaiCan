@@ -40,12 +40,12 @@
         "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\release\\drawable\\default_bt_paizhao.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable\\default_bt_paizhao.xml"
-    },
-    {
         "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\release\\drawable\\shape.xml",
         "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\drawable\\shape.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\release\\drawable\\default_bt_paizhao.xml",
+        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable\\default_bt_paizhao.xml"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\release\\drawable\\abc_item_background_holo_light.xml",

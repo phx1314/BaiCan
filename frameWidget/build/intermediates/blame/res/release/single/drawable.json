@@ -12,12 +12,12 @@
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable\\default_bt_paizhao.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable\\shadow_down.xml",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable\\shadow_down.xml"
-    },
-    {
         "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable\\default_bg_translate.xml",
         "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable\\default_bg_translate.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable\\shadow_down.xml",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable\\shadow_down.xml"
     },
     {
         "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable\\abc_edit_text_material.xml",
@@ -92,12 +92,12 @@
         "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_dialog_material_background_light.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable\\abc_text_cursor_material.xml",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_text_cursor_material.xml"
-    },
-    {
         "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable\\vpi__tab_indicator.xml",
         "source": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable\\vpi__tab_indicator.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable\\abc_text_cursor_material.xml",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
         "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable\\abc_spinner_textfield_background_material.xml",

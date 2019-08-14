@@ -74,6 +74,13 @@
     <WebView
         android:id="@+id/mWebView"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       />
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView" android:visibility="gone"
+        android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 </LinearLayout>
 

@@ -493,7 +493,7 @@ public class PictureUploadActivity extends Activity implements Camera.PreviewCal
         //压缩后的身份证翻拍照
         Toast.makeText(getApplicationContext(), "拿到照片", 2000).show();
         CollectInfoInstance.getInstance().setFrontId(BmpUtil.Bitmap2Bytes(bm));
-        Frame.HANDLES.sentAll("FrgShenfenRezhengNew",type,bm);
+        Frame.HANDLES.sentAll("FrgShenfenRezhengNew", type, bm);
         finish();
 
     }
@@ -1054,7 +1054,7 @@ public class PictureUploadActivity extends Activity implements Camera.PreviewCal
     void setImgFrame() {
         //添加拍照框
         ImageView frameImgView = new ImageView(this);
-        InputStream is = getResources().openRawResource(type==1?R.drawable.camera_idcard_front:R.drawable.camera_idcard_back);
+        InputStream is = getResources().openRawResource(type == 1 ? R.drawable.camera_idcard_front : R.drawable.camera_idcard_back);
         Bitmap bmp = BitmapFactory.decodeStream(is);
         frameImgView.setImageBitmap(bmp);
 

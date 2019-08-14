@@ -24,12 +24,12 @@
         "source": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\drawable-xhdpi\\morentouxiang_n.png"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\bt_zhuanhuansxt_n.png",
-        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_zhuanhuansxt_n.png"
-    },
-    {
         "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\ic_pengyouquan.png",
         "source": "F:\\work\\BaiCan\\frameWidget\\src\\main\\res\\drawable-xhdpi\\ic_pengyouquan.png"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\bt_zhuanhuansxt_n.png",
+        "source": "F:\\AsWork\\BaiCan\\frameWidget\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable-xhdpi-v4\\bt_zhuanhuansxt_n.png"
     },
     {
         "merged": "F:\\work\\BaiCan\\frameWidget\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png",

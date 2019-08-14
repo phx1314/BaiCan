@@ -13,7 +13,6 @@ package com.ntdlg.bc.frg;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -104,12 +103,12 @@ public class FrgZhangdan extends BaseFrg {
         mTextView_ws_3 = (TextView) findViewById(R.id.mTextView_ws_3);
         mTextView_ws_4 = (TextView) findViewById(R.id.mTextView_ws_4);
         mTextView_qsh = (TextView) findViewById(R.id.mTextView_qsh);
-        mTextView_xianxia.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Helper.startActivity(getContext(), FrgXxhk.class, TitleAct.class);
-            }
-        });
+//        mTextView_xianxia.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Helper.startActivity(getContext(), FrgXxhk.class, TitleAct.class);
+//            }
+//        });
         mTextView_shenqing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,7 +122,6 @@ public class FrgZhangdan extends BaseFrg {
         if (title.equals("还款")) {
             mTextView_time.setVisibility(View.INVISIBLE);
             mTextView_time_last.setVisibility(View.INVISIBLE);
-            mTextView_xianxia.setVisibility(View.INVISIBLE);
             mLinearLayout_bottom.setVisibility(View.INVISIBLE);
             mTextView_remark.setVisibility(View.INVISIBLE);
             BeanTQHK mBeanTQHK = new BeanTQHK();
@@ -156,7 +154,6 @@ public class FrgZhangdan extends BaseFrg {
             mTextView_qsh.setText("期数:" + mModelWDZD.currentPeriords + "/" + mModelWDZD.totalPeriords);
             mTextView_all_price.setText(mModelWDZD.jkze);
             mTextView_wh_price.setText(mModelWDZD.whbj);
-            mTextView_xianxia.setText(Html.fromHtml(mModelWDZD.bankNo + mModelWDZD.bankName + "卡余额不足？尝试<font color='#FDA935'>线下还款</font>元"));
             mMViewOne.setProgress(Float.valueOf(mModelWDZD.yqwhje), Float.valueOf(mModelWDZD.bqyhbx) - Float.valueOf(mModelWDZD.bqyhje), Float.valueOf(mModelWDZD.bqyhbx));
             mBeanHKZF.amount = mModelWDZD.bqyhje;
             mBeanHKZF.repayId = mModelWDZD.repayId;
@@ -166,8 +163,8 @@ public class FrgZhangdan extends BaseFrg {
             } else if (mModelWDZD.status.equals("8")) {
                 mTextView_shenqing.setBackgroundResource(R.drawable.shape_gray_shen);
                 mTextView_shenqing.setText("还款中");
-                mTextView_xianxia.setVisibility(View.INVISIBLE);
-                mTextView_remark.setText("您已使用线下还款，系统正在审核中");
+//                mTextView_remark.setText("您已使用线下还款，系统正在审核中");
+                mTextView_remark.setText("系统正在审核中");
                 mTextView_shenqing.setEnabled(false);
             }
         } else if (methodName.equals(repayment)) {

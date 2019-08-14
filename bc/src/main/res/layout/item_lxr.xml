@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#ffffff" android:orientation="vertical">
-     <TextView android:id="@+id/mTextView_title" android:layout_width="match_parent" android:layout_height="@dimen/j30dp" android:background="#f5f5f5" android:gravity="center_vertical" android:paddingLeft="@dimen/j15dp" android:text="A" android:textColor="@color/A2" android:textSize="15sp" android:textStyle="bold" android:visibility="gone" />
-     <TextView android:id="@+id/mTextView" style="@style/text_style_17_black" android:layout_width="match_parent" android:layout_height="@dimen/j45dp" android:background="#ffffff" android:gravity="center_vertical" android:paddingLeft="@dimen/j15dp" android:text="十字华科" android:textSize="15sp" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mTextView_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/j30dp"
+        android:background="#f5f5f5"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/j15dp"
+        android:text="A"
+        android:textColor="@color/A2"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/mTextView"
+        style="@style/text_style_17_black"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/j45dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/j15dp"
+        android:text="十字华科"
+        android:textSize="15sp" />
 </LinearLayout>
 

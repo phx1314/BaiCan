@@ -36,12 +36,12 @@
         "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_top_material.xml"
-    },
-    {
         "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_thumb_material.xml",
         "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\swipedismiss_undo_btn_bg.xml",
@@ -112,12 +112,12 @@
         "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shadow_right.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\drawable\\shadow_right.xml"
-    },
-    {
         "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\default_bg_regc_tra.xml",
         "source": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable\\default_bg_regc_tra.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shadow_right.xml",
+        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\drawable\\shadow_right.xml"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_holo_light.xml",
@@ -136,16 +136,16 @@
         "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable\\swipedismiss_undo_btn_bg_focused.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\default_bg_regc_tra.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable\\default_bg_regc_tra.xml"
+        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
         "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\sidebar_background.xml",
         "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\frameWidget\\unspecified\\res\\drawable\\sidebar_background.xml"
     },
     {
-        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_edit_text_material.xml"
+        "merged": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\default_bg_regc_tra.xml",
+        "source": "F:\\AsWork\\BaiCan\\andBase\\build\\intermediates\\exploded-aar\\BaiCan\\andframework-release\\unspecified\\res\\drawable\\default_bg_regc_tra.xml"
     },
     {
         "merged": "F:\\work\\BaiCan\\andBase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\default_bt_background.xml",

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mTextView_ht"
+        style="@style/text_style_15_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center"
+        android:padding="@dimen/j10dp"
+        android:text="服务合同" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/tyD1" />
+
+    <TextView
+        android:id="@+id/mTextView_xy"
+        style="@style/text_style_15_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center"
+        android:padding="@dimen/j10dp"
+        android:text="借款协议" />
+
+    <TextView
+        android:id="@+id/mTextView_cancel"
+        style="@style/text_style_15_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/j10dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:padding="@dimen/j10dp"
+        android:text="取消" />
+</LinearLayout>
+

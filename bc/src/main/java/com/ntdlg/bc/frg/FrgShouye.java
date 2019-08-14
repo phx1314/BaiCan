@@ -261,14 +261,19 @@ public class FrgShouye extends BaseFrg {
             }
         } else if (methodName.equals("chekNumber2")) {
             mModelYHZXDD = (ModelYHZXDD) json2Model(content, ModelYHZXDD.class);
-//            F.saveApplyId(mModelYHZXDD.applyId);
-            BeanKSJK mBeanKSJK = new BeanKSJK();
-            mBeanKSJK.result = mModelYHZXDD.result;
-            mBeanKSJK.applyId = mModelYHZXDD.applyId;
-            mBeanKSJK.amount = mTextView_num.getText().toString();
-            mBeanKSJK.term = mTextView_zhou.getText().toString();
-            mBeanKSJK.sign = readClassAttr(mBeanKSJK);
-            loadJsonUrl(rapidLoan, new Gson().toJson(mBeanKSJK));
+            F.saveApplyId(mModelYHZXDD.applyId);
+            if (mModelYHZXDD.result.equals("11")) {
+                Helper.startActivity(getContext(), FrgSign.class, TitleAct.class, "from", "FrgShouye");
+            } else {
+                BeanKSJK mBeanKSJK = new BeanKSJK();
+                mBeanKSJK.result = mModelYHZXDD.result;
+                mBeanKSJK.applyId = mModelYHZXDD.applyId;
+                mBeanKSJK.amount = mTextView_num.getText().toString();
+                mBeanKSJK.term = mTextView_zhou.getText().toString();
+                mBeanKSJK.sign = readClassAttr(mBeanKSJK);
+                loadJsonUrl(rapidLoan, new Gson().toJson(mBeanKSJK));
+            }
+
         } else if (methodName.equals(applyDeadline)) {
             mModelSQJE = (ModelSQJE) json2Model(content, ModelSQJE.class);
             if (mModelSQJE.amountRecords.size() > 0) {

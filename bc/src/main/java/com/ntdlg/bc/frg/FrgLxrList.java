@@ -41,7 +41,6 @@ import java.util.List;
 
 import static com.ntdlg.bc.F.readClassAttr;
 import static com.ntdlg.bc.F.savePhone;
-import static com.ntdlg.bc.F.updateversion;
 
 
 public class FrgLxrList extends BaseFrg {
@@ -77,7 +76,6 @@ public class FrgLxrList extends BaseFrg {
                         mAllContactsList));
                 if (mAllContactsList.size() > 0) {
                     BeansavePhone mBeansavePhone = new BeansavePhone();
-
                     for (SortModel mSortModel : mAllContactsList) {
                         mBeansavePhone.linkMan.add(new BeansavePhone.linkManBean(mSortModel.name, mSortModel.number));
                     }

@@ -344,7 +344,7 @@ public class FrgSxed extends BaseFrg {
             mTextView_shz.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.fail, 0, 0);
             mTextView_remark1.setText(Html.fromHtml("很遗憾，您的借款尚未结清"));
             mTextView_left.setVisibility(View.GONE);
-            mTextView_right.setText("去结清");
+            mTextView_right.setText("去还款");
             mTextView_right.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

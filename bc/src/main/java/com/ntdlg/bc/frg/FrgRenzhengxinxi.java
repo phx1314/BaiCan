@@ -86,7 +86,6 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 com.ntdlg.bc.F.getUrl(mModelSF.idcard_back_photo, "FrgRenzhengxinxi", 2);
                 break;
             case 2:
-                mBeanSFSM.accountId = com.ntdlg.bc.F.UserId;
                 mBeanSFSM.sign = readClassAttr(mBeanSFSM);
                 loadJsonUrl(scanIdentity, new Gson().toJson(mBeanSFSM));
                 break;
@@ -95,7 +94,7 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 break;
             case 120:
                 mModelSF = (ModelSF) obj;
-                mBeanSFSM.accountId = com.ntdlg.bc.F.UserId;
+                mBeanSFSM = new BeanSFSM();
                 mBeanSFSM.idcard_back_photo = mModelSF.idcard_back_photo;
                 mBeanSFSM.idcard_front_photo = mModelSF.idcard_front_photo;
                 mBeanSFSM.pic_photo = mModelSF.pic_photo;

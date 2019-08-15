@@ -216,7 +216,7 @@
                                 style="@style/text_style_13_gray"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="申请借款金额" />
+                                android:text="审批借款金额" />
 
                             <TextView
                                 android:id="@+id/mTextView_price"
@@ -241,7 +241,7 @@
                                 style="@style/text_style_13_gray"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="申请借款期限" />
+                                android:text="审批借款期限" />
 
                             <TextView
                                 android:id="@+id/mTextView_qx"
@@ -254,19 +254,21 @@
                         <ImageView
                             android:layout_width="1px"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:visibility="gone" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:visibility="gone">
 
                             <TextView
                                 style="@style/text_style_13_gray"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="申请借款费率" />
+                                android:text="审批借款费率" />
 
                             <TextView
                                 android:id="@+id/mTextView_fl"
@@ -291,7 +293,7 @@
                                 style="@style/text_style_13_gray"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="申请还款金额" />
+                                android:text="审批还款金额" />
 
                             <TextView
                                 android:id="@+id/mTextView_hk"

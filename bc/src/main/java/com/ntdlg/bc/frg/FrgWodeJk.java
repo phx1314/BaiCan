@@ -24,16 +24,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.framewidget.view.CallBackOnly;
-import com.google.gson.Gson;
 import com.mdx.framework.widget.ActionBar;
 import com.ntdlg.bc.R;
-import com.ntdlg.bc.bean.BeanCKHT;
 import com.ntdlg.bc.item.DialogBottom;
 import com.ntdlg.bc.model.ModelCKHT;
 import com.ntdlg.bc.model.ModelZHZX;
 
 import static com.ntdlg.bc.F.json2Model;
-import static com.ntdlg.bc.F.readClassAttr;
 import static com.ntdlg.bc.F.showAgreement;
 
 
@@ -64,15 +61,15 @@ public class FrgWodeJk extends BaseFrg {
     public void disposeMsg(int type, Object obj) {
         switch (type) {
             case 0:
-                mHeadlayout.setRText("查看合同");
-                mHeadlayout.setRightOnclicker(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        BeanCKHT mBeanCKHT = new BeanCKHT();
-                        mBeanCKHT.sign = readClassAttr(mBeanCKHT);
-                        loadJsonUrl(showAgreement, new Gson().toJson(mBeanCKHT));
-                    }
-                });
+//                mHeadlayout.setRText("查看合同");
+//                mHeadlayout.setRightOnclicker(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        BeanCKHT mBeanCKHT = new BeanCKHT();
+//                        mBeanCKHT.sign = readClassAttr(mBeanCKHT);
+//                        loadJsonUrl(showAgreement, new Gson().toJson(mBeanCKHT));
+//                    }
+//                });
                 break;
         }
     }

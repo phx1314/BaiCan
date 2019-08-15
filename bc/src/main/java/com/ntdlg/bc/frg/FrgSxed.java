@@ -194,6 +194,7 @@ public class FrgSxed extends BaseFrg {
             mLinearLayout_bottom.setVisibility(View.GONE);
         } else if (mModelKSJK.result.equals("4")) {//审核成功
             mTextView_ed.setText(mModelKSJK.assignAmount);
+            mTextView_left.setVisibility(View.GONE);
             mTextView_time.setText("签约倒计时 " + getTime(mModelKSJK.endDate));
             mTextView_tg.setText("审核通过");
             mImageView_jihao.setImageResource(R.drawable.complete);

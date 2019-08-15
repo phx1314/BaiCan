@@ -8,6 +8,14 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
+    <TextView
+        style="@style/text_style_15_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/j10dp"
+        android:text="请用正楷字体签字" />
+
     <com.f1reking.signatureview.SignatureView
         android:id="@+id/mSignatureView"
         android:layout_width="match_parent"

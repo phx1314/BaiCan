@@ -261,8 +261,8 @@ public class FrgShouye extends BaseFrg {
             }
         } else if (methodName.equals("chekNumber2")) {
             mModelYHZXDD = (ModelYHZXDD) json2Model(content, ModelYHZXDD.class);
-            F.saveApplyId(mModelYHZXDD.applyId);
             if (mModelYHZXDD.result.equals("11")) {
+                F.saveApplyId(mModelYHZXDD.applyId);
                 Helper.startActivity(getContext(), FrgSign.class, TitleAct.class, "from", "FrgShouye");
             } else {
                 BeanKSJK mBeanKSJK = new BeanKSJK();

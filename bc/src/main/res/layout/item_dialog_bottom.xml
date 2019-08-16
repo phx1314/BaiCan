@@ -14,12 +14,14 @@
         android:background="#fff"
         android:gravity="center"
         android:padding="@dimen/j10dp"
-        android:text="服务合同" />
+        android:text="服务合同"
+        android:visibility="gone" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="@color/tyD1" />
+        android:background="@color/tyD1"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/mTextView_xy"
@@ -29,7 +31,8 @@
         android:background="#fff"
         android:gravity="center"
         android:padding="@dimen/j10dp"
-        android:text="借款协议" />
+        android:text="借款协议"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/mTextView_cancel"

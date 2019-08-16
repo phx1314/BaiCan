@@ -13,6 +13,7 @@ package com.ntdlg.bc.frg;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -27,7 +28,6 @@ import com.mdx.framework.activity.NoTitleAct;
 import com.mdx.framework.utility.Helper;
 import com.mdx.framework.widget.ActionBar;
 import com.ntdlg.bc.R;
-import com.ntdlg.bc.bean.BeanQYQR;
 import com.ntdlg.bc.bean.BeanQYQRSJ;
 import com.ntdlg.bc.bean.BeanSQTE;
 import com.ntdlg.bc.bean.BeanVip;
@@ -37,7 +37,6 @@ import com.ntdlg.bc.model.ModelKSJK2;
 import com.ntdlg.bc.model.ModelLoginUrl;
 import com.ntdlg.bc.model.ModelQUQRSJ;
 
-import static com.ntdlg.bc.F.affirmBorrow;
 import static com.ntdlg.bc.F.affirmBorrowData;
 import static com.ntdlg.bc.F.beginApply;
 import static com.ntdlg.bc.F.getVip88LoginUrl;
@@ -78,7 +77,13 @@ public class FrgJkShenqing extends BaseFrg {
                 loadJsonUrl(noVip, new Gson().toJson(mBeannoVip));
                 break;
             case 1:
-                loadJsonUrl(getVip88LoginUrl, new Gson().toJson(new BeanVip()));
+                com.framewidget.F.yShoure(getContext(), "购买会员成功后，须工作时间内才能立即放款", "", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        loadJsonUrl(getVip88LoginUrl, new Gson().toJson(new BeanVip()));
+                    }
+                });
+
                 break;
         }
     }

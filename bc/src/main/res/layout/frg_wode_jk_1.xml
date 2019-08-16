@@ -107,7 +107,8 @@
         android:paddingBottom="@dimen/j15dp"
         android:paddingLeft="@dimen/j20dp"
         android:paddingRight="@dimen/j20dp"
-        android:paddingTop="@dimen/j15dp">
+        android:paddingTop="@dimen/j15dp"
+        android:visibility="gone">
 
         <TextView
             style="@style/text_style_15_black"
@@ -128,7 +129,8 @@
         android:layout_height="1px"
         android:layout_marginLeft="@dimen/j20dp"
         android:layout_marginRight="@dimen/j20dp"
-        android:background="@color/tyD1" />
+        android:background="@color/tyD1"
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="match_parent"

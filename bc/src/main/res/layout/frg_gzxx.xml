@@ -1,27 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#ffffff" android:gravity="center_horizontal" android:orientation="vertical">
-     <LinearLayout android:layout_width="match_parent" android:layout_height="@dimen/j45dp" android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/j12dp">
-          <TextView style="@style/text_style_13_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="4" android:text="单位名称" />
-          <EditText android:id="@+id/mEditText_dw" style="@style/text_style_13_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j20dp" android:layout_marginRight="@dimen/j10dp" android:layout_weight="1" android:background="#00000000" android:hint="请输入单位名字" android:singleLine="true" />
-     </LinearLayout>
-     <ImageView android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="@dimen/j10dp" android:background="@color/tyD1" />
-     <LinearLayout android:id="@+id/mLinearLayout_dw_address" android:layout_width="match_parent" android:layout_height="@dimen/j45dp" android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/j12dp">
-          <TextView style="@style/text_style_13_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="4" android:text="单位地址" />
-          <TextView android:id="@+id/mTextView_dw_address" style="@style/text_style_13_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j20dp" android:layout_marginRight="@dimen/j10dp" android:layout_weight="1" android:drawableRight="@drawable/arrows_top" android:gravity="center_vertical" android:hint="请选择城市" />
-     </LinearLayout>
-     <ImageView android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="@dimen/j10dp" android:background="@color/tyD1" />
-     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/j12dp">
-          <TextView style="@style/text_style_13_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="4" android:text="住宅地址" android:visibility="invisible" />
-          <EditText android:id="@+id/mEditText_dw_detail" style="@style/text_style_13_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j20dp" android:layout_marginRight="@dimen/j10dp" android:layout_weight="1" android:background="#00000000" android:gravity="center_vertical" android:hint="请输入详细地址" android:minHeight="@dimen/j45dp" android:paddingBottom="@dimen/j10dp" android:paddingTop="@dimen/j10dp" />
-     </LinearLayout>
-     <ImageView android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="@dimen/j10dp" android:background="@color/tyD1" />
-     <LinearLayout android:layout_width="match_parent" android:layout_height="@dimen/j45dp" android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/j12dp">
-          <TextView style="@style/text_style_13_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="4" android:text="单位电话" />
-          <EditText android:id="@+id/mTextView_zjh" style="@style/text_style_13_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j20dp" android:layout_marginRight="@dimen/j10dp" android:layout_weight="1" android:background="#00000000" android:hint="区号-座机号" android:inputType="phone" android:singleLine="true" />
-     </LinearLayout>
-     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:background="#f2f2f2" android:orientation="vertical">
-          <TextView style="@style/text_style_13_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j40dp" android:gravity="center_horizontal" android:text="填写本人真实有效信息可提升审核速度" />
-          <TextView android:id="@+id/mTextView_shenqing" style="@style/text_style_15_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/j20dp" android:layout_marginLeft="@dimen/j35dp" android:layout_marginRight="@dimen/j35dp" android:layout_marginTop="@dimen/j10dp" android:background="@drawable/shape_green" android:gravity="center" android:padding="@dimen/j8dp" android:text="提交" />
-     </LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/j45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/j12dp">
+
+        <TextView
+            style="@style/text_style_13_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="4"
+            android:text="单位名称" />
+
+        <EditText
+            android:id="@+id/mEditText_dw"
+            style="@style/text_style_13_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/j20dp"
+            android:layout_marginRight="@dimen/j10dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:hint="请输入单位名字"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/j10dp"
+        android:background="@color/tyD1" />
+
+    <LinearLayout
+        android:id="@+id/mLinearLayout_dw_address"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/j45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/j12dp">
+
+        <TextView
+            style="@style/text_style_13_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="4"
+            android:text="单位地址" />
+
+        <TextView
+            android:id="@+id/mTextView_dw_address"
+            style="@style/text_style_13_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/j20dp"
+            android:layout_marginRight="@dimen/j10dp"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/arrows_top"
+            android:gravity="center_vertical"
+            android:hint="请选择城市" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/j10dp"
+        android:background="@color/tyD1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/j12dp">
+
+        <TextView
+            style="@style/text_style_13_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="4"
+            android:text="住宅地址"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/mEditText_dw_detail"
+            style="@style/text_style_13_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/j20dp"
+            android:layout_marginRight="@dimen/j10dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:hint="请输入详细地址"
+            android:minHeight="@dimen/j45dp"
+            android:paddingBottom="@dimen/j10dp"
+            android:paddingTop="@dimen/j10dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/j10dp"
+        android:background="@color/tyD1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/j45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/j12dp">
+
+        <TextView
+            style="@style/text_style_13_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="4"
+            android:text="单位电话" />
+
+        <EditText
+            android:id="@+id/mTextView_zjh"
+            style="@style/text_style_13_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/j20dp"
+            android:layout_marginRight="@dimen/j10dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:hint="区号-座机号"
+            android:inputType="phone"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_style_13_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/j40dp"
+            android:gravity="center_horizontal"
+            android:text="填写本人真实有效信息可提升审核速度" />
+
+        <TextView
+            android:id="@+id/mTextView_shenqing"
+            style="@style/text_style_15_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/j20dp"
+            android:layout_marginLeft="@dimen/j35dp"
+            android:layout_marginRight="@dimen/j35dp"
+            android:layout_marginTop="@dimen/j10dp"
+            android:background="@drawable/shape_green"
+            android:gravity="center"
+            android:padding="@dimen/j8dp"
+            android:text="提交" />
+    </LinearLayout>
 </LinearLayout>
 

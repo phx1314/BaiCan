@@ -12,6 +12,7 @@
 package com.ntdlg.bc.frg;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -112,8 +113,14 @@ public class FrgZhangdan extends BaseFrg {
         mTextView_shenqing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mBeanHKZF.sign = readClassAttr(mBeanHKZF);
-                loadJsonUrl(pay, new Gson().toJson(mBeanHKZF));
+                com.framewidget.F.yShoure(getContext(), "是否确认立即还款", "", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        mBeanHKZF.sign = readClassAttr(mBeanHKZF);
+                        loadJsonUrl(pay, new Gson().toJson(mBeanHKZF));
+                    }
+                });
+
             }
         });
     }

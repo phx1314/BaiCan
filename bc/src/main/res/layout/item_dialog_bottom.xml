@@ -31,8 +31,12 @@
         android:background="#fff"
         android:gravity="center"
         android:padding="@dimen/j10dp"
-        android:text="借款协议"
-        android:visibility="gone" />
+        android:text="借款协议" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/tyD1" />
 
     <TextView
         android:id="@+id/mTextView_cancel"

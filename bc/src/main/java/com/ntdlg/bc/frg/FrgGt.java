@@ -82,7 +82,7 @@ public class FrgGt extends BaseFrg {
         mLinearLayout_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (mModelGRXYRZXX.IsShebaoAuth.equals("1")) {
+                if (mModelGRXYRZXX.isShebaoAuth.equals("1")) {
                     Helper.toast("您已认证", getContext());
                     return;
                 }
@@ -111,7 +111,7 @@ public class FrgGt extends BaseFrg {
                 mTextView_1.setText("未认证");
                 mTextView_1.setTextColor(getResources().getColor(R.color.shouye_red));
             }
-            if (mModelGRXYRZXX.IsShebaoAuth.equals("1")) {
+            if (mModelGRXYRZXX.isShebaoAuth.equals("1")) {
                 mTextView_2.setText("已认证");
                 mTextView_2.setTextColor(getResources().getColor(R.color.A));
             } else {

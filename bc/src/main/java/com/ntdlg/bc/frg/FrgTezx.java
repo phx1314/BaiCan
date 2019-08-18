@@ -142,7 +142,7 @@ public class FrgTezx extends BaseFrg {
         mLinearLayout_sb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!mModelGRXYRZXX.IsShebaoAuth.equals("1")) {
+                if (!mModelGRXYRZXX.isShebaoAuth.equals("1")) {
                     type = MxParam.PARAM_TASK_FUND;
                     rZhengWb(getActivity(), MxParam.PARAM_TASK_SECURITY, FrgTezx.this);//社保
                 }
@@ -222,7 +222,7 @@ public class FrgTezx extends BaseFrg {
                 mTextView_2.setText("未认证");
                 mTextView_2.setTextColor(getResources().getColor(R.color.shouye_red));
             }
-            if (mModelGRXYRZXX.IsShebaoAuth.equals("1")) {
+            if (mModelGRXYRZXX.isShebaoAuth.equals("1")) {
                 mImageView_sb.setImageResource(R.drawable.gong);
                 mTextView_sb.setText("已认证");
                 mTextView_sb.setTextColor(getResources().getColor(R.color.A));

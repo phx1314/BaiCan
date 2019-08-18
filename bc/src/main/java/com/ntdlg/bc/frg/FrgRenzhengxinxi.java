@@ -218,7 +218,7 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 clk_mTextView_6.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.dsh, 0, 0);
                 clk_mTextView_6.setBackgroundResource(R.drawable.bg1);
             }
-            if (mModelGRXYRZXX.isGongjijinAuth.equals("1") || mModelGRXYRZXX.IsShebaoAuth.equals("1")) {
+            if (mModelGRXYRZXX.isGongjijinAuth.equals("1") || mModelGRXYRZXX.isShebaoAuth.equals("1")) {
                 clk_mTextView_7.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.dshhover, 0, 0);
                 clk_mTextView_7.setBackgroundResource(R.drawable.bg1_hover);
             } else {
@@ -312,7 +312,7 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 Helper.toast("支付宝未认证", getContext());
                 return;
             }
-            if (!mModelGRXYRZXX.isGongjijinAuth.equals("1") && !mModelGRXYRZXX.IsShebaoAuth.equals("1")) {
+            if (!mModelGRXYRZXX.isGongjijinAuth.equals("1") && !mModelGRXYRZXX.isShebaoAuth.equals("1")) {
                 Helper.toast("公积金/社保未认证", getContext());
                 return;
             }

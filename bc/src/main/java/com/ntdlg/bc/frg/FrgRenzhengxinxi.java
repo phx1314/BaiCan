@@ -96,24 +96,26 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 break;
             case 3:
                 mAllContactsList = (ArrayList) obj;
-                if (mAllContactsList.size() > 0) {
-                    BeansavePhone mBeansavePhone = new BeansavePhone();
-                    for (SortModel mSortModel : mAllContactsList) {
-                        mBeansavePhone.linkMan.add(new BeansavePhone.linkManBean(mSortModel.name, mSortModel.number));
-                    }
-                    mBeansavePhone.sign = readClassAttr(mBeansavePhone);
-                    loadJsonUrlNoshow(savePhone, new Gson().toJson(mBeansavePhone));
-                    com.framewidget.F.yShoure(getContext(), "", "请仔细核对所填信息，确保真实有效完整，一经提交将无法修改", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            BeanSubXSSH mBeanKSJK = new BeanSubXSSH();
-                            mBeanKSJK.location = F.address;
-                            mBeanKSJK.sign = readClassAttr(mBeanKSJK);
-                            loadJsonUrl(submitCkeck, new Gson().toJson(mBeanKSJK));
+                if (mTextView_lg.getVisibility() == View.VISIBLE) {
+                    if (mAllContactsList.size() > 0) {
+                        BeansavePhone mBeansavePhone = new BeansavePhone();
+                        for (SortModel mSortModel : mAllContactsList) {
+                            mBeansavePhone.linkMan.add(new BeansavePhone.linkManBean(mSortModel.name, mSortModel.number));
                         }
-                    });
-                } else {
-                    Toast.makeText(getContext(), "未获得读取联系人权限 或 未联系人数据不存在", Toast.LENGTH_SHORT).show();
+                        mBeansavePhone.sign = readClassAttr(mBeansavePhone);
+                        loadJsonUrlNoshow(savePhone, new Gson().toJson(mBeansavePhone));
+                        com.framewidget.F.yShoure(getContext(), "", "请仔细核对所填信息，确保真实有效完整，一经提交将无法修改", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                BeanSubXSSH mBeanKSJK = new BeanSubXSSH();
+                                mBeanKSJK.location = F.address;
+                                mBeanKSJK.sign = readClassAttr(mBeanKSJK);
+                                loadJsonUrl(submitCkeck, new Gson().toJson(mBeanKSJK));
+                            }
+                        });
+                    } else {
+                        Toast.makeText(getContext(), "未获得读取联系人权限 或 未联系人数据不存在", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 break;
             case 120:

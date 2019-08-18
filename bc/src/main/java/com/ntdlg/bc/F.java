@@ -66,7 +66,7 @@ import java.util.List;
 
 public class F {
     public static String mUserId = com.ntdlg.bc.F.UserId;                                  //合作方系统中的客户ID
-//    public static String mApiKey = "228aa9f04f6c4e8ca9288dc049000a98";      //获取任务状态时使用
+    //    public static String mApiKey = "228aa9f04f6c4e8ca9288dc049000a98";      //获取任务状态时使用
     public static String mApiKey = "8fd884a085f44159af23c38af7c79473";      //获取任务状态时使用
     public static String mBannerColor = "#000000"; //标题栏背景色
     public static String mTextColor = "#ffffff";  //标题栏字体颜色
@@ -398,7 +398,7 @@ public class F {
     /**
      * 加载联系人数据
      */
-    public static void loadContacts(final Context context) {
+    public static void loadContacts(final Context context, final String from) {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -429,7 +429,7 @@ public class F {
                             String contactName = phoneCursor.getString(PHONES_DISPLAY_NAME_INDEX);
                             String sortKey = phoneCursor.getString(SORT_KEY_INDEX);
                             String book = phoneCursor.getString(PHONEBOOK_LABEL);
-                            SortModel sortModel = new SortModel(contactName, phoneNumber, sortKey);
+                            SortModel sortModel = new SortModel(contactName, phoneNumber.replace(" ", ""), sortKey);
                             if (book == null) {
                                 book = "#";
                             } else if (book.equals("#")) {
@@ -440,8 +440,11 @@ public class F {
                             mAllContactsList.add(sortModel);
                             Log.i("电话", phoneNumber + "");
                         }
-                        Frame.HANDLES.sentAll("FrgLxrList", 0, mAllContactsList);
-                        Frame.HANDLES.sentAll("FrgRenzhengxinxi", 3, mAllContactsList);
+                        if (from.equals("FrgLxrList")) {
+                            Frame.HANDLES.sentAll("FrgLxrList", 0, mAllContactsList);
+                        } else if (from.equals("FrgRenzhengxinxi")) {
+                            Frame.HANDLES.sentAll("FrgRenzhengxinxi", 3, mAllContactsList);
+                        }
                     }
                     phoneCursor.close();
                 } catch (Exception e) {
@@ -814,7 +817,7 @@ public class F {
             context.startActivity(intent);
         } catch (Exception e) {
             e.printStackTrace();
-            Helper.toast("暂不支持此文件查看",context);
+            Helper.toast("暂不支持此文件查看", context);
         }
     }
 

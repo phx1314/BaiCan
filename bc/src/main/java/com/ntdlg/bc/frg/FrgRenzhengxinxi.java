@@ -11,13 +11,17 @@
 
 package com.ntdlg.bc.frg;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.mdx.framework.Frame;
@@ -48,6 +52,7 @@ import static com.ntdlg.bc.F.savePhone;
 import static com.ntdlg.bc.F.scanIdentity;
 import static com.ntdlg.bc.F.submitCkeck;
 import static com.ntdlg.bc.F.yunyingshangAuth;
+import static com.umeng.socialize.utils.DeviceConfig.context;
 
 
 public class FrgRenzhengxinxi extends BaseFrg {
@@ -91,6 +96,25 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 break;
             case 3:
                 mAllContactsList = (ArrayList) obj;
+                if (mAllContactsList.size() > 0) {
+                    BeansavePhone mBeansavePhone = new BeansavePhone();
+                    for (SortModel mSortModel : mAllContactsList) {
+                        mBeansavePhone.linkMan.add(new BeansavePhone.linkManBean(mSortModel.name, mSortModel.number));
+                    }
+                    mBeansavePhone.sign = readClassAttr(mBeansavePhone);
+                    loadJsonUrlNoshow(savePhone, new Gson().toJson(mBeansavePhone));
+                    com.framewidget.F.yShoure(getContext(), "", "请仔细核对所填信息，确保真实有效完整，一经提交将无法修改", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            BeanSubXSSH mBeanKSJK = new BeanSubXSSH();
+                            mBeanKSJK.location = F.address;
+                            mBeanKSJK.sign = readClassAttr(mBeanKSJK);
+                            loadJsonUrl(submitCkeck, new Gson().toJson(mBeanKSJK));
+                        }
+                    });
+                } else {
+                    Toast.makeText(getContext(), "未获得读取联系人权限 或 未联系人数据不存在", Toast.LENGTH_SHORT).show();
+                }
                 break;
             case 120:
                 mModelSF = (ModelSF) obj;
@@ -261,6 +285,7 @@ public class FrgRenzhengxinxi extends BaseFrg {
         } else if (R.id.clk_mTextView_8 == v.getId()) {
             Helper.startActivity(getContext(), FrgMe.class, TitleAct.class);
         } else if (R.id.mTextView_lg == v.getId()) {
+
             if (!mModelGRXYRZXX.isBasicAuth.equals("1")) {
                 Helper.toast("基本信息尚未认证", getContext());
                 return;
@@ -281,8 +306,8 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 Helper.toast("身份证信息尚未认证", getContext());
                 return;
             }
-            if (!mModelGRXYRZXX.isTaobaoAuth.equals("1") && !mModelGRXYRZXX.isZhifubaoAuth.equals("1") && !mModelGRXYRZXX.isJingdongAuth.equals("1")) {
-                Helper.toast("电商未认证", getContext());
+            if (!mModelGRXYRZXX.isZhifubaoAuth.equals("1")) {
+                Helper.toast("支付宝未认证", getContext());
                 return;
             }
             if (!mModelGRXYRZXX.isGongjijinAuth.equals("1") && !mModelGRXYRZXX.IsShebaoAuth.equals("1")) {
@@ -293,23 +318,8 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 Helper.toast("美团/饿了么未认证", getContext());
                 return;
             }
-            if (mAllContactsList.size() > 0) {
-                BeansavePhone mBeansavePhone = new BeansavePhone();
-                for (SortModel mSortModel : mAllContactsList) {
-                    mBeansavePhone.linkMan.add(new BeansavePhone.linkManBean(mSortModel.name, mSortModel.number));
-                }
-                mBeansavePhone.sign = readClassAttr(mBeansavePhone);
-                loadJsonUrlNoshow(savePhone, new Gson().toJson(mBeansavePhone));
-            }
-            com.framewidget.F.yShoure(getContext(), "", "请仔细核对所填信息，确保真实有效完整，一经提交将无法修改", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    BeanSubXSSH mBeanKSJK = new BeanSubXSSH();
-                    mBeanKSJK.location = F.address;
-                    mBeanKSJK.sign = readClassAttr(mBeanKSJK);
-                    loadJsonUrl(submitCkeck, new Gson().toJson(mBeanKSJK));
-                }
-            });
+            F.loadContacts(getContext(), "FrgRenzhengxinxi");
+
         }
     }
 

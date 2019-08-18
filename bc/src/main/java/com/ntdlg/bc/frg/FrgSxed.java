@@ -303,7 +303,7 @@ public class FrgSxed extends BaseFrg {
             mTextView_shz.setText("未通过...");
             mTextView_shz.setTextColor(Color.parseColor("#FA3C3C"));
             mTextView_shz.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.fail, 0, 0);
-            mTextView_remark1.setText(Html.fromHtml("很遗憾，您的借款申请由于评分不足未能通过<br><font color='##FA3C3C'>30天</font>内将无法再次发起借款申请"));
+            mTextView_remark1.setText(Html.fromHtml("综合评分不足 请<br><font color='##FA3C3C'>30天</font>后再申请了"));
             mTextView_left.setVisibility(View.GONE);
             mTextView_right.setText("关闭");
             mTextView_right.setOnClickListener(new View.OnClickListener() {

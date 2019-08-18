@@ -8,34 +8,6 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/mLinearLayout_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="@dimen/j12dp">
-
-        <TextView
-            style="@style/text_style_15_black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="淘宝" />
-
-        <TextView
-            android:id="@+id/mTextView_1"
-            style="@style/text_style_15_gray"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawablePadding="@dimen/j10dp"
-            android:drawableRight="@drawable/arrows_top"
-            android:text="已认证" />
-    </LinearLayout>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="@color/tyD1" />
-    <LinearLayout
         android:id="@+id/mLinearLayout_zfb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,6 +35,36 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="@color/tyD1" />
+
+    <LinearLayout
+        android:id="@+id/mLinearLayout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/j12dp">
+
+        <TextView
+            style="@style/text_style_15_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="淘宝" />
+
+        <TextView
+            android:id="@+id/mTextView_1"
+            style="@style/text_style_15_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/j10dp"
+            android:drawableRight="@drawable/arrows_top"
+            android:text="已认证" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/tyD1" />
+
 
     <LinearLayout
         android:id="@+id/mLinearLayout_2"
@@ -107,7 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/j40dp"
             android:gravity="center_horizontal"
-            android:text="三选一认证即可" />
+            android:text="注：支付宝必须认证" />
 
         <TextView
             android:id="@+id/mTextView_shenqing"

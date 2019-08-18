@@ -24,23 +24,18 @@ import android.widget.TextView;
 
 import com.framewidget.F;
 import com.framewidget.view.SideBar;
-import com.google.gson.Gson;
 import com.mdx.framework.Frame;
 import com.mdx.framework.widget.ActionBar;
 import com.mdx.framework.widget.MPageListView;
 import com.ntdlg.bc.R;
 import com.ntdlg.bc.ada.AdaLxr;
 import com.ntdlg.bc.ada.AdaLxr2;
-import com.ntdlg.bc.bean.BeansavePhone;
 import com.ntdlg.bc.view.PinyinComparator;
 import com.ntdlg.bc.view.SortModel;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import static com.ntdlg.bc.F.readClassAttr;
-import static com.ntdlg.bc.F.savePhone;
 
 
 public class FrgLxrList extends BaseFrg {
@@ -74,14 +69,6 @@ public class FrgLxrList extends BaseFrg {
                 Collections.sort(mAllContactsList, new PinyinComparator());
                 mMPageListView.setAdapter(new AdaLxr(getContext(),
                         mAllContactsList));
-                if (mAllContactsList.size() > 0) {
-                    BeansavePhone mBeansavePhone = new BeansavePhone();
-                    for (SortModel mSortModel : mAllContactsList) {
-                        mBeansavePhone.linkMan.add(new BeansavePhone.linkManBean(mSortModel.name, mSortModel.number));
-                    }
-                    mBeansavePhone.sign = readClassAttr(mBeansavePhone);
-                    loadJsonUrlNoshow(savePhone, new Gson().toJson(mBeansavePhone));
-                }
                 break;
             case 1:
                 Frame.HANDLES.sentAll(from, FrgLxrList.this.type, obj);
@@ -192,7 +179,7 @@ public class FrgLxrList extends BaseFrg {
     }
 
     public void loaddata() {
-        com.ntdlg.bc.F.loadContacts(getContext());
+        com.ntdlg.bc.F.loadContacts(getContext(),"FrgLxrList");
     }
 
     @Override

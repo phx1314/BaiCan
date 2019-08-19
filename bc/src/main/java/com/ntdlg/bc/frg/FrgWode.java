@@ -27,6 +27,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.mdx.framework.activity.NoTitleAct;
 import com.mdx.framework.activity.TitleAct;
 import com.mdx.framework.utility.Helper;
 import com.mdx.framework.widget.MImageView;
@@ -36,6 +37,8 @@ import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanBase;
 import com.ntdlg.bc.bean.BeanSZTX;
 import com.ntdlg.bc.bean.BeanShare;
+import com.ntdlg.bc.bean.BeanVipNo;
+import com.ntdlg.bc.model.ModelLoginUrl;
 import com.ntdlg.bc.model.ModelShare;
 import com.ntdlg.bc.model.ModelZHZX;
 
@@ -46,6 +49,7 @@ import java.net.URL;
 
 import static com.ntdlg.bc.F.Bitmap2StrByBase64;
 import static com.ntdlg.bc.F.getInfo;
+import static com.ntdlg.bc.F.getVip88LoginUrl;
 import static com.ntdlg.bc.F.json2Model;
 import static com.ntdlg.bc.F.readClassAttr;
 import static com.ntdlg.bc.F.setPhoto;
@@ -65,6 +69,7 @@ public class FrgWode extends BaseFrg {
     public LinearLayout mLinearLayout_4;
     public ModelZHZX mModelZHZX;
     public ModelShare mModelShare;
+    public LinearLayout mLinearLayout_qy;
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -103,12 +108,14 @@ public class FrgWode extends BaseFrg {
         mTextView_zhangdan = (TextView) findViewById(R.id.mTextView_zhangdan);
         mLinearLayout_3 = (LinearLayout) findViewById(R.id.mLinearLayout_3);
         mLinearLayout_4 = (LinearLayout) findViewById(R.id.mLinearLayout_4);
+        mLinearLayout_qy = (LinearLayout) findViewById(R.id.mLinearLayout_qy);
 
         clk_mTextView_hd.setOnClickListener(com.mdx.framework.utility.Helper.delayClickLitener(this));
         mLinearLayout_1.setOnClickListener(com.mdx.framework.utility.Helper.delayClickLitener(this));
         mLinearLayout_2.setOnClickListener(com.mdx.framework.utility.Helper.delayClickLitener(this));
         mLinearLayout_3.setOnClickListener(com.mdx.framework.utility.Helper.delayClickLitener(this));
         mLinearLayout_4.setOnClickListener(com.mdx.framework.utility.Helper.delayClickLitener(this));
+        mLinearLayout_qy.setOnClickListener(com.mdx.framework.utility.Helper.delayClickLitener(this));
         mImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -166,6 +173,9 @@ public class FrgWode extends BaseFrg {
             loaddata();
         } else if (methodName.equals(share)) {
             mModelShare = (ModelShare) json2Model(content, ModelShare.class);
+        } else if (methodName.equals(getVip88LoginUrl)) {
+            ModelLoginUrl mModelLoginUrl = (ModelLoginUrl) json2Model(content, ModelLoginUrl.class);
+            Helper.startActivity(getContext(), FrgVip.class, NoTitleAct.class, "url", mModelLoginUrl.dataObject.data);
         }
     }
 
@@ -233,6 +243,8 @@ public class FrgWode extends BaseFrg {
             Helper.startActivity(getContext(), FrgWodeYhk.class, TitleAct.class);
         } else if (R.id.mLinearLayout_4 == v.getId()) {
             Helper.startActivity(getContext(), FrgMore.class, TitleAct.class);
+        } else if (R.id.mLinearLayout_qy == v.getId()) {
+            loadJsonUrl(getVip88LoginUrl, new Gson().toJson(new BeanVipNo()));
         }
     }
 

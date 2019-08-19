@@ -29,6 +29,7 @@ import com.ntdlg.bc.bean.BeanBase;
 import com.ntdlg.bc.bean.BeanHt;
 import com.ntdlg.bc.bean.BeanSQTE;
 import com.ntdlg.bc.bean.BeanVip;
+import com.ntdlg.bc.bean.BeanVipNo;
 import com.ntdlg.bc.bean.BeanWDJK;
 import com.ntdlg.bc.model.ModelGRXYRZXX;
 import com.ntdlg.bc.model.ModelKSJK2;
@@ -188,7 +189,7 @@ public class FrgWodeJk1 extends BaseFrg {
                             com.framewidget.F.yShoure(getContext(), "购买会员成功后，须工作时间内才能立即放款", "", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    loadJsonUrl(getVip88LoginUrl, new Gson().toJson(new BeanVip()));
+                                    loadJsonUrl(getVip88LoginUrl, new Gson().toJson(new BeanVipNo()));
                                 }
                             });
                         }

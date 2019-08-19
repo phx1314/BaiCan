@@ -247,7 +247,7 @@
                             android:layout_width="@dimen/j280dp"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="10,100.00" />
+                         />
 
                         <TextView
                             style="@style/text_style_13_gray"
@@ -271,7 +271,7 @@
                             android:layout_width="@dimen/j280dp"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="10,100.00" />
+                             />
 
                         <TextView
                             style="@style/text_style_13_gray"

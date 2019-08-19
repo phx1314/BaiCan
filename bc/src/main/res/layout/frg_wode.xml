@@ -58,140 +58,177 @@
             android:text="" />
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#F4F4F4"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/mLinearLayout_1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/j15dp"
-            android:paddingLeft="@dimen/j10dp"
-            android:paddingRight="@dimen/j10dp"
-            android:paddingTop="@dimen/j15dp">
+            android:layout_height="match_parent"
+            android:background="#F4F4F4"
+            android:orientation="vertical">
 
-            <TextView
-                style="@style/text_style_15_black"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/mLinearLayout_1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableLeft="@drawable/my_loan"
-                android:drawablePadding="@dimen/j10dp"
-                android:gravity="center_vertical"
-                android:text="我的借款" />
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/j15dp"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp"
+                android:paddingTop="@dimen/j15dp">
 
-            <TextView
-                android:id="@+id/mTextView_jk"
-                android:layout_width="wrap_content"
+                <TextView
+                    style="@style/text_style_15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/my_loan"
+                    android:drawablePadding="@dimen/j10dp"
+                    android:gravity="center_vertical"
+                    android:text="我的借款" />
+
+                <TextView
+                    android:id="@+id/mTextView_jk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/arrows_top" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/j35dp"
+                android:background="@color/tyD1" />
+
+            <LinearLayout
+                android:id="@+id/mLinearLayout_qy"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableRight="@drawable/arrows_top" />
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/j15dp"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp"
+                android:paddingTop="@dimen/j15dp">
+
+                <TextView
+                    style="@style/text_style_15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_star_border_black_24dp"
+                    android:drawablePadding="@dimen/j5dp"
+                    android:gravity="center_vertical"
+                    android:text="我的权益" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/arrows_top" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/j35dp"
+                android:background="@color/tyD1" />
+
+            <LinearLayout
+                android:id="@+id/mLinearLayout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/j15dp"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp"
+                android:paddingTop="@dimen/j15dp">
+
+                <TextView
+                    style="@style/text_style_15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/my_bill"
+                    android:drawablePadding="@dimen/j10dp"
+                    android:gravity="center_vertical"
+                    android:text="我的账单" />
+
+                <TextView
+                    android:id="@+id/mTextView_zhangdan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/arrows_top" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/j35dp"
+                android:background="@color/tyD1" />
+
+            <LinearLayout
+                android:id="@+id/mLinearLayout_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/j15dp"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp"
+                android:paddingTop="@dimen/j15dp">
+
+                <TextView
+                    style="@style/text_style_15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/bank_card"
+                    android:drawablePadding="@dimen/j10dp"
+                    android:gravity="center_vertical"
+                    android:text="银行卡" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/arrows_top" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/j35dp"
+                android:background="@color/tyD1" />
+
+            <LinearLayout
+                android:id="@+id/mLinearLayout_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/j15dp"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp"
+                android:paddingTop="@dimen/j15dp">
+
+                <TextView
+                    style="@style/text_style_15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/line_of_credit"
+                    android:drawablePadding="@dimen/j10dp"
+                    android:gravity="center_vertical"
+                    android:text="更多" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/arrows_top" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tyD1" />
         </LinearLayout>
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="1px"
-            android:layout_marginLeft="@dimen/j35dp"
-            android:background="@color/tyD1" />
-
-        <LinearLayout
-            android:id="@+id/mLinearLayout_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/j15dp"
-            android:paddingLeft="@dimen/j10dp"
-            android:paddingRight="@dimen/j10dp"
-            android:paddingTop="@dimen/j15dp">
-
-            <TextView
-                style="@style/text_style_15_black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableLeft="@drawable/my_bill"
-                android:drawablePadding="@dimen/j10dp"
-                android:gravity="center_vertical"
-                android:text="我的账单" />
-
-            <TextView
-                android:id="@+id/mTextView_zhangdan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableRight="@drawable/arrows_top" />
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="1px"
-            android:layout_marginLeft="@dimen/j35dp"
-            android:background="@color/tyD1" />
-
-        <LinearLayout
-            android:id="@+id/mLinearLayout_3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/j15dp"
-            android:paddingLeft="@dimen/j10dp"
-            android:paddingRight="@dimen/j10dp"
-            android:paddingTop="@dimen/j15dp">
-
-            <TextView
-                style="@style/text_style_15_black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableLeft="@drawable/bank_card"
-                android:drawablePadding="@dimen/j10dp"
-                android:gravity="center_vertical"
-                android:text="银行卡" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableRight="@drawable/arrows_top" />
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="1px"
-            android:layout_marginLeft="@dimen/j35dp"
-            android:background="@color/tyD1" />
-
-        <LinearLayout
-            android:id="@+id/mLinearLayout_4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/j15dp"
-            android:paddingLeft="@dimen/j10dp"
-            android:paddingRight="@dimen/j10dp"
-            android:paddingTop="@dimen/j15dp">
-
-            <TextView
-                style="@style/text_style_15_black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableLeft="@drawable/line_of_credit"
-                android:drawablePadding="@dimen/j10dp"
-                android:gravity="center_vertical"
-                android:text="更多" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableRight="@drawable/arrows_top" />
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="1px"
-            android:background="@color/tyD1" />
-    </LinearLayout>
+    </ScrollView>
 </LinearLayout>
 

@@ -9,8 +9,8 @@ android {
         applicationId "com.ntdlg.bc"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 44
-        versionName "1.0.44"
+        versionCode 46
+        versionName "1.0.46"
         multiDexEnabled = true
     }
     aaptOptions {

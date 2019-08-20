@@ -111,14 +111,12 @@ public class F {
     public static String setPhoto = "/api/customer/setPhoto";
     public static String chekNumber = "/api/customer/chekNumber";
     public static String applyPromote = "/api/customer/applyPromote";
-    public static String affirmBorrow = "/api/customer/affirmBorrow";
     public static String myBills = "/api/customer/myBills";
     public static String scanIdentity = "/api/customer/scanIdentity";
     public static String logout = "/api/customer/logout";
     public static String beginApply = "/api/customer/beginApply";
     public static String bioAssay = "/api/customer/bioAssay";
     public static String setDefaultBank = "/api/customer/setDefaultBank";
-    public static String bankBind = "/api/customer/bankBind";
     public static String bankBindOne = "/api/customer/bankBindOne";
     public static String bankBindTwo = "/api/customer/bankBindTwo";
     public static String bank = "/api/customer/bank";

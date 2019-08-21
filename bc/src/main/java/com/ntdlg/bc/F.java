@@ -62,6 +62,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class F {
@@ -427,7 +429,7 @@ public class F {
                             String contactName = phoneCursor.getString(PHONES_DISPLAY_NAME_INDEX);
                             String sortKey = phoneCursor.getString(SORT_KEY_INDEX);
                             String book = phoneCursor.getString(PHONEBOOK_LABEL);
-                            SortModel sortModel = new SortModel(contactName, phoneNumber.replace(" ", ""), sortKey);
+                            SortModel sortModel = new SortModel(filterEmoji(contactName), phoneNumber.replace(" ", ""), sortKey);
                             if (book == null) {
                                 book = "#";
                             } else if (book.equals("#")) {
@@ -582,6 +584,21 @@ public class F {
         return "";
     }
 
+    public static String filterEmoji(String source) {
+        if (source != null) {
+            Pattern emoji = Pattern
+                    .compile(
+                            "[\ud83c\udc00-\ud83c\udfff]|[\ud83d\udc00-\ud83d\udfff]|[\u2600-\u27ff]",
+                            Pattern.UNICODE_CASE | Pattern.CASE_INSENSITIVE);
+            Matcher emojiMatcher = emoji.matcher(source);
+            if (emojiMatcher.find()) {
+                source = emojiMatcher.replaceAll("[表情]");
+                return source;
+            }
+            return source;
+        }
+        return source;
+    }
 
     public static void rZhengWb(final Activity activity, String type, final BaseFrg mBaseFrg) {
         try {

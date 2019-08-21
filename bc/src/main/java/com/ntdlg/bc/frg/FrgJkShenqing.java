@@ -85,6 +85,10 @@ public class FrgJkShenqing extends BaseFrg {
                 });
 
                 break;
+            case 121:
+                finish();
+                Frame.HANDLES.sentAll("FrgSxed", 0, null);
+                break;
         }
     }
 
@@ -161,7 +165,7 @@ public class FrgJkShenqing extends BaseFrg {
             });
         } else if (methodName.equals(getVip88LoginUrl)) {
             ModelLoginUrl mModelLoginUrl = (ModelLoginUrl) json2Model(content, ModelLoginUrl.class);
-            Helper.startActivity(getContext(), FrgVip.class, NoTitleAct.class, "url", mModelLoginUrl.dataObject.data);
+            Helper.startActivity(getContext(), FrgVip.class, NoTitleAct.class, "url", mModelLoginUrl.dataObject.data, "from", "FrgJkShenqing");
         }
     }
 

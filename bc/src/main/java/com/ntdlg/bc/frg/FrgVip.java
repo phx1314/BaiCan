@@ -15,6 +15,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -48,10 +49,12 @@ public class FrgVip extends BaseFrg {
     public WebView mWebView;
     public String url = "";
     public ProgressBar mProgressBar;
+    public String from;
 
     @Override
     protected void create(Bundle savedInstanceState) {
         url = getActivity().getIntent().getStringExtra("url");
+        from = getActivity().getIntent().getStringExtra("from");
         setContentView(R.layout.frg_vip);
         initView();
         loaddata();
@@ -169,6 +172,9 @@ public class FrgVip extends BaseFrg {
         @JavascriptInterface
         public void gotoPage(String pageName) {
             if (pageName.equals("home")) {
+                if (!TextUtils.isEmpty(from)) {
+                    Frame.HANDLES.sentAll(from, 121, 0);
+                }
                 finish();
             }
         }

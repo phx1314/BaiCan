@@ -299,20 +299,6 @@ public class F {
     }
 
 
-    public static byte[] bitmap2Byte(String picpathcrop) {
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        com.mdx.framework.utility.BitmapRead.decodeSampledBitmapFromFile(
-                picpathcrop, 480, 0).compress(Bitmap.CompressFormat.JPEG, 80,
-                out);
-        try {
-            out.flush();
-            out.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return out.toByteArray();
-    }
 
     public static void showCenterDialog(Context context, View view,
                                         CallBackOnly mCallBackOnly) {

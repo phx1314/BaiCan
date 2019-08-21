@@ -245,7 +245,7 @@ public class F {
     public static byte[] bitmap2Byte(String picpathcrop) {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         com.mdx.framework.utility.BitmapRead.decodeSampledBitmapFromFile(
-                picpathcrop, 480, 0).compress(Bitmap.CompressFormat.PNG, 80,
+                picpathcrop, 360, 0).compress(Bitmap.CompressFormat.PNG, 50,
                 out);
         try {
             out.flush();
@@ -259,7 +259,7 @@ public class F {
 
     public static byte[] bitmap2Byte(Bitmap bitmap) {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 80,
+        bitmap.compress(Bitmap.CompressFormat.PNG, 50,
                 out);
         try {
             out.flush();

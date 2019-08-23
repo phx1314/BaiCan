@@ -311,6 +311,7 @@ public class FrgShouye extends BaseFrg {
     }
 
     public void changeBottom(SeekBar seekBar) {
+
         try {
             int i = seekBar.getProgress() + Integer.valueOf(mModelSQJE.deadlineRecords.get(0).value);
             int min = Integer.MAX_VALUE;

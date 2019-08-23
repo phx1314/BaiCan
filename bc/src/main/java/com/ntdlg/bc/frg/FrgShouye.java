@@ -238,7 +238,7 @@ public class FrgShouye extends BaseFrg {
         mImageView_del.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mSeekBar_zhou.setProgress(mSeekBar_zhou.getProgress() > dex ? mSeekBar_zhou.getProgress() - dex : 0);
+                mSeekBar_zhou.setProgress(mSeekBar_zhou.getProgress() > dex ? mSeekBar_zhou.getProgress() - (dex / 2 + 1) : 0);
                 changeBottom(mSeekBar_zhou);
             }
         });

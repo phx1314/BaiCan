@@ -8,20 +8,80 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <TextView
-        style="@style/text_style_15_black"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="@dimen/j10dp"
-        android:text="请用正楷字体签字" />
-
-    <com.f1reking.signatureview.SignatureView
-        android:id="@+id/mSignatureView"
+    <LinearLayout
+        android:id="@+id/mLinearLayout_ht"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:backColor="#00000000"
-        app:penColor="@color/black"
-        app:penWidth="30" />
+        android:orientation="vertical">
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/j10dp"
+            android:layout_marginTop="@dimen/j12dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/mCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/tv_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/j5dp"
+                android:text="我已阅读并知晓上述全部合同内容，且认可第三方对本次借款所提供的咨询服务"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mTextView_shenqing"
+            style="@style/text_style_15_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/j10dp"
+            android:layout_marginLeft="@dimen/j20dp"
+            android:layout_marginRight="@dimen/j20dp"
+            android:layout_marginTop="@dimen/j5dp"
+            android:background="@drawable/shape_green"
+            android:gravity="center"
+            android:padding="@dimen/j10dp"
+            android:text="下一步" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mLinearLayout_sign"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_style_15_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/j10dp"
+            android:text="请用正楷字体签字" />
+
+        <com.f1reking.signatureview.SignatureView
+            android:id="@+id/mSignatureView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:backColor="#00000000"
+            app:penColor="@color/black"
+            app:penWidth="30" />
+    </LinearLayout>
 </LinearLayout>
 

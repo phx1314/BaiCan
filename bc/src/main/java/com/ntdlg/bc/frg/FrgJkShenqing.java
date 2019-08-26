@@ -127,6 +127,8 @@ public class FrgJkShenqing extends BaseFrg {
         BeanQYQRSJ mBeanQYQRSJ = new BeanQYQRSJ();
         mBeanQYQRSJ.sign = readClassAttr(mBeanQYQRSJ);
         loadJsonUrl(affirmBorrowData, new Gson().toJson(mBeanQYQRSJ));
+
+
     }
 
     @Override
@@ -151,18 +153,24 @@ public class FrgJkShenqing extends BaseFrg {
             this.finish();
         } else if (methodName.equals(beginApply)) {
             final ModelKSJK2 mModelKSJK2 = (ModelKSJK2) json2Model(content, ModelKSJK2.class);
-            final View view = DialogCao.getView(getContext(), null);
-            F.showCenterDialog(getContext(), view, new CallBackOnly() {
-                @Override
-                public void goReturn(String token, String reftoken) {
+            if (mModelKSJK2.result.equals("3")) {
+                final View view = DialogCao.getView(getContext(), null);
+                F.showCenterDialog(getContext(), view, new CallBackOnly() {
+                    @Override
+                    public void goReturn(String token, String reftoken) {
 
-                }
+                    }
 
-                @Override
-                public void goReturnDo(Dialog mDialog) {
-                    ((DialogCao) view.getTag()).set(mDialog, mModelKSJK2);
-                }
-            });
+                    @Override
+                    public void goReturnDo(Dialog mDialog) {
+                        ((DialogCao) view.getTag()).set(mDialog, mModelKSJK2);
+                    }
+                });
+            } else {
+                Helper.toast("借款状态异常", getContext());
+                finish();
+            }
+
         } else if (methodName.equals(getVip88LoginUrl)) {
             ModelLoginUrl mModelLoginUrl = (ModelLoginUrl) json2Model(content, ModelLoginUrl.class);
             Helper.startActivity(getContext(), FrgVip.class, NoTitleAct.class, "url", mModelLoginUrl.dataObject.data, "from", "FrgJkShenqing");

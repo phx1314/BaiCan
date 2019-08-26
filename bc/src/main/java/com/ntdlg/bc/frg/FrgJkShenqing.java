@@ -153,7 +153,7 @@ public class FrgJkShenqing extends BaseFrg {
             this.finish();
         } else if (methodName.equals(beginApply)) {
             final ModelKSJK2 mModelKSJK2 = (ModelKSJK2) json2Model(content, ModelKSJK2.class);
-            if (mModelKSJK2.result.equals("3")) {
+//            if (mModelKSJK2.result.equals("3")) {
                 final View view = DialogCao.getView(getContext(), null);
                 F.showCenterDialog(getContext(), view, new CallBackOnly() {
                     @Override
@@ -166,10 +166,10 @@ public class FrgJkShenqing extends BaseFrg {
                         ((DialogCao) view.getTag()).set(mDialog, mModelKSJK2);
                     }
                 });
-            } else {
-                Helper.toast("借款状态异常", getContext());
-                finish();
-            }
+//            } else {
+//                Helper.toast("借款状态异常", getContext());
+//                finish();
+//            }
 
         } else if (methodName.equals(getVip88LoginUrl)) {
             ModelLoginUrl mModelLoginUrl = (ModelLoginUrl) json2Model(content, ModelLoginUrl.class);

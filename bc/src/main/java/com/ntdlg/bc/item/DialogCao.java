@@ -84,9 +84,9 @@ public class DialogCao extends BaseItem {
         } else {
             mLinearLayout_left.setVisibility(View.VISIBLE);
             mImageView_left.setVisibility(View.VISIBLE);
-            mTextView_title.setText("尊敬的客户，您现在可以选择购买vip会员即享立即放款功能或者选择24小时放款功能！(工作时间内才能立即放款)");
+            mTextView_title.setText("尊敬的客户，您现在可以选择购买vip会员即享立即放款功能或者选择48小时放款功能！(工作时间内才能立即放款)");
             mTextView_1.setText("去购买");
-            mTextView_2.setText("24小时放款");
+            mTextView_2.setText("48小时放款");
             mTextView_1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

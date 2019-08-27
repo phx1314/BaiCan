@@ -87,7 +87,7 @@
                     android:background="?android:attr/selectableItemBackground"
                     android:gravity="center"
                     android:padding="@dimen/j10dp"
-                    android:text="24小时放款"
+                    android:text="48小时放款"
                     android:textColor="@color/A" />
             </LinearLayout>
         </LinearLayout>

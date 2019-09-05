@@ -13,6 +13,7 @@ package com.ntdlg.bc.frg;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -20,6 +21,7 @@ import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -109,15 +111,45 @@ public class FrgShenfenRezhengNew extends BaseFrg {
                     Helper.startActivity(getContext(), FrgLogin.class, TitleAct.class);
                     return;
                 }
-                Helper.requestPermissions(new String[]{Manifest.permission.CAMERA}, new PermissionRequest() {
-                    public void onGrant(String[] permissions, int[] grantResults) {
-                        path = Environment
-                                .getExternalStorageDirectory() + "/" + System.currentTimeMillis() + ".jpeg";
-                        Intent intent1 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                        intent1.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(path)));
-                        startActivityForResult(intent1, CAMERA_CODE);
-                    }
-                });
+                try {
+                    Helper.requestPermissions(new String[]{Manifest.permission.CAMERA}, new PermissionRequest() {
+                        public void onGrant(String[] permissions, int[] grantResults) {
+                            path = Environment
+                                    .getExternalStorageDirectory() + "/" + System.currentTimeMillis() + ".jpeg";
+                            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//                            intent1.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(path)));
+//                            startActivityForResult(intent1, CAMERA_CODE);
+
+
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                                try {
+                                    ContentValues values = new ContentValues(1);
+                                    values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpg");
+                                    values.put(MediaStore.Images.Media.DATA, path);
+                                    Uri imageUri = getActivity().getContentResolver()
+                                            .insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+                                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION
+                                            | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+                                    if (imageUri != null) {
+                                        intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
+                                        intent.putExtra(MediaStore.EXTRA_OUTPUT,
+                                                imageUri);
+                                    }
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            } else {
+                                intent.putExtra(MediaStore.EXTRA_OUTPUT,
+                                        Uri.fromFile(new File(path)));
+                            }
+                            startActivityForResult(intent, CAMERA_CODE);
+
+                        }
+                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
 
             }
         });

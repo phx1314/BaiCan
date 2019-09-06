@@ -36,6 +36,11 @@ public class BaseItem implements OnClickListener, HttpResponseListenerSon {
     }
 
     @Override
+    public void onFail(String methodName, String content) {
+
+    }
+
+    @Override
     public void onFinish() {
 
     }

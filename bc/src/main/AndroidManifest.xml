@@ -77,17 +77,18 @@
             android:name="com.mdx.framework.activity.LoadingAct"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
-            android:theme="@style/actNNS">
+            android:theme="@style/SplashTheme"
+            tools:replace="android:theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <!--<activity-->
-        <!--android:name="com.jinqu.standard.act.MainActivity"-->
+        <!--android:name="com.ntdlg.bc.frg.ActLoading"-->
         <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
         <!--android:screenOrientation="portrait"-->
-        <!--android:theme="@style/actNNS">-->
+        <!--android:theme="@style/SplashTheme">-->
         <!--<intent-filter>-->
         <!--<action android:name="android.intent.action.MAIN" />-->
         <!--<category android:name="android.intent.category.LAUNCHER" />-->

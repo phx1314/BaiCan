@@ -17,14 +17,17 @@ import android.os.Handler;
 import android.widget.RelativeLayout;
 
 import com.mdx.framework.activity.IndexAct;
+import com.mdx.framework.activity.MFragment;
 import com.mdx.framework.utility.Helper;
 import com.mdx.framework.widget.MImageView;
 import com.ntdlg.bc.F;
 import com.ntdlg.bc.R;
 import com.ntdlg.bc.service.LocService;
 
+import static com.ntdlg.bc.F.isOpen;
 
-public class FrgLoading extends BaseFrg {
+
+public class FrgLoading extends MFragment {
 
     public RelativeLayout mLinearLayout;
     public MImageView iv_loading;
@@ -33,6 +36,7 @@ public class FrgLoading extends BaseFrg {
     @Override
     protected void create(Bundle savedInstanceState) {
         setContentView(R.layout.frg_loading);
+        isOpen = true;
         getActivity().startService(
                 new Intent(getContext(), LocService.class));
         initView();

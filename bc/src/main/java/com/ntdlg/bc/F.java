@@ -137,6 +137,9 @@ public class F {
     public static String meituanAuth = "/api/customer/meituanAuth";
     public static String elemeAuth = "/api/customer/elemeAuth";
     public static String savePhone = "/api/customer/savePhone";
+    public static String getXDAlpayContent = "/api/customer/getXDAlpayContent";
+    public static String getXDWeiXinPath = "/api/customer/getXDWeiXinPath";
+    public static boolean isOpen = false;
 
     public static void Login(String mUserId, String token, String reftoken) {
         SharedPreferences sp = PreferenceManager

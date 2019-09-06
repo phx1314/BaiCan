@@ -11,14 +11,19 @@
 
 package com.ntdlg.bc.frg;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.framewidget.F;
 import com.framewidget.util.AbDateUtil;
+import com.framewidget.view.CallBackOnly;
 import com.google.gson.Gson;
 import com.mdx.framework.activity.TitleAct;
 import com.mdx.framework.utility.Helper;
@@ -27,11 +32,18 @@ import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanBase;
 import com.ntdlg.bc.bean.BeanHKZF;
 import com.ntdlg.bc.bean.BeanTQHK;
+import com.ntdlg.bc.bean.BeanWX;
+import com.ntdlg.bc.bean.BeanZFB;
+import com.ntdlg.bc.item.ZfDialog;
 import com.ntdlg.bc.model.ModelTQHK;
 import com.ntdlg.bc.model.ModelWDZD;
+import com.ntdlg.bc.model.ModelWX;
+import com.ntdlg.bc.model.ModelZFB;
 import com.ntdlg.bc.view.MViewOne;
 
 import static com.ntdlg.bc.F.changeTime;
+import static com.ntdlg.bc.F.getXDAlpayContent;
+import static com.ntdlg.bc.F.getXDWeiXinPath;
 import static com.ntdlg.bc.F.json2Model;
 import static com.ntdlg.bc.F.myBill;
 import static com.ntdlg.bc.F.pay;
@@ -61,7 +73,10 @@ public class FrgZhangdan extends BaseFrg {
     public TextView mTextView_ws_3;
     public TextView mTextView_ws_4;
     public BeanHKZF mBeanHKZF = new BeanHKZF();
+    public BeanZFB mBeanZFB = new BeanZFB();
+    public BeanWX mBeanWX = new BeanWX();
     public TextView mTextView_qsh;
+    public Dialog mDialog;
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -76,6 +91,14 @@ public class FrgZhangdan extends BaseFrg {
         switch (type) {
             case 0:
                 loaddata();
+                break;
+            case 1:
+                mBeanZFB.sign = readClassAttr(mBeanZFB);
+                loadJsonUrl(getXDAlpayContent, new Gson().toJson(mBeanZFB));
+                break;
+            case 2:
+                mBeanWX.sign = readClassAttr(mBeanWX);
+                loadJsonUrl(getXDWeiXinPath, new Gson().toJson(mBeanWX));
                 break;
         }
     }
@@ -113,14 +136,32 @@ public class FrgZhangdan extends BaseFrg {
         mTextView_shenqing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                com.framewidget.F.yShoure(getContext(), "是否确认立即还款", "", new DialogInterface.OnClickListener() {
+//                com.framewidget.F.yShoure(getContext(), "是否确认立即还款", "", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                mBeanHKZF.sign = readClassAttr(mBeanHKZF);
+//                loadJsonUrl(pay, new Gson().toJson(mBeanHKZF));
+//                    }
+//                });
+                final View vv = ZfDialog.getView(getContext(), null);
+                F.showBottomDialog(getContext(), vv, new CallBackOnly() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        mBeanHKZF.sign = readClassAttr(mBeanHKZF);
-                        loadJsonUrl(pay, new Gson().toJson(mBeanHKZF));
+                    public void goReturn(String token, String reftoken) {
+
+                    }
+
+                    @Override
+                    public void goReturnDo(Dialog mDialog) {
+                        FrgZhangdan.this.mDialog = mDialog;
+                        ((ZfDialog) vv.getTag()).set(mDialog);
+                        mDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                            @Override
+                            public void onDismiss(DialogInterface dialog) {
+                                loaddata();
+                            }
+                        });
                     }
                 });
-
             }
         });
     }
@@ -139,12 +180,12 @@ public class FrgZhangdan extends BaseFrg {
             mTextView_ws_3.setText("利息(元)");
             mTextView_ws_4.setText("手续费(元)");
             mTextView_shenqing.setText("确定");
-            mBeanHKZF.type = "2";
+            mBeanWX.type = mBeanZFB.type = mBeanHKZF.type = "2";
         } else {
             BeanBase mBeanBase = new BeanBase();
             mBeanBase.sign = readClassAttr(mBeanBase);
             loadJsonUrl(myBill, new Gson().toJson(mBeanBase));
-            mBeanHKZF.type = "1";
+            mBeanWX.type = mBeanZFB.type = mBeanHKZF.type = "1";
         }
     }
 
@@ -162,8 +203,8 @@ public class FrgZhangdan extends BaseFrg {
             mTextView_all_price.setText(mModelWDZD.jkze);
             mTextView_wh_price.setText(mModelWDZD.whbj);
             mMViewOne.setProgress(Float.valueOf(mModelWDZD.yqwhje), Float.valueOf(mModelWDZD.bqyhbx) - Float.valueOf(mModelWDZD.bqyhje), Float.valueOf(mModelWDZD.bqyhbx));
-            mBeanHKZF.amount = mModelWDZD.bqyhje;
-            mBeanHKZF.repayId = mModelWDZD.repayId;
+            mBeanWX.amount = mBeanZFB.amount = mBeanHKZF.amount = mModelWDZD.bqyhje;
+            mBeanWX.repayId = mBeanZFB.repayId = mBeanHKZF.repayId = mModelWDZD.repayId;
             if (mModelWDZD.status.equals("4")) {
                 mTextView_shenqing.setEnabled(false);
                 mTextView_shenqing.setText("审核中");
@@ -181,10 +222,27 @@ public class FrgZhangdan extends BaseFrg {
             mTextView_price2.setText(mModelTQHK.lx);
             mTextView_price3.setText(mModelTQHK.sxf);
             mMViewOne.setProgress(Float.valueOf(mModelTQHK.hkbj), Float.valueOf(mModelTQHK.lx), Float.valueOf(mModelTQHK.sxf));
-            mBeanHKZF.amount = mModelTQHK.hkze;
-            mBeanHKZF.applyId = mModelTQHK.applyId;
+            mBeanWX.amount = mBeanZFB.amount = mBeanHKZF.amount = mModelTQHK.hkze;
+            mBeanWX.repayId = mBeanZFB.repayId = mBeanHKZF.applyId = mModelTQHK.applyId;
         } else if (methodName.equals(pay)) {
             Helper.toast("提交成功", getContext());
+        } else if (methodName.equals(getXDAlpayContent)) {
+            ModelZFB mModelZFB = (ModelZFB) json2Model(content, ModelZFB.class);
+            Intent intent = new Intent();
+            intent.setAction("android.intent.action.VIEW");
+            Uri content_url = Uri.parse(mModelZFB.content);
+            intent.setData(content_url);
+            startActivity(intent);
+        } else if (methodName.equals(getXDWeiXinPath)) {
+            ModelWX mModelWX = (ModelWX) json2Model(content, ModelWX.class);
+            Helper.startActivity(getContext(), FrgEwm.class, TitleAct.class, "url", mModelWX.urlPath);
+        }
+    }
+
+    @Override
+    public void onFail(String methodName, String content) {
+        if (methodName.equals(getXDAlpayContent) || methodName.equals(getXDWeiXinPath)) {
+            mDialog.dismiss();
         }
     }
 

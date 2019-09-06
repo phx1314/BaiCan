@@ -24,10 +24,15 @@ import com.ab.util.HttpResponseListener;
 import com.ab.util.HttpResponseListenerSon;
 import com.framewidget.F;
 import com.framewidget.view.Headlayout;
+import com.mdx.framework.Frame;
+import com.mdx.framework.activity.LoadingAct;
 import com.mdx.framework.activity.MFragment;
+import com.mdx.framework.utility.Helper;
 import com.mdx.framework.widget.ActionBar;
 import com.moxie.client.manager.MoxieSDK;
 import com.ntdlg.bc.R;
+
+import static com.ntdlg.bc.F.isOpen;
 
 public abstract class BaseFrg extends MFragment implements View.OnClickListener, HttpResponseListenerSon {
     public Headlayout mHeadlayout;
@@ -44,6 +49,11 @@ public abstract class BaseFrg extends MFragment implements View.OnClickListener,
 
     @Override
     public void onFailure(int statusCode, String content, Throwable error) {
+
+    }
+
+    @Override
+    public void onFail(String methodName, String content) {
 
     }
 
@@ -81,6 +91,11 @@ public abstract class BaseFrg extends MFragment implements View.OnClickListener,
     protected void initcreate(Bundle savedInstanceState) {
         super.initcreate(savedInstanceState);
         setWindowStatusBarColor(getActivity(), R.color.A2);
+        if (!isOpen) {
+            Frame.HANDLES.closeAll();
+            Helper.startActivity(getContext(), FrgLoading.class, LoadingAct.class);
+            isOpen = true;
+        }
     }
 
     @Override

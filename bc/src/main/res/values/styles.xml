@@ -29,5 +29,12 @@
           <item name="android:minHeight">2.0dip</item>
           <item name="android:thumb">@drawable/yuan_white</item>
      </style>
+
+     <style name="SplashTheme" parent="AppTheme">
+          <!-- 这里的trans自己写一个#00000000即可-->
+          <item name="android:windowBackground">@color/A</item>
+          <item name="windowNoTitle">true</item>
+          <item name="android:windowFullscreen">true</item>
+     </style>
 </resources>
 

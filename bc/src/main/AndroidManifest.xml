@@ -84,17 +84,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<activity-->
-        <!--android:name="com.ntdlg.bc.frg.ActLoading"-->
-        <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
-        <!--android:screenOrientation="portrait"-->
-        <!--android:theme="@style/SplashTheme">-->
-        <!--<intent-filter>-->
-        <!--<action android:name="android.intent.action.MAIN" />-->
-        <!--<category android:name="android.intent.category.LAUNCHER" />-->
-        <!--</intent-filter>-->
-        <!--</activity>-->
-        <activity android:name="com.moxie.client.MainActivity"></activity>
         <activity
             android:name="com.mdx.framework.activity.NoTitleAct"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -174,21 +163,21 @@
         <meta-data
             android:name="PGYER_APPID"
             android:value="b1cc32d88f8962181e0656a5e19f974d"></meta-data>
-
-        <service
-            android:name="com.moxie.client.accessible.AccessibleCrawlerService"
-            android:accessibilityFlags="flagReportViewIds"
-            android:enabled="true"
-            android:exported="false"
-            android:label="@string/accessibility_name"
-            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
-            <intent-filter>
-                <action android:name="android.accessibilityservice.AccessibilityService" />
-            </intent-filter>
-            <meta-data
-                android:name="android.accessibilityservice"
-                android:resource="@xml/accessible_crawler_config" />
-        </service>
+        <!--<activity android:name="com.moxie.client.MainActivity"></activity>-->
+        <!--<service-->
+            <!--android:name="com.moxie.client.accessible.AccessibleCrawlerService"-->
+            <!--android:accessibilityFlags="flagReportViewIds"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="false"-->
+            <!--android:label="@string/accessibility_name"-->
+            <!--android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.accessibilityservice.AccessibilityService" />-->
+            <!--</intent-filter>-->
+            <!--<meta-data-->
+                <!--android:name="android.accessibilityservice"-->
+                <!--android:resource="@xml/accessible_crawler_config" />-->
+        <!--</service>-->
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="dde8599b0c82207923f99d7f11dc6f69" />

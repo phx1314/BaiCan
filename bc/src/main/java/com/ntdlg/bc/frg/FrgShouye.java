@@ -11,6 +11,7 @@
 
 package com.ntdlg.bc.frg;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -180,7 +181,7 @@ public class FrgShouye extends BaseFrg {
             @Override
             public void onClick(View view) {
                 if (TextUtils.isEmpty(F.UserId)) {
-                    Helper.startActivity(getContext(), FrgLogin.class, TitleAct.class);
+                    Helper.startActivity(getContext(),  Intent.FLAG_ACTIVITY_CLEAR_TOP,FrgLogin.class, TitleAct.class);
                     return;
                 }
                 chEck2();

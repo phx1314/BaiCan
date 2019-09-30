@@ -221,7 +221,7 @@ public class FrgSxed extends BaseFrg {
             mTextView_left.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Helper.startActivity(getContext(), FrgTezx.class, TitleAct.class);
+//                    Helper.startActivity(getContext(), FrgTezx.class, TitleAct.class);
 
                 }
             });

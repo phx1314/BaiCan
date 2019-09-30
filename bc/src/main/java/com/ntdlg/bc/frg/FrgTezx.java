@@ -22,7 +22,6 @@ import com.google.gson.Gson;
 import com.mdx.framework.Frame;
 import com.mdx.framework.utility.Helper;
 import com.mdx.framework.widget.ActionBar;
-import com.moxie.client.model.MxParam;
 import com.ntdlg.bc.F;
 import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanBase;
@@ -118,7 +117,7 @@ public class FrgTezx extends BaseFrg {
             @Override
             public void onClick(View view) {
                 if (!mModelGRXYRZXX.isTaobaoAuth.equals("1")) {
-                    rZhengWb(getActivity(), MxParam.PARAM_TASK_TAOBAO, FrgTezx.this);//淘宝
+//                    rZhengWb(getActivity(), MxParam.PARAM_TASK_TAOBAO, FrgTezx.this);//淘宝
                 }
             }
         });
@@ -126,7 +125,7 @@ public class FrgTezx extends BaseFrg {
             @Override
             public void onClick(View view) {
                 if (!mModelGRXYRZXX.isZhifubaoAuth.equals("1")) {
-                    rZhengWb(getActivity(), MxParam.PARAM_TASK_ALIPAY, FrgTezx.this);//淘宝
+//                    rZhengWb(getActivity(), MxParam.PARAM_TASK_ALIPAY, FrgTezx.this);//淘宝
                 }
             }
         });
@@ -135,7 +134,7 @@ public class FrgTezx extends BaseFrg {
             public void onClick(View view) {
                 if (!mModelGRXYRZXX.isGongjijinAuth.equals("1")) {
                     type = "2";
-                    rZhengWb(getActivity(), MxParam.PARAM_TASK_FUND, FrgTezx.this);//公积金
+//                    rZhengWb(getActivity(), MxParam.PARAM_TASK_FUND, FrgTezx.this);//公积金
                 }
             }
         });
@@ -143,8 +142,8 @@ public class FrgTezx extends BaseFrg {
             @Override
             public void onClick(View view) {
                 if (!mModelGRXYRZXX.isShebaoAuth.equals("1")) {
-                    type = MxParam.PARAM_TASK_FUND;
-                    rZhengWb(getActivity(), MxParam.PARAM_TASK_SECURITY, FrgTezx.this);//社保
+//                    type = MxParam.PARAM_TASK_FUND;
+//                    rZhengWb(getActivity(), MxParam.PARAM_TASK_SECURITY, FrgTezx.this);//社保
                 }
             }
         });
@@ -171,7 +170,7 @@ public class FrgTezx extends BaseFrg {
             public void onClick(View view) {
                 if (!mModelGRXYRZXX.isJingdongAuth.equals("1")) {
                     type = "4";
-                    rZhengWb(getActivity(), MxParam.PARAM_TASK_JINGDONG, FrgTezx.this);
+//                    rZhengWb(getActivity(), MxParam.PARAM_TASK_JINGDONG, FrgTezx.this);
                 }
             }
         });

@@ -49,7 +49,14 @@ public class FrgMe extends BaseFrg{
         initView();
         loaddata();
     }
-
+    @Override
+    public void disposeMsg(int type, Object obj) {
+        switch (type){
+            case 0:
+                loaddata();
+                break;
+        }
+    }
     private void initView(){
         findVMethod();
     }

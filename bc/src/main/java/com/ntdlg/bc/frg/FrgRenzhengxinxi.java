@@ -11,12 +11,10 @@
 
 package com.ntdlg.bc.frg;
 
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.database.Cursor;
+import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -52,7 +50,6 @@ import static com.ntdlg.bc.F.savePhone;
 import static com.ntdlg.bc.F.scanIdentity;
 import static com.ntdlg.bc.F.submitCkeck;
 import static com.ntdlg.bc.F.yunyingshangAuth;
-import static com.umeng.socialize.utils.DeviceConfig.context;
 
 
 public class FrgRenzhengxinxi extends BaseFrg {
@@ -249,7 +246,7 @@ public class FrgRenzhengxinxi extends BaseFrg {
     public void onClick(android.view.View v) {
         if (TextUtils.isEmpty(com.ntdlg.bc.F.UserId)) {
             Helper.toast("请先登录", getContext());
-            Helper.startActivity(getContext(), FrgLogin.class, TitleAct.class);
+            Helper.startActivity(getContext(),  Intent.FLAG_ACTIVITY_CLEAR_TOP,FrgLogin.class, TitleAct.class);
             return;
         }
         if (R.id.clk_mTextView_1 == v.getId()) {
@@ -271,10 +268,10 @@ public class FrgRenzhengxinxi extends BaseFrg {
 //            }
             Helper.startActivity(getContext(), FrgLxr.class, TitleAct.class);
         } else if (R.id.clk_mTextView_4 == v.getId()) {//手机
-            if (mModelGRXYRZXX.isOperatorAuth.equals("1")) {
-                Helper.toast("您已认证", getContext());
-                return;
-            }
+//            if (mModelGRXYRZXX.isOperatorAuth.equals("1")) {
+//                Helper.toast("您已认证", getContext());
+//                return;
+//            }
             F.rZhengWb(getActivity(), MxParam.PARAM_TASK_CARRIER, FrgRenzhengxinxi.this);//手机认证
         } else if (R.id.clk_mTextView_5 == v.getId()) {//身份
             if (mModelGRXYRZXX.isNameAuth.equals("1")) {
@@ -310,14 +307,14 @@ public class FrgRenzhengxinxi extends BaseFrg {
                 Helper.toast("身份证信息尚未认证", getContext());
                 return;
             }
-            if (!mModelGRXYRZXX.isZhifubaoAuth.equals("1")) {
-                Helper.toast("支付宝未认证", getContext());
+            if (!mModelGRXYRZXX.isTaobaoAuth.equals("1")) {
+                Helper.toast("淘宝未认证", getContext());
                 return;
             }
-            if (!mModelGRXYRZXX.isGongjijinAuth.equals("1") && !mModelGRXYRZXX.isShebaoAuth.equals("1")) {
-                Helper.toast("公积金/社保未认证", getContext());
-                return;
-            }
+//            if (!mModelGRXYRZXX.isGongjijinAuth.equals("1") && !mModelGRXYRZXX.isShebaoAuth.equals("1")) {
+//                Helper.toast("公积金/社保未认证", getContext());
+//                return;
+//            }
             if (!mModelGRXYRZXX.isMeituanAuth.equals("1") && !mModelGRXYRZXX.isElemeAuth.equals("1")) {
                 Helper.toast("美团/饿了么未认证", getContext());
                 return;

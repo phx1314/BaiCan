@@ -121,7 +121,7 @@ public class FrgWode extends BaseFrg {
             public void onClick(View view) {
                 if (TextUtils.isEmpty(com.ntdlg.bc.F.UserId)) {
                     Helper.toast("请先登录", getContext());
-                    Helper.startActivity(getContext(), FrgLogin.class, TitleAct.class);
+                    Helper.startActivity(getContext(),  Intent.FLAG_ACTIVITY_CLEAR_TOP,FrgLogin.class, TitleAct.class);
                     return;
                 }
 //                Helper.startActivity(getContext(), FrgSign.class, TitleAct.class);
@@ -183,7 +183,7 @@ public class FrgWode extends BaseFrg {
     public void onClick(android.view.View v) {
         if (TextUtils.isEmpty(com.ntdlg.bc.F.UserId)) {
             Helper.toast("请先登录", getContext());
-            Helper.startActivity(getContext(), FrgLogin.class, TitleAct.class);
+            Helper.startActivity(getContext(),  Intent.FLAG_ACTIVITY_CLEAR_TOP,FrgLogin.class, TitleAct.class);
             return;
         }
         if (R.id.clk_mTextView_hd == v.getId()) {

@@ -27,7 +27,6 @@ import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanBase;
 import com.ntdlg.bc.model.ModelGRXYRZXX;
 
-import static android.R.attr.type;
 import static com.ntdlg.bc.F.getPlatform;
 import static com.ntdlg.bc.F.jingdongAuth;
 import static com.ntdlg.bc.F.json2Model;
@@ -115,6 +114,15 @@ public class FrgDshrzh extends BaseFrg {
         BeanBase mBeanBase = new BeanBase();
         mBeanBase.sign = readClassAttr(mBeanBase);
         loadJsonUrl(getPlatform, new Gson().toJson(mBeanBase));
+    }
+
+    @Override
+    public void disposeMsg(int type, Object obj) {
+        switch (type){
+            case 0:
+                loaddata();
+            break;
+        }
     }
 
     @Override

@@ -18,11 +18,12 @@
         android:paddingTop="@dimen/j10dp">
 
         <TextView
+            android:id="@+id/mTextView_name"
             style="@style/text_style_15_black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="3"
-            android:text="账号" />
+            android:ems="4"
+            android:text="手机号" />
 
         <EditText
             android:id="@+id/mEditText_code"
@@ -33,7 +34,7 @@
             android:layout_weight="1"
             android:background="#00000000"
             android:gravity="center_vertical"
-            android:hint="请输入账号"
+            android:hint="请输入手机号"
             android:singleLine="true" />
 
     </LinearLayout>
@@ -57,11 +58,13 @@
         android:paddingTop="@dimen/j10dp">
 
         <TextView
+            android:id="@+id/mTextView_pass"
             style="@style/text_style_15_black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="3"
+            android:ems="4"
             android:text="密码" />
+
         <EditText
             android:id="@+id/mEditText_code_yh"
             style="@style/text_style_15_gray"
@@ -82,43 +85,23 @@
         android:layout_marginRight="@dimen/j20dp"
         android:background="@color/tyD1" />
 
+    <TextView
+        android:id="@+id/mTextView_ts"
+        style="@style/text_style_15_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#f2f2f2"
+        android:gravity="bottom"
+        android:lineSpacingExtra="@dimen/j10dp"
+        android:padding="@dimen/j10dp"
+        android:text="温馨提示：\n*姓名请填写手机号对应实名\n*授权期间请不要登陆运营商网站\n*运营商可能会收到一条或多条短信\n*验证码十分钟只能发一条，一条在两份钟之内有效\n*请务必填写真实信息" />
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingBottom="@dimen/j10dp"
-        android:paddingLeft="@dimen/j20dp"
-        android:paddingRight="@dimen/j20dp"
-        android:paddingTop="@dimen/j10dp"
-        android:visibility="gone">
-
-        <TextView
-            style="@style/text_style_13_black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="3"
-            android:text="开户行" />
-
-        <EditText
-            android:id="@+id/mEditText_khh"
-            style="@style/text_style_13_black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/j10dp"
-            android:layout_weight="1"
-            android:background="#00000000"
-            android:gravity="center_vertical|right" />
-    </LinearLayout>
-
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:background="#f2f2f2"
-        android:gravity="bottom"
         android:orientation="horizontal">
 
         <TextView

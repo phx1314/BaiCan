@@ -38,6 +38,7 @@ import static com.ntdlg.bc.F.json2Model;
 import static com.ntdlg.bc.F.performAuth;
 import static com.ntdlg.bc.F.readClassAttr;
 import static com.ntdlg.bc.R.id.clk_mTextView_get;
+import static com.ntdlg.bc.R.id.mEditText_khh;
 import static com.ntdlg.bc.R.id.mEditText_yzhm;
 import static com.ntdlg.bc.R.id.mEditText_yzm;
 import static com.umeng.socialize.utils.DeviceConfig.context;
@@ -49,8 +50,10 @@ public class FrgRzhPub extends BaseFrg {
     public EditText mEditText_code;
     public LinearLayout mLinearLayout_yh;
     public EditText mEditText_code_yh;
-    public EditText mEditText_khh;
     public TextView mTextView_shenqing;
+    public TextView mTextView_name;
+    public TextView mTextView_pass;
+    public TextView mTextView_ts;
     private String type;
 
     @Override
@@ -69,21 +72,39 @@ public class FrgRzhPub extends BaseFrg {
         mEditText_code = (EditText) findViewById(R.id.mEditText_code);
         mLinearLayout_yh = (LinearLayout) findViewById(R.id.mLinearLayout_yh);
         mEditText_code_yh = (EditText) findViewById(R.id.mEditText_code_yh);
-        mEditText_khh = (EditText) findViewById(R.id.mEditText_khh);
         mTextView_shenqing = (TextView) findViewById(R.id.mTextView_shenqing);
+        mTextView_name = (TextView) findViewById(R.id.mTextView_name);
+        mTextView_pass = (TextView) findViewById(R.id.mTextView_pass);
+        mTextView_ts = (TextView) findViewById(R.id.mTextView_ts);
 
         mTextView_shenqing.setOnClickListener(com.mdx.framework.utility.Helper.delayClickLitener(this));
 
     }
 
     public void loaddata() {
-
+        if (type.equals("03")) {
+            mTextView_name.setText("手机号码");
+            mTextView_pass.setText("服务密码");
+            mEditText_code.setHint("请输入手机号码");
+            mEditText_code_yh.setHint("请输入服务密码");
+        } else {
+            mTextView_ts.setText("");
+        }
     }
 
 
     @Override
     public void onClick(android.view.View v) {
         if (R.id.mTextView_shenqing == v.getId()) {
+            if (TextUtils.isEmpty(mEditText_code.getText().toString())) {
+                Helper.toast(mEditText_code.getHint().toString(), getContext());
+                return;
+            }
+            if (TextUtils.isEmpty(mEditText_code_yh.getText().toString())) {
+                Helper.toast(mEditText_code_yh.getHint().toString(), getContext());
+                return;
+            }
+
             BeanapplyAuth mBeanapplyAuth = new BeanapplyAuth();
             mBeanapplyAuth.accountName = mEditText_code.getText().toString();
             mBeanapplyAuth.password = mEditText_code_yh.getText().toString();
@@ -100,7 +121,11 @@ public class FrgRzhPub extends BaseFrg {
                 JSONObject mJSONObject = new JSONObject(content);
                 if (mJSONObject.getString("errorcode").equals("5100")) {
                     ModelPub mModelPub = (ModelPub) json2Model(content, ModelPub.class);
-                    Helper.startActivity(getActivity(), FrgRzhPubNext.class, TitleAct.class, "mModelPub", mModelPub, "type", type);
+                    if (mModelPub.nextProcess != null) {
+                        Helper.startActivity(getActivity(), FrgRzhPubNext.class, TitleAct.class, "mModelPub", mModelPub, "type", type);
+                    } else {
+                        Helper.toast("nextProcess数据返回空", getContext());
+                    }
                 } else if (mJSONObject.getString("errorcode").equals("5000")) {
                     Helper.startActivity(getActivity(), FrgRzhPubLaqu.class, TitleAct.class, "type", type, "smsCode", "", "imgCode", "");
                 }
@@ -123,6 +148,10 @@ public class FrgRzhPub extends BaseFrg {
     @Override
     public void setActionBar(ActionBar actionBar, Context context) {
         super.setActionBar(actionBar, context);
-        mHeadlayout.setTitle("认证");
+        if (type.equals("03")) {
+            mHeadlayout.setTitle("运营商认证");
+        } else if (type.equals("12")) {
+            mHeadlayout.setTitle("淘宝认证");
+        }
     }
 }

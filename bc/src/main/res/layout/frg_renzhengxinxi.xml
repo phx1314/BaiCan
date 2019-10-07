@@ -34,6 +34,14 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
+            <TextView
+                style="@style/text_style_15_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="@dimen/j10dp"
+                android:text="请按步骤完成如下认证" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -43,32 +51,48 @@
                 android:paddingLeft="@dimen/j10dp"
                 android:paddingRight="@dimen/j10dp">
 
-                <TextView
-                    android:id="@+id/clk_mTextView_1"
-                    style="@style/text_style_15_black"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg1"
-                    android:drawablePadding="@dimen/j10dp"
-                    android:drawableTop="@drawable/gr"
-                    android:gravity="center"
-                    android:paddingTop="@dimen/j20dp"
-                    android:text="个人资料" />
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/clk_mTextView_1"
+                        style="@style/text_style_15_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg1"
+                        android:drawablePadding="@dimen/j10dp"
+                        android:drawableTop="@drawable/gr"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/j20dp"
+                        android:text="个人资料" />
+
+                    <!--<TextView-->
+                    <!--style="@style/text_style_17_black"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="@dimen/j10dp"-->
+                    <!--android:text="1"-->
+                    <!--android:textColor="@color/A" />-->
+                </RelativeLayout>
 
                 <TextView
-                    android:id="@+id/clk_mTextView_2"
+                    android:id="@+id/clk_mTextView_5"
                     style="@style/text_style_15_black"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/j10dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg1"
                     android:drawablePadding="@dimen/j10dp"
-                    android:drawableTop="@drawable/gz"
+                    android:drawableTop="@drawable/sfz"
                     android:gravity="center"
                     android:paddingTop="@dimen/j20dp"
-                    android:text="工作收入" />
+                    android:text="身份认证" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -81,10 +105,25 @@
                 android:paddingRight="@dimen/j10dp">
 
                 <TextView
+                    android:id="@+id/clk_mTextView_2"
+                    style="@style/text_style_15_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:background="@drawable/bg1"
+                    android:drawablePadding="@dimen/j10dp"
+                    android:drawableTop="@drawable/gz"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/j20dp"
+                    android:text="工作收入" />
+
+                <TextView
                     android:id="@+id/clk_mTextView_3"
                     style="@style/text_style_15_black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/j10dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg1"
                     android:drawablePadding="@dimen/j10dp"
@@ -93,19 +132,7 @@
                     android:paddingTop="@dimen/j20dp"
                     android:text="联系人" />
 
-                <TextView
-                    android:id="@+id/clk_mTextView_4"
-                    style="@style/text_style_15_black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/j10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg1"
-                    android:drawablePadding="@dimen/j10dp"
-                    android:drawableTop="@drawable/phonerz"
-                    android:gravity="center"
-                    android:paddingTop="@dimen/j20dp"
-                    android:text="手机认证" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -118,17 +145,18 @@
                 android:paddingRight="@dimen/j10dp">
 
                 <TextView
-                    android:id="@+id/clk_mTextView_5"
+                    android:id="@+id/clk_mTextView_4"
                     style="@style/text_style_15_black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/bg1"
                     android:drawablePadding="@dimen/j10dp"
-                    android:drawableTop="@drawable/sfz"
+                    android:drawableTop="@drawable/phonerz"
                     android:gravity="center"
                     android:paddingTop="@dimen/j20dp"
-                    android:text="身份认证" />
+                    android:text="手机认证" />
+
 
                 <TextView
                     android:id="@+id/clk_mTextView_6"
@@ -150,10 +178,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/j20dp"
                 android:gravity="center"
-                android:visibility="gone"
                 android:orientation="horizontal"
                 android:paddingLeft="@dimen/j10dp"
-                android:paddingRight="@dimen/j10dp">
+                android:paddingRight="@dimen/j10dp"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/clk_mTextView_8"

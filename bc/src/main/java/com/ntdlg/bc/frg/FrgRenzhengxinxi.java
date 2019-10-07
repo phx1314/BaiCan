@@ -268,10 +268,10 @@ public class FrgRenzhengxinxi extends BaseFrg {
 //            }
             Helper.startActivity(getContext(), FrgLxr.class, TitleAct.class);
         } else if (R.id.clk_mTextView_4 == v.getId()) {//手机
-            if (mModelGRXYRZXX.isOperatorAuth.equals("1")) {
-                Helper.toast("您已认证", getContext());
-                return;
-            }
+//            if (mModelGRXYRZXX.isOperatorAuth.equals("1")) {
+//                Helper.toast("您已认证", getContext());
+//                return;
+//            }
             F.rZhengWb(getActivity(), MxParam.PARAM_TASK_CARRIER, FrgRenzhengxinxi.this);//手机认证
         } else if (R.id.clk_mTextView_5 == v.getId()) {//身份
             if (mModelGRXYRZXX.isNameAuth.equals("1")) {

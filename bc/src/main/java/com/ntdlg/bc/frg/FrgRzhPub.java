@@ -150,7 +150,7 @@ public class FrgRzhPub extends BaseFrg {
         super.setActionBar(actionBar, context);
         if (type.equals("03")) {
             mHeadlayout.setTitle("运营商认证");
-        } else if (type.equals("12")) {
+        } else if (type.equals("11")) {
             mHeadlayout.setTitle("淘宝认证");
         }
     }

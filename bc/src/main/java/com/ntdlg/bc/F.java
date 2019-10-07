@@ -605,7 +605,7 @@ public class F {
         }if (type.equals(F.ELM)) {
             tt="8";
         }if (type.equals(MxParam.PARAM_TASK_TAOBAO)) {
-            tt = "12";
+            tt = "11";
         }
 
         if (!TextUtils.isEmpty(tt))

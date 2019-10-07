@@ -78,10 +78,10 @@ public class FrgDshrzh extends BaseFrg {
         mLinearLayout_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if (mModelGRXYRZXX.isTaobaoAuth.equals("1")) {
-//                    Helper.toast("您已认证", getContext());
-//                    return;
-//                }
+                if (mModelGRXYRZXX.isTaobaoAuth.equals("1")) {
+                    Helper.toast("您已认证", getContext());
+                    return;
+                }
                 rZhengWb(getActivity(), MxParam.PARAM_TASK_TAOBAO,FrgDshrzh.this);
             }
         });

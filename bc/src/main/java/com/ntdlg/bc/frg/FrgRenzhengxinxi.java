@@ -315,10 +315,10 @@ public class FrgRenzhengxinxi extends BaseFrg {
 //                Helper.toast("公积金/社保未认证", getContext());
 //                return;
 //            }
-            if (!mModelGRXYRZXX.isMeituanAuth.equals("1") && !mModelGRXYRZXX.isElemeAuth.equals("1")) {
-                Helper.toast("美团/饿了么未认证", getContext());
-                return;
-            }
+//            if (!mModelGRXYRZXX.isMeituanAuth.equals("1") && !mModelGRXYRZXX.isElemeAuth.equals("1")) {
+//                Helper.toast("美团/饿了么未认证", getContext());
+//                return;
+//            }
             F.loadContacts(getContext(), "FrgRenzhengxinxi");
 
         }

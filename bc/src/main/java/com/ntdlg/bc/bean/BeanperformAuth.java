@@ -7,6 +7,7 @@ package com.ntdlg.bc.bean;
 public class BeanperformAuth extends BeanBase {
     public String orderId = com.ntdlg.bc.F.applyId;
     public String smsCode = "";
+    public String imgCode = "";
     public String type = "";
 
 

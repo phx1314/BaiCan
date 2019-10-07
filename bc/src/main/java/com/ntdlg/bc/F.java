@@ -599,7 +599,7 @@ public class F {
     public static void rZhengWb(final Activity activity, String type, final BaseFrg mBaseFrg) {
         String tt = "";
         if (type.equals(MxParam.PARAM_TASK_CARRIER)) {
-            tt="3";
+            tt = "03";
         }else if (type.equals(F.MT)) {
             tt="7";
         }if (type.equals(F.ELM)) {

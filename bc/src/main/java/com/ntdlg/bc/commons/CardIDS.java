@@ -1,8 +1,8 @@
 //
 //  
 //
-//  Created by DELL on 2019-09-06 08:39:50
-//  Copyright (c) DELL All rights reserved.
+//  Created by Administrator on 2019-10-07 09:33:18
+//  Copyright (c) Administrator All rights reserved.
 
 
 /**
@@ -19,5 +19,6 @@ public class CardIDS{
     public static final int CARDID_YINDAO = 8004 ;
     public static final int CARDID_PUBLIST = 8005 ;
     public static final int CARDID_DIALOGBOTTOM = 8006 ;
+    public static final int CARDID_RZHPUBNEXT = 8007;
 
 }

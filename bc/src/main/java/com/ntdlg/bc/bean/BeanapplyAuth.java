@@ -7,7 +7,7 @@ package com.ntdlg.bc.bean;
 public class BeanapplyAuth extends BeanBase {
     public String orderId = com.ntdlg.bc.F.applyId;
     public String password = "";
-    public String acountName = "";
+    public String accountName = "";
     public String type = "";
 
 

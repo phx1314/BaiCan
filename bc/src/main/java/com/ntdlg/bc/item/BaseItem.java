@@ -40,6 +40,7 @@ public class BaseItem implements OnClickListener, HttpResponseListenerSon {
 
     }
 
+
     @Override
     public void onFinish() {
 

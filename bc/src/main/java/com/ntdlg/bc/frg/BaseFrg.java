@@ -62,6 +62,7 @@ public abstract class BaseFrg extends MFragment implements View.OnClickListener,
 
     }
 
+
     public void loadJson(String methodName, String methodNameBiaoShi, String json) {
         HttpUtil.loadJsonUrl(getContext(), methodName, json, new HttpResponseListener(getContext(), this, methodNameBiaoShi));
     }

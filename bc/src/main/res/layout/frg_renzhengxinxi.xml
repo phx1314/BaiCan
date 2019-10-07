@@ -150,6 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/j20dp"
                 android:gravity="center"
+                android:visibility="gone"
                 android:orientation="horizontal"
                 android:paddingLeft="@dimen/j10dp"
                 android:paddingRight="@dimen/j10dp">

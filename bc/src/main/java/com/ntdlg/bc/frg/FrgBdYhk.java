@@ -234,6 +234,18 @@ public class FrgBdYhk extends BaseFrg {
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        try {
+            if (handler != null)
+                handler.removeCallbacks(runnable);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Override
     public void setActionBar(ActionBar actionBar, Context context) {
         super.setActionBar(actionBar, context);
         mHeadlayout.setTitle("绑定银行卡");

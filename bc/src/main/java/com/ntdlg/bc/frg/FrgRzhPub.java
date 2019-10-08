@@ -13,14 +13,11 @@ package com.ntdlg.bc.frg;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.framewidget.F;
 import com.google.gson.Gson;
 import com.mdx.framework.Frame;
 import com.mdx.framework.activity.TitleAct;
@@ -28,21 +25,13 @@ import com.mdx.framework.utility.Helper;
 import com.mdx.framework.widget.ActionBar;
 import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanapplyAuth;
-import com.ntdlg.bc.bean.BeanperformAuth;
 import com.ntdlg.bc.model.ModelPub;
 
 import org.json.JSONObject;
 
 import static com.ntdlg.bc.F.applyAuth;
 import static com.ntdlg.bc.F.json2Model;
-import static com.ntdlg.bc.F.performAuth;
 import static com.ntdlg.bc.F.readClassAttr;
-import static com.ntdlg.bc.R.id.clk_mTextView_get;
-import static com.ntdlg.bc.R.id.mEditText_khh;
-import static com.ntdlg.bc.R.id.mEditText_yzhm;
-import static com.ntdlg.bc.R.id.mEditText_yzm;
-import static com.umeng.socialize.utils.DeviceConfig.context;
-import static java.security.AccessController.getContext;
 
 
 public class FrgRzhPub extends BaseFrg {

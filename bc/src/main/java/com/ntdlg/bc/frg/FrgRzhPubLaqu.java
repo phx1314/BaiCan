@@ -96,6 +96,7 @@ public class FrgRzhPubLaqu extends BaseFrg {
     public void onSuccess(String methodName, String content) {
         Helper.toast("认证成功", getContext());
         finish();
+        Frame.HANDLES.sentAll("FrgRenzhengxinxi,FrgDshrzh,FrgMe", 0, null);
         Frame.HANDLES.closeIds("FrgRzhPubLaqu,FrgRzhPubNext,FrgRzhPub");
     }
 
@@ -138,6 +139,6 @@ public class FrgRzhPubLaqu extends BaseFrg {
     @Override
     public void setActionBar(ActionBar actionBar, Context context) {
         super.setActionBar(actionBar, context);
-        mHeadlayout.setTitle("拉取数据");
+        mHeadlayout.setTitle("认证中");
     }
 }

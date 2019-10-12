@@ -95,7 +95,7 @@
         android:gravity="bottom"
         android:lineSpacingExtra="@dimen/j10dp"
         android:padding="@dimen/j10dp"
-        android:text="温馨提示：\n*姓名请填写手机号对应实名\n*授权期间请不要登陆运营商网站\n*运营商可能会收到一条或多条短信\n*验证码十分钟只能发一条，一条在两份钟之内有效\n*请务必填写真实信息" />
+        android:text="温馨提示：\n*姓名请填写手机号对应实名\n*授权期间请不要登陆运营商网站\n*运营商可能会收到一条或多条短信\n*验证码十分钟只能发一条，一条在两分钟之内有效\n*请务必填写真实信息" />
 
 
     <LinearLayout

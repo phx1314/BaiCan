@@ -143,7 +143,6 @@ public class FrgBdYhk extends BaseFrg {
 
                 mBeanbankBind.bankNo = mEditText_code.getText().toString().trim();
                 mBeanbankBind.phone = mEditText_phone.getText().toString().trim();
-                mBeanbankBind.bankId = mEditText_phone.getText().toString().trim();
                 mBeanbankBind.sign = readClassAttr(mBeanbankBind);
                 loadJsonUrl(bankBind, new Gson().toJson(mBeanbankBind));
             }

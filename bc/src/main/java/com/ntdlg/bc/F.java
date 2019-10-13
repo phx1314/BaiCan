@@ -111,6 +111,7 @@ public class F {
     public static String bioAssay = "/api/customer/bioAssay";
     public static String setDefaultBank = "/api/customer/setDefaultBank";
     public static String bankBindOne = "/api/customer/bankBindOne";
+    public static String bankBind = "/api/customer/bankBind";
     public static String bankBindTwo = "/api/customer/bankBindTwo";
     public static String bank = "/api/customer/bank";
     public static String loadProduct = "/loadProduct";
@@ -132,6 +133,7 @@ public class F {
     public static String getXDWeiXinPath = "/api/customer/getXDWeiXinPath";
     public static String applyAuth = "/api/customer/applyAuth";
     public static String performAuth = "/api/customer/performAuth";
+    public static String getExamUrl = "/api/customer/getExamUrl";
     public static boolean isOpen = false;
 
     public static void Login(String mUserId, String token, String reftoken) {

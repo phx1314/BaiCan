@@ -29,7 +29,7 @@ import com.mdx.framework.widget.ActionBar;
 import com.ntdlg.bc.F;
 import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanBase;
-import com.ntdlg.bc.bean.BeanFSDXYZM;
+import com.ntdlg.bc.bean.BeanbankBind;
 import com.ntdlg.bc.bean.BeanbankBindOne;
 import com.ntdlg.bc.bean.BeanbankBindTwo;
 import com.ntdlg.bc.model.BaseData;
@@ -40,6 +40,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.ntdlg.bc.F.bank;
+import static com.ntdlg.bc.F.bankBind;
 import static com.ntdlg.bc.F.bankBindOne;
 import static com.ntdlg.bc.F.bankBindTwo;
 import static com.ntdlg.bc.F.json2Model;
@@ -59,7 +60,7 @@ public class FrgBdYhk extends BaseFrg {
     public TextView mTextView_shenqing;
     public LinearLayout mLinearLayout_yh;
     public List<BaseData> list = new ArrayList<>();
-    public BeanbankBindTwo mBeanbankBindTwo = new BeanbankBindTwo();
+    public BeanbankBind mBeanbankBind = new BeanbankBind();
     public String from;
     public EditText mEditText_yzm;
     public TextView clk_mTextView_get;
@@ -82,7 +83,7 @@ public class FrgBdYhk extends BaseFrg {
             case 101:
                 BaseData item = (BaseData) obj;
                 mEditText_code_yh.setText(item.value);
-                mBeanbankBindTwo.bankId = item.code;
+                mBeanbankBind.bankId = item.code;
                 break;
         }
     }
@@ -139,16 +140,12 @@ public class FrgBdYhk extends BaseFrg {
                     Helper.toast("请输入正确的手机号", getContext());
                     return;
                 }
-                if (TextUtils.isEmpty(mEditText_yzm.getText().toString().trim())) {
-                    Helper.toast("请输入验证码", getContext());
-                    return;
-                }
-                mBeanbankBindTwo.bankNo = mEditText_code.getText().toString().trim();
-                mBeanbankBindTwo.phone = mEditText_phone.getText().toString().trim();
-                mBeanbankBindTwo.txId = mModelbankBindOne.txId;
-                mBeanbankBindTwo.code = mEditText_yzm.getText().toString().trim();
-                mBeanbankBindTwo.sign = readClassAttr(mBeanbankBindTwo);
-                loadJsonUrl(bankBindTwo, new Gson().toJson(mBeanbankBindTwo));
+
+                mBeanbankBind.bankNo = mEditText_code.getText().toString().trim();
+                mBeanbankBind.phone = mEditText_phone.getText().toString().trim();
+                mBeanbankBind.bankId = mEditText_phone.getText().toString().trim();
+                mBeanbankBind.sign = readClassAttr(mBeanbankBind);
+                loadJsonUrl(bankBind, new Gson().toJson(mBeanbankBind));
             }
         });
         clk_mTextView_get.setOnClickListener(new View.OnClickListener() {
@@ -175,12 +172,6 @@ public class FrgBdYhk extends BaseFrg {
                 mBeanbankBindOne.phone = mEditText_phone.getText().toString().trim();
                 mBeanbankBindOne.sign = readClassAttr(mBeanbankBindOne);
                 loadJsonUrl(bankBindOne, new Gson().toJson(mBeanbankBindOne));
-
-//                BeanFSDXYZM mBeanFSDXYZM = new BeanFSDXYZM();
-////                mBeanFSDXYZM.type = "20";
-//                mBeanFSDXYZM.phone = mEditText_phone.getText().toString();
-//                mBeanFSDXYZM.sign = readClassAttr(mBeanFSDXYZM);
-//                loadJsonUrl(sendSms, new Gson().toJson(mBeanFSDXYZM));
             }
         });
     }
@@ -224,7 +215,7 @@ public class FrgBdYhk extends BaseFrg {
             mModelbankBindOne = (ModelbankBindOne) json2Model(content, ModelbankBindOne.class);
             times = 60;
             doTimer();
-        } else if (methodName.equals(bankBindTwo)) {
+        } else if (methodName.equals(bankBind)) {
             Helper.toast("绑定成功", getContext());
             Frame.HANDLES.sentAll("FrgWodeYhk,FrgRenzhengxinxi", 0, null);
             if (!TextUtils.isEmpty(from))

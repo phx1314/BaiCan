@@ -21,8 +21,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.framewidget.frg.FrgPtDetail;
 import com.google.gson.Gson;
 import com.mdx.framework.Frame;
+import com.mdx.framework.activity.NoTitleAct;
 import com.mdx.framework.activity.TitleAct;
 import com.mdx.framework.utility.Helper;
 import com.mdx.framework.widget.ActionBar;
@@ -32,7 +34,9 @@ import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanBase;
 import com.ntdlg.bc.bean.BeanSFSM;
 import com.ntdlg.bc.bean.BeanSubXSSH;
+import com.ntdlg.bc.bean.BeangetExamUrl;
 import com.ntdlg.bc.bean.BeansavePhone;
+import com.ntdlg.bc.model.ModelDt;
 import com.ntdlg.bc.model.ModelGRXYRZXX;
 import com.ntdlg.bc.model.ModelSF;
 import com.ntdlg.bc.view.SortModel;
@@ -41,6 +45,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.ntdlg.bc.F.elemeAuth;
+import static com.ntdlg.bc.F.getExamUrl;
 import static com.ntdlg.bc.F.getPlatform;
 import static com.ntdlg.bc.F.json2Model;
 import static com.ntdlg.bc.F.mTAocrVerify;
@@ -227,7 +232,9 @@ public class FrgRenzhengxinxi extends BaseFrg {
             Helper.toast("提交成功", getContext());
             Frame.HANDLES.sentAll("FrgWode", 0, null);
             Frame.HANDLES.sentAll("FrgShouye", 0, null);
-            this.finish();
+            BeangetExamUrl mBeangetExamUrl = new BeangetExamUrl();
+            mBeangetExamUrl.sign = readClassAttr(mBeangetExamUrl);
+            loadJsonUrl(getExamUrl, new Gson().toJson(mBeangetExamUrl));
 
         } else if (methodName.equals(savePhone)) {
             com.framewidget.F.yShoure(getContext(), "", "请仔细核对所填信息，确保真实有效完整，一经提交将无法修改", new DialogInterface.OnClickListener() {
@@ -239,6 +246,10 @@ public class FrgRenzhengxinxi extends BaseFrg {
                     loadJsonUrl(submitCkeck, new Gson().toJson(mBeanKSJK));
                 }
             });
+        } else if (methodName.equals(getExamUrl)) {
+            ModelDt mModelDt = (ModelDt) json2Model(content, ModelDt.class);
+            Helper.startActivity(getContext(), FrgPtDetail.class, NoTitleAct.class, "url", mModelDt.url, "title", "答题");
+            this.finish();
         }
     }
 
@@ -246,7 +257,7 @@ public class FrgRenzhengxinxi extends BaseFrg {
     public void onClick(android.view.View v) {
         if (TextUtils.isEmpty(com.ntdlg.bc.F.UserId)) {
             Helper.toast("请先登录", getContext());
-            Helper.startActivity(getContext(),  Intent.FLAG_ACTIVITY_CLEAR_TOP,FrgLogin.class, TitleAct.class);
+            Helper.startActivity(getContext(), Intent.FLAG_ACTIVITY_CLEAR_TOP, FrgLogin.class, TitleAct.class);
             return;
         }
         if (R.id.clk_mTextView_1 == v.getId()) {

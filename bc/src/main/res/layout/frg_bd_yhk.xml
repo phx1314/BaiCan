@@ -163,7 +163,8 @@
         android:paddingBottom="@dimen/j10dp"
         android:paddingLeft="@dimen/j20dp"
         android:paddingRight="@dimen/j20dp"
-        android:paddingTop="@dimen/j10dp">
+        android:paddingTop="@dimen/j10dp"
+        android:visibility="gone">
 
         <EditText
             android:id="@+id/mEditText_yzm"

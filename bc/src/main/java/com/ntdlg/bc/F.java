@@ -134,6 +134,7 @@ public class F {
     public static String applyAuth = "/api/customer/applyAuth";
     public static String performAuth = "/api/customer/performAuth";
     public static String getExamUrl = "/api/customer/getExamUrl";
+    public static String getDeviceFingerprint = "/api/customer/getDeviceFingerprint";
     public static boolean isOpen = false;
 
     public static void Login(String mUserId, String token, String reftoken) {

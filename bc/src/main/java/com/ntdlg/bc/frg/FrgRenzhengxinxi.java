@@ -34,6 +34,7 @@ import com.ntdlg.bc.R;
 import com.ntdlg.bc.bean.BeanBase;
 import com.ntdlg.bc.bean.BeanSFSM;
 import com.ntdlg.bc.bean.BeanSubXSSH;
+import com.ntdlg.bc.bean.BeangetDeviceFingerprint;
 import com.ntdlg.bc.bean.BeangetExamUrl;
 import com.ntdlg.bc.bean.BeansavePhone;
 import com.ntdlg.bc.model.ModelDt;
@@ -45,6 +46,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.ntdlg.bc.F.elemeAuth;
+import static com.ntdlg.bc.F.getDeviceFingerprint;
 import static com.ntdlg.bc.F.getExamUrl;
 import static com.ntdlg.bc.F.getPlatform;
 import static com.ntdlg.bc.F.json2Model;
@@ -55,6 +57,7 @@ import static com.ntdlg.bc.F.savePhone;
 import static com.ntdlg.bc.F.scanIdentity;
 import static com.ntdlg.bc.F.submitCkeck;
 import static com.ntdlg.bc.F.yunyingshangAuth;
+import static com.ntdlg.bc.frg.FrgHome.payload;
 
 
 public class FrgRenzhengxinxi extends BaseFrg {
@@ -151,6 +154,11 @@ public class FrgRenzhengxinxi extends BaseFrg {
         mTextView_lg.setOnClickListener(com.mdx.framework.utility.Helper.delayClickLitener(this));
         if (type == 1) {
             mRelativeLayout_title.setVisibility(View.GONE);
+
+            BeangetDeviceFingerprint mBeangetDeviceFingerprint = new BeangetDeviceFingerprint();
+            mBeangetDeviceFingerprint.deviceData = payload;
+            mBeangetDeviceFingerprint.sign = readClassAttr(mBeangetDeviceFingerprint);
+            loadJsonUrlNoshow(getDeviceFingerprint, new Gson().toJson(mBeangetDeviceFingerprint));
         } else {
             mTextView_lg.setVisibility(View.GONE);
         }

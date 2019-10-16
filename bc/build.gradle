@@ -9,8 +9,8 @@ android {
         applicationId "com.ntdlg.bc"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 65
-        versionName "1.0.65"
+        versionCode 66
+        versionName "1.0.66"
         multiDexEnabled = true
     }
     aaptOptions {
@@ -49,6 +49,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile project(':picRecognize')
     compile(name: 'moxie-client-2.4.4', ext: 'aar')
+    compile(name: 'di-collector-android-fraud-7.0.2-0', ext: 'aar')
     compile 'com.jakewharton:butterknife:8.2.0'
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.github.thinkcool:circletextimageview:1.0.20151218'

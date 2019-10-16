@@ -11,6 +11,7 @@
 
 package com.ntdlg.bc.frg;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -18,10 +19,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.WindowManager;
+import android.webkit.WebView;
 import android.widget.LinearLayout;
 
 import com.ab.http.HttpUtil;
+import com.deviceinsight.android.DeviceInsightCollector;
+import com.deviceinsight.android.DeviceInsightException;
 import com.framewidget.newMenu.OnCheckChange;
 import com.framewidget.newMenu.OnPageSelset;
 import com.framewidget.newMenu.SlidingFragment;
@@ -31,14 +36,20 @@ import com.liulishuo.filedownloader.FileDownloader;
 import com.mdx.framework.Frame;
 import com.mdx.framework.activity.TitleAct;
 import com.mdx.framework.utility.Helper;
+import com.mdx.framework.utility.permissions.PermissionRequest;
 import com.ntdlg.bc.F;
 import com.ntdlg.bc.R;
+import com.ntdlg.bc.bean.BeangetDeviceFingerprint;
 import com.ntdlg.bc.bean.Beanupdateversion;
 import com.ntdlg.bc.model.ModelVersion;
 import com.pgyersdk.javabean.AppBean;
 import com.pgyersdk.update.PgyUpdateManager;
 import com.pgyersdk.update.UpdateManagerListener;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
+import static com.ntdlg.bc.F.getDeviceFingerprint;
 import static com.ntdlg.bc.F.getVersionCode;
 import static com.ntdlg.bc.F.getVersionName;
 import static com.ntdlg.bc.F.json2Model;
@@ -51,7 +62,9 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
     public LinearLayout mLinearLayout_content;
     public SlidingFragment mSlidingFragment;
     public android.support.v4.app.FragmentManager fragmentManager;
-
+    public WebView mWebView;
+    public DeviceInsightCollector collector;
+    public static String payload;
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -72,7 +85,6 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
                                     .setNegativeButton(
                                             "确定",
                                             new DialogInterface.OnClickListener() {
-
                                                 @Override
                                                 public void onClick(
                                                         DialogInterface dialog,
@@ -92,6 +104,36 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
                     public void onNoUpdateAvailable() {
                     }
                 });
+
+
+        collector = new DeviceInsightCollector(getActivity());
+        Helper.requestPermissions(new String[]{Manifest.permission.READ_PHONE_STATE}, new PermissionRequest() {
+            public void onGrant(String[] permissions, int[] grantResults) {
+                new Thread(new Runnable() {
+                    public void run() {
+                        try {
+                            payload = collector.collect();
+                            final String version = collector.getVersion();
+                            Log.i("DeviceInsight", "Collected payload: " + payload);
+                            Log.i("DeviceInsight", "Collector version: " + version);
+//                            submitPayload(payload, "");
+                        } catch (final DeviceInsightException ex) {
+                        }
+                    }
+                }, "Collector").start();
+
+            }
+        });
+    }
+
+
+    void submitPayload(String payload, String uri) {
+        if (uri.length() > 0 && payload.length() > 0) {
+            try {
+                mWebView.postUrl(uri, ("user_prefs=" + URLEncoder.encode(payload, "UTF-8")).getBytes());
+            } catch (UnsupportedEncodingException ex) {
+            }
+        }
     }
 
     @Override
@@ -117,6 +159,7 @@ public class FrgHome extends BaseFrg implements OnCheckChange, OnPageSelset {
 
     private void findVMethod() {
         mLinearLayout_content = (LinearLayout) findViewById(R.id.mLinearLayout_content);
+        mWebView = (WebView) findViewById(R.id.mWebView);
         mSlidingFragment = new SlidingFragment(this);
         fragmentManager = getActivity().getSupportFragmentManager();
         android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager
